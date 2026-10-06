@@ -12,6 +12,8 @@
 
 ## How it was built
 
+It would've been easy to write a prompt and have an AI generate a tarot reading. Instead, I chose to take the tarot cards and their meanings and assemble the texts deterministically — the same draw always produces the same reading, with no model call at request time.
+
 The site started out as a conventional Node/Express application (Express + templates + per-language content JSON). Later, it also became a testbed for another technical curiosity: porting the entire application to [Kof](https://koflang.github.io/), a programming language still under development — not just the server, but the **entire build**. Since September 12, 2026, the production site ( https://mytarot.day ) has been running on Kof; since September 26, 2026, the build process itself (rendering each locale's HTML, assembling the API responses, flattening the content data) also runs 100% on Kof, no Node in the path at all — zero-downtime blue-green deploys throughout.
 
 In front of all of this, two servers with different jobs:
