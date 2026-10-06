@@ -1,0 +1,925 @@
+{
+  "ui": {
+    "logo": "MyTarot.Day",
+    "tagline": "Citire zilnică de tarot 100% gratuită, personalizată în funcție de data nașterii. Fără înregistrare, fără niciun cost, pentru totdeauna.",
+    "eyebrow": "Patru cărți. O singură zi.",
+    "selectCardsPrompt": "Alege 4 cărți",
+    "heroTitleLine1": "Ce spun cărțile de astăzi despre",
+    "heroTitleEm": "tine",
+    "submitLabel": "Arată cărțile mele",
+    "submittingLabel": "Se extrag...",
+    "loadingText": "Se amestecă pachetul pentru {date}...",
+    "tryAnotherLabel": "Faci o altă citire?",
+    "buyMeCoffeeLabel": "☕  Cumpără-mi o cafea 🤗",
+    "funFact": "Știai că: Aspectul vintage al cărților noastre de tarot este autentic. Folosim pachetul tradițional Rider–Waite–Smith din 1909, cu ilustrațiile originale realizate de Pamela Colman Smith. După mai bine de un secol, acest pachet clasic continuă să inspire cititori din întreaga lume și este considerat una dintre cele mai influente baze ale tarotului modern.",
+    "footerDisclaimer": "MyTarot.Day este oferit pentru reflecție și divertisment. Nu reprezintă un substitut pentru sfaturi profesionale, medicale, financiare sau juridice.",
+    "footerTagline": "Dezvoltat de echipa P.San | Este gratuit și așa va rămâne mereu!",
+    "footerHome": "Acasă",
+    "footerBlog": "Blog",
+    "footerPrivacy": "Politica de confidențialitate",
+    "footerTerms": "Termeni și condiții",
+    "footerAbout": "Despre",
+    "footerContact": "Contact",
+    "todayBadge": "Astăzi",
+    "reversedLabel": "Inversată",
+    "uprightLabel": "Dreaptă",
+    "supportPromptText": "Ți-a plăcut? Cumpără-mi o cafea",
+    "summaryGuideLabel": "Ghid",
+    "summaryPastLabel": "Trecut",
+    "summaryFutureLabel": "Viitor",
+    "freeBadge": "100% gratuit — fără cont, fără costuri",
+    "freeTitlePhrase": "Citire tarot gratuită"
+  },
+  "positions": {
+    "determinant": {
+      "label": "Determinantul",
+      "subtitle": "Forța care modelează întreaga zi",
+      "intros": [
+        "Deasupra tuturor lucrurilor astăzi se află",
+        "Cartea care stabilește tonul pentru întreaga zi este",
+        "Înainte de orice altceva, ziua este modelată de"
+      ]
+    },
+    "past": {
+      "label": "Trecutul",
+      "subtitle": "Ce porți cu tine",
+      "intros": [
+        "În spatele tău, influențând încă acest moment, se află",
+        "Ceea ce porți cu tine din zilele recente este",
+        "Trecutul care alimentează ziua de azi este marcat de"
+      ]
+    },
+    "present": {
+      "label": "Prezentul",
+      "subtitle": "Unde te afli cu adevărat",
+      "intros": [
+        "Chiar acum, în centrul lucrurilor, se află",
+        "Unde te afli cu adevărat astăzi este cu",
+        "În momentul prezent, te confrunți cu"
+      ]
+    },
+    "future": {
+      "label": "Viitorul",
+      "subtitle": "Încotro se îndreaptă lucrurile",
+      "intros": [
+        "Chiar în față, lucrurile se îndreaptă către",
+        "Încotro se îndreaptă situația, dacă nimic nu se schimbă, este",
+        "Viitorul apropiat indică spre"
+      ]
+    }
+  },
+  "summaryClauses": [
+    "Citite împreună, cărțile de astăzi trasează o linie de la {past} până la {future}, cu {determinant} stabilind termenii pentru modul în care se desfășoară totul.",
+    "Firul roșu de astăzi pornește de la ceea ce {past} te-a învățat deja, trece prin locul în care te afli acum și se îndreaptă către {future} — totul fiind colorat de {determinant}."
+  ],
+  "ranks": {
+    "ace": "As",
+    "two": "Doi",
+    "three": "Trei",
+    "four": "Patru",
+    "five": "Cinci",
+    "six": "Șase",
+    "seven": "Șapte",
+    "eight": "Opt",
+    "nine": "Nouă",
+    "ten": "Zece",
+    "page": "Valet",
+    "knight": "Cavaler",
+    "queen": "Regină",
+    "king": "Rege"
+  },
+  "suits": {
+    "wands": "Bâte",
+    "cups": "Cupe",
+    "swords": "Săbii",
+    "pentacles": "Monede"
+  },
+  "majorArcana": {
+    "0": {
+      "name": "Nebunul",
+      "keywords": [
+        "începuturi",
+        "inocență",
+        "salt în necunoscut",
+        "deschidere"
+      ],
+      "upright": "un nou început fără hartă și fără garanții — nu ai nimic altceva decât curiozitatea și curajul de a face un pas înainte înainte ca toate răspunsurile să fie clare.",
+      "reversed": "ezitare mascată în prudență, un pas repetat de atâtea ori încât nu mai este făcut niciodată — sau opusul: un salt în orb, fără a verifica ce se află dedesubt.",
+      "advice": "Fii din nou începător. Singura greșeală aici este refuzul de a începe."
+    },
+    "1": {
+      "name": "Magicianul",
+      "keywords": [
+        "ingeniozitate",
+        "voință",
+        "manifestare"
+      ],
+      "upright": "conștientizarea faptului că toate instrumentele de care situația are nevoie — intelect, abilitate, momentul potrivit — sunt deja în mâinile tale, iar folosirea lor intenționată este singurul pas care a mai rămas.",
+      "reversed": "talent nefolosit sau abilități direcționate către manipulare în loc de a construi ceva. Oricum ar fi, potențialul se irosește sau încrederea este mai mult o fațadă decât o fundație.",
+      "advice": "Nu mai aduna alte instrumente. Ia-l pe cel din mână și folosește-l."
+    },
+    "2": {
+      "name": "Marea Preoteasă",
+      "keywords": [
+        "intuiție",
+        "subconștient",
+        "cunoaștere ascunsă"
+      ],
+      "upright": "cunoaștere care vine dincolo de limbaj — o presimțire, un vis, un sentiment care se dovedește a fi mai precis decât orice dovadă pe care o aveai la momentul respectiv.",
+      "reversed": "un adevăr tăcut acoperit de zgomot sau un instinct păstrat privat pentru că încă nu se poate dovedi.",
+      "advice": "Ai încredere în ceea ce simți deja, dar nu ai spus cu voce tare. Știe ceva ce rațiunea ta încă nu a descoperit."
+    },
+    "3": {
+      "name": "Împărăteasa",
+      "keywords": [
+        "abundență",
+        "hrănire",
+        "creativitate",
+        "creștere"
+      ],
+      "upright": "un sezon de creștere care are nevoie de îngrijire, nu de forțare — un proiect, o relație sau o parte din tine care înflorește atunci când este hrănită în loc să fie împinsă de la spate.",
+      "reversed": "grijă sau creativitate care se transformă în sufocare sau un teren fertil lăsat neîngrijit până când nu a mai produs nimic.",
+      "advice": "Oferă atenție lucrurilor la care ții, în loc de presiune. Răbdarea este cea care le ajută să crească."
+    },
+    "4": {
+      "name": "Împăratul",
+      "keywords": [
+        "structură",
+        "autoritate",
+        "disciplină",
+        "stabilitate"
+      ],
+      "upright": "ordine construită cu un scop — un cadru, o limită sau un plan suficient de solid pentru a susține intențiile bune sub presiune reală.",
+      "reversed": "control exercitat prea strâns sau o structură atât de laxă încât nimic din interiorul ei nu rămâne stabil.",
+      "advice": "Ridică schela înainte de a construi casa. Structura de acum economisește efort mai târziu."
+    },
+    "5": {
+      "name": "Hierofantul",
+      "keywords": [
+        "tradiție",
+        "sisteme de credințe",
+        "îndrumare",
+        "convenție"
+      ],
+      "upright": "înțelepciune transmisă prin canale stabilite — un mentor, o instituție sau o tradiție a cărei îndrumare merită încă urmată, cel puțin pentru moment.",
+      "reversed": "o regulă păstrată din pură obișnuință sau o convenție care a încetat de mult să își justifice loialitatea.",
+      "advice": "Învață mai întâi calea stabilită. Decide dacă o vei părăsi după aceea."
+    },
+    "6": {
+      "name": "Îndrăgostiții",
+      "keywords": [
+        "conexiune",
+        "valori",
+        "alegere",
+        "aliniere"
+      ],
+      "upright": "o aliniere reală între oameni, valori sau drumuri — o alegere care contează pentru că spune ceea ce susții, nu doar ceea ce îți place.",
+      "reversed": "o nepotrivire acceptată în tăcere sau o decizie evitată pentru că a o numi cu voce tare ar deschide o conversație dificilă.",
+      "advice": "Numește alegerea clar, chiar dacă răspunsul onest complică lucrurile."
+    },
+    "7": {
+      "name": "Carul",
+      "keywords": [
+        "voință",
+        "determinare",
+        "victorie prin control"
+      ],
+      "upright": "mișcare înainte câștigată prin menținerea a două forțe opuse într-o singură mână și direcționarea lor în aceeași direcție.",
+      "reversed": "impuls consumat de conflictul interior sau o victorie urmărită atât de intens încât calcă în picioare chiar lucrul pe care trebuia să îl protejeze.",
+      "advice": "Nu te mai lupta cu propriile contradicții. Îndreaptă-le în aceeași direcție și pornește."
+    },
+    "8": {
+      "name": "Puterea",
+      "keywords": [
+        "curaj",
+        "răbdare",
+        "hotărâre liniștită",
+        "compasiune"
+      ],
+      "upright": "o putere care nu are nevoie să își ridice vocea — o stabilitate care vine din împăcarea cu lucrul dificil, nu din îngroparea lui.",
+      "reversed": "îndoială de sine care poartă umilința ca pe o mască sau forță folosită acolo unde răbdarea ar fi realizat mai mult.",
+      "advice": "Întâmpină ceea ce te sperie cu calm în loc de forță. Blândețea nu este slăbiciune."
+    },
+    "9": {
+      "name": "Eremitul",
+      "keywords": [
+        "introspecție",
+        "singurătate",
+        "îndrumare interioară"
+      ],
+      "upright": "o retragere necesară — îndepărtarea de zgomot pentru a auzi ce gândești, nu doar ce spun toți cei din jurul tău.",
+      "reversed": "izolare care se transformă în evitare sau înțelepciune ținută atât de aproape încât nu ajunge niciodată la cei care au nevoie de ea.",
+      "advice": "Acceptă singurătatea. Orice răspuns cauți, nu îl vei găsi într-o mulțime."
+    },
+    "10": {
+      "name": "Roata Norocului",
+      "keywords": [
+        "cicluri",
+        "schimbare",
+        "destin",
+        "puncte de cotitură"
+      ],
+      "upright": "o schimbare deja în desfășurare, împinsă de forțe mai mari decât orice alegere individuală — circumstanțe care se întorc într-un mod ce schimbă termenii situației.",
+      "reversed": "un ciclu care se repetă pentru că modelul de dedesubt nu s-a schimbat — doar costumul lui.",
+      "advice": "Nu mai încerca să controlezi rotirea. Pune-ți energia în modul în care reacționezi odată ce se oprește."
+    },
+    "11": {
+      "name": "Dreptatea",
+      "keywords": [
+        "echitate",
+        "adevăr",
+        "cauză și efect",
+        "claritate"
+      ],
+      "upright": "o socoteală corectă, chiar dacă nu una confortabilă — privire clară asupra cauzei și efectului și asupra a ceea ce se datorează.",
+      "reversed": "un dezechilibru pe care nimeni nu l-a abordat sau un adevăr evitat pentru că a-l înfrunta direct ar cere responsabilitate.",
+      "advice": "Privește situația fără a te flata. Echitatea începe cu o socoteală onestă."
+    },
+    "12": {
+      "name": "Spânzuratul",
+      "keywords": [
+        "predare",
+        "nouă perspectivă",
+        "pauză"
+      ],
+      "upright": "progres făcut prin pauză în loc de forțare — o suspendare deliberată care deschide un unghi asupra lucrurilor pe care nu le-ai fi putut atinge în timp ce te mișcai.",
+      "reversed": "amânare de dragul amânării sau un sacrificiu care nu a adus nicio înțelegere reală în schimb.",
+      "advice": "Lasă acest lucru nerezolvat încă puțin. Perspectiva trăiește în așteptare, nu undeva dincolo de ea."
+    },
+    "13": {
+      "name": "Moartea",
+      "keywords": [
+        "transformare",
+        "sfârșituri",
+        "eliberare"
+      ],
+      "upright": "un sfârșit real care eliberează spațiu pentru ceva ce nu ar fi putut exista alături de el — nu distrugere, ci schimbare necesară.",
+      "reversed": "o schimbare căreia i te-ai opus mult timp după ce a devenit inevitabilă, ceea ce face ca sfârșitul să fie și mai greu odată ce sosește.",
+      "advice": "Lasă partea din acest lucru care s-a terminat deja să rămână în urmă. Altceva are nevoie de spațiul pe care îl ocupă."
+    },
+    "14": {
+      "name": "Temperanța",
+      "keywords": [
+        "echilibru",
+        "moderație",
+        "integrare",
+        "răbdare"
+      ],
+      "upright": "două lucruri care păreau incompatibile așezându-se într-un mijloc viabil — răbdare, amestecare, meșteșugul lent de a nimeri proporțiile corecte.",
+      "reversed": "prea mult într-o direcție sau un compromis făcut atât de repede încât nicio parte nu ajunge să fie satisfăcută.",
+      "advice": "Încetinește amestecul. Echilibrul corect nu va fi forțat peste noapte."
+    },
+    "15": {
+      "name": "Diavolul",
+      "keywords": [
+        "atașament",
+        "restricție",
+        "ispită",
+        "tipare vechi"
+      ],
+      "upright": "un tipar, un obicei sau o dinamică ce are o influență asupra ta mai mare decât ai vrea să recunoști — deși ușa de ieșire nu a fost niciodată încuiată.",
+      "reversed": "prima tragere reală departe de ceva ce te-a ținut captiv — vederea lanțului clar pentru ceea ce este.",
+      "advice": "Privește onest la ceea ce continui să alegi, deși te costă. Numirea lucrurilor este locul unde începe calea de ieșire."
+    },
+    "16": {
+      "name": "Turnul",
+      "keywords": [
+        "schimbare bruscă",
+        "răsturnare",
+        "revelație"
+      ],
+      "upright": "o structură construită pe un teren șubred, care se prăbușește rapid — perturbator, dar clarificator, deoarece elimină ceea ce nu a fost niciodată stabil.",
+      "reversed": "o prăbușire amânată prin simplă evitare sau o perturbare mai mică ce totuși zdruncină ceva din temelii.",
+      "advice": "Nu te grăbi să reconstruiești exact ceea ce a căzut. Întreabă-te mai întâi de ce nu a putut rezista."
+    },
+    "17": {
+      "name": "Steaua",
+      "keywords": [
+        "speranță",
+        "reînnoire",
+        "inspirație",
+        "vindecare"
+      ],
+      "upright": "speranță liniștită care revine după o perioadă grea — nu optimism naiv, ci un sentiment real că lucrurile pot fi reparate și se îndreaptă spre ceva mai bun.",
+      "reversed": "speranță care se subțiază sau o perspectivă optimistă care s-a desprins de orice plan real.",
+      "advice": "Lasă-te să speri din nou. Ai meritat-o și indică spre ceva real."
+    },
+    "18": {
+      "name": "Luna",
+      "keywords": [
+        "incertitudine",
+        "subconștient",
+        "iluzie",
+        "intuiție"
+      ],
+      "upright": "o situație luminată de altceva decât de fapte clare — instinct, imaginație și temeri vechi amestecate, astfel încât ceea ce vezi nu este încă întreaga imagine.",
+      "reversed": "confuzie care începe să se risipească sau o teamă care se dovedește a fi fost mai mare în imaginație decât în realitate.",
+      "advice": "Nu forța o decizie cât timp imaginea este încă neclară. Așteaptă mai multă lumină."
+    },
+    "19": {
+      "name": "Soarele",
+      "keywords": [
+        "bucurie",
+        "vitalitate",
+        "claritate",
+        "succes"
+      ],
+      "upright": "noroc pur și simplu — claritate, căldură, un rezultat care nu are nevoie de o a doua opinie.",
+      "reversed": "bucurie diminuată de prea multă analiză sau un succes care nu este lăsat să fie savurat pentru ceea ce este.",
+      "advice": "Lasă acest lucru să fie atât de bun pe cât este. Nu trebuie să cauți defecte."
+    },
+    "20": {
+      "name": "Judecata",
+      "keywords": [
+        "socoteală",
+        "trezire",
+        "reflecție",
+        "absoluțiune"
+      ],
+      "upright": "o socoteală onestă cu locul în care ai fost și o chemare de a păși într-o versiune a ta care se potrivește cu ceea ce ai învățat.",
+      "reversed": "auto-judecată care se transformă în asprime sau o trezire amânată încă puțin.",
+      "advice": "Răspunde clar chemării. Orice ai evitat este gata să fie înfruntat acum."
+    },
+    "21": {
+      "name": "Lumea",
+      "keywords": [
+        "finalizare",
+        "întregire",
+        "sosire"
+      ],
+      "upright": "un ciclu care se închide curat, tot ce trebuia să învețe fiind deja înțeles — un sentiment real de sosire înainte ca următoarea călătorie să înceapă.",
+      "reversed": "o aproape-finalizare căreia îi lipsește ultima piesă sau o încheiere căutată înainte de a fi momentul.",
+      "advice": "Recunoaște cât de departe ai ajuns înainte de a te grăbi spre ceea ce urmează."
+    }
+  },
+  "minorArcana": {
+    "wands": {
+      "ace": {
+        "keywords": [
+          "inspirație",
+          "nouă inițiativă",
+          "scânteie creativă"
+        ],
+        "upright": "un val de energie creativă care sosește pe neașteptate — o idee, o ofertă sau o inițiativă care nu a fost încă conturată, dar care te atrage deja către ea.",
+        "reversed": "inspirație care stagnează înainte de a se transforma în acțiune sau entuziasm pentru un proiect nou care se răcește înainte de a începe.",
+        "advice": "Acționează acum, cât timp scânteia este încă vie. Dacă aștepți planul perfect, aceasta se va stinge."
+      },
+      "two": {
+        "keywords": [
+          "planificare",
+          "viziune de viitor",
+          "putere personală"
+        ],
+        "upright": "te afli într-un punct de observație confortabil, cu opțiuni reale în față, cântărind ceea ce ai construit deja față de direcția în care ai putea merge.",
+        "reversed": "ești prea precaut de teama necunoscutului sau ai un plan de viitor care nu este niciodată pus la încercare.",
+        "advice": "Nu mai admira doar priveliștea din locul în care te afli. Alege o direcție și începe să mergi spre ea."
+      },
+      "three": {
+        "keywords": [
+          "expansiune",
+          "prevedere",
+          "așteptarea rezultatelor"
+        ],
+        "upright": "așteptarea de după muncă — corăbiile au plecat deja, rezultatele nu au sosit încă, dar fundația este suficient de solidă pentru a avea încredere.",
+        "reversed": "întârzieri care se acumulează într-un plan ce părea sigur sau o perspectivă lărgită care scoate la iveală obstacole neprevăzute.",
+        "advice": "Păstrează-ți privirea spre orizont încă puțin. Ceea ce ai pus în mișcare este pe drum."
+      },
+      "four": {
+        "keywords": [
+          "celebrare",
+          "întoarcere acasă",
+          "etapă importantă"
+        ],
+        "upright": "o etapă importantă care merită o pauză — o întoarcere acasă, o sărbătoare, sentimentul că ai meritat acest moment de liniște.",
+        "reversed": "o celebrare care pare goală sau un sentiment de apartenență care nu a fost încă pe deplin atins.",
+        "advice": "Permite-ți să te bucuri pe deplin de acest moment. Nu orice lucru bun trebuie să fie urmat imediat de următoarea sarcină."
+      },
+      "five": {
+        "keywords": [
+          "competiție",
+          "fricțiune",
+          "dezacord"
+        ],
+        "upright": "voințe care se ciocnesc deschis — zgomotos, poate epuizant, dar onest, și mai bine decât aceeași tensiune lăsată să mocnească în subteran.",
+        "reversed": "conflict care își pierde suflul în sfârșit sau o rivalitate care se dovedește a fi mai mult o postură decât ceva substanțial.",
+        "advice": "Nu confunda această fricțiune cu eșecul. Ideile aflate în competiție se șlefuiesc reciproc atunci când nimeni nu se teme să fie în dezacord cu voce tare."
+      },
+      "six": {
+        "keywords": [
+          "victorie",
+          "recunoaștere",
+          "încredere"
+        ],
+        "upright": "o victorie pe care și ceilalți o pot vedea — recunoaștere publică pentru un efort care, până acum, a fost în mare parte invizibil.",
+        "reversed": "mândrie care se transformă în aroganță sau o victorie care nu a primit niciodată recunoașterea meritată.",
+        "advice": "Acceptă recunoașterea fără să încerci să o minimalizezi. Ai câștigat victoria; las-o să strălucească."
+      },
+      "seven": {
+        "keywords": [
+          "defensivă",
+          "perseverență",
+          "menținerea poziției"
+        ],
+        "upright": "menținerea unei poziții pe care toți ceilalți încearcă să ți-o ia — obositor, dar este dovada că ceea ce ai construit merită apărat.",
+        "reversed": "renunțarea la un teren pe care nu trebuia să-l cedezi sau apărarea unei poziții atât de mult timp încât ai uitat de ce conta.",
+        "advice": "Menține-ți poziția, dar verifică dacă încă mai lupți pentru cauza potrivită."
+      },
+      "eight": {
+        "keywords": [
+          "impuls",
+          "acțiune rapidă",
+          "mișcare rapidă"
+        ],
+        "upright": "totul se mișcă brusc — mesaje care sosesc, planuri care accelerează, o perioadă de mișcare rapidă după o lungă așteptare.",
+        "reversed": "impulsul stagnează exact când conta cel mai mult sau lucrurile se mișcă atât de repede încât nimic nu are timp să se așeze.",
+        "advice": "Acționează rapid cât timp calea este liberă, dar nu depăși propria capacitate de a reacționa la ceea ce urmează."
+      },
+      "nine": {
+        "keywords": [
+          "reziliență",
+          "ultima redută",
+          "persistență precaută"
+        ],
+        "upright": "încă un efort cerut de la tine după o lungă serie — obosit, precaut, dar încă în picioare și mai aproape de final decât pare.",
+        "reversed": "defensivă care s-a transformat în izolare sau epuizare care face ca fiecare provocare rămasă să pară mai mare decât este.",
+        "advice": "Ai supraviețuit fiecărei runde de până acum. Nu lăsa precauția să te împiedice să accepți ajutor pentru această ultimă etapă."
+      },
+      "ten": {
+        "keywords": [
+          "povară",
+          "supraîncărcare",
+          "finalizare obținută cu greu"
+        ],
+        "upright": "duci mai mult decât partea ta pentru că ești atât de aproape de linia de sosire încât a renunța acum pare o risipă.",
+        "reversed": "o povară păstrată din încăpățânare sau muncă lăsată jos în sfârșit după ce a fost purtată prea mult timp.",
+        "advice": "Întreabă-te ce anume porți și care nu a fost niciodată responsabilitatea ta să finalizezi. O parte din această greutate poate fi împărțită sau abandonată."
+      },
+      "page": {
+        "keywords": [
+          "explorare",
+          "idee nouă",
+          "entuziasm"
+        ],
+        "upright": "o idee prea incitantă pentru a sta pe loc — curiozitate neliniștită care vrea să se testeze imediat în fața lumii.",
+        "reversed": "entuziasm fără finalitate sau planuri anunțate cu voce tare și apoi abandonate în liniște.",
+        "advice": "Lasă entuziasmul să te ghideze, dar supune ideea la cel puțin un test real înainte de a alerga spre următoarea."
+      },
+      "knight": {
+        "keywords": [
+          "aventură",
+          "impulsivitate",
+          "urmărire curajoasă"
+        ],
+        "upright": "te îndrepți spre următorul obiectiv cu încredere totală, condus mai mult de dorința de aventură decât de un plan fix.",
+        "reversed": "nesăbuință care începe să te coste sau energie neliniștită care nu mai are unde să se consume productiv.",
+        "advice": "Pune puțină ordine în acea îndrăzneală înainte ca ea să te conducă pe tine, în loc să o conduci tu pe ea."
+      },
+      "queen": {
+        "keywords": [
+          "încredere",
+          "independență",
+          "magnetism"
+        ],
+        "upright": "o încredere în sine caldă și neclintită, care atrage oamenii fără a fi nevoie să le demonstrezi ceva.",
+        "reversed": "încredere care a devenit rigidă sau exigentă, ori independență folosită pentru a-i ține pe alții la distanță în loc de a sta pe propriile picioare.",
+        "advice": "Condu cu încrederea pe care o ai deja. Nu trebuie să o demonstrezi nimănui mai întâi."
+      },
+      "king": {
+        "keywords": [
+          "viziune",
+          "leadership",
+          "antreprenoriat curajos"
+        ],
+        "upright": "leadership care inspiră prin exemplu — o viziune curajoasă dublată de capacitatea de a o pune în practică.",
+        "reversed": "așteptări ridicate care au devenit imposibil de îndeplinit sau ambiție urmărită atât de nemilos încât îi epuizează pe cei care te ajută.",
+        "advice": "Condu viziunea, dar asigură-te că oamenii care o pun în practică alături de tine încă își doresc să fie acolo."
+      }
+    },
+    "cups": {
+      "ace": {
+        "keywords": [
+          "iubire nouă",
+          "deschidere emoțională",
+          "revărsare"
+        ],
+        "upright": "o cupă emoțională care se umple dincolo de margine — o iubire nouă, o compasiune proaspătă sau un sentiment atât de plin încât trebuie să se reverse în ceva.",
+        "reversed": "o deschidere emoțională care este reținută sau o iubire și o conexiune oferite, dar încă neacceptate.",
+        "advice": "Lasă acest sentiment să fie atât de plin pe cât este. Nu este nevoie să raționalizezi ceva atât de real."
+      },
+      "two": {
+        "keywords": [
+          "parteneriat",
+          "atracție reciprocă",
+          "uniune"
+        ],
+        "upright": "doi oameni care se întâlnesc ca egali — o legătură care se formează sau se aprofundează, pe termeni reciproci și echilibrați.",
+        "reversed": "o conexiune care a devenit dezechilibrată sau un parteneriat sub o tensiune care nu a fost încă numită cu voce tare.",
+        "advice": "Verifică dacă această conexiune este încă la fel de reciprocă precum a fost la început. Spune clar ce s-a schimbat, dacă s-a schimbat ceva."
+      },
+      "three": {
+        "keywords": [
+          "prietenie",
+          "celebrare",
+          "comunitate"
+        ],
+        "upright": "bucuria care este mai frumoasă când e împărtășită — o adunare, o prietenie, un moment care merită celebrat alături de oamenii care ți-au fost alături.",
+        "reversed": "o dinamică de grup care se transformă în bârfe sau excludere, ori excese care umbresc ceea ce ar fi trebuit să fie o adevărată celebrare.",
+        "advice": "Adu-i pe oamenii care contează cel mai mult în acest moment. Celebrarea înseamnă mai mult atunci când nu este făcută singur."
+      },
+      "four": {
+        "keywords": [
+          "apatie",
+          "contemplare",
+          "ofertă ratată"
+        ],
+        "upright": "plictiseală față de ceea ce este deja pe masă, chiar dacă ceva ce merită observat îți este oferit chiar în fața ta.",
+        "reversed": "apatia care își slăbește în sfârșit strânsoarea sau disponibilitatea de a privi în sus și de a evalua oportunitatea pe care o ignorai.",
+        "advice": "Ridică privirea de la ceea ce te dezamăgește și observă ce ți se oferă. S-ar putea să valoreze mai mult decât a părut la început."
+      },
+      "five": {
+        "keywords": [
+          "pierdere",
+          "doliu",
+          "regret"
+        ],
+        "upright": "durere concentrată pe ceea ce s-a vărsat și a dispărut, chiar dacă ceva intact stă încă aproape, neobservat.",
+        "reversed": "durerea care începe să își slăbească strânsoarea sau primii pași reali către acceptarea unei pierderi în loc de a o retrăi la nesfârșit.",
+        "advice": "Jelește ceea ce a dispărut cu adevărat, dar întoarce-te suficient de mult pentru a vedea ce a rămas încă în picioare în spatele tău."
+      },
+      "six": {
+        "keywords": [
+          "nostalgie",
+          "amintire",
+          "inocență"
+        ],
+        "upright": "o atracție către vremuri mai simple — amintiri vechi, conforturi familiare sau o revedere cu cineva dintr-un capitol anterior.",
+        "reversed": "nostalgie care a devenit un loc de ascunziș sau un trecut idealizat care face prezentul să pară mai rău decât este.",
+        "advice": "Vizitează trecutul pentru confort, dar nu te muta înapoi acolo. Ceea ce ai nevoie acum trăiește în prezent."
+      },
+      "seven": {
+        "keywords": [
+          "fantezie",
+          "alegeri",
+          "iluzie"
+        ],
+        "upright": "prea multe opțiuni atractive, unele mai solide decât altele, făcând dificilă distingerea oportunității reale de dorințele nerealiste.",
+        "reversed": "ceața care se risipește suficient pentru a vedea care opțiuni au fost reale și o decizie care devine în sfârșit posibilă.",
+        "advice": "Testează fiecare opțiune în raport cu realitatea înainte de a alege. Nu tot ce strălucește aici va rezista."
+      },
+      "eight": {
+        "keywords": [
+          "plecare",
+          "căutarea unui sens mai profund",
+          "despărțire"
+        ],
+        "upright": "a pleca de la ceva ce pare în regulă la exterior pentru că a încetat să te mai hrănească pe interior.",
+        "reversed": "a rămâne undeva din frica de ceea ce ar însemna plecarea sau a pluti fără a te angaja vreodată pe deplin în despărțire.",
+        "advice": "Ai încredere în acea parte din tine care știe că acest lucru nu mai este suficient, chiar dacă nu poți explica pe deplin de ce încă."
+      },
+      "nine": {
+        "keywords": [
+          "mulțumire",
+          "satisfacție",
+          "dorință împlinită"
+        ],
+        "upright": "o satisfacție ușoară și confortabilă — o dorință îndeplinită, o nevoie satisfăcută, o mulțumire care nu trebuie justificată.",
+        "reversed": "autosuficiență care înlocuiește satisfacția reală sau abundență care, cumva, tot nu pare suficientă.",
+        "advice": "Lasă această mulțumire să fie simplă. Nu trebuie să o câștigi de două ori îngrijorându-te că nu va dura."
+      },
+      "ten": {
+        "keywords": [
+          "împlinire emoțională",
+          "armonie familială",
+          "fericire durabilă"
+        ],
+        "upright": "o fericire profundă și stabilă, construită alături de cei mai apropiați oameni — nu un moment de vârf, ci o stare durabilă.",
+        "reversed": "armonie acasă care este mai mult aparență decât substanță sau valori între cei dragi care au încetat în liniște să se mai alinieze.",
+        "advice": "Privește dincolo de imaginea de suprafață a fericirii și verifică dacă oamenii din ea o simt și ei."
+      },
+      "page": {
+        "keywords": [
+          "oportunitate creativă",
+          "mesaj intuitiv",
+          "curiozitate"
+        ],
+        "upright": "un mesaj emoțional sau creativ blând și neașteptat care sosește — ceva ce merită atenție, chiar dacă pare mic.",
+        "reversed": "imaturitate emoțională care stă în calea unei oportunități reale sau un impuls creativ folosit pentru a evada în loc de a exprima.",
+        "advice": "Ia în serios acel sentiment mic și neașteptat. Este mai informativ decât pare."
+      },
+      "knight": {
+        "keywords": [
+          "romantism",
+          "idealism",
+          "urmarea inimii"
+        ],
+        "upright": "a conduce cu inima, urmărind o viziune romantică sau idealistă cu sinceritate reală, chiar dacă nu este încă pe deplin practică.",
+        "reversed": "toane mascate în sensibilitate sau un ideal romantic care te pregătește mereu pentru dezamăgire.",
+        "advice": "Urmează-ți inima aici, dar verifică totul în raport cu realitatea înainte de a o urma până la capăt."
+      },
+      "queen": {
+        "keywords": [
+          "compasiune",
+          "siguranță emoțională",
+          "intuiție"
+        ],
+        "upright": "profunzime emoțională susținută cu stabilitate reală — compasiune pentru ceilalți care nu vine cu prețul propriului echilibru.",
+        "reversed": "compasiune care s-a transformat în neglijare de sine sau siguranță emoțională care rezistă doar atâta timp cât nimeni nu o testează.",
+        "advice": "Oferă-le celorlalți compasiunea ta, dar păstrează suficientă și pentru tine."
+      },
+      "king": {
+        "keywords": [
+          "echilibru emoțional",
+          "diplomație",
+          "control calm"
+        ],
+        "upright": "o stăpânire calmă asupra sentimentelor puternice — capacitatea de a rămâne stabil și corect chiar și atunci când mizele emoționale sunt mari.",
+        "reversed": "control asupra sentimentelor care este de fapt suprimare sau un calm de suprafață care ascunde manipulare dedesubt.",
+        "advice": "Rămâi stabil, dar lasă să se știe ceea ce simți cu adevărat, în loc să doar gestionezi situația."
+      }
+    },
+    "swords": {
+      "ace": {
+        "keywords": [
+          "descoperire",
+          "claritate",
+          "idee nouă"
+        ],
+        "upright": "o tăietură bruscă prin confuzie — o realizare, o decizie sau un adevăr care sosește clar și inconfundabil.",
+        "reversed": "claritate umbrită de prea mult zgomot sau un adevăr care a fost distorsionat înainte de a ajunge la tine.",
+        "advice": "Ai încredere în gândul limpede atunci când apare. Nu lăsa pe nimeni să te convingă să te întorci la confuzie."
+      },
+      "two": {
+        "keywords": [
+          "impas",
+          "decizie dificilă",
+          "evitare"
+        ],
+        "upright": "o decizie ținută la distanță, păzită și echilibrată atât de atent încât nicio opțiune nu este aleasă vreodată.",
+        "reversed": "impasul care se rupe în sfârșit sau un exces de informații contradictorii care face alegerea mai grea în loc să o ușureze.",
+        "advice": "Dă-ți jos legătura de la ochi. Decizia nu va deveni mai ușoară dacă o amâni."
+      },
+      "three": {
+        "keywords": [
+          "suferință",
+          "trădare",
+          "durere"
+        ],
+        "upright": "o durere ascuțită și specifică — un adevăr, o trădare sau o pierdere care te rănește tocmai pentru că este reală.",
+        "reversed": "primele etape ale vindecării sau o durere veche care reapare pentru că nu a fost niciodată pe deplin procesată.",
+        "advice": "Lasă durerea să fie exact atât de ascuțită pe cât este. Să o numești clar este ceea ce începe vindecarea."
+      },
+      "four": {
+        "keywords": [
+          "odihnă",
+          "recuperare",
+          "contemplare"
+        ],
+        "upright": "o retragere deliberată după conflict sau tensiune — nu o înfrângere, ci recuperarea de care mintea are nevoie înainte de a putea gândi limpede din nou.",
+        "reversed": "odihnă întreruptă înainte de a fi completă sau o agitație care face recuperarea reală imposibilă.",
+        "advice": "Odihnește-te pe deplin. O recuperare pe jumătate înseamnă doar să porți epuizarea cu tine în ceea ce urmează."
+      },
+      "five": {
+        "keywords": [
+          "victorie goală",
+          "conflict",
+          "trădare"
+        ],
+        "upright": "o victorie care costă mai mult decât merită — un conflict dus până la capăt, deși toți cei implicați ies mai rău din el.",
+        "reversed": "resentimente care persistă după un conflict care nu a fost niciodată cu adevărat rezolvat sau o șansă de a face pace în loc să forțezi avantajul.",
+        "advice": "Întreabă-te dacă a câștiga această luptă anume merită prețul pe care îl vei plăti ulterior."
+      },
+      "six": {
+        "keywords": [
+          "tranziție",
+          "a merge mai departe",
+          "ape mai calme"
+        ],
+        "upright": "o mișcare lentă și deliberată departe de turbulențe, ducând cu tine doar ceea ce este necesar către ceva mai stabil.",
+        "reversed": "rezistența la o tranziție care este deja necesară sau bagaje nerezolvate care sunt purtate în apele mai calme ce urmează.",
+        "advice": "Lasă apele dificile în urma ta. Nu continua să privești înapoi la țărmul pe care îl părăsești."
+      },
+      "seven": {
+        "keywords": [
+          "strategie",
+          "înșelăciune",
+          "acționând singur"
+        ],
+        "upright": "a te mișca liniștit și independent, luând ceea ce ai nevoie fără a cere permisiunea — inteligent, dar nu pe deplin onest.",
+        "reversed": "o strategie ascunsă care iese la iveală sau o conștiință vinovată care ajunge în sfârșit din urmă o scurtătură luată.",
+        "advice": "Întreabă-te dacă strategia pe care o folosești ar mai avea sens dacă toți cei implicați ar putea să o vadă."
+      },
+      "eight": {
+        "keywords": [
+          "captivitate",
+          "mentalitate de victimă",
+          "limite autoimpuse"
+        ],
+        "upright": "senzația de a fi încolțit din toate părțile, deși frânghiile care te țin sunt mai slabe decât par — o închisoare construită mai mult din credințe decât din fapte.",
+        "reversed": "prima crăpătură reală în acea capcană autoimpusă, pe măsură ce povestea neputinței începe să-și piardă puterea.",
+        "advice": "Caută breșa în frânghiile pe care le-ai considerat solide. Există mai mult loc de mișcare decât pare."
+      },
+      "nine": {
+        "keywords": [
+          "anxietate",
+          "îngrijorare",
+          "angoasă mentală"
+        ],
+        "upright": "o minte care rulează scenarii catastrofale în întuneric, epuizată de temeri care par mult mai mari la ora 3 dimineața decât la lumina zilei.",
+        "reversed": "îngrijorarea care începe să se diminueze sau decizia de a rosti frica cu voce tare în sfârșit, în loc să o porți singur.",
+        "advice": "Spune-ți îngrijorarea cu voce tare cuiva. Rareori supraviețuiește contactului cu lumina zilei la fel de intactă cum pare acum."
+      },
+      "ten": {
+        "keywords": [
+          "punctul cel mai de jos",
+          "final dureros",
+          "trădare"
+        ],
+        "upright": "un final care este pe cât de definitiv, pe atât de dureros — ce a fost mai rău a trecut deja, și de aici nu poți merge decât în sus.",
+        "reversed": "rezistența la un final care s-a produs deja sau o recuperare lentă și parțială după ceva ce nu s-a vindecat complet încă.",
+        "advice": "Lasă acest final să fie complet. Lupta de a-l menține pe jumătate viu doar prelungește durerea."
+      },
+      "page": {
+        "keywords": [
+          "curiozitate",
+          "vigilență",
+          "sete de adevăr"
+        ],
+        "upright": "o minte alertă, care pune întrebări, adunând informații și observând atent înainte de a decide ce să creadă.",
+        "reversed": "bârfa care ține locul unei investigații reale sau idei care nu trec niciodată de la vorbe la acțiune concretă.",
+        "advice": "Continuă să pui întrebări, dar în cele din urmă acționează conform a ceea ce îți spun răspunsurile."
+      },
+      "knight": {
+        "keywords": [
+          "acțiune decisivă",
+          "asertivitate",
+          "gândire rapidă"
+        ],
+        "upright": "a te mișca rapid și a vorbi direct, trecând direct la subiect fără a aștepta permisiunea nimănui.",
+        "reversed": "agresivitate care depășește judecata sau decizii impulsive luate mai repede decât cerea situația.",
+        "advice": "Acționează decisiv, dar trage aer în piept înainte de a rosti cea mai tăioasă versiune a ceea ce gândești."
+      },
+      "queen": {
+        "keywords": [
+          "gândire independentă",
+          "limite clare",
+          "comunicare directă"
+        ],
+        "upright": "a vedea situațiile clar și a spune lucrurilor pe nume fără a le îndulci mai mult decât cere adevărul.",
+        "reversed": "directețe care a virat spre răceală sau limite ținute atât de rigid încât nimeni nu se poate apropia.",
+        "advice": "Păstrează claritatea, dar verifică dacă duritatea este necesară sau este doar mai ușoară decât a fi blând."
+      },
+      "king": {
+        "keywords": [
+          "autoritate intelectuală",
+          "gândire structurată",
+          "adevăr imparțial"
+        ],
+        "upright": "judecată bazată pe principii și dovezi, mai degrabă decât pe sentimente — corectă, precisă și greu de contestat.",
+        "reversed": "logica folosită ca armă sau autoritate care este corectă din punct de vedere tehnic, dar totuși crudă.",
+        "advice": "Ai dreptate, dar nu lăsa faptul că ai dreptate să fie o scuză pentru a fi nepoliticos."
+      }
+    },
+    "pentacles": {
+      "ace": {
+        "keywords": [
+          "oportunitate nouă",
+          "prosperitate",
+          "manifestare"
+        ],
+        "upright": "o oportunitate concretă care îți cade în mâini — practică, reală și pe care merită să construiești, nu doar să o admiri.",
+        "reversed": "o oportunitate ratată din cauza momentului nepotrivit sau a planificării deficitare, ori un început promițător care nu a fost dus la bun sfârșit.",
+        "advice": "Fă pasul practic acum. Acest tip de oportunitate răsplătește perseverența mai mult decât entuziasmul."
+      },
+      "two": {
+        "keywords": [
+          "echilibru",
+          "adaptabilitate",
+          "gestionarea priorităților"
+        ],
+        "upright": "menținerea mai multor cerințe în mișcare simultan, ajustându-te din mers în loc să renunți la vreuna dintre ele.",
+        "reversed": "o prioritate în plus adăugată amestecului, ceea ce face ca ceva să scape de sub control când nu ar fi trebuit.",
+        "advice": "Analizează onest ceea ce jonglezi. S-ar putea ca ceva de aici să trebuiască lăsat deoparte, nu echilibrat cu și mai mult efort."
+      },
+      "three": {
+        "keywords": [
+          "colaborare",
+          "abilitate",
+          "munca în echipă"
+        ],
+        "upright": "abilități diferite care se combină pentru a crea ceva ce niciuna nu ar fi putut construi singură — progres solid realizat printr-o colaborare reală.",
+        "reversed": "lucrul în izolare la ceva ce avea nevoie de alte mâini, sau o echipă care a încetat să mai tragă în aceeași direcție.",
+        "advice": "Adu ajutorul de care este nevoie. Acesta nu este un proiect care poate fi construit bine de unul singur."
+      },
+      "four": {
+        "keywords": [
+          "securitate",
+          "control",
+          "a ține strâns"
+        ],
+        "upright": "o strângere fermă a ceea ce ai construit, prioritizând securitatea în detrimentul riscului, chiar și cu prețul unei oarecare flexibilități.",
+        "reversed": "a te agăța atât de strâns încât nimic nou nu poate intra, sau frica de pierdere care ghidează deciziile mai mult decât orice amenințare reală.",
+        "advice": "Slăbește puțin strânsoarea. Ceea ce protejezi nu este atât de fragil pe cât pare."
+      },
+      "five": {
+        "keywords": [
+          "dificultate",
+          "pierdere financiară",
+          "izolare"
+        ],
+        "upright": "dificultăți reale, resimțite la fel de mult în izolare ca și în pierderea în sine — te lupți simțind că ajutorul este de neatins.",
+        "reversed": "primele semne că sprijinul devine disponibil, sau dificultățile încep în sfârșit să se diminueze după o perioadă grea.",
+        "advice": "Caută ușa care este deschisă în apropiere. Ajutorul există, chiar dacă nu pare așa încă."
+      },
+      "six": {
+        "keywords": [
+          "generozitate",
+          "a da și a primi",
+          "echilibru"
+        ],
+        "upright": "resurse care circulă echitabil între oameni — ajutor oferit pentru că este nevoie de el și primit fără rușine.",
+        "reversed": "generozitate care vine cu condiții, sau un schimb care a devenit în liniște dezechilibrat.",
+        "advice": "Verifică dacă ceea ce se oferă aici este gratuit sau dacă se datorează ceva la schimb."
+      },
+      "seven": {
+        "keywords": [
+          "răbdare",
+          "perspectivă pe termen lung",
+          "evaluarea progresului"
+        ],
+        "upright": "o pauză pentru a evalua efortul deja investit, cântărind dacă dă roade sau dacă este nevoie de o schimbare de direcție.",
+        "reversed": "nerăbdare față de un rezultat care încă nu a apărut, sau efort continuat pe o cale care a încetat să mai fie profitabilă.",
+        "advice": "Fă o analiză onestă. O parte din acest efort merită mai multă răbdare; o altă parte merită un plan nou."
+      },
+      "eight": {
+        "keywords": [
+          "diligență",
+          "măiestrie",
+          "dezvoltarea abilităților"
+        ],
+        "upright": "efort constant și repetat, menit să te facă cu adevărat bun la ceva — neînsemnat, dar exact ceea ce necesită măiestria.",
+        "reversed": "perfecționismul care blochează progresul real sau scurtături luate la o muncă ce merita efortul deplin.",
+        "advice": "Continuă să faci repetițiile neînsemnate. Așa arată abilitatea în timp ce este construită."
+      },
+      "nine": {
+        "keywords": [
+          "autosuficiență",
+          "abundență",
+          "independență"
+        ],
+        "upright": "confort și abundență câștigate în mare parte prin forțe proprii — o autosuficiență care nu are nevoie de aprobarea nimănui.",
+        "reversed": "succes care arată bine din exterior în timp ce se simte gol pe dinăuntru, sau suprasolicitare care a alungat pe oricine cu care te-ai fi putut bucura de el.",
+        "advice": "Bucură-te de ceea ce ai construit fără a avea nevoie ca altcineva să confirme că valorează ceva."
+      },
+      "ten": {
+        "keywords": [
+          "moștenire",
+          "securitate pe termen lung",
+          "avere de familie"
+        ],
+        "upright": "stabilitate care durează mai mult decât o singură persoană — o moștenire sau o fundație construită pentru a susține mai mult decât doar pe tine.",
+        "reversed": "o moștenire sub presiune sau dezacorduri de familie asupra resurselor care amenință ceva construit să dureze.",
+        "advice": "Protejează ceea ce este menit să te supraviețuiască, dar nu lăsa disputele asupra acestuia să distrugă scopul pentru care a fost construit."
+      },
+      "page": {
+        "keywords": [
+          "oportunitate nouă",
+          "studiu",
+          "curiozitate practică"
+        ],
+        "upright": "o oportunitate practică ce merită studiată îndeaproape — nouă, promițătoare și încă în etapa de învățare a modului în care funcționează.",
+        "reversed": "planuri nerealiste care nu au fost testate în realitate sau progres care a stagnat înainte de a începe cu adevărat.",
+        "advice": "Studiază această oportunitate îndeaproape înainte de a te angaja mai mult. Este promițătoare, dar încă neconfirmată."
+      },
+      "knight": {
+        "keywords": [
+          "diligență",
+          "rutină",
+          "progres metodic"
+        ],
+        "upright": "progres lent, metodic, de încredere — fără scurtături, doar muncă constantă care se adună în timp.",
+        "reversed": "rutină care s-a calcificat în stagnare sau perfecționism atât de rigid încât a împiedicat orice finalizare.",
+        "advice": "Ai încredere în metoda lentă care funcționează. Nu trebuie să fie mai rapidă pentru a fi eficientă."
+      },
+      "queen": {
+        "keywords": [
+          "hrănire",
+          "ingeniozitate",
+          "stabilitate"
+        ],
+        "upright": "grijă practică ce se manifestă în moduri tangibile — confort, resurse și stabilitate oferite cu generozitate celorlalți.",
+        "reversed": "grija pentru ceilalți venind cu prețul grijii pentru tine însuți, sau insecuritatea legată de resurse care subminează acea generozitate.",
+        "advice": "Extinde aceeași grijă practică și asupra ta, pe care o oferi atât de ușor tuturor celorlalți."
+      },
+      "king": {
+        "keywords": [
+          "măiestrie materială",
+          "securitate financiară",
+          "generozitate"
+        ],
+        "upright": "măiestrie materială și financiară construită în timp, acum suficient de generoasă pentru a împărtăși securitatea creată.",
+        "reversed": "controlul asupra resurselor care devine rigid sau posesiv, ori securitatea financiară urmărită cu prețul a orice altceva.",
+        "advice": "Folosește cu generozitate ceea ce ai construit. Securitatea care nu este împărtășită devine, în cele din urmă, doar izolare."
+      }
+    }
+  }
+}

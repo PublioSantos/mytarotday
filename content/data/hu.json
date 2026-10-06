@@ -1,0 +1,925 @@
+{
+  "ui": {
+    "logo": "MyTarot.Day",
+    "tagline": "100%-ban ingyenes napi tarot jóslás, a születési dátumod alapján személyre szabva. Regisztráció nélkül, örökre ingyen.",
+    "eyebrow": "Négy kártya. Egy nap.",
+    "selectCardsPrompt": "Válassz 4 lapot",
+    "heroTitleLine1": "Mit mondanak a mai kártyák",
+    "heroTitleEm": "neked",
+    "submitLabel": "Kártyák megjelenítése",
+    "submittingLabel": "Húzás folyamatban…",
+    "loadingText": "Keverem a paklit erre a napra: {date}…",
+    "tryAnotherLabel": "Készítsünk másik jóslást?",
+    "buyMeCoffeeLabel": "☕  Vegyél nekem egy kávét 🤗",
+    "funFact": "Érdekesség: A tarot kártyáink vintage megjelenése hiteles. Az 1909-es hagyományos Rider–Waite–Smith Tarot-ot használjuk, Pamela Colman Smith eredeti illusztrációival. Több mint egy évszázaddal később ez a klasszikus pakli továbbra is inspirálja az olvasókat világszerte, és a modern tarot egyik legmeghatározóbb alapjának tekintik.",
+    "footerDisclaimer": "A MyTarot.Day elmélkedési és szórakoztatási célokat szolgál. Nem helyettesíti a professzionális, orvosi, pénzügyi vagy jogi tanácsadást.",
+    "footerTagline": "Fejlesztette a P.San Team | Ingyenes, és az is marad!",
+    "footerHome": "Kezdőlap",
+    "footerBlog": "Blog",
+    "footerPrivacy": "Adatvédelmi irányelvek",
+    "footerTerms": "Felhasználási feltételek",
+    "footerAbout": "Rólunk",
+    "footerContact": "Kapcsolat",
+    "todayBadge": "Ma",
+    "reversedLabel": "Fordított",
+    "uprightLabel": "Egyenes",
+    "supportPromptText": "Tetszett? Hívj meg egy kávéra",
+    "summaryGuideLabel": "Útmutató",
+    "summaryPastLabel": "Múlt",
+    "summaryFutureLabel": "Jövő",
+    "freeBadge": "100% ingyenes — regisztráció és költségek nélkül",
+    "freeTitlePhrase": "Ingyenes tarot jóslás"
+  },
+  "positions": {
+    "determinant": {
+      "label": "A Meghatározó",
+      "subtitle": "Az erő, amely az egész napot formálja",
+      "intros": [
+        "Minden más felett ma ez áll:",
+        "A kártya, amely megadja az egész nap alaphangját:",
+        "Mindenekelőtt a napot ez formálja:"
+      ]
+    },
+    "past": {
+      "label": "A Múlt",
+      "subtitle": "Amit magaddal hozol",
+      "intros": [
+        "Mögötted, még mindig hatással van erre a pillanatra:",
+        "Amit a közelmúltból magaddal hozol:",
+        "A múlt, amely táplálja a mait, ezzel van jelölve:"
+      ]
+    },
+    "present": {
+      "label": "A Jelen",
+      "subtitle": "Ahol éppen állsz",
+      "intros": [
+        "Éppen most, a dolgok középpontjában:",
+        "Ahol ma valójában állsz:",
+        "A jelen pillanatban ezzel foglalkozol:"
+      ]
+    },
+    "future": {
+      "label": "A Jövő",
+      "subtitle": "Ami felé tartasz",
+      "intros": [
+        "Közvetlenül előtted, ez felé haladsz:",
+        "Ami felé ez tart, ha semmi sem változik:",
+        "A közeljövő erre mutat:"
+      ]
+    }
+  },
+  "summaryClauses": [
+    "Együtt olvasva a mai kirakás egy vonalat húz {past} és {future} között, ahol {determinant} határozza meg, hogyan bontakozik ki mindez.",
+    "A mai vezérfonal abból indul ki, amit {past} már megtanított neked, át azon, ahol most állsz, egészen {future} felé – mindezt {determinant} színezi."
+  ],
+  "ranks": {
+    "ace": "Ász",
+    "two": "Kettes",
+    "three": "Hármas",
+    "four": "Négyes",
+    "five": "Ötös",
+    "six": "Hatos",
+    "seven": "Hetes",
+    "eight": "Nyolcas",
+    "nine": "Kilences",
+    "ten": "Tizes",
+    "page": "Apród",
+    "knight": "Lovag",
+    "queen": "Királynő",
+    "king": "Király"
+  },
+  "suits": {
+    "wands": "Botok",
+    "cups": "Kelyhek",
+    "swords": "Kardok",
+    "pentacles": "Érmék"
+  },
+  "majorArcana": {
+    "0": {
+      "name": "A Bolond",
+      "keywords": [
+        "kezdetek",
+        "ártatlanság",
+        "hitből fakadó ugrás",
+        "nyitottság"
+      ],
+      "upright": "egy friss kezdet térkép és garanciák nélkül — nincs más, csak a kíváncsiság és a bátorság, hogy előre lépj, mielőtt minden válasz megérkezne.",
+      "reversed": "óvatosságnak álcázott habozás, egy olyan lépés, amit annyiszor elpróbáltál, hogy sosem teszel meg — vagy az ellenkezője: egy vak ugrás, anélkül, hogy ellenőriznéd, mi van alatta.",
+      "advice": "Légy újra kezdő. Az egyetlen hiba itt az, ha megtagadod a kezdést."
+    },
+    "1": {
+      "name": "A Mágus",
+      "keywords": [
+        "talpraesettség",
+        "akaraterő",
+        "megnyilvánulás"
+      ],
+      "upright": "felismerni, hogy minden eszköz, amire a helyzetnek szüksége van — értelem, készség, időzítés — már a kezedben van, és ezek tudatos használata az egyetlen hátramaradt lépés.",
+      "reversed": "kihasználatlan tehetség, vagy manipulációra fordított készség az építés helyett. Akárhogy is, a képesség kárba vész, vagy az önbizalom inkább csak színjáték, mint alap.",
+      "advice": "Ne gyűjts több eszközt. Vedd kézbe azt, ami már nálad van, és használd."
+    },
+    "2": {
+      "name": "A Főpapnő",
+      "keywords": [
+        "intuíció",
+        "tudattalan",
+        "rejtett tudás"
+      ],
+      "upright": "tudás, amely a szavakon túl érkezik — egy megérzés, egy álom, egy érzés, amely végül pontosabbnak bizonyul, mint bármely bizonyíték, ami akkor a rendelkezésedre állt.",
+      "reversed": "egy csendes igazság, amit elnyom a zaj, vagy egy ösztön, amit titokban tartasz, mert még nem tudod bizonyítani.",
+      "advice": "Bízz abban, amit már érzel, de még nem mondtál ki hangosan. Olyasmit tud, amit az érvelésed még nem ért el."
+    },
+    "3": {
+      "name": "Az Uralkodónő",
+      "keywords": [
+        "bőség",
+        "gondoskodás",
+        "kreativitás",
+        "növekedés"
+      ],
+      "upright": "a növekedés egy olyan időszaka, amely törődést igényel, nem kényszert — egy projekt, kapcsolat vagy önmagad egy része, amely akkor virágzik, ha táplálják, nem pedig ha sürgetik.",
+      "reversed": "a gondoskodás vagy kreativitás fojtogatóvá válik, vagy a termékeny talaj parlagon hever, amíg már semmit sem terem.",
+      "advice": "Fordíts figyelmet arra, ami fontos neked, ahelyett, hogy nyomást gyakorolnál rá. A türelem az, ami növeszti."
+    },
+    "4": {
+      "name": "Az Uralkodó",
+      "keywords": [
+        "struktúra",
+        "tekintély",
+        "fegyelem",
+        "stabilitás"
+      ],
+      "upright": "célzatosan épített rend — egy keret, határ vagy terv, amely elég szilárd ahhoz, hogy a jó szándékot valódi nyomás alatt is megtartsa.",
+      "reversed": "túl szorosan fogott irányítás, vagy egy olyan laza struktúra, amelyben semmi sem marad egyenesen.",
+      "advice": "Állítsd fel az állványzatot, mielőtt felépíted a házat. A mostani struktúra később energiát takarít meg."
+    },
+    "5": {
+      "name": "A Főpap",
+      "keywords": [
+        "hagyomány",
+        "hitrendszerek",
+        "útmutatás",
+        "konvenció"
+      ],
+      "upright": "bejáratott csatornákon keresztül átadott bölcsesség — egy mentor, intézmény vagy hagyomány, amelynek útmutatása még érdemes a követésre, legalábbis egyelőre.",
+      "reversed": "puszta szokásból fenntartott szabály, vagy egy konvenció, amely már régen nem érdemli ki a hűséget.",
+      "advice": "Először tanuld meg a kijelölt utat. Döntsd el később, hogy elhagyod-e."
+    },
+    "6": {
+      "name": "A Szeretők",
+      "keywords": [
+        "kapcsolat",
+        "értékek",
+        "választás",
+        "összhang"
+      ],
+      "upright": "valódi összhang emberek, értékek vagy utak között — egy választás, amely azért számít, mert azt fejezi ki, ami mellett kiállsz, nem csak azt, amit kedvelsz.",
+      "reversed": "egy csendben eltűrt összeférhetetlenség, vagy egy elkerült döntés, mert a kimondása nehezebb beszélgetést indítana el.",
+      "advice": "Nevezd meg a választást tisztán, még akkor is, ha az őszinte válasz bonyolultabbá teszi a dolgokat."
+    },
+    "7": {
+      "name": "A Diadalszekér",
+      "keywords": [
+        "akaraterő",
+        "eltökéltség",
+        "győzelem irányítással"
+      ],
+      "upright": "előrehaladás, amelyet úgy nyersz el, hogy két ellentétes erőt egy kézben tartasz, és mindkettőt ugyanabba az irányba kormányzod.",
+      "reversed": "a belső konfliktusok által felemésztett lendület, vagy egy olyan győzelem, amelyért annyira küzdöttél, hogy eltaposta azt, amit védenie kellett volna.",
+      "advice": "Ne küzdj tovább a saját ellentmondásaiddal. Mutass velük ugyanabba az irányba, és indulj."
+    },
+    "8": {
+      "name": "Az Erő",
+      "keywords": [
+        "bátorság",
+        "türelem",
+        "csendes elszántság",
+        "együttérzés"
+      ],
+      "upright": "olyan erő, amelynek sosem kell felemelnie a hangját — egyfajta állhatatosság, amely abból fakad, hogy békét kötsz a nehéz dologgal, nem pedig eltemeted.",
+      "reversed": "az önbizalomhiány, amely az alázatot álcaként viseli, vagy olyan erőszak, ahol a türelem többet ért volna.",
+      "advice": "Találkozz azzal, amitől félsz, nyugalommal, ne erővel. A gyengédség nem gyengeség."
+    },
+    "9": {
+      "name": "A Remete",
+      "keywords": [
+        "önvizsgálat",
+        "egyedüllét",
+        "belső útmutatás"
+      ],
+      "upright": "szükséges visszavonulás — hátralépni a zajból, hogy meghalld, mit gondolsz te, nem csak azt, amit mindenki körülötted mond.",
+      "reversed": "az elszigeteltség elkerüléssé válik, vagy a bölcsesség olyan szorosan tartva, hogy sosem éri el azokat, akiknek szükségük lenne rá.",
+      "advice": "Válaszd az egyedüllétet. Bármilyen választ is keresel, az nem a tömegben fog megjelenni."
+    },
+    "10": {
+      "name": "A Szerencsekerék",
+      "keywords": [
+        "ciklusok",
+        "változás",
+        "sors",
+        "fordulópontok"
+      ],
+      "upright": "már folyamatban lévő változás, amelyet az egyetlen választásnál nagyobb erők hajtanak — a körülmények olyan fordulata, amely megváltoztatja a dolgok feltételeit.",
+      "reversed": "egy ciklus, amely megismétli önmagát, mert a mögötte lévő minta nem változott — csak a jelmeze.",
+      "advice": "Ne próbáld irányítani a fordulatot. Fektess energiát abba, hogyan reagálsz, amikor földet ér."
+    },
+    "11": {
+      "name": "Az Igazság",
+      "keywords": [
+        "méltányosság",
+        "igazság",
+        "ok és okozat",
+        "tisztánlátás"
+      ],
+      "upright": "tisztességes elszámolás, még ha nem is kényelmes — tiszta tekintet az ok-okozati összefüggésekre és arra, mivel tartozol.",
+      "reversed": "egy egyensúlytalanság, amivel senki sem foglalkozik, vagy egy igazság, amit kikerülnek, mert a szembenézés elszámoltathatóságot követelne.",
+      "advice": "Nézz a helyzetre anélkül, hogy hízelegnél magadnak. A méltányosság az őszinte elszámolással kezdődik."
+    },
+    "12": {
+      "name": "Az Akasztott Ember",
+      "keywords": [
+        "megadás",
+        "új perspektíva",
+        "szünet"
+      ],
+      "upright": "a haladás, amelyet a sürgetés helyett a szünet tartásával érsz el — egy szándékos felfüggesztés, amely olyan szöget nyit meg a dolgokra, amit mozgás közben nem érhettél el.",
+      "reversed": "késleltetés önmagáért, vagy egy áldozat, amely sosem hozott valódi megértést cserébe.",
+      "advice": "Hagyd ezt megoldatlanul még egy darabig. A felismerés a várakozásban él, nem valahol azon túl."
+    },
+    "13": {
+      "name": "A Halál",
+      "keywords": [
+        "átalakulás",
+        "lezárások",
+        "elengedés"
+      ],
+      "upright": "egy valódi lezárás, amely helyet csinál valaminek, ami nem létezhetett volna mellette — nem pusztítás, hanem szükséges változás.",
+      "reversed": "egy változás, amelynek sokáig ellenálltál, miután elkerülhetetlenné vált, ami csak nehezebbé teszi a lezárást, amikor végül bekövetkezik.",
+      "advice": "Hagyd, hogy ami már véget ért, az véget is érjen. Valami másnak szüksége van a helyre, amit elfoglal."
+    },
+    "14": {
+      "name": "A Mértékletesség",
+      "keywords": [
+        "egyensúly",
+        "mértékletesség",
+        "integráció",
+        "türelem"
+      ],
+      "upright": "két dolog, amely összeegyeztethetetlennek tűnt, egy működőképes középútra talál — türelem, keverés, a megfelelő arányok megtalálásának lassú művészete.",
+      "reversed": "túl sok az egyik irányba, vagy egy olyan kompromisszum, amit olyan gyorsan összecsaptak, hogy egyik fél sem elégedett.",
+      "advice": "Lassítsd a keverést. A megfelelő egyensúlyt nem lehet egyik napról a másikra kierőszakolni."
+    },
+    "15": {
+      "name": "Az Ördög",
+      "keywords": [
+        "kötődés",
+        "korlátozás",
+        "kísértés",
+        "régi minták"
+      ],
+      "upright": "egy minta, szokás vagy dinamika, amelynek nagyobb a hatalma rajtad, mint szeretnéd beismerni — annak ellenére, hogy a kijárat ajtaja sosem volt zárva.",
+      "reversed": "az első valódi elmozdulás valamitől, ami csapdában tartott — tisztán látni a láncot azért, ami valójában.",
+      "advice": "Nézz őszintén arra, amit folyamatosan választasz, annak ellenére, hogy mibe kerül. A megnevezése a kiút kezdete."
+    },
+    "16": {
+      "name": "A Torony",
+      "keywords": [
+        "hirtelen változás",
+        "felfordulás",
+        "kinyilatkoztatás"
+      ],
+      "upright": "egy ingatag talajra épített struktúra, amely gyorsan összeomlik — zavaró, de tisztázó, mivel kisöpri azt, ami sosem volt stabil.",
+      "reversed": "a puszta elkerüléssel elodázott összeomlás, vagy egy kisebb zavar, amely mégis kimozdít valamit a helyéről.",
+      "advice": "Ne siess pontosan azt újjáépíteni, ami összeomlott. Előbb kérdezd meg, miért nem tudott állva maradni."
+    },
+    "17": {
+      "name": "A Csillag",
+      "keywords": [
+        "remény",
+        "megújulás",
+        "inspiráció",
+        "gyógyulás"
+      ],
+      "upright": "csendes remény, amely egy nehéz szakasz után tér vissza — nem naiv optimizmus, hanem egy valódi érzés, hogy a dolgok megjavíthatók, és valami jobb felé tartanak.",
+      "reversed": "a remény vékonyodik, vagy egy derűlátó kilátás, amely elszakadt minden tényleges tervtől.",
+      "advice": "Engedd meg magadnak, hogy újra remélj. Megérdemelted, és valami valós irányba mutat."
+    },
+    "18": {
+      "name": "A Hold",
+      "keywords": [
+        "bizonytalanság",
+        "tudatalatti",
+        "illúzió",
+        "intuíció"
+      ],
+      "upright": "egy helyzet, amelyet nem a puszta tények világítanak meg — ösztön, képzelet és régi félelmek keverednek, így amit látsz, az még nem a teljes kép.",
+      "reversed": "a zavarodottság kezd felszállni, vagy egy félelem, amelyről kiderül, hogy a képzeletben nagyobbnak tűnt, mint a valóságban.",
+      "advice": "Ne kényszeríts ki döntést, amíg a kép még ennyire tisztázatlan. Várj több fényre."
+    },
+    "19": {
+      "name": "A Nap",
+      "keywords": [
+        "öröm",
+        "életerő",
+        "tisztánlátás",
+        "siker"
+      ],
+      "upright": "tiszta szerencse — tisztánlátás, melegség, egy eredmény, amely nem szorul második találgatásra.",
+      "reversed": "az örömöt elhomályosítja a túlgondolás, vagy egy siker, amit nem hagynak, hogy beengedj és élvezz azért, ami.",
+      "advice": "Hagyd, hogy ez olyan jó legyen, amilyen. Nem kell keresned a csapdát."
+    },
+    "20": {
+      "name": "Az Ítélet",
+      "keywords": [
+        "elszámolás",
+        "ébredés",
+        "reflexió",
+        "feloldozás"
+      ],
+      "upright": "őszinte elszámolás azzal, hol jártál, és egy hívás, hogy lépj be önmagad egy olyan verziójába, amely megfelel annak, amit tanultál.",
+      "reversed": "az önítélet keménységgé válik, vagy egy ébresztő, amit még egy kicsit elhalasztanak.",
+      "advice": "Válaszolj a hívásra tisztán. Bármit is kerültél eddig, most készen állsz a szembenézésre."
+    },
+    "21": {
+      "name": "A Világ",
+      "keywords": [
+        "befejezés",
+        "teljesség",
+        "megérkezés"
+      ],
+      "upright": "egy ciklus tiszta lezárása, mindazzal a tudással a kézben, amit tanítania kellett — a valódi megérkezés érzése, mielőtt a következő utazás elkezdődik.",
+      "reversed": "egy majdnem kész állapot, amelyből még hiányzik az utolsó darab, vagy a lezárás keresése, mielőtt eljönne az ideje.",
+      "advice": "Ismerd el, milyen messzire jutottál, mielőtt a következő dolog felé rohannál."
+    }
+  },
+  "minorArcana": {
+    "wands": {
+      "ace": {
+        "keywords": [
+          "inspiráció",
+          "új vállalkozás",
+          "kreatív szikra"
+        ],
+        "upright": "Hirtelen érkező kreatív energia – egy ötlet, ajánlat vagy lehetőség, amely még formálatlan, de már vonz magához.",
+        "reversed": "Inspiráció, amely elakad, mielőtt cselekvéssé válna, vagy egy új vállalkozás iránti lelkesedés, amely még az indulás előtt kihűl.",
+        "advice": "Cselekedj a szikra alapján most, amíg forró. Ha a tökéletes tervre vársz, csak hagyod, hogy elhalványuljon."
+      },
+      "two": {
+        "keywords": [
+          "tervezés",
+          "jövőkép",
+          "személyes erő"
+        ],
+        "upright": "Kényelmes kilátóponton állsz, előtted valódi lehetőségekkel; azt méricskéled, amit eddig felépítettél, és hová vihetnéd tovább.",
+        "reversed": "Túlzott óvatosság az ismeretlentől való félelem miatt, vagy egy jövőbeli terv, amelyet sosem tesztelnek a valóságban.",
+        "advice": "Ne csak a kilátást csodáld onnan, ahol állsz. Válassz egy irányt, és indulj el felé."
+      },
+      "three": {
+        "keywords": [
+          "terjeszkedés",
+          "előrelátás",
+          "eredményekre várás"
+        ],
+        "upright": "A várakozás ideje a munka elvégzése után – a hajók már úton vannak, az eredmények még nem érkeztek meg, de az alapok elég szilárdak a bizalomhoz.",
+        "reversed": "Késedelmek egy olyan tervnél, amely biztosnak tűnt, vagy egy szélesebb látókör, amely olyan akadályokat tár fel, amelyekkel nem számoltál.",
+        "advice": "Tartsd a szemed a horizonton még egy kicsit. Amit elindítottál, az még úton van feléd."
+      },
+      "four": {
+        "keywords": [
+          "ünneplés",
+          "hazatérés",
+          "mérföldkő"
+        ],
+        "upright": "Egy mérföldkő, amelynél érdemes megállni – hazatérés, ünneplés, annak az érzése, hogy kiérdemelted ezt a nyugodt pillanatot.",
+        "reversed": "Ünneplés, amely üresnek érződik, vagy az otthon és az összetartozás érzése, amely még nem teljesen ért el hozzád.",
+        "advice": "Engedd meg magadnak, hogy teljes mértékben élvezd ezt. Nem minden jó pillanatot kell azonnal a következő feladatnak követnie."
+      },
+      "five": {
+        "keywords": [
+          "versengés",
+          "súrlódás",
+          "nézeteltérés"
+        ],
+        "upright": "Összecsapó akaratok a nyílt színen – zajos, talán kimerítő, de őszinte, és jobb, mint ha a feszültség a felszín alatt fortyogna.",
+        "reversed": "A konfliktus végre veszít az erejéből, vagy egy rivalizálás, amelyről kiderül, hogy több volt benne a póz, mint a tartalom.",
+        "advice": "Ne téveszd össze ezt a súrlódást a kudarccal. Az egymásnak feszülő ötletek élesítik egymást, ha senki sem fél hangosan vitatkozni."
+      },
+      "six": {
+        "keywords": [
+          "győzelem",
+          "elismerés",
+          "önbizalom"
+        ],
+        "upright": "Olyan győzelem, amelyet mások is látnak – nyilvános elismerés olyan erőfeszítésekért, amelyek eddig többnyire láthatatlanok voltak.",
+        "reversed": "A büszkeség arroganciába fordul, vagy egy győzelem, amely sosem kapta meg a megérdemelt elismerést.",
+        "advice": "Fogadd el az elismerést anélkül, hogy megpróbálnád megmagyarázni vagy kisebbíteni. Kiérdemelted a győzelmet; hagyd, hogy önmagáért beszéljen."
+      },
+      "seven": {
+        "keywords": [
+          "védekezés",
+          "kitartás",
+          "álláspont védelme"
+        ],
+        "upright": "Olyan pozíciót tartasz, amelyet most mindenki más el akar venni tőled – fárasztó, de bizonyíték arra, hogy amit építettél, az megérdemli a védelmet.",
+        "reversed": "Feladod a pozíciódat, pedig nem kellett volna, vagy olyan sokáig védekezel, hogy szem elől tévesztetted, miért is volt fontos.",
+        "advice": "Tartsd a frontot, de ellenőrizd, hogy még mindig a megfelelő dombért harcolsz-e."
+      },
+      "eight": {
+        "keywords": [
+          "lendület",
+          "gyors cselekvés",
+          "gyors mozgás"
+        ],
+        "upright": "Minden hirtelen egyszerre mozdul meg – üzenetek érkeznek, tervek gyorsulnak fel, a hosszú várakozás utáni gyors mozgás időszaka.",
+        "reversed": "A lendület pont akkor akad el, amikor a legfontosabb lenne, vagy a dolgok olyan gyorsan változnak, hogy semminek nincs ideje leülepedni.",
+        "advice": "Mozogj gyorsan, amíg tiszta az út, de ne fuss gyorsabban, mint ahogy reagálni tudsz a következő eseményekre."
+      },
+      "nine": {
+        "keywords": [
+          "rugalmasság",
+          "utolsó védvonal",
+          "óvatos kitartás"
+        ],
+        "upright": "Még egy utolsó erőfeszítésre van szükség egy hosszú sorozat után – fáradt vagy, óvatos, de még mindig állsz, és közelebb vagy a végéhez, mint gondolnád.",
+        "reversed": "A védekezés elszigeteltséggé keményedik, vagy a kimerültség miatt minden hátralévő kihívás nagyobbnak tűnik, mint amekkora valójában.",
+        "advice": "Eddig minden kört túléltél. Ne hagyd, hogy az óvatosság megakadályozzon abban, hogy segítséget kérj ehhez az utolsó lépéshez."
+      },
+      "ten": {
+        "keywords": [
+          "teher",
+          "túlterheltség",
+          "nehezen kivívott befejezés"
+        ],
+        "upright": "Többet cipelsz a részednél, mert már olyan közel vagy a célvonalhoz, hogy most letenni azt pazarlásnak tűnik.",
+        "reversed": "Makacsságból cipelt teher, vagy végre letett munka, amit túl sokáig hordoztál.",
+        "advice": "Kérdezd meg magadtól, mit cipelsz, ami sosem volt a te feladatod befejezni. Ebből a súlyból osztozhatsz másokkal, vagy le is teheted."
+      },
+      "page": {
+        "keywords": [
+          "felfedezés",
+          "új ötlet",
+          "lelkesedés"
+        ],
+        "upright": "Egy ötlet, ami annyira izgalmas, hogy nem tudsz nyugton maradni tőle – nyugtalan kíváncsiság, amely azonnal ki akarja próbálni magát a világban.",
+        "reversed": "Lelkesedés következetesség nélkül, vagy hangosan bejelentett tervek, amelyeket aztán csendben elhagynak.",
+        "advice": "Engedd, hogy a lelkesedés hajtson, de adj az ötletnek legalább egy valódi próbát, mielőtt a következő után vetnéd magad."
+      },
+      "knight": {
+        "keywords": [
+          "kaland",
+          "impulzivitás",
+          "merész törekvés"
+        ],
+        "upright": "Teljes önbizalommal száguldasz a következő dolog felé, inkább a hajsza iránti vágy hajt, mint egy rögzített terv.",
+        "reversed": "Megfontolatlanság, amely kezdi megbosszulni magát, vagy nyugtalan energia, amelynek nincs hová produktívan áramlania.",
+        "advice": "Hozd kontroll alá ezt a merészséget, mielőtt az kezdene el irányítani téged, ahelyett, hogy te irányítanád őt."
+      },
+      "queen": {
+        "keywords": [
+          "önbizalom",
+          "függetlenség",
+          "mágnesesség"
+        ],
+        "upright": "Meleg, megingathatatlan önbizalom, amely vonzza az embereket anélkül, hogy meg kellene felelned nekik.",
+        "reversed": "Önbizalom, amely rideggé vagy követelőzővé vált, vagy függetlenség, amelyet arra használsz, hogy kizárd másokat, ahelyett, hogy a saját lábadon állnál.",
+        "advice": "Vezess azzal az önbizalommal, ami már megvan benned. Nem kell először senki másnak bizonyítanod."
+      },
+      "king": {
+        "keywords": [
+          "jövőkép",
+          "vezetés",
+          "merész vállalkozói szellem"
+        ],
+        "upright": "Vezetés, amely példamutatással inspirál – merész jövőkép párosul a megvalósításhoz szükséges kitartással.",
+        "reversed": "Magas elvárások, amelyek teljesíthetetlenné váltak, vagy olyan könyörtelen ambíció, amely felégeti azokat, akik segítenek neked.",
+        "advice": "Vezesd a jövőképet, de ellenőrizd, hogy azok, akik veled együtt valósítják meg, még mindig ott akarnak-e lenni."
+      }
+    },
+    "cups": {
+      "ace": {
+        "keywords": [
+          "új szerelem",
+          "érzelmi megnyílás",
+          "túlcsordulás"
+        ],
+        "upright": "egy érzelmi kehely, amely túlárad a peremén – új szerelem, új együttérzés, vagy egy olyan teljesség, amelynek muszáj utat törnie magának.",
+        "reversed": "egy érzelmi megnyílás, amelyet visszatartanak, vagy felkínált szeretet és kapcsolat, amit még nem engedtek be.",
+        "advice": "Hagyd, hogy ez az érzés olyan teljes legyen, amilyen. Nem kell adagolnod valamit, ami ennyire valóságos."
+      },
+      "two": {
+        "keywords": [
+          "párkapcsolat",
+          "kölcsönös vonzalom",
+          "egyesülés"
+        ],
+        "upright": "két ember, akik egyenrangú félként találkoznak – egy kötelék, amely kölcsönös és nagyjából egyenlő feltételek mellett alakul vagy mélyül.",
+        "reversed": "egy kapcsolat, amely egyoldalúvá vált, vagy egy olyan kötelék, amely olyan feszültség alatt áll, amit még nem mondtak ki hangosan.",
+        "advice": "Ellenőrizd, hogy ez a kapcsolat még mindig olyan kölcsönös-e, mint amilyennek indult. Mondd ki tisztán, ha valami megváltozott."
+      },
+      "three": {
+        "keywords": [
+          "barátság",
+          "ünneplés",
+          "közösség"
+        ],
+        "upright": "az öröm, amelyet jobb megosztani – egy összejövetel, egy barátság, egy pillanat, amit érdemes megünnepelni azokkal, akik melletted álltak.",
+        "reversed": "egy csoportdinamika, amely pletykálkodásba vagy kirekesztésbe fordul, vagy túlzásba vitt élvezetek, amelyek elhomályosítják az igazi ünneplést.",
+        "advice": "Vond be azokat, akik a legfontosabbak számodra ebbe a pillanatba. Az ünneplés többet ér, ha nem egyedül teszed."
+      },
+      "four": {
+        "keywords": [
+          "apátia",
+          "elmélkedés",
+          "elmulasztott lehetőség"
+        ],
+        "upright": "unalom azzal, ami már az asztalon van, annak ellenére, hogy valami figyelemre méltó dolog kínálkozik éppen előtted.",
+        "reversed": "az apátia végre enged a szorításából, vagy hajlandóság arra, hogy felnézz és mérlegeld a lehetőséget, amit eddig figyelmen kívül hagytál.",
+        "advice": "Nézz fel onnan, ami csalódást okoz, és vedd észre, mit kínálnak neked. Lehet, hogy többet ér, mint elsőre látszott."
+      },
+      "five": {
+        "keywords": [
+          "veszteség",
+          "gyász",
+          "megbánás"
+        ],
+        "upright": "a gyász arra összpontosít, ami kiömlött és elveszett, miközben valami ép dolog még mindig ott áll a közelben, észrevétlenül.",
+        "reversed": "a gyász kezd enyhülni, vagy az első valódi lépések a veszteség elfogadása felé, ahelyett, hogy újra és újra átélnéd.",
+        "advice": "Gyászold meg, ami valóban elveszett, de fordulj meg elég hosszú időre ahhoz, hogy lásd, mi áll még mindig mögötted."
+      },
+      "six": {
+        "keywords": [
+          "nosztalgia",
+          "emlék",
+          "ártatlanság"
+        ],
+        "upright": "vonzódás az egyszerűbb idők felé – régi emlékek, ismerős kényelem, vagy találkozás valakivel egy korábbi életszakaszból.",
+        "reversed": "a nosztalgia, amely búvóhellyé vált, vagy egy idealizált múlt, amely miatt a jelen rosszabbnak tűnik, mint amilyen valójában.",
+        "advice": "Látogass el a múltba a vigaszért, de ne költözz vissza. Amire most szükséged van, az a jelenben él."
+      },
+      "seven": {
+        "keywords": [
+          "fantázia",
+          "választások",
+          "illúzió"
+        ],
+        "upright": "túl sok csábító lehetőség, amelyek közül némelyik szilárdabb a többinél, így nehéz megkülönböztetni a valódi esélyt a vágyálmoktól.",
+        "reversed": "a köd annyira kitisztul, hogy látod, mely lehetőségek voltak valósak, és végre döntés születhet.",
+        "advice": "Mielőtt választanál, mérd meg minden lehetőségedet a valósággal. Nem minden, ami itt csillog, állja majd ki az idő próbáját."
+      },
+      "eight": {
+        "keywords": [
+          "továbblépés",
+          "mélyebb értelem keresése",
+          "távozás"
+        ],
+        "upright": "továbblépés valamiből, ami kívülről rendben lévőnek tűnik, mert belülről már nem táplál téged.",
+        "reversed": "maradás valahol a távozással járó következményektől való félelem miatt, vagy sodródás anélkül, hogy valaha is elköteleződnél a távozás mellett.",
+        "advice": "Bízz abban a részedben, amely tudja, hogy ez már nem elég, még akkor is, ha még nem tudod teljesen megmagyarázni, miért."
+      },
+      "nine": {
+        "keywords": [
+          "elégedettség",
+          "beteljesülés",
+          "teljesült kívánság"
+        ],
+        "upright": "könnyű, kényelmes elégedettség – egy teljesült kívánság, egy beteljesült vágy, olyan elégedettség, amelyet nem kell megindokolni.",
+        "reversed": "az önteltség az igazi elégedettség helyett, vagy bőség, amely valahogy mégsem tűnik elégnek.",
+        "advice": "Hagyd, hogy ez az elégedettség egyszerű legyen. Nem kell kétszer is kiérdemelned azzal, hogy aggódsz, vajon nem múlik-e el."
+      },
+      "ten": {
+        "keywords": [
+          "érzelmi beteljesülés",
+          "családi harmónia",
+          "tartós boldogság"
+        ],
+        "upright": "mély, megalapozott boldogság, amelyet a hozzád legközelebb állókkal építettél fel – nem egy csúcspillanat, hanem egy tartós állapot.",
+        "reversed": "otthoni harmónia, amely inkább látszat, mint valóság, vagy olyan értékek a szeretteid körében, amelyek csendben eltávolodtak egymástól.",
+        "advice": "Nézz a boldogság felszíni képe mögé, és ellenőrizd, hogy az emberek, akik benne vannak, szintén érzik-e ezt."
+      },
+      "page": {
+        "keywords": [
+          "kreatív lehetőség",
+          "intuitív üzenet",
+          "kíváncsiság"
+        ],
+        "upright": "egy gyengéd, váratlan érzelmi vagy kreatív üzenet érkezése – valami, amire érdemes odafigyelni, még ha kicsinek tűnik is.",
+        "reversed": "érzelmi éretlenség, amely útját állja egy valódi lehetőségnek, vagy kreatív impulzus, amelyet menekülésre használsz a kifejezés helyett.",
+        "advice": "Vedd komolyan ezt a kis, váratlan érzést. Többet mond, mint amennyire látszik."
+      },
+      "knight": {
+        "keywords": [
+          "romantika",
+          "idealizmus",
+          "a szív követése"
+        ],
+        "upright": "a szív vezérel, romantikus vagy idealista elképzelést kergetsz valódi őszinteséggel, még ha az még nem is teljesen praktikus.",
+        "reversed": "érzékenységnek álcázott hangulatváltozás, vagy egy romantikus eszménykép, amely folyton csalódást okoz.",
+        "advice": "Kövesd a szívedet, de mielőtt végleg elköteleződnél, ellenőrizd a valósággal."
+      },
+      "queen": {
+        "keywords": [
+          "együttérzés",
+          "érzelmi biztonság",
+          "intuíció"
+        ],
+        "upright": "érzelmi mélység valódi stabilitással – együttérzés mások iránt, amely nem a saját egyensúlyod rovására megy.",
+        "reversed": "együttérzés, amely önelhanyagolásba csap át, vagy érzelmi biztonság, amely csak addig tart, amíg senki sem teszi próbára.",
+        "advice": "Add át az együttérzésedet másoknak, de tarts meg belőle eleget magadnak is."
+      },
+      "king": {
+        "keywords": [
+          "érzelmi egyensúly",
+          "diplomácia",
+          "nyugodt kontroll"
+        ],
+        "upright": "nyugodt mesteri szint az erős érzések felett – képes vagy stabil és tisztességes maradni akkor is, amikor nagy az érzelmi tét.",
+        "reversed": "az érzések feletti kontroll, ami valójában elfojtás, vagy a felszíni nyugalom, amely manipulációt rejt.",
+        "advice": "Maradj stabil, de hagyd, hogy az igazi érzéseid láthatóak legyenek, ahelyett, hogy csak menedzselnéd őket."
+      }
+    },
+    "swords": {
+      "ace": {
+        "keywords": [
+          "áttörés",
+          "tisztánlátás",
+          "új ötlet"
+        ],
+        "upright": "hirtelen vágás a zűrzavaron — egy felismerés, döntés vagy az igazság egy darabja, amely élesen és félreérthetetlenül érkezik meg.",
+        "reversed": "tisztánlátás, amelyet túl sok zaj homályosított el, vagy egy igazság, amelyet elferdítettek, mielőtt elért volna hozzád.",
+        "advice": "Bízz a tiszta gondolatban, amikor megérkezik. Ne hagyd, hogy újra összezavarjanak."
+      },
+      "two": {
+        "keywords": [
+          "patthelyzet",
+          "nehéz döntés",
+          "elkerülés"
+        ],
+        "upright": "egy karnyújtásnyira tartott döntés, amelyet olyan óvatosan egyensúlyozol, hogy egyik lehetőség mellett sem teszed le a voksodat.",
+        "reversed": "a patthelyzet végre megtörik, vagy az ellentmondásos információk áradata nehezebbé teszi a választást, ahelyett, hogy könnyítené.",
+        "advice": "Vedd le a szemellenzőt. A döntés nem lesz könnyebb azzal, ha tovább halogatod."
+      },
+      "three": {
+        "keywords": [
+          "szívfájdalom",
+          "árulás",
+          "bánat"
+        ],
+        "upright": "éles és konkrét fájdalom — egy igazság, árulás vagy veszteség, amely azért vág mélyre, mert valóságos.",
+        "reversed": "a gyógyulás első szakaszai, vagy régi fájdalom, amely újra a felszínre tör, mert az első alkalommal nem dolgoztad fel teljesen.",
+        "advice": "Hagyd, hogy a fájdalom éppen olyan éles legyen, amilyen. A pontos megnevezése az, ami elindítja a gyógyulást."
+      },
+      "four": {
+        "keywords": [
+          "pihenés",
+          "felépülés",
+          "elmélyülés"
+        ],
+        "upright": "szándékos visszavonulás a konfliktus vagy feszültség után — nem vereség, hanem az a felépülés, amelyre az elmének szüksége van, mielőtt újra tisztán tudna gondolkodni.",
+        "reversed": "a pihenés megszakad, mielőtt befejeződne, vagy nyugtalanság, amely lehetetlenné teszi a valódi felépülést.",
+        "advice": "Pihend ki magad teljesen. A félbehagyott felépülés csak annyit jelent, hogy a kimerültséget viszed tovább a következő feladatba."
+      },
+      "five": {
+        "keywords": [
+          "üres győzelem",
+          "konfliktus",
+          "árulás"
+        ],
+        "upright": "egy győzelem, amely többe kerül, mint amennyit ér — egy konfliktus, amelyet a végsőkig vittek, bár minden résztvevő rosszabbul jön ki belőle.",
+        "reversed": "a konfliktus után megmaradó neheztelés, amelyet sosem oldottak meg igazán, vagy lehetőség a békére a győzelem erőltetése helyett.",
+        "advice": "Kérdezd meg magadtól, vajon megéri-e ez a konkrét harc azt, amibe utána kerül."
+      },
+      "six": {
+        "keywords": [
+          "átmenet",
+          "továbblépés",
+          "nyugodtabb vizek"
+        ],
+        "upright": "lassú, szándékos elmozdulás a zűrzavarból, csak a legszükségesebbeket magaddal víve valami stabilabb felé.",
+        "reversed": "ellenállás egy már amúgy is szükséges átmenettel szemben, vagy megoldatlan csomagok cipelése az előttünk álló nyugodtabb vizekre.",
+        "advice": "Hagyd a nehéz vizeket magad mögött. Ne nézz vissza folyton arra a partra, amelyet elhagysz."
+      },
+      "seven": {
+        "keywords": [
+          "stratégia",
+          "megtévesztés",
+          "önálló cselekvés"
+        ],
+        "upright": "csendben és függetlenül mozogni, elvenni, amire szükséged van, engedélykérés nélkül — okos, de nem teljesen őszinte.",
+        "reversed": "egy rejtett stratégia napvilágra kerülése, vagy a bűntudat, amely végre utoléri a választott kiskaput.",
+        "advice": "Kérdezd meg, vajon a stratégiád még mindig értelmes lenne-e, ha minden érintett látná."
+      },
+      "eight": {
+        "keywords": [
+          "csapda",
+          "áldozatszerep",
+          "önkorlátozás"
+        ],
+        "upright": "úgy érzed, minden oldalról be vagy kerítve, pedig a kötelek, amelyek fogva tartanak, lazábbak, mint amilyennek tűnnek — egy börtön, amely inkább a hiedelmeidből, mint a tényekből épült.",
+        "reversed": "az első igazi repedés az önmagad állította csapdán, ahogy a tehetetlenség története veszít az erejéből.",
+        "advice": "Keresd a rést azokon a köteleken, amelyeket szilárdnak hittél. Több mozgástered van, mint amennyinek érzed."
+      },
+      "nine": {
+        "keywords": [
+          "szorongás",
+          "aggodalom",
+          "lelki gyötrelem"
+        ],
+        "upright": "egy elme, amely sötétben a legrosszabb forgatókönyveket pörgeti, kimerülve azoktól a félelmektől, amelyek hajnali 3-kor sokkal nagyobbnak tűnnek, mint nappal.",
+        "reversed": "az aggodalom enyhülése, vagy egy döntés, hogy végre kimondod a félelmet, ahelyett, hogy egyedül cipelnéd.",
+        "advice": "Mondd ki az aggodalmadat valakinek. Ritkán éli túl a nappali fényt olyan épen, mint amilyennek most érzed."
+      },
+      "ten": {
+        "keywords": [
+          "mélypont",
+          "fájdalmas vég",
+          "árulás"
+        ],
+        "upright": "egy vég, amely éppoly végleges, mint amilyen fájdalmas — a legrosszabb már mögötted van, innen már csak felfelé vezet az út.",
+        "reversed": "ellenállás egy olyan véggel szemben, amely már megtörtént, vagy lassú, részleges felépülés valamiből, ami még nem gyógyult be teljesen.",
+        "advice": "Hagyd, hogy ez a vég teljes legyen. Az, hogy életben próbálod tartani, csak meghosszabbítja a fájdalmat."
+      },
+      "page": {
+        "keywords": [
+          "kíváncsiság",
+          "éberség",
+          "igazságkeresés"
+        ],
+        "upright": "éber, kérdező elme, amely információkat gyűjt és alaposan megfigyel, mielőtt eldöntené, miben higgyen.",
+        "reversed": "pletyka a valódi vizsgálódás helyett, vagy ötletek, amelyek sosem jutnak el a beszédtől a tényleges cselekvésig.",
+        "advice": "Tedd fel a kérdéseidet, de végül cselekedj aszerint, amit a válaszok mondanak."
+      },
+      "knight": {
+        "keywords": [
+          "határozott cselekvés",
+          "érvényesülés",
+          "gyors gondolkodás"
+        ],
+        "upright": "gyors mozgás és világos beszéd, egyenesen a lényegre törve, anélkül, hogy bárki engedélyére várnál.",
+        "reversed": "agresszió, amely megelőzi az ítélőképességet, vagy impulzív döntések, amelyeket gyorsabban hoztak, mint ahogy a helyzet megkívánta volna.",
+        "advice": "Cselekedj határozottan, de vegyél egy mély levegőt, mielőtt kimondanád a gondolataid legélesebb változatát."
+      },
+      "queen": {
+        "keywords": [
+          "független gondolkodás",
+          "világos határok",
+          "közvetlen kommunikáció"
+        ],
+        "upright": "tisztán látni a helyzeteket és kimondani azokat anélkül, hogy az igazságnál jobban lágyítanád őket.",
+        "reversed": "közvetlenség, amely átcsapott hidegségbe, vagy olyan mereven tartott határok, amelyekhez senki sem tud közel kerülni.",
+        "advice": "Tartsd meg a tisztánlátást, de ellenőrizd, hogy a nyers őszinteség szükséges-e, vagy csak könnyebb, mint gyengédnek lenni."
+      },
+      "king": {
+        "keywords": [
+          "intellektuális tekintély",
+          "strukturált gondolkodás",
+          "pártatlan igazság"
+        ],
+        "upright": "az elvek és bizonyítékok alapján hozott ítélet, nem pedig érzések alapján — tisztességes, pontos és nehéz vitatkozni vele.",
+        "reversed": "a logika fegyverként való használata, vagy olyan tekintély, amely technikailag helyes, mégis kegyetlen.",
+        "advice": "Legyen igazad, de ne hagyd, hogy az igazad mentség legyen a kegyetlenségre."
+      }
+    },
+    "pentacles": {
+      "ace": {
+        "keywords": [
+          "új lehetőség",
+          "jólét",
+          "megnyilvánulás"
+        ],
+        "upright": "egy kézzelfogható lehetőség, amely a kezedbe kerül – gyakorlatias, valós, és érdemes rá építeni, ahelyett, hogy csak csodálnád.",
+        "reversed": "egy elszalasztott lehetőség rossz időzítés vagy hiányos tervezés miatt, vagy egy ígéretes kezdet, amely nem kapott folytatást.",
+        "advice": "Tedd meg a gyakorlati lépést most. Ez a fajta lehetőség jobban jutalmazza a kitartást, mint a puszta lelkesedést."
+      },
+      "two": {
+        "keywords": [
+          "egyensúly",
+          "alkalmazkodóképesség",
+          "prioritások zsonglőrködése"
+        ],
+        "upright": "több követelményt is mozgásban tartani egyszerre, menet közben igazodni ahelyett, hogy bármelyiket is elejtenéd.",
+        "reversed": "eggyel több prioritás került a képbe, és most valami kicsúszik a kezedből, aminek nem kellett volna.",
+        "advice": "Nézz szembe őszintén azzal, amivel zsonglőrködsz. Lehet, hogy valamit le kell tenned ahelyett, hogy görcsösen próbálnád egyensúlyban tartani."
+      },
+      "three": {
+        "keywords": [
+          "együttműködés",
+          "készség",
+          "csapatmunka"
+        ],
+        "upright": "különböző képességek ötvözése valami olyasmivé, amit egyikük sem tudott volna egyedül felépíteni – szilárd haladás valódi együttműködés révén.",
+        "reversed": "elszigetelten dolgozni valamin, amihez mások keze is kellett volna, vagy egy csapat, amely már nem egy irányba húz.",
+        "advice": "Vond be a szükséges segítséget. Ez nem egy olyan projekt, amit egyedül jól fel lehet építeni."
+      },
+      "four": {
+        "keywords": [
+          "biztonság",
+          "kontroll",
+          "szoros tartás"
+        ],
+        "upright": "szoros fogás azon, amit felépítettél, a biztonságot a kockázat elé helyezve, még némi rugalmasság árán is.",
+        "reversed": "olyan szorosan ragaszkodni valamihez, hogy semmi új nem férhet be, vagy a veszteségtől való félelem jobban irányítja a döntéseidet, mint bármilyen valós fenyegetés.",
+        "advice": "Lazíts egy kicsit a fogáson. Amit védesz, az nem olyan törékeny, mint amilyennek érzed."
+      },
+      "five": {
+        "keywords": [
+          "nehézség",
+          "anyagi veszteség",
+          "elszigeteltség"
+        ],
+        "upright": "valódi nehézség, amelyet az elszigeteltség éppúgy felerősít, mint maga a veszteség – küzdelem, miközben úgy érzed, a segítség elérhetetlen.",
+        "reversed": "a támogatás első jelei kezdenek megjelenni, vagy a nehézség végre enyhülni kezd egy kemény időszak után.",
+        "advice": "Keresd a közeli nyitott ajtót. A segítség létezik, még ha most nem is így érzed."
+      },
+      "six": {
+        "keywords": [
+          "nagylelkűség",
+          "adás és kapás",
+          "egyensúly"
+        ],
+        "upright": "az erőforrások igazságos áramlása az emberek között – segítségnyújtás, mert szükség van rá, és elfogadása szégyenérzet nélkül.",
+        "reversed": "nagylelkűség, amelynek feltételei vannak, vagy egy csere, amely csendben egyoldalúvá vált.",
+        "advice": "Ellenőrizd, hogy amit itt adnak, az szabadon érkezik-e, vagy valami tartozás áll a hátterében."
+      },
+      "seven": {
+        "keywords": [
+          "türelem",
+          "hosszú távú szemlélet",
+          "haladás felmérése"
+        ],
+        "upright": "egy szünet, hogy számba vedd a már befektetett erőfeszítéseket, mérlegelve, hogy megtérülnek-e, vagy irányt kell váltani.",
+        "reversed": "türelmetlenség egy olyan megtérüléssel szemben, amely még nem érkezett meg, vagy erőfeszítés folytatása egy olyan úton, amely már nem hoz eredményt.",
+        "advice": "Végezz őszinte számvetést. Az erőfeszítéseid egy része több türelmet érdemel; egy része pedig egy új tervet."
+      },
+      "eight": {
+        "keywords": [
+          "szorgalom",
+          "mesterségbeli tudás",
+          "készségfejlesztés"
+        ],
+        "upright": "állandó, ismétlődő erőfeszítés, amelynek célja, hogy valamiben igazán jó legyél – nem csillogó, de pontosan ez az, amit a mesteri szint megkövetel.",
+        "reversed": "a perfekcionizmus akadályozza a valódi haladást, vagy rövidítéseket alkalmazol olyan munkánál, amely megérdemelné a teljes odafigyelést.",
+        "advice": "Folytasd a nem túl látványos ismétléseket. Így néz ki a szakértelem, miközben épül."
+      },
+      "nine": {
+        "keywords": [
+          "önellátás",
+          "bőség",
+          "függetlenség"
+        ],
+        "upright": "kényelem és bőség, amelyet nagyrészt a saját erődből értél el – egyfajta önellátás, amelynek nincs szüksége senki jóváhagyására.",
+        "reversed": "siker, amely kívülről jól néz ki, de belül üresnek hat, vagy túlhajszoltság, amely kiszorított mindenkit, akivel megoszthatnád.",
+        "advice": "Élvezd, amit felépítettél anélkül, hogy bárki más megerősítésére szükséged lenne ahhoz, hogy értékesnek érezd."
+      },
+      "ten": {
+        "keywords": [
+          "örökség",
+          "hosszú távú biztonság",
+          "családi vagyon"
+        ],
+        "upright": "stabilitás, amely túlél egyetlen embert is – egy örökség vagy alap, amelyet úgy építettek, hogy ne csak téged támogasson.",
+        "reversed": "egy örökség nyomás alatt, vagy családi nézeteltérések az erőforrások miatt, amelyek veszélyeztetik a tartósra épített dolgokat.",
+        "advice": "Védd azt, aminek túl kell élnie téged, de ne hagyd, hogy a viták tönkretegyék azt, amiért az egész épült."
+      },
+      "page": {
+        "keywords": [
+          "új lehetőség",
+          "tanulás",
+          "gyakorlati kíváncsiság"
+        ],
+        "upright": "egy gyakorlatias lehetőség, amelyet érdemes alaposan tanulmányozni – új, ígéretes, és még abban a szakaszban van, hogy megtanuld, hogyan működik.",
+        "reversed": "irreális tervek, amelyeket nem teszteltek a valósággal, vagy olyan haladás, amely megakadt, mielőtt igazán elkezdődött volna.",
+        "advice": "Tanulmányozd alaposan ezt a lehetőséget, mielőtt elköteleződnél. Ígéretes, de még nem bizonyított."
+      },
+      "knight": {
+        "keywords": [
+          "szorgalom",
+          "rutin",
+          "módszeres haladás"
+        ],
+        "upright": "lassú, módszeres, megbízható haladás – nincsenek rövidítések, csak következetes munka, amely idővel összeadódik.",
+        "reversed": "rutin, amely stagnálásba merevedett, vagy olyan merev perfekcionizmus, amely megakadályozza a dolgok befejezését.",
+        "advice": "Bízz a lassú módszerben, ami működik. Nem kell gyorsabbnak lennie ahhoz, hogy hatékony legyen."
+      },
+      "queen": {
+        "keywords": [
+          "gondoskodás",
+          "talpraesettség",
+          "földhözragadtság"
+        ],
+        "upright": "gyakorlatias gondoskodás, amely kézzelfogható módon mutatkozik meg – kényelem, erőforrások és földhözragadtság, amit nagylelkűen kínálsz másoknak.",
+        "reversed": "másokról való gondoskodás a saját magadról való gondoskodás kárára, vagy az erőforrásokkal kapcsolatos bizonytalanság, amely aláássa a nagylelkűséget.",
+        "advice": "Ugyanolyan gyakorlatias gondoskodással fordulj magad felé, amilyet olyan könnyedén felajánlasz mindenkinek."
+      },
+      "king": {
+        "keywords": [
+          "anyagi mesteri szint",
+          "anyagi biztonság",
+          "nagylelkűség"
+        ],
+        "upright": "idővel felépített anyagi és pénzügyi mesteri szint, amely most már elég nagylelkű ahhoz, hogy megossza az általa teremtett biztonságot.",
+        "reversed": "az erőforrások feletti kontroll merevvé vagy birtoklóvá válik, vagy az anyagi biztonság hajszolása minden más kárára történik.",
+        "advice": "Használd nagylelkűen, amit felépítettél. A biztonság, amelyet nem osztanak meg, végül csak elszigeteltséghez vezet."
+      }
+    }
+  }
+}

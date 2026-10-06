@@ -1,0 +1,925 @@
+{
+  "ui": {
+    "logo": "MyTarot.Day",
+    "tagline": "Bói bài tarot hàng ngày 100% miễn phí, được cá nhân hóa theo ngày sinh của bạn. Không cần tạo tài khoản, hoàn toàn miễn phí.",
+    "eyebrow": "Bốn lá bài. Một ngày.",
+    "selectCardsPrompt": "Chọn 4 lá bài",
+    "heroTitleLine1": "Những lá bài hôm nay nói gì với",
+    "heroTitleEm": "bạn",
+    "submitLabel": "Xem bài của tôi",
+    "submittingLabel": "Đang rút bài...",
+    "loadingText": "Đang xáo bài cho ngày {date}...",
+    "tryAnotherLabel": "Xem một lượt khác?",
+    "buyMeCoffeeLabel": "☕  Mua cho tôi một ly cà phê 🤗",
+    "funFact": "Thông tin thú vị: Vẻ ngoài cổ điển của các lá bài tarot của chúng tôi là nguyên bản. Chúng tôi sử dụng bộ bài Rider–Waite–Smith truyền thống năm 1909 với các hình ảnh gốc của Pamela Colman Smith. Hơn một thế kỷ sau, bộ bài kinh điển này vẫn tiếp tục truyền cảm hứng cho những người xem bài trên khắp thế giới và được coi là một trong những nền tảng có ảnh hưởng nhất của tarot hiện đại.",
+    "footerDisclaimer": "MyTarot.Day được cung cấp cho mục đích chiêm nghiệm và giải trí. Nó không thay thế cho lời khuyên chuyên môn về y tế, tài chính hoặc pháp lý.",
+    "footerTagline": "Được phát triển bởi P.San Team | Hoàn toàn miễn phí và mãi mãi như vậy!",
+    "footerHome": "Trang chủ",
+    "footerBlog": "Blog",
+    "footerPrivacy": "Chính sách bảo mật",
+    "footerTerms": "Điều khoản & Điều kiện",
+    "footerAbout": "Về chúng tôi",
+    "footerContact": "Liên hệ",
+    "todayBadge": "Hôm nay",
+    "reversedLabel": "Ngược",
+    "uprightLabel": "Xuôi",
+    "supportPromptText": "Bạn thấy thích chứ? Mời mình một ly cà phê nhé",
+    "summaryGuideLabel": "Hướng dẫn",
+    "summaryPastLabel": "Quá khứ",
+    "summaryFutureLabel": "Tương lai",
+    "freeBadge": "100% Miễn Phí — Không Cần Đăng Ký, Không Tốn Phí",
+    "freeTitlePhrase": "Xem Bói Tarot Miễn Phí"
+  },
+  "positions": {
+    "determinant": {
+      "label": "Lá bài Định mệnh",
+      "subtitle": "Năng lượng định hình cả ngày",
+      "intros": [
+        "Bao trùm lên mọi thứ hôm nay là",
+        "Lá bài thiết lập tông giọng cho cả ngày là",
+        "Trước bất cứ điều gì khác, ngày hôm nay đang được định hình bởi"
+      ]
+    },
+    "past": {
+      "label": "Quá khứ",
+      "subtitle": "Những gì bạn đang mang theo",
+      "intros": [
+        "Phía sau bạn, vẫn đang ảnh hưởng đến khoảnh khắc này, là",
+        "Những gì bạn mang theo từ những ngày gần đây là",
+        "Quá khứ đang đổ dồn vào hôm nay được đánh dấu bởi"
+      ]
+    },
+    "present": {
+      "label": "Hiện tại",
+      "subtitle": "Nơi bạn thực sự đứng",
+      "intros": [
+        "Ngay lúc này, tại trung tâm của mọi sự việc, là",
+        "Nơi bạn thực sự đứng hôm nay là với",
+        "Trong khoảnh khắc hiện tại, bạn đang đối mặt với"
+      ]
+    },
+    "future": {
+      "label": "Tương lai",
+      "subtitle": "Hướng đi của sự việc",
+      "intros": [
+        "Ngay phía trước, mọi thứ đang tiến tới",
+        "Nếu không có gì thay đổi, hướng đi của sự việc là",
+        "Tương lai gần đang chỉ về phía"
+      ]
+    }
+  },
+  "summaryClauses": [
+    "Khi đọc cùng nhau, trải bài hôm nay vạch ra một đường thẳng từ {past} đến {future}, với {determinant} thiết lập các điều kiện cho cách mọi thứ diễn ra.",
+    "Dòng chảy hôm nay chạy từ những gì {past} đã dạy bạn, qua vị trí hiện tại của bạn, hướng tới {future} — tất cả đều được tô điểm bởi {determinant}."
+  ],
+  "ranks": {
+    "ace": "Át",
+    "two": "Hai",
+    "three": "Ba",
+    "four": "Bốn",
+    "five": "Năm",
+    "six": "Sáu",
+    "seven": "Bảy",
+    "eight": "Tám",
+    "nine": "Chín",
+    "ten": "Mười",
+    "page": "Người hầu",
+    "knight": "Hiệp sĩ",
+    "queen": "Hoàng hậu",
+    "king": "Nhà vua"
+  },
+  "suits": {
+    "wands": "Gậy",
+    "cups": "Cốc",
+    "swords": "Kiếm",
+    "pentacles": "Tiền"
+  },
+  "majorArcana": {
+    "0": {
+      "name": "The Fool",
+      "keywords": [
+        "khởi đầu",
+        "sự ngây thơ",
+        "bước nhảy niềm tin",
+        "sự cởi mở"
+      ],
+      "upright": "một khởi đầu mới không có bản đồ và không có sự đảm bảo nào — chẳng có gì ngoài sự tò mò và lòng can đảm để tiến bước trước khi mọi câu trả lời được hé lộ.",
+      "reversed": "sự do dự được ngụy trang dưới vẻ thận trọng, một bước đi được tập dượt quá nhiều lần đến mức chẳng bao giờ thực hiện được — hoặc ngược lại: một bước nhảy mù quáng mà không kiểm tra xem điều gì đang chờ đợi bên dưới.",
+      "advice": "Hãy trở lại làm người mới bắt đầu. Sai lầm duy nhất ở đây là từ chối việc bắt đầu."
+    },
+    "1": {
+      "name": "The Magician",
+      "keywords": [
+        "sự tháo vát",
+        "ý chí",
+        "sự biểu hiện"
+      ],
+      "upright": "nhận ra mọi công cụ mà tình huống yêu cầu — trí tuệ, kỹ năng, thời điểm — đều đã nằm trong tay bạn, và việc sử dụng chúng một cách có mục đích là bước duy nhất còn lại.",
+      "reversed": "tài năng bị bỏ phí, hoặc kỹ năng bị bẻ cong sang hướng thao túng thay vì xây dựng điều gì đó. Dù thế nào đi nữa, khả năng đang bị lãng phí, hoặc sự tự tin chỉ là màn trình diễn hơn là nền tảng thực sự.",
+      "advice": "Đừng thu thập thêm công cụ nữa. Hãy cầm lấy thứ đang có trong tay và sử dụng nó."
+    },
+    "2": {
+      "name": "The High Priestess",
+      "keywords": [
+        "trực giác",
+        "tiềm thức",
+        "kiến thức ẩn giấu"
+      ],
+      "upright": "kiến thức đến từ bên dưới ngôn từ — một linh cảm, một giấc mơ, một cảm giác cuối cùng lại chính xác hơn bất kỳ bằng chứng nào bạn có vào thời điểm đó.",
+      "reversed": "một sự thật tĩnh lặng bị nhấn chìm bởi tiếng ồn, hoặc một bản năng bị giữ kín vì nó chưa thể tự chứng minh.",
+      "advice": "Hãy tin vào những gì bạn cảm nhận được nhưng chưa nói ra. Nó biết điều gì đó mà lý trí của bạn vẫn chưa bắt kịp."
+    },
+    "3": {
+      "name": "The Empress",
+      "keywords": [
+        "sự sung túc",
+        "nuôi dưỡng",
+        "sáng tạo",
+        "phát triển"
+      ],
+      "upright": "một mùa tăng trưởng cần sự chăm sóc, không phải ép buộc — một dự án, mối quan hệ, hoặc một phần trong bạn sẽ phát triển mạnh mẽ khi được nuôi dưỡng thay vì bị thúc ép.",
+      "reversed": "sự quan tâm hoặc sáng tạo trở nên ngột ngạt, hoặc mảnh đất màu mỡ bị bỏ hoang cho đến khi không còn sản sinh ra bất cứ thứ gì.",
+      "advice": "Hãy dành sự quan tâm cho những gì bạn trân trọng thay vì tạo áp lực. Sự kiên nhẫn chính là thứ giúp nó lớn lên."
+    },
+    "4": {
+      "name": "The Emperor",
+      "keywords": [
+        "cấu trúc",
+        "thẩm quyền",
+        "kỷ luật",
+        "sự ổn định"
+      ],
+      "upright": "trật tự được xây dựng có mục đích — một khuôn khổ, ranh giới hoặc kế hoạch đủ vững chắc để giữ cho những ý định tốt đẹp đứng vững dưới áp lực thực tế.",
+      "reversed": "sự kiểm soát bị nắm giữ quá chặt, hoặc một cấu trúc lỏng lẻo đến mức không có gì bên trong nó có thể đứng vững.",
+      "advice": "Hãy dựng giàn giáo trước khi xây nhà. Cấu trúc ngay lúc này sẽ tiết kiệm công sức về sau."
+    },
+    "5": {
+      "name": "The Hierophant",
+      "keywords": [
+        "truyền thống",
+        "hệ thống niềm tin",
+        "sự dẫn dắt",
+        "quy ước"
+      ],
+      "upright": "trí tuệ được truyền lại qua các kênh đã được thiết lập — một người cố vấn, tổ chức hoặc truyền thống mà sự dẫn dắt của họ vẫn xứng đáng được tuân theo, ít nhất là vào lúc này.",
+      "reversed": "một quy tắc được duy trì chỉ vì thói quen, hoặc một quy ước đã không còn xứng đáng với sự trung thành từ lâu.",
+      "advice": "Hãy học con đường đã được thiết lập trước. Sau đó hãy quyết định xem có nên rời bỏ nó hay không."
+    },
+    "6": {
+      "name": "The Lovers",
+      "keywords": [
+        "kết nối",
+        "giá trị",
+        "lựa chọn",
+        "sự hòa hợp"
+      ],
+      "upright": "sự hòa hợp thực sự giữa con người, giá trị hoặc con đường — một lựa chọn quan trọng vì nó khẳng định bạn đại diện cho điều gì, không chỉ là điều bạn thích.",
+      "reversed": "sự không tương xứng bị âm thầm chịu đựng, hoặc một quyết định bị né tránh vì nói ra thành lời sẽ mở ra một cuộc trò chuyện khó khăn hơn.",
+      "advice": "Hãy gọi tên lựa chọn đó một cách rõ ràng, ngay cả khi câu trả lời trung thực khiến mọi thứ trở nên phức tạp hơn."
+    },
+    "7": {
+      "name": "The Chariot",
+      "keywords": [
+        "ý chí",
+        "sự quyết tâm",
+        "chiến thắng thông qua kiểm soát"
+      ],
+      "upright": "sự tiến lên phía trước đạt được bằng cách giữ hai lực lượng đối lập trong một bàn tay và điều khiển cả hai cùng một hướng.",
+      "reversed": "động lực bị tiêu hao bởi xung đột nội tâm, hoặc một chiến thắng bị theo đuổi quyết liệt đến mức chà đạp lên chính thứ mà nó lẽ ra phải bảo vệ.",
+      "advice": "Ngừng đấu tranh với những mâu thuẫn của chính mình. Hãy hướng chúng về cùng một phía và tiến bước."
+    },
+    "8": {
+      "name": "Strength",
+      "keywords": [
+        "lòng can đảm",
+        "sự kiên nhẫn",
+        "quyết tâm tĩnh lặng",
+        "lòng trắc ẩn"
+      ],
+      "upright": "sức mạnh không bao giờ cần phải lên tiếng — một sự vững vàng đến từ việc làm hòa với điều khó khăn, không phải chôn vùi nó.",
+      "reversed": "sự nghi ngờ bản thân đội lốt sự khiêm tốn, hoặc dùng vũ lực ở nơi mà sự kiên nhẫn sẽ mang lại kết quả tốt hơn.",
+      "advice": "Hãy đối mặt với những gì khiến bạn sợ hãi bằng sự bình tĩnh thay vì vũ lực. Sự dịu dàng không phải là yếu đuối."
+    },
+    "9": {
+      "name": "The Hermit",
+      "keywords": [
+        "sự tự soi rọi",
+        "sự cô độc",
+        "sự dẫn dắt nội tâm"
+      ],
+      "upright": "một sự rút lui cần thiết — bước lùi lại khỏi tiếng ồn để nghe xem bạn thực sự nghĩ gì, thay vì chỉ nghe những gì mọi người xung quanh đang nói.",
+      "reversed": "sự cô lập biến thành sự né tránh, hoặc trí tuệ được giữ quá chặt đến mức không bao giờ đến được với những người cần nó.",
+      "advice": "Hãy tận hưởng sự cô độc. Bất kỳ câu trả lời nào bạn tìm kiếm cũng sẽ không xuất hiện giữa đám đông."
+    },
+    "10": {
+      "name": "Wheel of Fortune",
+      "keywords": [
+        "chu kỳ",
+        "sự thay đổi",
+        "định mệnh",
+        "bước ngoặt"
+      ],
+      "upright": "một sự thay đổi đang diễn ra, được thúc đẩy bởi những lực lượng lớn hơn bất kỳ lựa chọn cá nhân nào — hoàn cảnh xoay chuyển theo cách thay đổi các điều kiện hiện tại.",
+      "reversed": "một chu kỳ lặp lại vì mô hình bên dưới chưa thay đổi — chỉ có lớp vỏ bên ngoài là khác đi.",
+      "advice": "Đừng cố kiểm soát vòng quay. Hãy dồn năng lượng vào cách bạn phản ứng khi nó dừng lại."
+    },
+    "11": {
+      "name": "Justice",
+      "keywords": [
+        "sự công bằng",
+        "sự thật",
+        "nhân quả",
+        "sự rõ ràng"
+      ],
+      "upright": "một sự tính toán công bằng, ngay cả khi đó không phải là điều dễ chịu — cái nhìn rõ ràng về nguyên nhân và kết quả, và về những gì cần phải trả.",
+      "reversed": "sự mất cân bằng chưa được giải quyết, hoặc một sự thật bị né tránh vì đối mặt trực diện với nó đòi hỏi sự chịu trách nhiệm.",
+      "advice": "Hãy nhìn vào tình huống mà không tự huyễn hoặc bản thân. Sự công bằng bắt đầu bằng một sự nhìn nhận trung thực."
+    },
+    "12": {
+      "name": "The Hanged Man",
+      "keywords": [
+        "sự buông bỏ",
+        "góc nhìn mới",
+        "tạm dừng"
+      ],
+      "upright": "sự tiến bộ đạt được bằng cách tạm dừng thay vì thúc ép — một sự đình chỉ có chủ đích mở ra một góc nhìn về mọi thứ mà bạn không thể đạt được khi đang di chuyển.",
+      "reversed": "sự trì hoãn vì lợi ích riêng, hoặc một sự hy sinh không bao giờ mang lại bất kỳ sự thấu hiểu thực sự nào để đáp lại.",
+      "advice": "Hãy để điều này chưa được giải quyết thêm một thời gian nữa. Sự thấu suốt nằm trong sự chờ đợi, chứ không phải ở phía sau nó."
+    },
+    "13": {
+      "name": "Death",
+      "keywords": [
+        "sự chuyển hóa",
+        "sự kết thúc",
+        "sự giải phóng"
+      ],
+      "upright": "một sự kết thúc thực sự dọn đường cho điều gì đó không thể tồn tại song song với nó — không phải sự hủy diệt, mà là sự thay đổi cần thiết.",
+      "reversed": "một sự thay đổi bị kháng cự lâu sau khi nó trở nên không thể tránh khỏi, điều này chỉ làm cho sự kết thúc trở nên khó khăn hơn khi nó thực sự đến.",
+      "advice": "Hãy để phần đã kết thúc được kết thúc. Một điều gì đó khác đang cần không gian mà nó đang chiếm giữ."
+    },
+    "14": {
+      "name": "Temperance",
+      "keywords": [
+        "sự cân bằng",
+        "sự điều độ",
+        "sự tích hợp",
+        "sự kiên nhẫn"
+      ],
+      "upright": "hai thứ tưởng chừng không tương thích đang ổn định vào một điểm giữa khả thi — sự kiên nhẫn, sự hòa trộn, kỹ năng chậm rãi để đạt được tỷ lệ phù hợp.",
+      "reversed": "quá nhiều về một hướng, hoặc một sự thỏa hiệp được thực hiện quá nhanh đến mức không bên nào cảm thấy hài lòng.",
+      "advice": "Hãy làm chậm sự pha trộn lại. Sự cân bằng đúng đắn sẽ không thể bị ép buộc ngay trong một đêm."
+    },
+    "15": {
+      "name": "The Devil",
+      "keywords": [
+        "sự gắn kết",
+        "sự hạn chế",
+        "sự cám dỗ",
+        "mô hình cũ"
+      ],
+      "upright": "một mô hình, thói quen hoặc động lực đang kiểm soát bạn nhiều hơn bạn muốn thừa nhận — mặc dù cánh cửa thoát ra chưa bao giờ bị khóa.",
+      "reversed": "lần đầu tiên thực sự muốn rời xa thứ gì đó đã giam cầm bạn — nhìn thấy rõ ràng sợi xích đó là gì.",
+      "advice": "Hãy nhìn một cách trung thực vào những gì bạn cứ tiếp tục chọn mặc dù nó khiến bạn phải trả giá. Gọi tên nó là nơi bắt đầu của lối thoát."
+    },
+    "16": {
+      "name": "The Tower",
+      "keywords": [
+        "sự thay đổi đột ngột",
+        "sự biến động",
+        "sự mặc khải"
+      ],
+      "upright": "một cấu trúc được xây dựng trên nền đất lung lay, đang sụp đổ nhanh chóng — gây gián đoạn, nhưng làm sáng tỏ, vì nó dọn sạch những gì vốn dĩ chưa bao giờ ổn định.",
+      "reversed": "một sự sụp đổ bị trì hoãn thông qua việc né tránh, hoặc một sự gián đoạn nhỏ hơn vẫn làm lung lay điều gì đó.",
+      "advice": "Đừng vội vàng xây dựng lại chính xác những gì đã đổ vỡ. Hãy tự hỏi trước tại sao nó không thể đứng vững."
+    },
+    "17": {
+      "name": "The Star",
+      "keywords": [
+        "hy vọng",
+        "sự đổi mới",
+        "cảm hứng",
+        "chữa lành"
+      ],
+      "upright": "niềm hy vọng tĩnh lặng quay trở lại sau một giai đoạn khó khăn — không phải sự lạc quan ngây thơ, mà là cảm giác thực sự rằng mọi thứ có thể được hàn gắn và đang hướng tới một nơi tốt đẹp hơn.",
+      "reversed": "hy vọng đang dần mỏng manh, hoặc một cái nhìn lạc quan đã tách rời khỏi bất kỳ kế hoạch thực tế nào.",
+      "advice": "Hãy cho phép bản thân hy vọng một lần nữa. Bạn đã xứng đáng với điều đó, và nó đang chỉ dẫn đến một nơi có thật."
+    },
+    "18": {
+      "name": "The Moon",
+      "keywords": [
+        "sự không chắc chắn",
+        "tiềm thức",
+        "ảo ảnh",
+        "trực giác"
+      ],
+      "upright": "một tình huống được soi sáng bởi thứ gì đó khác ngoài sự thật đơn thuần — bản năng, trí tưởng tượng và những nỗi sợ cũ trộn lẫn vào nhau, vì vậy những gì bạn đang thấy chưa phải là bức tranh toàn cảnh.",
+      "reversed": "sự nhầm lẫn bắt đầu tan biến, hoặc một nỗi sợ hóa ra lại lớn hơn trong trí tưởng tượng so với thực tế.",
+      "advice": "Đừng ép buộc một quyết định khi bức tranh vẫn còn chưa rõ ràng. Hãy chờ đợi thêm ánh sáng."
+    },
+    "19": {
+      "name": "The Sun",
+      "keywords": [
+        "niềm vui",
+        "sức sống",
+        "sự rõ ràng",
+        "thành công"
+      ],
+      "upright": "vận may tốt lành đơn thuần — sự rõ ràng, ấm áp, một kết quả không cần phải đoán già đoán non.",
+      "reversed": "niềm vui bị lu mờ bởi việc suy nghĩ quá nhiều, hoặc một thành công không được phép đón nhận và tận hưởng đúng nghĩa.",
+      "advice": "Hãy để điều này tốt đẹp như nó vốn có. Bạn không cần phải đi tìm điểm bất thường đâu."
+    },
+    "20": {
+      "name": "Judgement",
+      "keywords": [
+        "sự tính toán",
+        "sự thức tỉnh",
+        "sự phản chiếu",
+        "sự xá tội"
+      ],
+      "upright": "một sự nhìn nhận trung thực về nơi bạn đã đi qua, và một lời kêu gọi bước vào phiên bản của chính mình phù hợp với những gì bạn đã học được.",
+      "reversed": "sự tự phán xét biến thành sự khắc nghiệt, hoặc một lời cảnh tỉnh bị trì hoãn thêm một chút nữa.",
+      "advice": "Hãy trả lời lời kêu gọi đó một cách rõ ràng. Bất cứ điều gì bạn đã né tránh đều đã sẵn sàng để đối mặt ngay bây giờ."
+    },
+    "21": {
+      "name": "The World",
+      "keywords": [
+        "sự hoàn thành",
+        "sự trọn vẹn",
+        "sự đến đích"
+      ],
+      "upright": "một chu kỳ khép lại một cách trọn vẹn, mọi bài học nó mang lại đều đã nằm trong tay — một cảm giác thực sự đã đến đích trước khi hành trình tiếp theo bắt đầu.",
+      "reversed": "một sự gần như hoàn thành vẫn thiếu mảnh ghép cuối cùng, hoặc sự kết thúc bị vội vã đạt tới trước khi đến thời điểm.",
+      "advice": "Hãy ghi nhận bạn đã đi được bao xa trước khi vội vã hướng tới bất cứ điều gì tiếp theo."
+    }
+  },
+  "minorArcana": {
+    "wands": {
+      "ace": {
+        "keywords": [
+          "cảm hứng",
+          "dự án mới",
+          "tia sáng sáng tạo"
+        ],
+        "upright": "một luồng năng lượng sáng tạo ập đến cùng lúc — một ý tưởng, lời đề nghị hoặc dự án chưa thành hình nhưng đã thôi thúc bạn hướng về nó.",
+        "reversed": "nguồn cảm hứng cứ bị đình trệ trước khi kịp hành động, hoặc sự hào hứng cho một dự án mới đang nguội lạnh trước khi nó kịp bắt đầu.",
+        "advice": "Hãy hành động theo tia sáng đó ngay khi nó còn nóng hổi. Việc chờ đợi một kế hoạch hoàn hảo sẽ chỉ làm nó phai nhạt đi mà thôi."
+      },
+      "two": {
+        "keywords": [
+          "lập kế hoạch",
+          "tầm nhìn tương lai",
+          "sức mạnh cá nhân"
+        ],
+        "upright": "đứng ở một vị trí thuận lợi với những lựa chọn thực tế phía trước, cân nhắc những gì bạn đã xây dựng so với nơi bạn có thể tiến tới tiếp theo.",
+        "reversed": "quá an toàn vì sợ hãi những điều chưa biết, hoặc một kế hoạch cho tương lai không bao giờ được đưa ra thử nghiệm.",
+        "advice": "Đừng chỉ mãi chiêm ngưỡng khung cảnh từ nơi bạn đang đứng. Hãy chọn một hướng đi và bắt đầu bước tới đó."
+      },
+      "three": {
+        "keywords": [
+          "mở rộng",
+          "tầm nhìn xa",
+          "chờ đợi kết quả"
+        ],
+        "upright": "sự chờ đợi sau khi công việc đã hoàn thành — những con tàu đã ra khơi, kết quả chưa tới, nhưng nền tảng đã đủ vững chắc để bạn tin tưởng.",
+        "reversed": "những trì hoãn chồng chất trên một kế hoạch tưởng chừng như chắc chắn, hoặc một tầm nhìn rộng mở lại hé lộ những trở ngại mà bạn chưa từng tính đến.",
+        "advice": "Hãy tiếp tục để mắt đến đường chân trời thêm chút nữa. Những gì bạn đã khởi động vẫn đang trên đường đến với bạn."
+      },
+      "four": {
+        "keywords": [
+          "ăn mừng",
+          "trở về nhà",
+          "cột mốc quan trọng"
+        ],
+        "upright": "một cột mốc xứng đáng để dừng chân — sự trở về nhà, một buổi ăn mừng, cảm giác đã đạt được khoảnh khắc thư thái này.",
+        "reversed": "một buổi ăn mừng cảm thấy trống rỗng, hoặc cảm giác về nhà và thuộc về nơi nào đó vẫn chưa thực sự đạt được.",
+        "advice": "Hãy cho phép bản thân tận hưởng trọn vẹn điều này. Không phải khoảnh khắc tốt đẹp nào cũng cần phải ngay lập tức nối tiếp bằng một nhiệm vụ khác."
+      },
+      "five": {
+        "keywords": [
+          "cạnh tranh",
+          "ma sát",
+          "bất đồng"
+        ],
+        "upright": "những ý chí đối lập va chạm công khai — ồn ào, có thể gây kiệt sức, nhưng chân thật và tốt hơn là để sự căng thẳng đó âm ỉ bên dưới.",
+        "reversed": "xung đột cuối cùng cũng giảm bớt, hoặc một sự cạnh tranh hóa ra chỉ là phô trương hơn là thực chất.",
+        "advice": "Đừng nhầm lẫn sự ma sát này với thất bại. Những ý tưởng cạnh tranh sẽ mài giũa lẫn nhau khi không ai ngại ngần bày tỏ sự bất đồng."
+      },
+      "six": {
+        "keywords": [
+          "chiến thắng",
+          "công nhận",
+          "tự tin"
+        ],
+        "upright": "một chiến thắng mà người khác cũng có thể nhìn thấy — sự công nhận đến công khai cho những nỗ lực mà cho đến nay, phần lớn vẫn chưa được chú ý.",
+        "reversed": "niềm tự hào biến thành sự kiêu ngạo, hoặc một chiến thắng không bao giờ nhận được sự công nhận xứng đáng.",
+        "advice": "Hãy đón nhận sự công nhận mà không cần phải giải thích quá nhiều. Bạn đã giành được chiến thắng; hãy để nó tỏa sáng."
+      },
+      "seven": {
+        "keywords": [
+          "phòng thủ",
+          "kiên trì",
+          "giữ vững lập trường"
+        ],
+        "upright": "giữ một vị trí mà mọi người khác đang cố gắng giành lấy từ bạn — mệt mỏi, nhưng là bằng chứng cho thấy những gì bạn xây dựng rất đáng để bảo vệ.",
+        "reversed": "từ bỏ vị trí mà bạn không cần phải làm vậy, hoặc bảo vệ một vị trí quá lâu đến mức bạn đã quên mất lý do tại sao nó quan trọng.",
+        "advice": "Hãy giữ vững lập trường, nhưng hãy kiểm tra xem bạn có còn đang chiến đấu vì mục tiêu đúng đắn hay không."
+      },
+      "eight": {
+        "keywords": [
+          "đà tiến triển",
+          "hành động nhanh chóng",
+          "chuyển động nhanh"
+        ],
+        "upright": "mọi thứ đột nhiên chuyển động cùng lúc — tin nhắn gửi đến, kế hoạch tăng tốc, một khoảng thời gian chuyển động nhanh sau một thời gian dài chờ đợi.",
+        "reversed": "đà tiến triển bị đình trệ ngay lúc quan trọng nhất, hoặc mọi thứ diễn ra quá nhanh đến mức không có thời gian để định hình.",
+        "advice": "Hãy di chuyển nhanh khi con đường còn thông thoáng, nhưng đừng chạy nhanh hơn khả năng phản ứng của chính bạn trước những gì sắp tới."
+      },
+      "nine": {
+        "keywords": [
+          "kiên cường",
+          "nỗ lực cuối cùng",
+          "sự kiên trì thận trọng"
+        ],
+        "upright": "một nỗ lực cuối cùng được yêu cầu sau một chuỗi dài những nỗ lực khác — mệt mỏi, cảnh giác, nhưng vẫn đứng vững và gần đến đích hơn bạn nghĩ.",
+        "reversed": "sự phòng thủ trở nên cô lập, hoặc sự kiệt sức khiến mọi thách thức còn lại trở nên lớn hơn thực tế.",
+        "advice": "Bạn đã sống sót qua mọi vòng đấu cho đến nay. Đừng để sự cảnh giác ngăn cản bạn chấp nhận sự giúp đỡ cho chặng cuối này."
+      },
+      "ten": {
+        "keywords": [
+          "gánh nặng",
+          "quá tải",
+          "sự hoàn thành khó nhọc"
+        ],
+        "upright": "gánh vác nhiều hơn phần của mình vì bạn đã ở rất gần vạch đích, việc buông bỏ lúc này cảm thấy thật lãng phí.",
+        "reversed": "một gánh nặng được giữ lại vì sự bướng bỉnh, hoặc công việc cuối cùng cũng được đặt xuống sau khi đã mang vác quá lâu.",
+        "advice": "Hãy tự hỏi điều gì bạn đang mang vác mà vốn dĩ không phải của bạn. Một phần sức nặng này có thể được chia sẻ hoặc buông bỏ."
+      },
+      "page": {
+        "keywords": [
+          "khám phá",
+          "ý tưởng mới",
+          "nhiệt huyết"
+        ],
+        "upright": "một ý tưởng thú vị đến mức không thể ngồi yên — sự tò mò không ngừng muốn thử thách bản thân với thế giới ngay lập tức.",
+        "reversed": "sự hào hứng không có hành động theo sau, hoặc những kế hoạch được tuyên bố rầm rộ rồi lặng lẽ bỏ dở.",
+        "advice": "Hãy để sự nhiệt huyết dẫn lối, nhưng hãy cho ý tưởng đó ít nhất một thử nghiệm thực tế trước khi theo đuổi ý tưởng tiếp theo."
+      },
+      "knight": {
+        "keywords": [
+          "phiêu lưu",
+          "bốc đồng",
+          "theo đuổi táo bạo"
+        ],
+        "upright": "lao về phía trước với sự tự tin tuyệt đối, được thúc đẩy bởi khao khát chinh phục hơn là một kế hoạch cố định.",
+        "reversed": "sự liều lĩnh bắt đầu khiến bạn phải trả giá, hoặc năng lượng không ngừng nghỉ nhưng không còn nơi nào để hướng tới một cách hiệu quả.",
+        "advice": "Hãy kiểm soát sự táo bạo đó trước khi nó điều khiển bạn, thay vì bạn điều khiển nó."
+      },
+      "queen": {
+        "keywords": [
+          "tự tin",
+          "độc lập",
+          "sức hút"
+        ],
+        "upright": "sự tự tin ấm áp, không thể lay chuyển, thu hút mọi người mà không cần phải cố gắng thể hiện để lấy lòng họ.",
+        "reversed": "sự tự tin trở nên cứng nhắc hoặc đòi hỏi, hoặc sự độc lập được sử dụng để ngăn cách người khác thay vì đứng trên đôi chân của chính mình.",
+        "advice": "Hãy dẫn dắt bằng sự tự tin bạn vốn có. Bạn không cần phải chứng minh điều đó với bất kỳ ai trước cả."
+      },
+      "king": {
+        "keywords": [
+          "tầm nhìn",
+          "lãnh đạo",
+          "tinh thần doanh nhân táo bạo"
+        ],
+        "upright": "sự lãnh đạo truyền cảm hứng bằng chính tấm gương — một tầm nhìn táo bạo kết hợp với khả năng thực thi để biến nó thành hiện thực.",
+        "reversed": "những kỳ vọng cao trở nên không thể đáp ứng, hoặc tham vọng được theo đuổi một cách tàn nhẫn đến mức làm tổn thương những người đang giúp đỡ bạn.",
+        "advice": "Hãy dẫn dắt bằng tầm nhìn, nhưng hãy kiểm tra xem những người đang thực hiện nó cùng bạn có còn muốn đồng hành hay không."
+      }
+    },
+    "cups": {
+      "ace": {
+        "keywords": [
+          "tình yêu mới",
+          "khai mở cảm xúc",
+          "tràn đầy"
+        ],
+        "upright": "một chiếc cốc cảm xúc đầy tràn qua miệng — tình yêu mới, lòng trắc ẩn mới, hoặc một cảm giác trọn vẹn đến mức phải lan tỏa ra xung quanh.",
+        "reversed": "một sự khai mở cảm xúc đang bị kìm nén, hoặc tình yêu và sự kết nối được trao đi nhưng chưa được đón nhận.",
+        "advice": "Hãy để cảm xúc này được trọn vẹn như nó vốn có. Không cần phải dè sẻn một điều gì đó chân thật đến thế."
+      },
+      "two": {
+        "keywords": [
+          "đối tác",
+          "sự thu hút lẫn nhau",
+          "sự gắn kết"
+        ],
+        "upright": "hai người gặp nhau như những người bình đẳng — một mối liên kết đang hình thành hoặc sâu sắc hơn trên cơ sở tương hỗ và khá cân bằng.",
+        "reversed": "một mối quan hệ trở nên lệch lạc, hoặc sự hợp tác đang chịu áp lực mà chưa được nói ra một cách rõ ràng.",
+        "advice": "Hãy kiểm tra xem mối quan hệ này còn giữ được sự tương hỗ như lúc ban đầu hay không. Hãy nói rõ ràng nếu có điều gì đã thay đổi."
+      },
+      "three": {
+        "keywords": [
+          "tình bạn",
+          "ăn mừng",
+          "cộng đồng"
+        ],
+        "upright": "niềm vui được chia sẻ sẽ trọn vẹn hơn — một buổi tụ họp, một tình bạn, một khoảnh khắc đáng ăn mừng cùng những người đã luôn sát cánh bên bạn.",
+        "reversed": "một nhóm người trở nên tiêu cực vì tin đồn hoặc sự loại trừ, hoặc sự nuông chiều quá mức làm lu mờ đi một dịp đáng lẽ phải là niềm vui thực sự.",
+        "advice": "Hãy đưa những người quan trọng nhất vào khoảnh khắc này. Ăn mừng sẽ ý nghĩa hơn khi không phải thực hiện một mình."
+      },
+      "four": {
+        "keywords": [
+          "thờ ơ",
+          "chiêm nghiệm",
+          "cơ hội bị bỏ lỡ"
+        ],
+        "upright": "sự chán nản với những gì đang có, mặc dù một điều gì đó đáng chú ý đang được trao ngay trước mắt bạn.",
+        "reversed": "sự thờ ơ cuối cùng cũng giảm bớt, hoặc sự sẵn lòng ngước nhìn lên và cân nhắc cơ hội mà bạn đã từng phớt lờ.",
+        "advice": "Hãy nhìn ra khỏi những gì làm bạn thất vọng và chú ý đến những gì đang được trao tặng. Nó có thể đáng giá hơn vẻ ngoài ban đầu của nó."
+      },
+      "five": {
+        "keywords": [
+          "mất mát",
+          "đau buồn",
+          "hối tiếc"
+        ],
+        "upright": "nỗi đau tập trung vào những gì đã mất và đổ vỡ, ngay cả khi vẫn còn những thứ nguyên vẹn ở gần bên mà bạn không nhận ra.",
+        "reversed": "nỗi đau bắt đầu giảm bớt, hoặc những bước đi thực sự đầu tiên hướng tới việc chấp nhận mất mát thay vì cứ mãi dằn vặt về nó.",
+        "advice": "Hãy để tang những gì đã thực sự mất đi, nhưng hãy quay đầu lại đủ lâu để thấy những gì vẫn còn đang đứng phía sau bạn."
+      },
+      "six": {
+        "keywords": [
+          "hoài niệm",
+          "ký ức",
+          "sự ngây thơ"
+        ],
+        "upright": "sự thôi thúc quay về những ngày tháng đơn giản hơn — những ký ức cũ, sự thoải mái quen thuộc, hoặc cuộc hội ngộ với ai đó từ một chương cũ của cuộc đời.",
+        "reversed": "sự hoài niệm trở thành nơi trú ẩn, hoặc một quá khứ được lý tưởng hóa khiến hiện tại trông tệ hơn thực tế.",
+        "advice": "Hãy tìm về quá khứ để tìm sự an ủi, nhưng đừng chuyển hẳn về đó. Những gì bạn cần bây giờ nằm ở hiện tại."
+      },
+      "seven": {
+        "keywords": [
+          "ảo tưởng",
+          "lựa chọn",
+          "huyễn hoặc"
+        ],
+        "upright": "quá nhiều lựa chọn hấp dẫn, một số thực tế hơn những cái khác, khiến bạn khó phân biệt đâu là cơ hội thực sự và đâu là suy nghĩ viển vông.",
+        "reversed": "sương mù dần tan để thấy rõ lựa chọn nào là thực tế, và cuối cùng bạn cũng có thể đưa ra quyết định.",
+        "advice": "Hãy kiểm chứng từng lựa chọn với thực tế trước khi quyết định. Không phải mọi thứ lấp lánh ở đây đều bền vững."
+      },
+      "eight": {
+        "keywords": [
+          "rời bỏ",
+          "tìm kiếm ý nghĩa sâu xa",
+          "sự ra đi"
+        ],
+        "upright": "rời bỏ một thứ trông có vẻ ổn từ bên ngoài vì nó không còn nuôi dưỡng tâm hồn bạn từ bên trong nữa.",
+        "reversed": "ở lại một nơi vì sợ hãi ý nghĩa của việc rời đi, hoặc cứ trôi dạt mà không bao giờ thực sự cam kết với sự ra đi đó.",
+        "advice": "Hãy tin vào phần trong bạn biết rằng điều này không còn đủ nữa, ngay cả khi bạn chưa thể giải thích đầy đủ lý do tại sao."
+      },
+      "nine": {
+        "keywords": [
+          "sự mãn nguyện",
+          "hài lòng",
+          "điều ước thành hiện thực"
+        ],
+        "upright": "sự hài lòng thoải mái, dễ dàng — một điều ước được đáp ứng, một mong muốn được thỏa mãn, sự mãn nguyện không cần phải biện minh.",
+        "reversed": "sự tự mãn thay thế cho sự hài lòng thực sự, hoặc sự dư dả mà bằng cách nào đó vẫn không cảm thấy là đủ.",
+        "advice": "Hãy để sự mãn nguyện này thật đơn giản. Bạn không cần phải kiếm nó lần thứ hai bằng cách lo lắng rằng nó sẽ không kéo dài."
+      },
+      "ten": {
+        "keywords": [
+          "trọn vẹn cảm xúc",
+          "hòa hợp gia đình",
+          "hạnh phúc bền lâu"
+        ],
+        "upright": "một niềm hạnh phúc sâu sắc, ổn định được xây dựng cùng những người thân thiết nhất — không phải là một khoảnh khắc đỉnh điểm, mà là một trạng thái bền vững.",
+        "reversed": "sự hòa hợp trong gia đình chỉ là vẻ bề ngoài, hoặc các giá trị giữa những người bạn yêu thương đã lặng lẽ không còn đồng điệu.",
+        "advice": "Hãy nhìn xa hơn bức tranh hạnh phúc bề nổi và kiểm tra xem những người trong đó có thực sự cảm thấy như vậy không."
+      },
+      "page": {
+        "keywords": [
+          "cơ hội sáng tạo",
+          "thông điệp trực giác",
+          "sự tò mò"
+        ],
+        "upright": "một thông điệp cảm xúc hoặc sáng tạo nhẹ nhàng, bất ngờ đến — điều gì đó đáng để chú ý, ngay cả khi nó có vẻ nhỏ bé.",
+        "reversed": "sự non nớt về cảm xúc cản trở một cơ hội thực sự, hoặc một xung lực sáng tạo được sử dụng để trốn tránh thay vì thể hiện.",
+        "advice": "Hãy coi trọng cảm giác nhỏ bé, bất ngờ đó. Nó mang nhiều thông tin hơn vẻ ngoài của nó đấy."
+      },
+      "knight": {
+        "keywords": [
+          "lãng mạn",
+          "lý tưởng hóa",
+          "làm theo trái tim"
+        ],
+        "upright": "dẫn dắt bằng trái tim, theo đuổi một tầm nhìn lãng mạn hoặc lý tưởng với sự chân thành thực sự, ngay cả khi nó chưa hoàn toàn thực tế.",
+        "reversed": "tâm trạng thất thường được ngụy trang dưới vẻ nhạy cảm, hoặc một lý tưởng lãng mạn luôn khiến bạn thất vọng.",
+        "advice": "Hãy làm theo trái tim mình ở đây, nhưng hãy kiểm chứng nó với thực tế trước khi bạn đi theo nó đến cùng."
+      },
+      "queen": {
+        "keywords": [
+          "lòng trắc ẩn",
+          "an toàn cảm xúc",
+          "trực giác"
+        ],
+        "upright": "chiều sâu cảm xúc được giữ vững với sự ổn định thực sự — lòng trắc ẩn dành cho người khác mà không phải trả giá bằng sự vững vàng của chính bạn.",
+        "reversed": "lòng trắc ẩn đã chuyển thành sự bỏ bê bản thân, hoặc sự an toàn cảm xúc chỉ tồn tại chừng nào không ai thử thách nó.",
+        "advice": "Hãy trao lòng trắc ẩn cho người khác, nhưng hãy giữ lại đủ cho chính bản thân mình."
+      },
+      "king": {
+        "keywords": [
+          "cân bằng cảm xúc",
+          "ngoại giao",
+          "kiểm soát bình tĩnh"
+        ],
+        "upright": "sự làm chủ bình tĩnh trước những cảm xúc mạnh mẽ — có khả năng giữ vững và công bằng ngay cả khi các yếu tố cảm xúc đang ở mức cao.",
+        "reversed": "sự kiểm soát cảm xúc thực chất là sự kìm nén, hoặc vẻ bình tĩnh bên ngoài che giấu sự thao túng bên dưới.",
+        "advice": "Hãy giữ vững lập trường, nhưng hãy để những gì bạn thực sự cảm thấy được biết đến thay vì chỉ quản lý chúng."
+      }
+    },
+    "swords": {
+      "ace": {
+        "keywords": [
+          "đột phá",
+          "sự sáng suốt",
+          "ý tưởng mới"
+        ],
+        "upright": "một sự cắt ngang đột ngột qua những bối rối — một sự nhận thức, quyết định, hoặc một sự thật xuất hiện sắc bén và rõ ràng không thể nhầm lẫn.",
+        "reversed": "sự sáng suốt bị che mờ bởi quá nhiều ồn ào, hoặc một sự thật đã bị bóp méo trước khi đến được với bạn.",
+        "advice": "Hãy tin vào suy nghĩ sáng suốt khi nó xuất hiện. Đừng để bị thuyết phục quay lại sự bối rối."
+      },
+      "two": {
+        "keywords": [
+          "thế bế tắc",
+          "quyết định khó khăn",
+          "né tránh"
+        ],
+        "upright": "một quyết định bị giữ ở khoảng cách an toàn, được bảo vệ và cân bằng cẩn thận đến mức không lựa chọn nào được đưa ra.",
+        "reversed": "thế bế tắc cuối cùng cũng bị phá vỡ, hoặc quá tải thông tin mâu thuẫn khiến việc lựa chọn trở nên khó khăn hơn thay vì dễ dàng hơn.",
+        "advice": "Hãy tháo băng bịt mắt ra. Quyết định sẽ không trở nên dễ dàng hơn nếu bạn cứ tiếp tục trì hoãn."
+      },
+      "three": {
+        "keywords": [
+          "đau lòng",
+          "phản bội",
+          "nỗi buồn"
+        ],
+        "upright": "một nỗi đau sắc bén và cụ thể — một sự thật, sự phản bội, hoặc mất mát cắt sâu chính vì nó là sự thật.",
+        "reversed": "những giai đoạn đầu của sự chữa lành, hoặc nỗi đau cũ trỗi dậy vì nó chưa bao giờ được giải quyết triệt để lần đầu tiên.",
+        "advice": "Hãy để nỗi đau được sắc bén như chính nó. Gọi tên nó một cách rõ ràng là điều bắt đầu cho sự chữa lành."
+      },
+      "four": {
+        "keywords": [
+          "nghỉ ngơi",
+          "hồi phục",
+          "chiêm nghiệm"
+        ],
+        "upright": "một sự rút lui có chủ đích sau xung đột hoặc căng thẳng — không phải là thất bại, mà là sự hồi phục mà tâm trí cần trước khi có thể suy nghĩ sáng suốt trở lại.",
+        "reversed": "sự nghỉ ngơi bị gián đoạn trước khi hoàn thành, hoặc sự bồn chồn khiến việc hồi phục thực sự trở nên bất khả thi.",
+        "advice": "Hãy nghỉ ngơi trọn vẹn. Hồi phục một nửa chỉ có nghĩa là mang theo sự kiệt sức vào bất cứ điều gì sắp tới."
+      },
+      "five": {
+        "keywords": [
+          "chiến thắng rỗng tuếch",
+          "xung đột",
+          "phản bội"
+        ],
+        "upright": "một chiến thắng tốn kém hơn giá trị của nó — một cuộc xung đột bị đẩy đến cùng cực mặc dù tất cả những người liên quan đều rời đi trong tình trạng tồi tệ hơn.",
+        "reversed": "sự oán giận còn sót lại sau một cuộc xung đột chưa bao giờ thực sự được giải quyết, hoặc một cơ hội để làm hòa thay vì cố gắng giành lợi thế.",
+        "advice": "Hãy tự hỏi liệu việc thắng cuộc chiến cụ thể này có xứng đáng với cái giá bạn phải trả sau đó hay không."
+      },
+      "six": {
+        "keywords": [
+          "chuyển tiếp",
+          "bước tiếp",
+          "vùng nước lặng"
+        ],
+        "upright": "một sự di chuyển chậm rãi, có chủ đích ra khỏi vùng hỗn loạn, chỉ mang theo những gì cần thiết hướng tới điều gì đó ổn định hơn.",
+        "reversed": "kháng cự một sự chuyển tiếp vốn đã cần thiết, hoặc hành lý chưa được giải quyết bị mang theo vào vùng nước lặng phía trước.",
+        "advice": "Hãy để những vùng nước khó khăn lại phía sau. Đừng tiếp tục nhìn lại bờ bến mà bạn đang rời đi."
+      },
+      "seven": {
+        "keywords": [
+          "chiến lược",
+          "lừa dối",
+          "hành động đơn độc"
+        ],
+        "upright": "di chuyển lặng lẽ và độc lập, lấy những gì bạn cần mà không xin phép — khôn ngoan, nhưng không hoàn toàn trung thực.",
+        "reversed": "một chiến lược ẩn giấu bị phơi bày, hoặc lương tâm cắn rứt cuối cùng cũng bắt kịp một lối tắt đã được thực hiện.",
+        "advice": "Hãy tự hỏi liệu chiến lược bạn đang thực hiện có còn hợp lý nếu tất cả những người liên quan đều có thể nhìn thấy nó."
+      },
+      "eight": {
+        "keywords": [
+          "bị mắc kẹt",
+          "tâm lý nạn nhân",
+          "giới hạn tự áp đặt"
+        ],
+        "upright": "cảm giác bị bao vây tứ phía, mặc dù những sợi dây trói bạn lỏng lẻo hơn bạn cảm thấy — một nhà tù được xây dựng từ niềm tin hơn là từ thực tế.",
+        "reversed": "vết nứt thực sự đầu tiên trong cái bẫy tự áp đặt đó, khi câu chuyện về sự bất lực bắt đầu nới lỏng sự kiểm soát của nó.",
+        "advice": "Hãy tìm khoảng trống trong những sợi dây mà bạn đã mặc định là chắc chắn. Có nhiều không gian để di chuyển hơn bạn tưởng."
+      },
+      "nine": {
+        "keywords": [
+          "lo âu",
+          "phiền muộn",
+          "đau khổ tinh thần"
+        ],
+        "upright": "một tâm trí chạy theo những kịch bản tồi tệ nhất trong bóng tối, kiệt sức vì những nỗi sợ hãi vốn lớn hơn nhiều vào lúc 3 giờ sáng so với ban ngày.",
+        "reversed": "sự lo lắng bắt đầu dịu đi, hoặc một quyết định nói ra nỗi sợ hãi cuối cùng thay vì mang nó một mình.",
+        "advice": "Hãy nói ra nỗi lo lắng đó với ai đó. Nó hiếm khi còn nguyên vẹn khi đối diện với ánh sáng như cách bạn cảm thấy lúc này."
+      },
+      "ten": {
+        "keywords": [
+          "chạm đáy",
+          "kết thúc đau đớn",
+          "phản bội"
+        ],
+        "upright": "một sự kết thúc cuối cùng và đau đớn — điều tồi tệ nhất đã ở lại phía sau, và từ đây chỉ có thể đi lên.",
+        "reversed": "kháng cự một sự kết thúc đã xảy ra, hoặc sự hồi phục chậm chạp, một phần từ điều gì đó chưa hoàn toàn chữa lành.",
+        "advice": "Hãy để sự kết thúc này được trọn vẹn. Cố gắng giữ cho nó sống lay lắt chỉ kéo dài thêm nỗi đau."
+      },
+      "page": {
+        "keywords": [
+          "tò mò",
+          "cảnh giác",
+          "khao khát sự thật"
+        ],
+        "upright": "một tâm trí tỉnh táo, hay đặt câu hỏi, thu thập thông tin và quan sát kỹ lưỡng trước khi quyết định tin vào điều gì.",
+        "reversed": "tin đồn thay thế cho việc điều tra thực sự, hoặc những ý tưởng không bao giờ chuyển từ lời nói sang hành động thực tế.",
+        "advice": "Hãy tiếp tục đặt câu hỏi, nhưng cuối cùng hãy hành động dựa trên những gì câu trả lời mang lại cho bạn."
+      },
+      "knight": {
+        "keywords": [
+          "hành động quyết đoán",
+          "sự quả quyết",
+          "tư duy nhanh"
+        ],
+        "upright": "di chuyển nhanh và nói thẳng, đi thẳng vào vấn đề mà không chờ đợi sự cho phép của bất kỳ ai.",
+        "reversed": "sự hung hăng vượt quá khả năng phán đoán, hoặc những quyết định bốc đồng được đưa ra nhanh hơn mức tình huống yêu cầu.",
+        "advice": "Hãy hành động quyết đoán, nhưng hãy hít một hơi trước khi nói ra phiên bản sắc bén nhất của những gì bạn đang nghĩ."
+      },
+      "queen": {
+        "keywords": [
+          "tư duy độc lập",
+          "thiết lập ranh giới",
+          "giao tiếp trực tiếp"
+        ],
+        "upright": "nhìn nhận tình huống một cách rõ ràng và nói ra điều đó mà không cần làm dịu đi nhiều hơn mức sự thật yêu cầu.",
+        "reversed": "sự thẳng thắn đã chuyển thành sự lạnh lùng, hoặc các ranh giới được giữ cứng nhắc đến mức không ai có thể đến gần.",
+        "advice": "Hãy giữ sự sáng suốt, nhưng hãy kiểm tra xem sự thẳng thừng đó là cần thiết hay chỉ là dễ dàng hơn so với việc dịu dàng."
+      },
+      "king": {
+        "keywords": [
+          "thẩm quyền trí tuệ",
+          "tư duy có cấu trúc",
+          "sự thật khách quan"
+        ],
+        "upright": "phán đoán dựa trên nguyên tắc và bằng chứng thay vì cảm xúc — công bằng, chính xác và khó có thể tranh cãi.",
+        "reversed": "logic được sử dụng như một vũ khí, hoặc quyền lực về mặt kỹ thuật là đúng nhưng vẫn tàn nhẫn.",
+        "advice": "Hãy đúng, nhưng đừng để việc đúng trở thành cái cớ cho sự thiếu tử tế."
+      }
+    },
+    "pentacles": {
+      "ace": {
+        "keywords": [
+          "cơ hội mới",
+          "thịnh vượng",
+          "hiện thực hóa"
+        ],
+        "upright": "một cơ hội cụ thể đang đến tay bạn — thực tế, hữu hình và đáng để xây dựng thay vì chỉ ngắm nhìn.",
+        "reversed": "một cơ hội bị bỏ lỡ do thời điểm hoặc kế hoạch không tốt, hoặc một khởi đầu đầy hứa hẹn nhưng không được thực hiện đến nơi đến chốn.",
+        "advice": "Hãy thực hiện bước đi thực tế ngay bây giờ. Loại cơ hội này cần sự kiên trì theo đuổi hơn là chỉ sự nhiệt tình."
+      },
+      "two": {
+        "keywords": [
+          "cân bằng",
+          "khả năng thích nghi",
+          "xoay xở với các ưu tiên"
+        ],
+        "upright": "duy trì nhiều yêu cầu cùng lúc, điều chỉnh linh hoạt thay vì để bất cứ thứ gì rơi rụng.",
+        "reversed": "quá nhiều ưu tiên được thêm vào, dẫn đến việc một thứ gì đó đang bị tuột khỏi tầm kiểm soát mà lẽ ra không nên như vậy.",
+        "advice": "Hãy nhìn nhận trung thực những gì bạn đang xoay xở. Có lẽ cần phải đặt bớt một thứ xuống thay vì cố gắng cân bằng quá sức."
+      },
+      "three": {
+        "keywords": [
+          "hợp tác",
+          "kỹ năng",
+          "làm việc nhóm"
+        ],
+        "upright": "những kỹ năng khác biệt kết hợp lại tạo thành thứ mà không ai có thể tự mình xây dựng — sự tiến bộ vững chắc nhờ hợp tác thực sự.",
+        "reversed": "làm việc đơn độc trong khi cần sự hỗ trợ, hoặc một đội ngũ không còn cùng nhìn về một hướng.",
+        "advice": "Hãy tìm kiếm sự giúp đỡ cần thiết. Đây không phải là dự án có thể xây dựng tốt nếu chỉ có một mình."
+      },
+      "four": {
+        "keywords": [
+          "an toàn",
+          "kiểm soát",
+          "giữ chặt"
+        ],
+        "upright": "nắm giữ chặt chẽ những gì bạn đã xây dựng, ưu tiên sự an toàn hơn là rủi ro, ngay cả khi phải đánh đổi bằng sự linh hoạt.",
+        "reversed": "nắm giữ quá chặt đến mức không có gì mới có thể thâm nhập, hoặc nỗi sợ mất mát chi phối quyết định hơn là bất kỳ mối đe dọa thực sự nào.",
+        "advice": "Hãy nới lỏng sự kiểm soát một chút. Những gì bạn đang bảo vệ không mong manh như bạn cảm thấy đâu."
+      },
+      "five": {
+        "keywords": [
+          "khó khăn",
+          "tổn thất tài chính",
+          "cô lập"
+        ],
+        "upright": "những khó khăn thực sự, cảm giác cô lập cũng đau đớn như chính sự mất mát — chật vật trong khi cảm thấy sự giúp đỡ nằm ngoài tầm với.",
+        "reversed": "những dấu hiệu đầu tiên của sự hỗ trợ xuất hiện, hoặc khó khăn bắt đầu dịu bớt sau một giai đoạn gian nan.",
+        "advice": "Hãy tìm cánh cửa đang mở gần đó. Sự giúp đỡ luôn tồn tại, ngay cả khi bạn chưa cảm nhận được điều đó."
+      },
+      "six": {
+        "keywords": [
+          "hào phóng",
+          "cho và nhận",
+          "cân bằng"
+        ],
+        "upright": "nguồn lực được luân chuyển công bằng giữa mọi người — sự giúp đỡ được trao đi vì cần thiết và được đón nhận mà không chút hổ thẹn.",
+        "reversed": "sự hào phóng đi kèm với điều kiện, hoặc một mối quan hệ trao đổi đã âm thầm trở nên bất cân xứng.",
+        "advice": "Hãy kiểm tra xem những gì được trao đi ở đây có thực sự tự nguyện, hay có điều gì đó đang bị đòi hỏi đáp trả."
+      },
+      "seven": {
+        "keywords": [
+          "kiên nhẫn",
+          "tầm nhìn dài hạn",
+          "đánh giá tiến độ"
+        ],
+        "upright": "một khoảng dừng để nhìn nhận lại những nỗ lực đã đầu tư, cân nhắc xem nó có đang mang lại kết quả hay cần thay đổi hướng đi.",
+        "reversed": "thiếu kiên nhẫn với kết quả chưa đến, hoặc tiếp tục nỗ lực trên một con đường không còn mang lại giá trị.",
+        "advice": "Hãy đánh giá một cách trung thực. Một phần nỗ lực này xứng đáng được kiên nhẫn hơn; một phần khác xứng đáng có kế hoạch mới."
+      },
+      "eight": {
+        "keywords": [
+          "siêng năng",
+          "tay nghề",
+          "xây dựng kỹ năng"
+        ],
+        "upright": "nỗ lực đều đặn, lặp đi lặp lại nhằm trở nên thực sự giỏi một việc gì đó — không hào nhoáng, nhưng đó chính xác là những gì sự tinh thông đòi hỏi.",
+        "reversed": "chủ nghĩa hoàn hảo làm đình trệ tiến độ thực sự, hoặc cắt giảm các công đoạn trong công việc vốn xứng đáng nhận được sự đầu tư trọn vẹn.",
+        "advice": "Hãy tiếp tục thực hiện những bước lặp lại không hào nhoáng đó. Đây chính là hình hài của kỹ năng khi đang được hình thành."
+      },
+      "nine": {
+        "keywords": [
+          "tự chủ",
+          "dồi dào",
+          "độc lập"
+        ],
+        "upright": "sự thoải mái và dồi dào đạt được phần lớn nhờ chính bạn — một sự tự chủ không cần sự chấp thuận của bất kỳ ai.",
+        "reversed": "thành công trông có vẻ tốt đẹp từ bên ngoài nhưng lại cảm thấy trống rỗng bên trong, hoặc làm việc quá sức khiến bạn không còn ai để chia sẻ niềm vui.",
+        "advice": "Hãy tận hưởng những gì bạn đã xây dựng mà không cần bất kỳ ai khác xác nhận giá trị của nó."
+      },
+      "ten": {
+        "keywords": [
+          "di sản",
+          "an toàn dài hạn",
+          "tài sản gia đình"
+        ],
+        "upright": "sự ổn định tồn tại lâu dài hơn bất kỳ cá nhân nào — một di sản hoặc nền tảng được xây dựng để hỗ trợ nhiều hơn là chỉ cho riêng bạn.",
+        "reversed": "di sản đang bị đe dọa, hoặc những bất đồng trong gia đình về nguồn lực đang làm tổn hại đến những gì đã được xây dựng bền vững.",
+        "advice": "Hãy bảo vệ những gì được tạo ra để tồn tại lâu dài, nhưng đừng để những tranh chấp về nó phá hủy mục đích ban đầu của nó."
+      },
+      "page": {
+        "keywords": [
+          "cơ hội mới",
+          "học tập",
+          "tò mò thực tế"
+        ],
+        "upright": "một cơ hội thực tế đáng để nghiên cứu kỹ lưỡng — mới mẻ, đầy hứa hẹn và vẫn đang trong giai đoạn tìm hiểu cách vận hành.",
+        "reversed": "những kế hoạch phi thực tế chưa được kiểm chứng, hoặc sự tiến bộ bị đình trệ trước khi thực sự bắt đầu.",
+        "advice": "Hãy nghiên cứu kỹ cơ hội này trước khi cam kết sâu hơn. Nó đầy hứa hẹn nhưng vẫn chưa được kiểm chứng."
+      },
+      "knight": {
+        "keywords": [
+          "siêng năng",
+          "thói quen",
+          "tiến bộ có phương pháp"
+        ],
+        "upright": "sự tiến bộ chậm rãi, có phương pháp, đáng tin cậy — không đường tắt, chỉ có sự làm việc nhất quán tích lũy theo thời gian.",
+        "reversed": "thói quen trở nên trì trệ, hoặc chủ nghĩa hoàn hảo cứng nhắc đến mức không có gì được hoàn thành.",
+        "advice": "Hãy tin tưởng vào phương pháp chậm rãi đang hiệu quả. Nó không cần phải nhanh hơn mới đạt được kết quả."
+      },
+      "queen": {
+        "keywords": [
+          "nuôi dưỡng",
+          "tháo vát",
+          "sự vững chãi"
+        ],
+        "upright": "sự chăm sóc thực tế thể hiện qua những cách hữu hình — sự thoải mái, nguồn lực và sự vững chãi được trao đi hào phóng cho người khác.",
+        "reversed": "chăm sóc người khác nhưng lại bỏ bê bản thân, hoặc sự bất an về nguồn lực làm suy giảm lòng hào phóng đó.",
+        "advice": "Hãy dành sự chăm sóc thực tế cho chính mình giống như cách bạn dễ dàng dành cho mọi người khác."
+      },
+      "king": {
+        "keywords": [
+          "làm chủ vật chất",
+          "an toàn tài chính",
+          "hào phóng"
+        ],
+        "upright": "sự làm chủ về vật chất và tài chính được xây dựng theo thời gian, nay đủ hào phóng để chia sẻ sự an toàn đã tạo ra.",
+        "reversed": "sự kiểm soát nguồn lực trở nên cứng nhắc hoặc chiếm hữu, hoặc theo đuổi an toàn tài chính bằng cách đánh đổi mọi thứ khác.",
+        "advice": "Hãy sử dụng những gì bạn đã xây dựng một cách hào phóng. Sự an toàn không được chia sẻ cuối cùng sẽ chỉ dẫn đến sự cô lập."
+      }
+    }
+  }
+}

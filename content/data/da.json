@@ -1,0 +1,925 @@
+{
+  "ui": {
+    "logo": "MyTarot.Day",
+    "tagline": "100% gratis daglig tarotlæsning, tilpasset din fødselsdato. Ingen konto, ingen omkostninger, nogensinde.",
+    "eyebrow": "Fire kort. Én dag.",
+    "selectCardsPrompt": "Vælg 4 kort",
+    "heroTitleLine1": "Hvad har dagens kort til",
+    "heroTitleEm": "dig",
+    "submitLabel": "Vis mine kort",
+    "submittingLabel": "Trækker...",
+    "loadingText": "Blander bunken til {date}...",
+    "tryAnotherLabel": "Lave en ny læsning?",
+    "buyMeCoffeeLabel": "☕  Køb mig en kop kaffe 🤗",
+    "funFact": "Sjov fakta: Det vintage look på vores tarotkort er autentisk. Vi bruger det traditionelle 1909 Rider–Waite–Smith Tarot med de originale illustrationer af Pamela Colman Smith. Mere end et århundrede senere fortsætter dette klassiske sæt med at inspirere læsere verden over og betragtes som et af de mest indflydelsesrige fundamenter for moderne tarot.",
+    "footerDisclaimer": "MyTarot.Day tilbydes til refleksion og underholdning. Det er ikke en erstatning for professionel, medicinsk, økonomisk eller juridisk rådgivning.",
+    "footerTagline": "Udviklet af P.San Team | Det er gratis, og det vil det altid være!",
+    "footerHome": "Forside",
+    "footerBlog": "Blog",
+    "footerPrivacy": "Privatlivspolitik",
+    "footerTerms": "Vilkår & Betingelser",
+    "footerAbout": "Om os",
+    "footerContact": "Kontakt",
+    "todayBadge": "I dag",
+    "reversedLabel": "Omvendt",
+    "uprightLabel": "Opretstående",
+    "supportPromptText": "Kunne du lide det? Giv mig en kop kaffe",
+    "summaryGuideLabel": "Guide",
+    "summaryPastLabel": "Fortid",
+    "summaryFutureLabel": "Fremtid",
+    "freeBadge": "100% gratis — ingen oprettelse, ingen omkostninger",
+    "freeTitlePhrase": "Gratis tarotlæsning"
+  },
+  "positions": {
+    "determinant": {
+      "label": "Determinanten",
+      "subtitle": "Kraften der former hele dagen",
+      "intros": [
+        "Over alt andet i dag ligger",
+        "Kortet, der sætter tonen for hele dagen, er",
+        "Før alt andet formes dagen af"
+      ]
+    },
+    "past": {
+      "label": "Fortiden",
+      "subtitle": "Hvad du bærer med dig",
+      "intros": [
+        "Bag dig, og stadig påvirkende dette øjeblik, er",
+        "Hvad du bærer med dig fra de seneste dage er",
+        "Fortiden, der spiller ind i dag, er markeret af"
+      ]
+    },
+    "present": {
+      "label": "Nutiden",
+      "subtitle": "Hvor du står lige nu",
+      "intros": [
+        "Lige nu, i centrum af det hele, er",
+        "Hvor du faktisk står i dag er med",
+        "I dette nu står du over for"
+      ]
+    },
+    "future": {
+      "label": "Fremtiden",
+      "subtitle": "Hvor det bevæger sig hen",
+      "intros": [
+        "Lige forude bevæger dette sig mod",
+        "Hvor dette bevæger sig hen, hvis intet ændrer sig, er",
+        "Den nærmeste fremtid peger mod"
+      ]
+    }
+  },
+  "summaryClauses": [
+    "Læst sammen tegner dagens oplæg en linje fra {past} til {future}, hvor {determinant} sætter rammerne for, hvordan det hele udspiller sig.",
+    "Den røde tråd i dag løber fra hvad {past} allerede har lært dig, gennem hvor du står nu, mod {future} — alt sammen farvet af {determinant}."
+  ],
+  "ranks": {
+    "ace": "Es",
+    "two": "To",
+    "three": "Tre",
+    "four": "Fire",
+    "five": "Fem",
+    "six": "Seks",
+    "seven": "Syv",
+    "eight": "Otte",
+    "nine": "Ni",
+    "ten": "Ti",
+    "page": "Page",
+    "knight": "Ridder",
+    "queen": "Dronning",
+    "king": "Konge"
+  },
+  "suits": {
+    "wands": "Stokke",
+    "cups": "Bægre",
+    "swords": "Sværd",
+    "pentacles": "Mønter"
+  },
+  "majorArcana": {
+    "0": {
+      "name": "Narren",
+      "keywords": [
+        "begyndelser",
+        "uskyld",
+        "spring ud i det ukendte",
+        "åbenhed"
+      ],
+      "upright": "en frisk start uden kort og garantier – intet at støtte sig til udover nysgerrighed og modet til at tage skridtet, før alle svarene er på plads.",
+      "reversed": "tøven forklædt som forsigtighed, et skridt der er øvet så mange gange, at det aldrig bliver taget – eller det modsatte: et blindt spring uden at tjekke, hvad der er nedenunder.",
+      "advice": "Vær begynder igen. Den eneste fejl her er at nægte at starte."
+    },
+    "1": {
+      "name": "Magikeren",
+      "keywords": [
+        "ressourcestærkhed",
+        "viljestyrke",
+        "manifestation"
+      ],
+      "upright": "at indse, at alle de værktøjer, situationen kræver – intellekt, færdigheder, timing – allerede er i dine hænder, og at det eneste, der mangler, er at bruge dem bevidst.",
+      "reversed": "talent der ikke bliver brugt, eller færdigheder der bliver brugt til manipulation i stedet for at skabe noget. Uanset hvad går evnerne til spilde, eller også er selvtilliden mere facade end fundament.",
+      "advice": "Hold op med at samle på flere værktøjer. Tag det, du har i hånden, og brug det."
+    },
+    "2": {
+      "name": "Ypperstepræstinden",
+      "keywords": [
+        "intuition",
+        "det ubevidste",
+        "skjult viden"
+      ],
+      "upright": "viden der kommer under sprogets overflade – en fornemmelse, en drøm, en følelse der viser sig at være mere præcis end alle de beviser, du havde på det tidspunkt.",
+      "reversed": "en stille sandhed der bliver overdøvet af støj, eller et instinkt der holdes for sig selv, fordi det endnu ikke kan bevise sit værd.",
+      "advice": "Stol på det, du allerede mærker, men ikke har sagt højt endnu. Det ved noget, som din logik endnu ikke har indhentet."
+    },
+    "3": {
+      "name": "Kejserinden",
+      "keywords": [
+        "overflod",
+        "omsorg",
+        "kreativitet",
+        "vækst"
+      ],
+      "upright": "en vækstperiode der kræver pleje, ikke tvang – et projekt, et forhold eller en del af dig selv, der trives, når det bliver næret i stedet for presset.",
+      "reversed": "omsorg eller kreativitet der tipper over i kvælning, eller frugtbar jord der er blevet forsømt, indtil den holdt op med at producere noget.",
+      "advice": "Giv det, du holder af, opmærksomhed i stedet for pres. Tålmodighed er det, der får det til at gro."
+    },
+    "4": {
+      "name": "Kejseren",
+      "keywords": [
+        "struktur",
+        "autoritet",
+        "disciplin",
+        "stabilitet"
+      ],
+      "upright": "orden bygget med et formål – en ramme, en grænse eller en plan, der er robust nok til at holde gode intentioner oppe under virkeligt pres.",
+      "reversed": "kontrol der holdes for stramt, eller en struktur så løs, at intet indeni forbliver oprejst.",
+      "advice": "Sæt stilladset op, før du bygger huset. Struktur nu sparer kræfter senere."
+    },
+    "5": {
+      "name": "Hierofanten",
+      "keywords": [
+        "tradition",
+        "trossystemer",
+        "vejledning",
+        "konvention"
+      ],
+      "upright": "visdom givet videre gennem etablerede kanaler – en mentor, en institution eller en tradition, hvis vejledning stadig fortjener at blive fulgt, i det mindste for nu.",
+      "reversed": "en regel der følges af ren vane, eller en konvention der for længst er holdt op med at gøre sig fortjent til loyalitet.",
+      "advice": "Lær den etablerede vej først. Beslut dig for, om du vil forlade den bagefter."
+    },
+    "6": {
+      "name": "De Elskende",
+      "keywords": [
+        "forbindelse",
+        "værdier",
+        "valg",
+        "samklang"
+      ],
+      "upright": "en reel samklang mellem mennesker, værdier eller veje – et valg der betyder noget, fordi det viser, hvad du står for, ikke bare hvad du kan lide.",
+      "reversed": "et mismatch man stiltiende finder sig i, eller en beslutning man undgår, fordi det at sætte ord på den ville åbne en sværere samtale.",
+      "advice": "Sæt ord på valget, selvom det ærlige svar gør tingene mere komplicerede."
+    },
+    "7": {
+      "name": "Vognen",
+      "keywords": [
+        "viljestyrke",
+        "beslutsomhed",
+        "sejr gennem kontrol"
+      ],
+      "upright": "fremdrift vundet ved at holde to modsatrettede kræfter i én hånd og styre dem begge i samme retning.",
+      "reversed": "momentum der bliver spist op af intern konflikt, eller en sejr man har jagtet så hårdt, at man træder på det, man skulle beskytte.",
+      "advice": "Hold op med at kæmpe med dine egne modsigelser. Peg dem i samme retning og kom afsted."
+    },
+    "8": {
+      "name": "Styrken",
+      "keywords": [
+        "mod",
+        "tålmodighed",
+        "stille beslutsomhed",
+        "medfølelse"
+      ],
+      "upright": "en kraft der aldrig behøver at hæve stemmen – en ro der kommer af at slutte fred med det svære, ikke at begrave det.",
+      "reversed": "selvtvivl der bærer ydmyghed som forklædning, eller magtanvendelse hvor tålmodighed ville have gjort mere gavn.",
+      "advice": "Mød det, der skræmmer dig, med ro i stedet for magt. Mildhed er ikke svaghed."
+    },
+    "9": {
+      "name": "Eremitten",
+      "keywords": [
+        "introspektion",
+        "ensomhed",
+        "indre vejledning"
+      ],
+      "upright": "et nødvendigt tilbagetog – at træde væk fra støjen for at høre, hvad du selv tænker, og ikke bare hvad alle omkring dig siger.",
+      "reversed": "isolation der bliver til undgåelse, eller visdom der holdes så tæt ind til kroppen, at den aldrig når dem, der har brug for den.",
+      "advice": "Tag ensomheden. Det svar, du leder efter, dukker ikke op i en menneskemængde."
+    },
+    "10": {
+      "name": "Lykkehjulet",
+      "keywords": [
+        "cyklusser",
+        "forandring",
+        "skæbne",
+        "vendepunkter"
+      ],
+      "upright": "en forandring der allerede er i gang, skubbet af kræfter større end noget enkelt valg – omstændigheder der vender på en måde, som ændrer præmisserne.",
+      "reversed": "en cyklus der gentager sig selv, fordi mønsteret nedenunder ikke har ændret sig – kun kostumet har.",
+      "advice": "Hold op med at prøve at kontrollere drejningen. Brug din energi på, hvordan du reagerer, når hjulet lander."
+    },
+    "11": {
+      "name": "Retfærdigheden",
+      "keywords": [
+        "retfærdighed",
+        "sandhed",
+        "årsag og virkning",
+        "klarhed"
+      ],
+      "upright": "et retfærdigt opgør, selvom det ikke er behageligt – et klart blik på årsag og virkning, og på hvad der skyldes.",
+      "reversed": "en ubalance ingen har adresseret, eller en sandhed man går udenom, fordi det at se den i øjnene ville kræve ansvarlighed.",
+      "advice": "Se på situationen uden at smigre dig selv. Retfærdighed begynder med et ærligt regnskab."
+    },
+    "12": {
+      "name": "Den Hængte Mand",
+      "keywords": [
+        "overgivelse",
+        "nyt perspektiv",
+        "pause"
+      ],
+      "upright": "fremskridt vundet ved at holde pause i stedet for at presse på – en bevidst suspension der åbner for en vinkel på tingene, du ikke kunne nå, mens du var i bevægelse.",
+      "reversed": "forsinkelse for forsinkelsens skyld, eller et offer der aldrig førte til nogen reel forståelse.",
+      "advice": "Lad dette forblive uafklaret lidt endnu. Indsigten lever i ventetiden, ikke et sted forbi den."
+    },
+    "13": {
+      "name": "Døden",
+      "keywords": [
+        "transformation",
+        "afslutninger",
+        "slip"
+      ],
+      "upright": "en sand afslutning der rydder plads til noget, der ikke kunne have eksisteret ved siden af den – ikke ødelæggelse, men nødvendig forandring.",
+      "reversed": "en forandring man har modsat sig længe efter, den blev uundgåelig, hvilket kun gør afslutningen sværere, når den endelig kommer.",
+      "advice": "Lad den del af dette, der allerede er forbi, være forbi. Noget andet har brug for den plads, den optager."
+    },
+    "14": {
+      "name": "Mådeholdet",
+      "keywords": [
+        "balance",
+        "mådehold",
+        "integration",
+        "tålmodighed"
+      ],
+      "upright": "to ting der så uforenelige ud, som finder en brugbar middelvej – tålmodighed, blanding, det langsomme håndværk at få proportionerne rigtige.",
+      "reversed": "for meget i én retning, eller et kompromis der er kastet sammen så hurtigt, at ingen af parterne ender med at være tilfredse.",
+      "advice": "Sæt farten ned på blandingen. Den rette balance kan ikke tvinges på plads natten over."
+    },
+    "15": {
+      "name": "Djævelen",
+      "keywords": [
+        "tilknytning",
+        "begrænsning",
+        "fristelse",
+        "gamle mønstre"
+      ],
+      "upright": "et mønster, en vane eller en dynamik der har mere fat i dig, end du har lyst til at indrømme – selvom døren ud aldrig har været låst.",
+      "reversed": "det første rigtige ryk væk fra noget, der havde dig fanget – at se lænken klart for, hvad den er.",
+      "advice": "Se ærligt på, hvad du bliver ved med at vælge, selvom det koster dig. At sætte navn på det er der, hvor vejen ud starter."
+    },
+    "16": {
+      "name": "Tårnet",
+      "keywords": [
+        "pludselig forandring",
+        "omvæltning",
+        "åbenbaring"
+      ],
+      "upright": "en struktur bygget på usikker grund, der falder hurtigt – forstyrrende, men afklarende, da det rydder ud i det, der aldrig var stabilt til at begynde med.",
+      "reversed": "et sammenbrud der er holdt stangen gennem ren undgåelse, eller en mindre forstyrrelse der stadig ryster noget løst.",
+      "advice": "Lad være med at skynde dig at genopbygge præcis det, der faldt. Spørg først, hvorfor det ikke kunne stå."
+    },
+    "17": {
+      "name": "Stjernen",
+      "keywords": [
+        "håb",
+        "fornyelse",
+        "inspiration",
+        "heling"
+      ],
+      "upright": "stille håb der vender tilbage efter en hård periode – ikke naiv optimisme, men en reel følelse af, at ting kan repareres og er på vej mod noget bedre.",
+      "reversed": "håb der bliver tyndt, eller et optimistisk syn der har løsrevet sig fra enhver reel plan.",
+      "advice": "Lad dig selv håbe igen. Du har fortjent det, og det peger mod noget virkeligt."
+    },
+    "18": {
+      "name": "Månen",
+      "keywords": [
+        "usikkerhed",
+        "det underbevidste",
+        "illusion",
+        "intuition"
+      ],
+      "upright": "en situation oplyst af andet end rene fakta – instinkt, fantasi og gamle frygter der blander sig, så det, du ser, ikke er hele billedet endnu.",
+      "reversed": "forvirring der begynder at lette, eller en frygt der viser sig at have fyldt mere i fantasien end i virkeligheden.",
+      "advice": "Lad være med at tvinge en beslutning igennem, mens billedet stadig er så uklart. Vent på mere lys."
+    },
+    "19": {
+      "name": "Solen",
+      "keywords": [
+        "glæde",
+        "vitalitet",
+        "klarhed",
+        "succes"
+      ],
+      "upright": "ren lykke – klarhed, varme, et resultat der ikke behøver en ekstra tanke.",
+      "reversed": "glæde dæmpet af at overanalysere den, eller en succes man ikke tillader sig selv at tage imod og nyde for, hvad den er.",
+      "advice": "Lad dette være så godt, som det er. Du behøver ikke lede efter hagen."
+    },
+    "20": {
+      "name": "Dommen",
+      "keywords": [
+        "opgør",
+        "opvågnen",
+        "refleksion",
+        "absolution"
+      ],
+      "upright": "et ærligt opgør med, hvor du har været, og et kald til at træde ind i en version af dig selv, der matcher det, du har lært.",
+      "reversed": "selvdom der bliver til hårdhed, eller et wake-up call der bliver udskudt lidt endnu.",
+      "advice": "Svar på kaldet klart. Alt det, du har undgået, er klar til at blive mødt nu."
+    },
+    "21": {
+      "name": "Verden",
+      "keywords": [
+        "fuldendelse",
+        "helhed",
+        "ankomst"
+      ],
+      "upright": "en cyklus der lukker rent, alt det den skulle lære fra sig er allerede i hus – en reel følelse af ankomst, før den næste rejse starter.",
+      "reversed": "en næsten-fuldendelse der stadig mangler sin sidste brik, eller en afslutning man forsøger at nå, før tiden er inde.",
+      "advice": "Anerkend hvor langt dette er nået, før du skynder dig mod det næste."
+    }
+  },
+  "minorArcana": {
+    "wands": {
+      "ace": {
+        "keywords": [
+          "inspiration",
+          "nyt projekt",
+          "kreativ gnist"
+        ],
+        "upright": "et udbrud af kreativ energi, der ankommer på én gang — en idé, et tilbud eller et projekt, der endnu ikke er formet, men som allerede trækker i dig.",
+        "reversed": "inspiration, der går i stå, før den bliver til handling, eller begejstring for et nyt projekt, der køles ned, før det overhovedet er startet.",
+        "advice": "Handl på gnisten nu, mens den stadig er varm. Hvis du venter på den perfekte plan, lader du den blot forsvinde."
+      },
+      "two": {
+        "keywords": [
+          "planlægning",
+          "fremtidsvision",
+          "personlig kraft"
+        ],
+        "upright": "at stå på et godt udsigtspunkt med reelle muligheder foran sig, hvor du afvejer det, du allerede har bygget, mod hvor du kan tage det hen næste gang.",
+        "reversed": "at spille for sikkert af frygt for det ukendte, eller en plan for fremtiden, der aldrig bliver sat på prøve.",
+        "advice": "Hold op med at beundre udsigten fra hvor du står. Vælg en retning og begynd at gå mod den."
+      },
+      "three": {
+        "keywords": [
+          "ekspansion",
+          "fremsyn",
+          "afventer resultater"
+        ],
+        "upright": "ventetiden efter arbejdet er gjort — skibene er allerede sendt afsted, resultaterne er ikke kommet endnu, men fundamentet er solidt nok til at stole på.",
+        "reversed": "forsinkelser, der hober sig op for en plan, der så ud til at virke, eller et udvidet udsyn, der afslører forhindringer, du ikke havde forudset.",
+        "advice": "Hold øjnene på horisonten lidt endnu. Det, du har sat i gang, er stadig på vej."
+      },
+      "four": {
+        "keywords": [
+          "fejring",
+          "hjemkomst",
+          "milepæl"
+        ],
+        "upright": "en milepæl, der er værd at stoppe op for — en hjemkomst, en fejring, en følelse af at have fortjent dette særlige øjeblik af ro.",
+        "reversed": "en fejring, der føles tom, eller en følelse af hjem og tilhørsforhold, der ikke helt er nået endnu.",
+        "advice": "Lad dig selv nyde dette fuldt ud. Ikke hvert godt øjeblik behøver straks at blive efterfulgt af den næste opgave."
+      },
+      "five": {
+        "keywords": [
+          "konkurrence",
+          "friktion",
+          "uenighed"
+        ],
+        "upright": "konkurrerende viljer, der støder sammen i det åbne — støjende, måske udmattende, men ærligt, og bedre end den samme spænding, der får lov at simre under overfladen.",
+        "reversed": "konflikt, der endelig mister pusten, eller en rivalisering, der viser sig at have været mere positur end substans.",
+        "advice": "Tag ikke denne friktion for en fiasko. Konkurrerende idéer skærper hinanden, når ingen er bange for at være uenige højt."
+      },
+      "six": {
+        "keywords": [
+          "sejr",
+          "anerkendelse",
+          "selvtillid"
+        ],
+        "upright": "en sejr, som andre også kan se — anerkendelse, der ankommer offentligt for en indsats, som indtil nu for det meste var usynlig.",
+        "reversed": "stolthed, der forvandles til arrogance, eller en sejr, der aldrig fik den anerkendelse, den fortjente.",
+        "advice": "Tag imod anerkendelsen uden at bortforklare den. Du har fortjent sejren; lad den stå."
+      },
+      "seven": {
+        "keywords": [
+          "defensivitet",
+          "udholdenhed",
+          "at stå fast"
+        ],
+        "upright": "at holde en position, som alle andre nu forsøger at tage fra dig — trættende, men bevis på, at det, du har bygget, er værd at forsvare.",
+        "reversed": "at opgive terræn, du ikke behøvede at opgive, eller at forsvare en position så længe, at du har mistet synet af, hvorfor det betød noget.",
+        "advice": "Stå fast, men tjek om du stadig kæmper for den rigtige sag."
+      },
+      "eight": {
+        "keywords": [
+          "momentum",
+          "hurtig handling",
+          "hurtig bevægelse"
+        ],
+        "upright": "alt bevæger sig pludselig på én gang — beskeder lander, planer accelererer, en periode med hurtig bevægelse efter lang ventetid.",
+        "reversed": "momentum, der går i stå lige når det betød mest, eller ting, der bevæger sig så hurtigt, at intet har tid til at lande.",
+        "advice": "Bevæg dig hurtigt, mens vejen er klar, men løb ikke hurtigere, end at du kan reagere på det, der kommer derefter."
+      },
+      "nine": {
+        "keywords": [
+          "resiliens",
+          "sidste stand",
+          "vogtet vedholdenhed"
+        ],
+        "upright": "én indsats mere kræves af dig efter en lang række af dem — træt, varsom, men stadig stående, og tættere på slutningen end det føles.",
+        "reversed": "defensivitet, der er hærdet til isolation, eller udmattelse, der får enhver resterende udfordring til at føles større, end den er.",
+        "advice": "Du har overlevet hver runde indtil nu. Lad ikke din vagtsomhed forhindre dig i at tage imod hjælp til denne sidste."
+      },
+      "ten": {
+        "keywords": [
+          "byrde",
+          "overbelastning",
+          "hårdt tilkæmpet fuldførelse"
+        ],
+        "upright": "at bære mere end din del, fordi du er tæt nok på målstregen til, at det føles spildt at lægge det fra dig nu.",
+        "reversed": "en byrde, der holdes fast af stædighed, eller arbejde, der endelig lægges fra sig efter at være blevet båret alt for længe.",
+        "advice": "Spørg dig selv, hvad du bærer på, som aldrig var meningen, at du skulle færdiggøre. Noget af denne vægt kan deles eller lægges fra sig."
+      },
+      "page": {
+        "keywords": [
+          "udforskning",
+          "ny idé",
+          "entusiasme"
+        ],
+        "upright": "en idé, der er for spændende til at sidde stille med — rastløs nysgerrighed, der straks vil teste sig selv mod verden.",
+        "reversed": "begejstring uden opfølgning, eller planer, der annonceres højt og derefter stille opgives.",
+        "advice": "Lad begejstringen bevæge dig, men giv idéen mindst én reel test, før du jagter den næste."
+      },
+      "knight": {
+        "keywords": [
+          "eventyr",
+          "impulsivitet",
+          "modig forfølgelse"
+        ],
+        "upright": "at storme mod det næste med total selvtillid, drevet mere af lysten til jagten end af en fast plan.",
+        "reversed": "hensynsløshed, der begynder at koste dig, eller rastløs energi uden et produktivt sted at gå hen.",
+        "advice": "Bring noget af det mod under kontrol, før det styrer dig, i stedet for at du styrer det."
+      },
+      "queen": {
+        "keywords": [
+          "selvtillid",
+          "uafhængighed",
+          "magnetisme"
+        ],
+        "upright": "en varm, urokkelig selvtillid, der tiltrækker folk uden behov for at præstere for dem.",
+        "reversed": "selvtillid, der er blevet skør eller krævende, eller uafhængighed brugt til at lukke andre ude frem for at stå på egne ben.",
+        "advice": "Led med den selvtillid, du allerede har. Du behøver ikke bevise den for nogen andre først."
+      },
+      "king": {
+        "keywords": [
+          "vision",
+          "lederskab",
+          "modigt iværksætteri"
+        ],
+        "upright": "lederskab, der inspirerer ved eksempel — en modig vision parret med opfølgningen til at gøre den virkelig.",
+        "reversed": "høje forventninger, der er blevet umulige at møde, eller ambition forfulgt så hensynsløst, at det brænder de mennesker, der hjælper dig.",
+        "advice": "Led visionen, men tjek om de mennesker, der bærer den ud med dig, stadig har lyst til at være der."
+      }
+    },
+    "cups": {
+      "ace": {
+        "keywords": [
+          "ny kærlighed",
+          "følelsesmæssig åbning",
+          "overflod"
+        ],
+        "upright": "et følelsesmæssigt bæger, der flyder over – ny kærlighed, ny medfølelse eller en følelse så fuld, at den må flyde over i noget andet.",
+        "reversed": "en følelsesmæssig åbning, der holdes tilbage, eller kærlighed og forbindelse, der tilbydes, men endnu ikke er lukket ind.",
+        "advice": "Lad denne følelse være så fuld, som den er. Der er ingen grund til at rationere noget så ægte."
+      },
+      "two": {
+        "keywords": [
+          "partnerskab",
+          "gensidig tiltrækning",
+          "forening"
+        ],
+        "upright": "to mennesker, der møder hinanden som ligeværdige – et bånd, der dannes eller uddybes på gensidige og nogenlunde lige vilkår.",
+        "reversed": "en forbindelse, der er blevet skæv, eller et partnerskab under et pres, som endnu ikke er blevet sat ord på.",
+        "advice": "Tjek om denne forbindelse stadig er lige så gensidig, som den startede. Sig klart, hvad der har ændret sig, hvis der er sket noget."
+      },
+      "three": {
+        "keywords": [
+          "venskab",
+          "fejring",
+          "fællesskab"
+        ],
+        "upright": "glæde, der er bedst, når den deles – en sammenkomst, et venskab, et øjeblik værd at fejre med de mennesker, der har stået ved din side.",
+        "reversed": "en gruppedynamik, der forvandles til sladder eller eksklusion, eller overdreven nydelse, der dæmper det, der burde have været en ægte fejring.",
+        "advice": "Tag de mennesker, der betyder mest, med ind i dette øjeblik. Fejring betyder mere, når den ikke gøres alene."
+      },
+      "four": {
+        "keywords": [
+          "apati",
+          "eftertænksomhed",
+          "overset tilbud"
+        ],
+        "upright": "kedsomhed med det, der allerede er på bordet, selvom noget, der er værd at bemærke, bliver tilbudt lige foran dig.",
+        "reversed": "apati, der endelig løsner sit greb, eller en vilje til at kigge op og vurdere den mulighed, du havde ignoreret.",
+        "advice": "Kig op fra det, der skuffer dig, og læg mærke til, hvad der bliver tilbudt. Det kan være mere værd, end det først så ud til."
+      },
+      "five": {
+        "keywords": [
+          "tab",
+          "sorg",
+          "fortrydelse"
+        ],
+        "upright": "sorg centreret omkring det, der er spildt og væk, selvom noget intakt stadig står tæt ved, ubemærket.",
+        "reversed": "sorg, der begynder at løsne sit greb, eller de første rigtige skridt mod at acceptere et tab frem for at genopleve det.",
+        "advice": "Sørg over det, der virkelig er væk, men vend dig om længe nok til at se, hvad der stadig står bag dig."
+      },
+      "six": {
+        "keywords": [
+          "nostalgi",
+          "minder",
+          "uskyld"
+        ],
+        "upright": "et træk tilbage mod enklere tider – gamle minder, velkendte trøster eller en genforening med nogen fra et tidligere kapitel.",
+        "reversed": "nostalgi, der er blevet et skjulested, eller en idealiseret fortid, der får nutiden til at se værre ud, end den er.",
+        "advice": "Besøg fortiden for trøst, men flyt ikke tilbage. Det, du har brug for nu, lever i nutiden."
+      },
+      "seven": {
+        "keywords": [
+          "fantasi",
+          "valg",
+          "illusion"
+        ],
+        "upright": "for mange tiltalende muligheder, nogle mere solide end andre, hvilket gør det svært at skelne reel mulighed fra ønsketænkning.",
+        "reversed": "tågen letter nok til at se, hvilke muligheder der nogensinde var virkelige, og en beslutning bliver endelig mulig.",
+        "advice": "Test hver mulighed mod virkeligheden, før du vælger. Ikke alt, der glimter her, vil holde."
+      },
+      "eight": {
+        "keywords": [
+          "at gå sin vej",
+          "søgen efter dybere mening",
+          "afsked"
+        ],
+        "upright": "at gå fra noget, der ser fint ud udefra, fordi det er holdt op med at give dig næring indeni.",
+        "reversed": "at blive et sted af frygt for, hvad det ville betyde at forlade det, eller at drive uden nogensinde at forpligte sig fuldt ud til afskeden.",
+        "advice": "Stol på den del af dig, der ved, at dette ikke længere er nok, selvom du ikke helt kan forklare hvorfor endnu."
+      },
+      "nine": {
+        "keywords": [
+          "tilfredshed",
+          "opfyldelse",
+          "ønske opfyldt"
+        ],
+        "upright": "en let, behagelig tilfredshed – et ønske mødt, et behov opfyldt, tilfredshed, der ikke behøver at blive retfærdiggjort.",
+        "reversed": "selvtilfredshed, der står i stedet for reel tilfredshed, eller overflod, der på en eller anden måde stadig ikke føles som nok.",
+        "advice": "Lad denne tilfredshed være enkel. Du behøver ikke at gøre dig fortjent til den to gange ved at bekymre dig om, at den ikke varer ved."
+      },
+      "ten": {
+        "keywords": [
+          "følelsesmæssig opfyldelse",
+          "familieharmoni",
+          "varig lykke"
+        ],
+        "upright": "en dyb, rolig lykke bygget med de mennesker, der står dig nærmest – ikke et højdepunkt, men en varig tilstand.",
+        "reversed": "harmoni i hjemmet, der er mere udseende end substans, eller værdier blandt de mennesker, du elsker, som stille er holdt op med at stemme overens.",
+        "advice": "Se forbi det overfladiske billede af lykke og tjek, om menneskene i det også føler det."
+      },
+      "page": {
+        "keywords": [
+          "kreativ mulighed",
+          "intuitiv besked",
+          "nysgerrighed"
+        ],
+        "upright": "en blid, uventet følelsesmæssig eller kreativ besked ankommer – noget, der er værd at være opmærksom på, selvom det virker småt.",
+        "reversed": "følelsesmæssig umodenhed, der står i vejen for en reel mulighed, eller en kreativ impuls, der bruges til at flygte frem for at udtrykke.",
+        "advice": "Tag den lille, uventede følelse alvorligt. Den er mere informativ, end den ser ud til."
+      },
+      "knight": {
+        "keywords": [
+          "romantik",
+          "idealisme",
+          "at følge hjertet"
+        ],
+        "upright": "at lede med hjertet, jagte en romantisk eller idealistisk vision med ægte oprigtighed, selvom det ikke er helt praktisk endnu.",
+        "reversed": "humørsvingninger forklædt som sensitivitet, eller et romantisk ideal, der bliver ved med at skuffe dig.",
+        "advice": "Følg dit hjerte her, men tjek det mod virkeligheden, før du følger det hele vejen."
+      },
+      "queen": {
+        "keywords": [
+          "medfølelse",
+          "følelsesmæssig tryghed",
+          "intuition"
+        ],
+        "upright": "følelsesmæssig dybde holdt med reel stabilitet – medfølelse for andre, der ikke sker på bekostning af dit eget ståsted.",
+        "reversed": "medfølelse, der er tippet over i selvforsømmelse, eller følelsesmæssig tryghed, der kun holder, så længe ingen tester den.",
+        "advice": "Giv andre din medfølelse, men behold nok af den i reserve til dig selv."
+      },
+      "king": {
+        "keywords": [
+          "følelsesmæssig balance",
+          "diplomati",
+          "rolig kontrol"
+        ],
+        "upright": "en rolig beherskelse over stærke følelser – i stand til at forblive stabil og retfærdig, selv når de følelsesmæssige indsatser er høje.",
+        "reversed": "kontrol over følelser, der i virkeligheden er undertrykkelse, eller ro på overfladen, der skjuler manipulation nedenunder.",
+        "advice": "Forbliv stabil, men lad det, du virkelig føler, blive kendt frem for kun at blive styret."
+      }
+    },
+    "swords": {
+      "ace": {
+        "keywords": [
+          "gennembrud",
+          "klarhed",
+          "ny idé"
+        ],
+        "upright": "et pludseligt gennembrud gennem forvirring — en erkendelse, beslutning eller sandhed, der ankommer skarpt og umiskendeligt klart.",
+        "reversed": "klarhed, der er blevet sløret af for meget støj, eller en sandhed, der er blevet fordrejet, før den nåede frem til dig.",
+        "advice": "Stol på den klare tanke, når den kommer. Lad dig ikke overtale tilbage i forvirring."
+      },
+      "two": {
+        "keywords": [
+          "dødvande",
+          "svær beslutning",
+          "undgåelse"
+        ],
+        "upright": "en beslutning holdt på afstand, bevogtet og afbalanceret så omhyggeligt, at ingen af mulighederne nogensinde bliver valgt.",
+        "reversed": "at dødvandet endelig brydes, eller en overflod af modstridende information, der gør valget sværere frem for lettere.",
+        "advice": "Tag bindet for øjnene. Beslutningen bliver ikke lettere af at udskyde den yderligere."
+      },
+      "three": {
+        "keywords": [
+          "hjertesorg",
+          "svigt",
+          "sorg"
+        ],
+        "upright": "en smerte, der er skarp og specifik — en sandhed, et svigt eller et tab, der skærer præcis, fordi det er virkeligt.",
+        "reversed": "de første stadier af heling, eller gammel smerte, der dukker op igen, fordi den aldrig blev bearbejdet fuldt ud første gang.",
+        "advice": "Lad smerten være præcis så skarp, som den er. At sætte ord på den er det, der starter helingen."
+      },
+      "four": {
+        "keywords": [
+          "hvile",
+          "restitution",
+          "eftertanke"
+        ],
+        "upright": "en bevidst tilbagetrækning efter konflikt eller pres — ikke et nederlag, men den restitution, et sind har brug for, før det kan tænke klart igen.",
+        "reversed": "hvile afbrudt før tid, eller rastløshed, der gør reel restitution umulig.",
+        "advice": "Tag hvilen fuldt ud. En halv restitution betyder bare, at du tager udmattelsen med ind i det, der kommer næste gang."
+      },
+      "five": {
+        "keywords": [
+          "hul sejr",
+          "konflikt",
+          "svigt"
+        ],
+        "upright": "en sejr, der koster mere, end den er værd — en konflikt drevet til det yderste, selvom alle involverede ender dårligere stillet.",
+        "reversed": "nag, der hænger ved efter en konflikt, som aldrig rigtig blev løst, eller en chance for at skabe fred frem for at presse fordelen.",
+        "advice": "Spørg dig selv, om det er værd at vinde denne specifikke kamp, når du ser på, hvad det vil koste dig bagefter."
+      },
+      "six": {
+        "keywords": [
+          "overgang",
+          "at komme videre",
+          "roligere vande"
+        ],
+        "upright": "en langsom, bevidst bevægelse væk fra turbulens, hvor du kun tager det nødvendige med mod noget mere stabilt.",
+        "reversed": "at modstå en overgang, der allerede er nødvendig, eller uforløst bagage, der tages med ind i det roligere vand forude.",
+        "advice": "Lad det vanskelige vand ligge bag dig. Bliv ikke ved med at se tilbage på den kyst, du forlader."
+      },
+      "seven": {
+        "keywords": [
+          "strategi",
+          "bedrag",
+          "at handle alene"
+        ],
+        "upright": "at bevæge sig stille og uafhængigt, tage hvad du har brug for uden at bede om tilladelse — klogt, men ikke helt ærligt.",
+        "reversed": "en skjult strategi, der kommer for en dag, eller en dårlig samvittighed, der endelig indhenter en genvej, man har taget.",
+        "advice": "Spørg dig selv, om den strategi, du følger, stadig ville give mening, hvis alle involverede kunne se den."
+      },
+      "eight": {
+        "keywords": [
+          "indespærring",
+          "offermentalitet",
+          "selvpålagte begrænsninger"
+        ],
+        "upright": "at føle sig bokset inde fra alle sider, selvom rebene, der holder dig, er løsere, end de føles — et fængsel bygget mere af tro end af fakta.",
+        "reversed": "den første rigtige revne i den selvpålagte fælde, efterhånden som historien om at være magtesløs begynder at miste sit greb.",
+        "advice": "Led efter åbningen i rebene, som du har antaget var solide. Der er mere plads til at bevæge sig, end det føles som."
+      },
+      "nine": {
+        "keywords": [
+          "angst",
+          "bekymring",
+          "mental kval"
+        ],
+        "upright": "et sind, der gennemspiller værste scenarier i mørket, udmattet af frygt, der virker langt større klokken 3 om natten end i dagslys.",
+        "reversed": "bekymring, der begynder at lette, eller en beslutning om endelig at sige frygten højt i stedet for at bære den alene.",
+        "advice": "Sig bekymringen højt til nogen. Den overlever sjældent mødet med dagslyset i samme grad, som den føles lige nu."
+      },
+      "ten": {
+        "keywords": [
+          "bunden",
+          "smertelig afslutning",
+          "svigt"
+        ],
+        "upright": "en afslutning, der er lige så endegyldig, som den er smertelig — det værste er allerede bag dig, og herfra er der kun én vej, og det er op.",
+        "reversed": "at modstå en afslutning, der allerede er sket, eller en langsom, delvis heling fra noget, der endnu ikke er helet helt.",
+        "advice": "Lad denne afslutning være komplet. At kæmpe for at holde den halvt i live forlænger kun smerten ved den."
+      },
+      "page": {
+        "keywords": [
+          "nysgerrighed",
+          "årvågenhed",
+          "tørst efter sandhed"
+        ],
+        "upright": "et vågent, spørgende sind, der indsamler information og observerer nøje, før det beslutter, hvad det skal tro på.",
+        "reversed": "sladder, der træder i stedet for reel undersøgelse, eller idéer, der aldrig bevæger sig fra snak til faktisk handling.",
+        "advice": "Bliv ved med at stille spørgsmål, men handl til sidst på det, svarene fortæller dig."
+      },
+      "knight": {
+        "keywords": [
+          "beslutsom handling",
+          "selvhævdelse",
+          "hurtig tænkning"
+        ],
+        "upright": "at bevæge sig hurtigt og tale direkte, skære lige ind til benet uden at vente på nogens tilladelse.",
+        "reversed": "aggression, der løber hurtigere end dømmekraften, eller impulsive beslutninger taget hurtigere, end situationen krævede.",
+        "advice": "Handl beslutsomt, men tag en indånding, før du siger den skarpeste version af det, du tænker."
+      },
+      "queen": {
+        "keywords": [
+          "selvstændig tænkning",
+          "klare grænser",
+          "direkte kommunikation"
+        ],
+        "upright": "at se situationer klart og sige det uden at blødgøre det mere, end sandheden kræver.",
+        "reversed": "direkte tale, der er tippet over i kulde, eller grænser, der holdes så stift, at ingen kan komme tæt på.",
+        "advice": "Behold klarheden, men tjek om din direkte facon er nødvendig, eller om det bare er lettere end at være blid."
+      },
+      "king": {
+        "keywords": [
+          "intellektuel autoritet",
+          "struktureret tænkning",
+          "upartisk sandhed"
+        ],
+        "upright": "dømmekraft baseret på principper og beviser frem for følelser — retfærdig, præcis og svær at argumentere imod.",
+        "reversed": "logik brugt som et våben, eller autoritet, der er teknisk korrekt, men stadig grusom.",
+        "advice": "Hav ret, men lad ikke det at have ret være en undskyldning for at være uvenlig omkring det."
+      }
+    },
+    "pentacles": {
+      "ace": {
+        "keywords": [
+          "ny mulighed",
+          "velstand",
+          "manifestation"
+        ],
+        "upright": "en konkret mulighed, der lander i dine hænder – praktisk, virkelig og værd at bygge videre på frem for blot at beundre.",
+        "reversed": "en mulighed forpasset på grund af dårlig timing eller planlægning, eller en lovende start, der aldrig blev fulgt op.",
+        "advice": "Tag det praktiske skridt nu. Denne form for mulighed belønner opfølgning mere end entusiasme."
+      },
+      "two": {
+        "keywords": [
+          "balance",
+          "tilpasningsevne",
+          "jonglering med prioriteter"
+        ],
+        "upright": "at holde flere krav i gang på samme tid, og justere undervejs frem for at lade noget falde.",
+        "reversed": "en prioritet for meget tilføjet til blandingen, hvor noget nu glider, som ikke burde.",
+        "advice": "Se ærligt på, hvad du jonglerer med. Noget her skal måske lægges fra dig, ikke balanceres hårdere."
+      },
+      "three": {
+        "keywords": [
+          "samarbejde",
+          "færdighed",
+          "teamwork"
+        ],
+        "upright": "forskellige færdigheder, der kombineres til noget, ingen af dem kunne have bygget alene – solid fremgang gennem ægte samarbejde.",
+        "reversed": "at arbejde isoleret på noget, der krævede andres hænder, eller et team, der er holdt op med at trække i samme retning.",
+        "advice": "Hent den hjælp, dette kræver. Dette er ikke et projekt, der bygges godt alene."
+      },
+      "four": {
+        "keywords": [
+          "sikkerhed",
+          "kontrol",
+          "at holde fast"
+        ],
+        "upright": "et stramt greb om det, du har bygget, hvor sikkerhed prioriteres over risiko, selv på bekostning af fleksibilitet.",
+        "reversed": "at holde så stramt fast, at intet nyt kan komme ind, eller frygt for tab, der driver beslutninger mere end nogen reel trussel.",
+        "advice": "Løsn grebet en smule. Det, du beskytter, er ikke så skrøbeligt, som det føles."
+      },
+      "five": {
+        "keywords": [
+          "modgang",
+          "økonomisk tab",
+          "isolation"
+        ],
+        "upright": "reel modgang, der mærkes lige så meget i isolation som i selve tabet – at kæmpe, mens det føles som om, hjælp er uden for rækkevidde.",
+        "reversed": "de første tegn på, at støtte bliver tilgængelig, eller modgang, der endelig begynder at lette efter en hård periode.",
+        "advice": "Se efter den dør, der står åben i nærheden. Hjælp findes her, selvom det ikke føles sådan endnu."
+      },
+      "six": {
+        "keywords": [
+          "generøsitet",
+          "at give og modtage",
+          "balance"
+        ],
+        "upright": "ressourcer, der flyder retfærdigt mellem mennesker – hjælp givet fordi den er nødvendig, og modtaget uden skam.",
+        "reversed": "generøsitet, der kommer med betingelser, eller en udveksling, der i stilhed er blevet ensidig.",
+        "advice": "Tjek om det, der gives her, er frit, eller om der skyldes noget til gengæld."
+      },
+      "seven": {
+        "keywords": [
+          "tålmodighed",
+          "det lange perspektiv",
+          "vurdering af fremskridt"
+        ],
+        "upright": "en pause for at gøre status over den investerede indsats, og vurdere om den bærer frugt eller kræver kursændring.",
+        "reversed": "utålmodighed med et afkast, der endnu ikke er kommet, eller indsats, der fortsætter på en vej, der ikke længere giver gevinst.",
+        "advice": "Foretag en ærlig revision. Noget af denne indsats fortjener mere tålmodighed; noget af det fortjener en ny plan."
+      },
+      "eight": {
+        "keywords": [
+          "flid",
+          "håndværk",
+          "færdighedsopbygning"
+        ],
+        "upright": "en støt, gentagen indsats rettet mod at blive virkelig god til noget – ikke glamourøst, men præcis hvad mesterskab kræver.",
+        "reversed": "perfektionisme, der bremser reel fremgang, eller genveje taget i arbejde, der fortjente den fulde indsats.",
+        "advice": "Bliv ved med at udføre de ikke-glamourøse gentagelser. Det er sådan, færdigheder ser ud, mens de bygges."
+      },
+      "nine": {
+        "keywords": [
+          "selvforsyning",
+          "overflod",
+          "uafhængighed"
+        ],
+        "upright": "komfort og overflod, der i høj grad er tjent af dig selv – en selvforsyning, der ikke behøver andres godkendelse.",
+        "reversed": "succes, der ser godt ud udefra, mens den føles hul, eller overarbejde, der har fortrængt muligheden for at dele glæden med andre.",
+        "advice": "Nyd det, du har bygget, uden at behøve andres bekræftelse for at det tæller."
+      },
+      "ten": {
+        "keywords": [
+          "arv",
+          "langsigtet sikkerhed",
+          "familieformue"
+        ],
+        "upright": "stabilitet, der overlever det enkelte menneske – en arv eller et fundament bygget til at støtte mere end blot dig selv.",
+        "reversed": "en arv under pres, eller uenigheder i familien om ressourcer, der truer noget, der var bygget til at vare.",
+        "advice": "Beskyt det, der er ment til at overleve dig, men lad ikke stridigheder om det ødelægge det, det blev bygget til."
+      },
+      "page": {
+        "keywords": [
+          "ny mulighed",
+          "studie",
+          "praktisk nysgerrighed"
+        ],
+        "upright": "en praktisk mulighed, der er værd at studere tæt – ny, lovende og stadig i stadiet hvor man lærer, hvordan den fungerer.",
+        "reversed": "urealistiske planer, der ikke er blevet testet mod virkeligheden, eller fremgang, der er gået i stå, før den rigtig startede.",
+        "advice": "Studér denne mulighed grundigt, før du forpligter dig yderligere. Den er lovende, men endnu uprøvet."
+      },
+      "knight": {
+        "keywords": [
+          "flid",
+          "rutine",
+          "metodisk fremgang"
+        ],
+        "upright": "langsom, metodisk, pålidelig fremgang – ingen genveje, blot konsekvent arbejde, der akkumuleres over tid.",
+        "reversed": "rutine, der er størknet til stagnation, eller perfektionisme så stiv, at intet bliver færdiggjort.",
+        "advice": "Stol på den langsomme metode, der virker. Den behøver ikke være hurtigere for at være effektiv."
+      },
+      "queen": {
+        "keywords": [
+          "omsorg",
+          "ressourcestærkhed",
+          "jordforbindelse"
+        ],
+        "upright": "praktisk omsorg, der viser sig på håndgribelige måder – komfort, ressourcer og jordforbindelse tilbudt generøst til andre.",
+        "reversed": "omsorg for andre på bekostning af omsorg for dig selv, eller usikkerhed omkring ressourcer, der undergraver generøsiteten.",
+        "advice": "Vis den samme praktiske omsorg over for dig selv, som du så let tilbyder alle andre."
+      },
+      "king": {
+        "keywords": [
+          "materielt mesterskab",
+          "økonomisk sikkerhed",
+          "generøsitet"
+        ],
+        "upright": "materielt og økonomisk mesterskab bygget over tid, nu generøst nok til at dele den sikkerhed, det har skabt.",
+        "reversed": "kontrol over ressourcer, der bliver stiv eller besidderisk, eller økonomisk sikkerhed forfulgt på bekostning af alt andet.",
+        "advice": "Brug det, du har bygget, generøst. Sikkerhed, der ikke deles, ender blot med at blive isolation."
+      }
+    }
+  }
+}

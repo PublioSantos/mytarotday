@@ -1,0 +1,508 @@
+{
+  "major": [
+    {
+      "id": 0,
+      "glyph": "fool",
+      "image": "RWS_Tarot_00_Fool.jpg"
+    },
+    {
+      "id": 1,
+      "glyph": "magician",
+      "image": "RWS_Tarot_01_Magician.jpg"
+    },
+    {
+      "id": 2,
+      "glyph": "priestess",
+      "image": "RWS_Tarot_02_High_Priestess.jpg"
+    },
+    {
+      "id": 3,
+      "glyph": "empress",
+      "image": "RWS_Tarot_03_Empress.jpg"
+    },
+    {
+      "id": 4,
+      "glyph": "emperor",
+      "image": "RWS_Tarot_04_Emperor.jpg"
+    },
+    {
+      "id": 5,
+      "glyph": "hierophant",
+      "image": "RWS_Tarot_05_Hierophant.jpg"
+    },
+    {
+      "id": 6,
+      "glyph": "lovers",
+      "image": "RWS_Tarot_06_Lovers.jpg"
+    },
+    {
+      "id": 7,
+      "glyph": "chariot",
+      "image": "RWS_Tarot_07_Chariot.jpg"
+    },
+    {
+      "id": 8,
+      "glyph": "strength",
+      "image": "RWS_Tarot_08_Strength.jpg"
+    },
+    {
+      "id": 9,
+      "glyph": "hermit",
+      "image": "RWS_Tarot_09_Hermit.jpg"
+    },
+    {
+      "id": 10,
+      "glyph": "wheel",
+      "image": "RWS_Tarot_10_Wheel_of_Fortune.jpg"
+    },
+    {
+      "id": 11,
+      "glyph": "justice",
+      "image": "RWS_Tarot_11_Justice.jpg"
+    },
+    {
+      "id": 12,
+      "glyph": "hanged",
+      "image": "RWS_Tarot_12_Hanged_Man.jpg"
+    },
+    {
+      "id": 13,
+      "glyph": "death",
+      "image": "RWS_Tarot_13_Death.jpg"
+    },
+    {
+      "id": 14,
+      "glyph": "temperance",
+      "image": "RWS_Tarot_14_Temperance.jpg"
+    },
+    {
+      "id": 15,
+      "glyph": "devil",
+      "image": "RWS_Tarot_15_Devil.jpg"
+    },
+    {
+      "id": 16,
+      "glyph": "tower",
+      "image": "RWS_Tarot_16_Tower.jpg"
+    },
+    {
+      "id": 17,
+      "glyph": "star",
+      "image": "RWS_Tarot_17_Star.jpg"
+    },
+    {
+      "id": 18,
+      "glyph": "moon",
+      "image": "RWS_Tarot_18_Moon.jpg"
+    },
+    {
+      "id": 19,
+      "glyph": "sun",
+      "image": "RWS_Tarot_19_Sun.jpg"
+    },
+    {
+      "id": 20,
+      "glyph": "judgement",
+      "image": "RWS_Tarot_20_Judgement.jpg"
+    },
+    {
+      "id": 21,
+      "glyph": "world",
+      "image": "RWS_Tarot_21_World.jpg"
+    }
+  ],
+  "minor": [
+    {
+      "id": 22,
+      "suitKey": "wands",
+      "rankKey": "ace",
+      "glyph": "wands",
+      "image": "Wands01.jpg"
+    },
+    {
+      "id": 23,
+      "suitKey": "wands",
+      "rankKey": "two",
+      "glyph": "wands",
+      "image": "Wands02.jpg"
+    },
+    {
+      "id": 24,
+      "suitKey": "wands",
+      "rankKey": "three",
+      "glyph": "wands",
+      "image": "Wands03.jpg"
+    },
+    {
+      "id": 25,
+      "suitKey": "wands",
+      "rankKey": "four",
+      "glyph": "wands",
+      "image": "Wands04.jpg"
+    },
+    {
+      "id": 26,
+      "suitKey": "wands",
+      "rankKey": "five",
+      "glyph": "wands",
+      "image": "Wands05.jpg"
+    },
+    {
+      "id": 27,
+      "suitKey": "wands",
+      "rankKey": "six",
+      "glyph": "wands",
+      "image": "Wands06.jpg"
+    },
+    {
+      "id": 28,
+      "suitKey": "wands",
+      "rankKey": "seven",
+      "glyph": "wands",
+      "image": "Wands07.jpg"
+    },
+    {
+      "id": 29,
+      "suitKey": "wands",
+      "rankKey": "eight",
+      "glyph": "wands",
+      "image": "Wands08.jpg"
+    },
+    {
+      "id": 30,
+      "suitKey": "wands",
+      "rankKey": "nine",
+      "glyph": "wands",
+      "image": "Wands09.jpg"
+    },
+    {
+      "id": 31,
+      "suitKey": "wands",
+      "rankKey": "ten",
+      "glyph": "wands",
+      "image": "Wands10.jpg"
+    },
+    {
+      "id": 32,
+      "suitKey": "wands",
+      "rankKey": "page",
+      "glyph": "wands",
+      "image": "Wands11.jpg"
+    },
+    {
+      "id": 33,
+      "suitKey": "wands",
+      "rankKey": "knight",
+      "glyph": "wands",
+      "image": "Wands12.jpg"
+    },
+    {
+      "id": 34,
+      "suitKey": "wands",
+      "rankKey": "queen",
+      "glyph": "wands",
+      "image": "Wands13.jpg"
+    },
+    {
+      "id": 35,
+      "suitKey": "wands",
+      "rankKey": "king",
+      "glyph": "wands",
+      "image": "Wands14.jpg"
+    },
+    {
+      "id": 36,
+      "suitKey": "cups",
+      "rankKey": "ace",
+      "glyph": "cups",
+      "image": "Cups01.jpg"
+    },
+    {
+      "id": 37,
+      "suitKey": "cups",
+      "rankKey": "two",
+      "glyph": "cups",
+      "image": "Cups02.jpg"
+    },
+    {
+      "id": 38,
+      "suitKey": "cups",
+      "rankKey": "three",
+      "glyph": "cups",
+      "image": "Cups03.jpg"
+    },
+    {
+      "id": 39,
+      "suitKey": "cups",
+      "rankKey": "four",
+      "glyph": "cups",
+      "image": "Cups04.jpg"
+    },
+    {
+      "id": 40,
+      "suitKey": "cups",
+      "rankKey": "five",
+      "glyph": "cups",
+      "image": "Cups05.jpg"
+    },
+    {
+      "id": 41,
+      "suitKey": "cups",
+      "rankKey": "six",
+      "glyph": "cups",
+      "image": "Cups06.jpg"
+    },
+    {
+      "id": 42,
+      "suitKey": "cups",
+      "rankKey": "seven",
+      "glyph": "cups",
+      "image": "Cups07.jpg"
+    },
+    {
+      "id": 43,
+      "suitKey": "cups",
+      "rankKey": "eight",
+      "glyph": "cups",
+      "image": "Cups08.jpg"
+    },
+    {
+      "id": 44,
+      "suitKey": "cups",
+      "rankKey": "nine",
+      "glyph": "cups",
+      "image": "Cups09.jpg"
+    },
+    {
+      "id": 45,
+      "suitKey": "cups",
+      "rankKey": "ten",
+      "glyph": "cups",
+      "image": "Cups10.jpg"
+    },
+    {
+      "id": 46,
+      "suitKey": "cups",
+      "rankKey": "page",
+      "glyph": "cups",
+      "image": "Cups11.jpg"
+    },
+    {
+      "id": 47,
+      "suitKey": "cups",
+      "rankKey": "knight",
+      "glyph": "cups",
+      "image": "Cups12.jpg"
+    },
+    {
+      "id": 48,
+      "suitKey": "cups",
+      "rankKey": "queen",
+      "glyph": "cups",
+      "image": "Cups13.jpg"
+    },
+    {
+      "id": 49,
+      "suitKey": "cups",
+      "rankKey": "king",
+      "glyph": "cups",
+      "image": "Cups14.jpg"
+    },
+    {
+      "id": 50,
+      "suitKey": "swords",
+      "rankKey": "ace",
+      "glyph": "swords",
+      "image": "Swords01.jpg"
+    },
+    {
+      "id": 51,
+      "suitKey": "swords",
+      "rankKey": "two",
+      "glyph": "swords",
+      "image": "Swords02.jpg"
+    },
+    {
+      "id": 52,
+      "suitKey": "swords",
+      "rankKey": "three",
+      "glyph": "swords",
+      "image": "Swords03.jpg"
+    },
+    {
+      "id": 53,
+      "suitKey": "swords",
+      "rankKey": "four",
+      "glyph": "swords",
+      "image": "Swords04.jpg"
+    },
+    {
+      "id": 54,
+      "suitKey": "swords",
+      "rankKey": "five",
+      "glyph": "swords",
+      "image": "Swords05.jpg"
+    },
+    {
+      "id": 55,
+      "suitKey": "swords",
+      "rankKey": "six",
+      "glyph": "swords",
+      "image": "Swords06.jpg"
+    },
+    {
+      "id": 56,
+      "suitKey": "swords",
+      "rankKey": "seven",
+      "glyph": "swords",
+      "image": "Swords07.jpg"
+    },
+    {
+      "id": 57,
+      "suitKey": "swords",
+      "rankKey": "eight",
+      "glyph": "swords",
+      "image": "Swords08.jpg"
+    },
+    {
+      "id": 58,
+      "suitKey": "swords",
+      "rankKey": "nine",
+      "glyph": "swords",
+      "image": "Swords09.jpg"
+    },
+    {
+      "id": 59,
+      "suitKey": "swords",
+      "rankKey": "ten",
+      "glyph": "swords",
+      "image": "Swords10.jpg"
+    },
+    {
+      "id": 60,
+      "suitKey": "swords",
+      "rankKey": "page",
+      "glyph": "swords",
+      "image": "Swords11.jpg"
+    },
+    {
+      "id": 61,
+      "suitKey": "swords",
+      "rankKey": "knight",
+      "glyph": "swords",
+      "image": "Swords12.jpg"
+    },
+    {
+      "id": 62,
+      "suitKey": "swords",
+      "rankKey": "queen",
+      "glyph": "swords",
+      "image": "Swords13.jpg"
+    },
+    {
+      "id": 63,
+      "suitKey": "swords",
+      "rankKey": "king",
+      "glyph": "swords",
+      "image": "Swords14.jpg"
+    },
+    {
+      "id": 64,
+      "suitKey": "pentacles",
+      "rankKey": "ace",
+      "glyph": "pentacles",
+      "image": "Pents01.jpg"
+    },
+    {
+      "id": 65,
+      "suitKey": "pentacles",
+      "rankKey": "two",
+      "glyph": "pentacles",
+      "image": "Pents02.jpg"
+    },
+    {
+      "id": 66,
+      "suitKey": "pentacles",
+      "rankKey": "three",
+      "glyph": "pentacles",
+      "image": "Pents03.jpg"
+    },
+    {
+      "id": 67,
+      "suitKey": "pentacles",
+      "rankKey": "four",
+      "glyph": "pentacles",
+      "image": "Pents04.jpg"
+    },
+    {
+      "id": 68,
+      "suitKey": "pentacles",
+      "rankKey": "five",
+      "glyph": "pentacles",
+      "image": "Pents05.jpg"
+    },
+    {
+      "id": 69,
+      "suitKey": "pentacles",
+      "rankKey": "six",
+      "glyph": "pentacles",
+      "image": "Pents06.jpg"
+    },
+    {
+      "id": 70,
+      "suitKey": "pentacles",
+      "rankKey": "seven",
+      "glyph": "pentacles",
+      "image": "Pents07.jpg"
+    },
+    {
+      "id": 71,
+      "suitKey": "pentacles",
+      "rankKey": "eight",
+      "glyph": "pentacles",
+      "image": "Pents08.jpg"
+    },
+    {
+      "id": 72,
+      "suitKey": "pentacles",
+      "rankKey": "nine",
+      "glyph": "pentacles",
+      "image": "Pents09.jpg"
+    },
+    {
+      "id": 73,
+      "suitKey": "pentacles",
+      "rankKey": "ten",
+      "glyph": "pentacles",
+      "image": "Pents10.jpg"
+    },
+    {
+      "id": 74,
+      "suitKey": "pentacles",
+      "rankKey": "page",
+      "glyph": "pentacles",
+      "image": "Pents11.jpg"
+    },
+    {
+      "id": 75,
+      "suitKey": "pentacles",
+      "rankKey": "knight",
+      "glyph": "pentacles",
+      "image": "Pents12.jpg"
+    },
+    {
+      "id": 76,
+      "suitKey": "pentacles",
+      "rankKey": "queen",
+      "glyph": "pentacles",
+      "image": "Pents13.jpg"
+    },
+    {
+      "id": 77,
+      "suitKey": "pentacles",
+      "rankKey": "king",
+      "glyph": "pentacles",
+      "image": "Pents14.jpg"
+    }
+  ]
+}

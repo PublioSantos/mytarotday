@@ -1,0 +1,925 @@
+{
+  "ui": {
+    "logo": "MyTarot.Day",
+    "tagline": "100% gratis daglig tarotläsning, anpassad efter ditt födelsedatum. Inget konto krävs, inga kostnader någonsin.",
+    "eyebrow": "Fyra kort. En dag.",
+    "selectCardsPrompt": "Välj 4 kort",
+    "heroTitleLine1": "Vad dagens kort säger om",
+    "heroTitleEm": "dig",
+    "submitLabel": "Visa mina kort",
+    "submittingLabel": "Drar...",
+    "loadingText": "Blandar leken för {date}...",
+    "tryAnotherLabel": "Göra en ny läsning?",
+    "buyMeCoffeeLabel": "☕  Köp mig en kaffe 🤗",
+    "funFact": "Rolig fakta: Den vintage-look våra tarotkort har är autentisk. Vi använder den traditionella 1909 Rider–Waite–Smith Tarot med originalkonstverk av Pamela Colman Smith. Mer än ett sekel senare fortsätter denna klassiska lek att inspirera läsare världen över och anses vara en av de mest inflytelserika grunderna för modern tarot.",
+    "footerDisclaimer": "MyTarot.Day erbjuds för reflektion och underhållning. Det är inte en ersättning för professionell medicinsk, finansiell eller juridisk rådgivning.",
+    "footerTagline": "Utvecklad av P.San Team | Det är gratis, och kommer alltid att vara!",
+    "footerHome": "Hem",
+    "footerBlog": "Blogg",
+    "footerPrivacy": "Integritetspolicy",
+    "footerTerms": "Villkor",
+    "footerAbout": "Om oss",
+    "footerContact": "Kontakt",
+    "todayBadge": "Idag",
+    "reversedLabel": "Omvänt",
+    "uprightLabel": "Upprätt",
+    "supportPromptText": "Gillade du det? Köp mig en kaffe",
+    "summaryGuideLabel": "Guide",
+    "summaryPastLabel": "Dåtid",
+    "summaryFutureLabel": "Framtid",
+    "freeBadge": "100% gratis — ingen registrering, inga kostnader",
+    "freeTitlePhrase": "Gratis tarotläsning"
+  },
+  "positions": {
+    "determinant": {
+      "label": "Determinanten",
+      "subtitle": "Kraften som formar hela dagen",
+      "intros": [
+        "Över allt annat idag vilar",
+        "Kortet som sätter tonen för hela dagen är",
+        "Innan något annat, formas dagen av"
+      ]
+    },
+    "past": {
+      "label": "Det förflutna",
+      "subtitle": "Vad du bär med dig",
+      "intros": [
+        "Bakom dig, och fortfarande påverkande detta ögonblick, finns",
+        "Vad du bär med dig från de senaste dagarna är",
+        "Det förflutna som spiller över i idag markeras av"
+      ]
+    },
+    "present": {
+      "label": "Nutiden",
+      "subtitle": "Var du faktiskt står",
+      "intros": [
+        "Just nu, i centrum av allt, finns",
+        "Där du faktiskt står idag är med",
+        "I nuet hanterar du"
+      ]
+    },
+    "future": {
+      "label": "Framtiden",
+      "subtitle": "Vart detta är på väg",
+      "intros": [
+        "Precis framför dig rör sig detta mot",
+        "Vart detta är på väg, om inget förändras, är",
+        "Den nära framtiden pekar mot"
+      ]
+    }
+  },
+  "summaryClauses": [
+    "Läst tillsammans spårar dagens läggning en linje från {past} fram till {future}, där {determinant} sätter villkoren för hur allt utspelar sig.",
+    "Den röda tråden idag löper från vad {past} redan lärt dig, genom var du står nu, mot {future} — allt färgat av {determinant}."
+  ],
+  "ranks": {
+    "ace": "Ess",
+    "two": "Tvåa",
+    "three": "Trea",
+    "four": "Fyra",
+    "five": "Femma",
+    "six": "Sexa",
+    "seven": "Sjua",
+    "eight": "Åtta",
+    "nine": "Nia",
+    "ten": "Tia",
+    "page": "Page",
+    "knight": "Riddare",
+    "queen": "Drottning",
+    "king": "Kung"
+  },
+  "suits": {
+    "wands": "Stavar",
+    "cups": "Bägare",
+    "swords": "Svärd",
+    "pentacles": "Pentagram"
+  },
+  "majorArcana": {
+    "0": {
+      "name": "Narren",
+      "keywords": [
+        "nystart",
+        "oskyld",
+        "hopp i blindo",
+        "öppenhet"
+      ],
+      "upright": "en nystart utan karta och garantier – inget annat än nyfikenhet och modet att ta steget framåt innan alla svar finns.",
+      "reversed": "tvekan förklädd till försiktighet, ett steg som övats så många gånger att det aldrig tas – eller motsatsen: ett blint hopp utan att kontrollera vad som finns under.",
+      "advice": "Var en nybörjare igen. Det enda misstaget här är att vägra börja."
+    },
+    "1": {
+      "name": "Magikern",
+      "keywords": [
+        "resursfullhet",
+        "viljestyrka",
+        "manifestation"
+      ],
+      "upright": "att inse att varje verktyg situationen kräver – intellekt, skicklighet, tajming – redan finns i dina händer, och att använda dem medvetet är det enda steget som återstår.",
+      "reversed": "talang som förblir oanvänd, eller skicklighet som används för manipulation istället för att bygga något. Hur som helst går förmågan till spillo, eller så är självförtroendet mer en fasad än en grund.",
+      "advice": "Sluta samla på fler verktyg. Plocka upp det du har i handen och använd det."
+    },
+    "2": {
+      "name": "Översteprästinnan",
+      "keywords": [
+        "intuition",
+        "det undermedvetna",
+        "dold kunskap"
+      ],
+      "upright": "kunskap som kommer under ytan av språket – en aning, en dröm, en känsla som visar sig vara mer korrekt än alla bevis du hade vid tillfället.",
+      "reversed": "en tyst sanning som dränks av brus, eller en instinkt som hålls privat eftersom den ännu inte kan bevisa sig själv.",
+      "advice": "Lita på det du redan känner men inte har sagt högt. Den vet något som ditt förnuft ännu inte hunnit ikapp."
+    },
+    "3": {
+      "name": "Kejsarinnan",
+      "keywords": [
+        "överflöd",
+        "omvårdnad",
+        "kreativitet",
+        "tillväxt"
+      ],
+      "upright": "en tid för tillväxt som behöver vårdas, inte tvingas fram – ett projekt, en relation eller en del av dig själv som frodas när den får näring istället för press.",
+      "reversed": "omsorg eller kreativitet som tippar över i kvävning, eller bördig mark som lämnats utan tillsyn tills den slutat producera något.",
+      "advice": "Ge det du bryr dig om uppmärksamhet istället för press. Tålamod är det som får det att växa."
+    },
+    "4": {
+      "name": "Kejsaren",
+      "keywords": [
+        "struktur",
+        "auktoritet",
+        "disciplin",
+        "stabilitet"
+      ],
+      "upright": "ordning byggd med ett syfte – ett ramverk, en gräns eller en plan som är tillräckligt stadig för att hålla goda intentioner uppe under verklig press.",
+      "reversed": "kontroll som hålls för hårt, eller en struktur så lös att inget inuti den förblir upprätt.",
+      "advice": "Sätt upp byggställningen innan du bygger huset. Struktur nu sparar ansträngning senare."
+    },
+    "5": {
+      "name": "Hierofanten",
+      "keywords": [
+        "tradition",
+        "trossystem",
+        "vägledning",
+        "konvention"
+      ],
+      "upright": "visdom som förts vidare genom etablerade kanaler – en mentor, institution eller tradition vars vägledning fortfarande förtjänar att följas, åtminstone för nu.",
+      "reversed": "en regel som hålls kvar av ren vana, eller en konvention som slutat förtjäna sin lojalitet för länge sedan.",
+      "advice": "Lär dig den etablerade vägen först. Bestäm dig för om du ska lämna den efteråt."
+    },
+    "6": {
+      "name": "De älskande",
+      "keywords": [
+        "anslutning",
+        "värderingar",
+        "val",
+        "linjering"
+      ],
+      "upright": "en verklig samstämmighet mellan människor, värderingar eller vägar – ett val som betyder något eftersom det visar vad du står för, inte bara vad du gillar.",
+      "reversed": "en obalans som tyst accepteras, eller ett beslut som undviks eftersom det skulle leda till ett svårare samtal om det uttalades.",
+      "advice": "Sätt ord på valet tydligt, även om det ärliga svaret gör saker mer komplicerade."
+    },
+    "7": {
+      "name": "Vagnen",
+      "keywords": [
+        "viljestyrka",
+        "beslutsamhet",
+        "seger genom kontroll"
+      ],
+      "upright": "framåtrörelse som vunnits genom att hålla två motsatta krafter i en hand och styra dem åt samma håll.",
+      "reversed": "momentum som äts upp av inre konflikt, eller en seger som jagats så hårt att den trampar ner det den var tänkt att skydda.",
+      "advice": "Sluta brottas med dina egna motsägelser. Peka dem åt samma håll och kör."
+    },
+    "8": {
+      "name": "Styrkan",
+      "keywords": [
+        "mod",
+        "tålamod",
+        "tyst beslutsamhet",
+        "medkänsla"
+      ],
+      "upright": "kraft som aldrig behöver höja rösten – en stadga som kommer från att sluta fred med det svåra, inte att begrava det.",
+      "reversed": "självtvivel som bär ödmjukhet som en mask, eller att ta till våld där tålamod hade gjort mer nytta.",
+      "advice": "Möt det som skrämmer dig med lugn istället för kraft. Mildhet är inte svaghet."
+    },
+    "9": {
+      "name": "Eremiten",
+      "keywords": [
+        "introspektion",
+        "ensamhet",
+        "inre vägledning"
+      ],
+      "upright": "en nödvändig reträtt – att ta ett steg tillbaka från bruset för att höra vad du själv tänker, inte bara vad alla runt omkring dig säger.",
+      "reversed": "isolering som förvandlas till undvikande, eller visdom som hålls så nära att den aldrig når de människor som behöver den.",
+      "advice": "Ta ensamheten. Svaret du söker kommer inte att dyka upp i en folkmassa."
+    },
+    "10": {
+      "name": "Lyckohjulet",
+      "keywords": [
+        "cykler",
+        "förändring",
+        "öde",
+        "vändpunkter"
+      ],
+      "upright": "en förändring som redan är igång, pådriven av krafter större än något enskilt val – omständigheter som vänder på ett sätt som ändrar förutsättningarna.",
+      "reversed": "en cykel som upprepar sig själv eftersom mönstret under ytan inte har ändrats – bara dess kostym.",
+      "advice": "Sluta försöka kontrollera vändningen. Lägg din energi på hur du svarar när den väl landar."
+    },
+    "11": {
+      "name": "Rättvisan",
+      "keywords": [
+        "rättvisa",
+        "sanning",
+        "orsak och verkan",
+        "klarhet"
+      ],
+      "upright": "en rättvis avräkning, även om den inte är bekväm – att se klart på orsak och verkan, och på vad som är skyldigt.",
+      "reversed": "en obalans som ingen har tagit tag i, eller en sanning som undviks eftersom att möta den rakt på skulle kräva ansvarstagande.",
+      "advice": "Se på situationen utan att smickra dig själv. Rättvisa börjar med en ärlig redovisning."
+    },
+    "12": {
+      "name": "Den hängde",
+      "keywords": [
+        "överlämnande",
+        "nytt perspektiv",
+        "paus"
+      ],
+      "upright": "framsteg som görs genom att pausa istället för att pressa på – en medveten suspension som öppnar upp en vinkel på saker du inte kunde nå medan du rörde dig.",
+      "reversed": "fördröjning för sakens skull, eller ett offer som aldrig gav någon verklig förståelse i utbyte.",
+      "advice": "Låt detta förbli olöst en stund till. Insikten lever i väntan, inte någonstans förbi den."
+    },
+    "13": {
+      "name": "Döden",
+      "keywords": [
+        "transformation",
+        "avslut",
+        "släpp taget"
+      ],
+      "upright": "ett sant avslut som röjer plats för något som inte kunde ha existerat vid sidan av det – inte förstörelse, utan nödvändig förändring.",
+      "reversed": "en förändring som motarbetats långt efter att den blivit oundviklig, vilket bara gör avslutet svårare när det väl kommer.",
+      "advice": "Låt den del av detta som redan är över vara över. Något annat behöver utrymmet den tar upp."
+    },
+    "14": {
+      "name": "Måttfullheten",
+      "keywords": [
+        "balans",
+        "måttfullhet",
+        "integration",
+        "tålamod"
+      ],
+      "upright": "två saker som såg oförenliga ut som finner en fungerande medelväg – tålamod, blandning, det långsamma hantverket att få proportionerna rätt.",
+      "reversed": "för mycket i en riktning, eller en kompromiss som slängts ihop så snabbt att ingen av sidorna blir nöjd.",
+      "advice": "Sakta ner blandningen. Rätt balans kan inte tvingas fram över en natt."
+    },
+    "15": {
+      "name": "Djävulen",
+      "keywords": [
+        "fäste",
+        "restriktion",
+        "frestelse",
+        "gamla mönster"
+      ],
+      "upright": "ett mönster, en vana eller en dynamik med mer grepp om dig än du vill erkänna – trots att dörren ut aldrig var låst.",
+      "reversed": "den första verkliga dragningen bort från något som hade fångat dig – att se kedjan tydligt för vad den är.",
+      "advice": "Se ärligt på vad du fortsätter välja trots att det kostar dig. Att sätta ord på det är där vägen ut börjar."
+    },
+    "16": {
+      "name": "Tornet",
+      "keywords": [
+        "plötslig förändring",
+        "omvälvning",
+        "uppenbarelse"
+      ],
+      "upright": "en struktur byggd på osäker mark som faller snabbt – störande, men klargörande, eftersom den rensar ut det som aldrig var stabilt från början.",
+      "reversed": "ett sammanbrott som hållits tillbaka genom rent undvikande, eller en mindre störning som ändå skakar loss något.",
+      "advice": "Skynda dig inte att bygga upp exakt det som föll. Fråga först varför det inte kunde stå kvar."
+    },
+    "17": {
+      "name": "Stjärnan",
+      "keywords": [
+        "hopp",
+        "förnyelse",
+        "inspiration",
+        "läkning"
+      ],
+      "upright": "tyst hopp som återvänder efter en svår period – inte naiv optimism, utan en verklig känsla av att saker kan lagas och är på väg mot något bättre.",
+      "reversed": "hopp som tunnas ut, eller en positiv framtidsutsikt som drivit iväg från alla faktiska planer.",
+      "advice": "Låt dig själv hoppas igen. Du har förtjänat det, och det pekar mot något verkligt."
+    },
+    "18": {
+      "name": "Månen",
+      "keywords": [
+        "osäkerhet",
+        "det undermedvetna",
+        "illusion",
+        "intuition"
+      ],
+      "upright": "en situation upplyst av något annat än rena fakta – instinkt, fantasi och gamla rädslor som blandas, så det du ser är inte hela bilden än.",
+      "reversed": "förvirring som börjar lätta, eller en rädsla som visar sig ha varit större i fantasin än i verkligheten.",
+      "advice": "Tvinga inte fram ett beslut medan bilden fortfarande är så oklar. Vänta på mer ljus."
+    },
+    "19": {
+      "name": "Solen",
+      "keywords": [
+        "glädje",
+        "vitalitet",
+        "klarhet",
+        "framgång"
+      ],
+      "upright": "ren lycka – klarhet, värme, ett resultat som inte behöver ifrågasättas.",
+      "reversed": "glädje som dämpas av att övertänka den, eller en framgång som inte tillåts bli mottagen och njuten för vad den är.",
+      "advice": "Låt detta vara så bra som det är. Du behöver inte leta efter haken."
+    },
+    "20": {
+      "name": "Domen",
+      "keywords": [
+        "avräkning",
+        "uppvaknande",
+        "reflektion",
+        "absolution"
+      ],
+      "upright": "en ärlig avräkning med var du har varit, och ett kall att kliva in i en version av dig själv som matchar det du har lärt dig.",
+      "reversed": "självdom som förvandlas till hårdhet, eller ett uppvaknande som skjuts upp lite till.",
+      "advice": "Svara på kallet tydligt. Vad du än har undvikit är redo att mötas nu."
+    },
+    "21": {
+      "name": "Världen",
+      "keywords": [
+        "fullbordan",
+        "helhet",
+        "ankomst"
+      ],
+      "upright": "en cykel som sluts rent, allt den var menad att lära ut finns redan i handen – en verklig känsla av ankomst innan nästa resa börjar.",
+      "reversed": "en nästan-fullbordan som fortfarande saknar sin sista bit, eller att nå avslut innan det är dags.",
+      "advice": "Erkänn hur långt detta har kommit innan du rusar mot vad som än kommer härnäst."
+    }
+  },
+  "minorArcana": {
+    "wands": {
+      "ace": {
+        "keywords": [
+          "inspiration",
+          "nytt projekt",
+          "kreativ gnista"
+        ],
+        "upright": "en plötslig våg av kreativ energi — en idé, ett erbjudande eller ett projekt som ännu inte tagit form men som redan drar dig till sig.",
+        "reversed": "inspiration som stannar av innan den blir till handling, eller entusiasm för ett nytt projekt som svalnar innan det ens har börjat.",
+        "advice": "Agera på gnistan nu medan den fortfarande är varm. Att vänta på den perfekta planen gör bara att den bleknar."
+      },
+      "two": {
+        "keywords": [
+          "planering",
+          "framtidsvision",
+          "personlig kraft"
+        ],
+        "upright": "att stå på en bekväm utsiktsplats med verkliga alternativ framför sig, och väga det du redan byggt mot vart du kan ta det härnäst.",
+        "reversed": "att spela för säkert av rädsla för det okända, eller en framtidsplan som aldrig sätts på prov.",
+        "advice": "Sluta beundra utsikten från där du står. Välj en riktning och börja gå mot den."
+      },
+      "three": {
+        "keywords": [
+          "expansion",
+          "framsynthet",
+          "väntan på resultat"
+        ],
+        "upright": "väntan efter att arbetet är gjort — skeppen har redan skickats ut, resultaten har inte kommit än, men grundarbetet är tillräckligt stabilt för att lita på.",
+        "reversed": "förseningar som hopar sig för en plan som såg ut att fungera, eller en vidgad vy som avslöjar hinder du inte räknat med.",
+        "advice": "Håll blicken vid horisonten en stund till. Det du har satt i rörelse är fortfarande på väg."
+      },
+      "four": {
+        "keywords": [
+          "firande",
+          "hemkomst",
+          "milstolpe"
+        ],
+        "upright": "en milstolpe värd att stanna upp för — en hemkomst, ett firande, en känsla av att ha förtjänat just detta ögonblick av vila.",
+        "reversed": "ett firande som känns tomt, eller en känsla av hem och tillhörighet som ännu inte riktigt har nåtts.",
+        "advice": "Låt dig själv njuta fullt ut. Varje bra ögonblick behöver inte omedelbart följas av nästa uppgift."
+      },
+      "five": {
+        "keywords": [
+          "konkurrens",
+          "friktion",
+          "oenighet"
+        ],
+        "upright": "viljor som krockar öppet — bullrigt, kanske utmattande, men ärligt, och bättre än att samma spänning får sjuda under ytan.",
+        "reversed": "konflikt som äntligen tappar fart, eller en rivalitet som visar sig ha varit mer attityd än substans.",
+        "advice": "Missta inte denna friktion för misslyckande. Konkurrerande idéer vässar varandra när ingen är rädd för att vara oense högt."
+      },
+      "six": {
+        "keywords": [
+          "seger",
+          "erkännande",
+          "självförtroende"
+        ],
+        "upright": "en vinst som även andra kan se — erkännande som kommer offentligt för en ansträngning som hittills mest varit osynlig.",
+        "reversed": "stolthet som surnar till arrogans, eller en seger som aldrig fick det erkännande den förtjänade.",
+        "advice": "Ta emot erkännandet utan att försöka förklara bort det. Du förtjänade vinsten; låt den stå för sig själv."
+      },
+      "seven": {
+        "keywords": [
+          "försvarsposition",
+          "uthållighet",
+          "stå upp för sig själv"
+        ],
+        "upright": "att hålla en position som alla andra nu försöker ta ifrån dig — tröttsamt, men ett bevis på att det du byggt är värt att försvara.",
+        "reversed": "att ge upp mark du inte behövde ge upp, eller att försvara en position så länge att du tappat bort varför den betydde något.",
+        "advice": "Stå på dig, men kontrollera att du fortfarande kämpar för rätt sak."
+      },
+      "eight": {
+        "keywords": [
+          "momentum",
+          "snabb handling",
+          "snabb rörelse"
+        ],
+        "upright": "allt rör sig plötsligt på en gång — meddelanden landar, planer accelererar, en period av snabb rörelse efter en lång väntan.",
+        "reversed": "momentum som stannar av precis när det betydde som mest, eller saker som rör sig så fort att inget hinner landa.",
+        "advice": "Rör dig snabbt medan vägen är fri, men spring inte ifrån din egen förmåga att reagera på det som kommer härnäst."
+      },
+      "nine": {
+        "keywords": [
+          "resiliens",
+          "sista ansträngningen",
+          "vaksam uthållighet"
+        ],
+        "upright": "ännu en ansträngning krävs av dig efter en lång rad av dem — trött, vaksam, men fortfarande stående, och närmare slutet än det känns.",
+        "reversed": "försvarsposition som hårdnat till isolering, eller utmattning som gör att varje kvarvarande utmaning känns större än den är.",
+        "advice": "Du har överlevt varje runda hittills. Låt inte din vaksamhet hindra dig från att ta emot hjälp med den sista."
+      },
+      "ten": {
+        "keywords": [
+          "börda",
+          "överbelastning",
+          "hårt förvärvat avslut"
+        ],
+        "upright": "att bära mer än din del eftersom du är så nära mållinjen att det känns slösaktigt att lägga ner det nu.",
+        "reversed": "en börda som hålls kvar av envishet, eller arbete som äntligen läggs ner efter att ha burits alldeles för länge.",
+        "advice": "Fråga dig själv vad du bär på som aldrig var menat för dig att avsluta. En del av denna vikt kan delas eller släppas."
+      },
+      "page": {
+        "keywords": [
+          "utforskande",
+          "ny idé",
+          "entusiasm"
+        ],
+        "upright": "en idé som är för spännande för att sitta still med — rastlös nyfikenhet som vill testa sig själv mot världen omedelbart.",
+        "reversed": "entusiasm utan uppföljning, eller planer som tillkännages högljutt för att sedan tyst överges.",
+        "advice": "Låt entusiasmen driva dig, men ge idén åtminstone ett riktigt test innan du jagar nästa."
+      },
+      "knight": {
+        "keywords": [
+          "äventyr",
+          "impulsivitet",
+          "djärv jakt"
+        ],
+        "upright": "att rusa mot nästa sak med totalt självförtroende, mer driven av lusten till jakten än av en fast plan.",
+        "reversed": "hänsynslöshet som börjar kosta dig, eller rastlös energi som inte har någon produktiv plats kvar att ta vägen.",
+        "advice": "Ta kontroll över en del av den djärvheten innan den styr dig, istället för att du styr den."
+      },
+      "queen": {
+        "keywords": [
+          "självförtroende",
+          "självständighet",
+          "magnetism"
+        ],
+        "upright": "en varm, orubblig självsäkerhet som drar till sig människor utan att behöva prestera för dem.",
+        "reversed": "självförtroende som blivit skört eller krävande, eller självständighet som används för att stänga ute andra istället för att stå på egna ben.",
+        "advice": "Led med det självförtroende du redan har. Du behöver inte bevisa det för någon annan först."
+      },
+      "king": {
+        "keywords": [
+          "vision",
+          "ledarskap",
+          "djärvt entreprenörskap"
+        ],
+        "upright": "ledarskap som inspirerar genom exempel — en djärv vision parad med genomförandekraft för att göra den verklig.",
+        "reversed": "höga förväntningar som blivit omöjliga att möta, eller ambition som drivs så hänsynslöst att den bränner ut människorna som hjälper dig.",
+        "advice": "Led visionen, men kontrollera att människorna som förverkligar den tillsammans med dig fortfarande vill vara där."
+      }
+    },
+    "cups": {
+      "ace": {
+        "keywords": [
+          "ny kärlek",
+          "emotionell öppning",
+          "överflöd"
+        ],
+        "upright": "en känslomässig bägare som fylls över kanten — ny kärlek, ny medkänsla eller en känsla så full att den måste spilla över i något annat.",
+        "reversed": "en känslomässig öppning som hålls tillbaka, eller kärlek och kontakt som erbjuds men ännu inte har släppts in.",
+        "advice": "Låt denna känsla vara så full som den är. Det finns ingen anledning att ransonera något så äkta."
+      },
+      "two": {
+        "keywords": [
+          "partnerskap",
+          "ömsesidig attraktion",
+          "förening"
+        ],
+        "upright": "två människor som möts som jämlikar — ett band som formas, eller fördjupas, på ömsesidiga och i stort sett jämna villkor.",
+        "reversed": "en förbindelse som blivit obalanserad, eller ett partnerskap under en press som ännu inte har uttalats högt.",
+        "advice": "Kontrollera att denna förbindelse fortfarande är lika ömsesidig som den var från början. Säg rakt ut vad som har förändrats, om något har gjort det."
+      },
+      "three": {
+        "keywords": [
+          "vänskap",
+          "firande",
+          "gemenskap"
+        ],
+        "upright": "glädje som är bättre när den delas — en sammankomst, en vänskap, ett ögonblick värt att fira med de människor som stått vid din sida.",
+        "reversed": "en gruppdynamik som surnar till skvaller eller exkludering, eller överdrift som dämpar det som borde ha varit ett genuint firande.",
+        "advice": "Ta med de människor som betyder mest i detta ögonblick. Firande betyder mer när det inte görs ensamt."
+      },
+      "four": {
+        "keywords": [
+          "apati",
+          "kontemplation",
+          "missat erbjudande"
+        ],
+        "upright": "tristess inför det som redan finns på bordet, trots att något värt att lägga märke till erbjuds precis framför dig.",
+        "reversed": "apati som äntligen släpper sitt grepp, eller en vilja att se upp och väga den möjlighet du tidigare ignorerat.",
+        "advice": "Se upp från det som gör dig besviken och lägg märke till vad som erbjuds. Det kan vara värt mer än det först verkade."
+      },
+      "five": {
+        "keywords": [
+          "förlust",
+          "sorg",
+          "ånger"
+        ],
+        "upright": "sorg centrerad kring det som spillts ut och gått förlorat, även medan något intakt fortfarande står kvar i närheten, obemärkt.",
+        "reversed": "sorg som börjar släppa sitt grepp, eller de första verkliga stegen mot att acceptera en förlust istället för att spela upp den igen.",
+        "advice": "Sörj det som verkligen är borta, men vänd dig om tillräckligt länge för att se vad som fortfarande står kvar bakom dig."
+      },
+      "six": {
+        "keywords": [
+          "nostalgi",
+          "minne",
+          "oskyld"
+        ],
+        "upright": "en dragning tillbaka mot enklare tider — gamla minnen, bekant trygghet eller en återförening med någon från ett tidigare kapitel.",
+        "reversed": "nostalgi som blivit ett gömställe, eller ett idealiserat förflutet som får nuet att se sämre ut än vad det är.",
+        "advice": "Besök det förflutna för tröst, men flytta inte tillbaka. Det du behöver nu lever i nuet."
+      },
+      "seven": {
+        "keywords": [
+          "fantasi",
+          "valmöjligheter",
+          "illusion"
+        ],
+        "upright": "för många tilltalande alternativ, vissa mer solida än andra, vilket gör det svårt att skilja verklig möjlighet från önsketänkande.",
+        "reversed": "dimman skingras tillräckligt för att se vilka alternativ som någonsin var verkliga, och ett beslut blir äntligen möjligt.",
+        "advice": "Testa varje alternativ mot verkligheten innan du väljer. Inte allt som glimmar här kommer att hålla måttet."
+      },
+      "eight": {
+        "keywords": [
+          "att gå vidare",
+          "söka djupare mening",
+          "avfärd"
+        ],
+        "upright": "att gå ifrån något som ser bra ut på utsidan eftersom det har slutat ge dig näring på insidan.",
+        "reversed": "att stanna kvar någonstans av rädsla för vad det skulle innebära att lämna, eller att driva utan att någonsin helt förbinda sig till avfärden.",
+        "advice": "Lita på den del av dig som vet att detta inte längre räcker, även om du inte kan förklara varför än."
+      },
+      "nine": {
+        "keywords": [
+          "tillfredsställelse",
+          "nöjdhet",
+          "önskan uppfylld"
+        ],
+        "upright": "en enkel, bekväm tillfredsställelse — en önskan uppfylld, ett behov tillgodosett, en nöjdhet som inte behöver rättfärdigas.",
+        "reversed": "självgodhet som ersätter verklig tillfredsställelse, eller överflöd som på något sätt ändå inte känns som tillräckligt.",
+        "advice": "Låt denna nöjdhet vara enkel. Du behöver inte förtjäna den två gånger genom att oroa dig för att den inte ska vara för evigt."
+      },
+      "ten": {
+        "keywords": [
+          "emotionell uppfyllelse",
+          "familjeharmoni",
+          "varaktig lycka"
+        ],
+        "upright": "en djup, grundad lycka byggd med de människor som står dig närmast — inte ett toppögonblick, utan ett varaktigt tillstånd.",
+        "reversed": "harmoni i hemmet som är mer yta än substans, eller värderingar bland de människor du älskar som i tysthet slutat stämma överens.",
+        "advice": "Se förbi ytan av lycka och kontrollera att människorna i den också känner den."
+      },
+      "page": {
+        "keywords": [
+          "kreativ möjlighet",
+          "intuitivt budskap",
+          "nyfikenhet"
+        ],
+        "upright": "ett milt, oväntat emotionellt eller kreativt budskap som anländer — något värt att uppmärksamma, även om det verkar litet.",
+        "reversed": "emotionell omognad som står i vägen för en verklig möjlighet, eller en kreativ impuls som används för att fly snarare än att uttrycka.",
+        "advice": "Ta den lilla, oväntade känslan på allvar. Den är mer informativ än den ser ut."
+      },
+      "knight": {
+        "keywords": [
+          "romantik",
+          "idealism",
+          "följa hjärtat"
+        ],
+        "upright": "att leda med hjärtat, jaga en romantisk eller idealistisk vision med verklig uppriktighet, även om det inte är helt praktiskt ännu.",
+        "reversed": "humörsvängningar utklädda till känslighet, eller ett romantiskt ideal som ständigt leder till besvikelse.",
+        "advice": "Följ ditt hjärta här, men stäm av det mot verkligheten innan du följer det hela vägen."
+      },
+      "queen": {
+        "keywords": [
+          "medkänsla",
+          "emotionell trygghet",
+          "intuition"
+        ],
+        "upright": "emotionellt djup hållet med verklig stabilitet — medkänsla för andra som inte sker på bekostnad av din egen stadga.",
+        "reversed": "medkänsla som tippat över i självförsummelse, eller emotionell trygghet som bara håller så länge ingen testar den.",
+        "advice": "Ge andra din medkänsla, men behåll tillräckligt mycket i reserv för dig själv."
+      },
+      "king": {
+        "keywords": [
+          "emotionell balans",
+          "diplomati",
+          "lugn kontroll"
+        ],
+        "upright": "en lugn behärskning över starka känslor — förmågan att förbli stadig och rättvis även när de emotionella insatserna är höga.",
+        "reversed": "kontroll över känslor som egentligen är undertryckande, eller lugn på ytan som döljer manipulation under.",
+        "advice": "Förbli stadig, men låt det du verkligen känner bli känt istället för att bara hantera det."
+      }
+    },
+    "swords": {
+      "ace": {
+        "keywords": [
+          "genombrott",
+          "klarhet",
+          "ny idé"
+        ],
+        "upright": "ett plötsligt genombrott genom förvirring — en insikt, ett beslut eller en sanning som anländer skarpt och omisskännligt tydligt.",
+        "reversed": "klarhet som grumlats av för mycket brus, eller en sanning som förvridits innan den nådde dig.",
+        "advice": "Lita på den klara tanken när den kommer. Låt den inte pratas tillbaka in i förvirring."
+      },
+      "two": {
+        "keywords": [
+          "dödläge",
+          "svårt beslut",
+          "undvikande"
+        ],
+        "upright": "ett beslut som hålls på armlängds avstånd, bevakat och balanserat så noggrant att inget av alternativen någonsin väljs.",
+        "reversed": "dödläget bryts äntligen, eller en överbelastning av motstridig information som gör valet svårare snarare än lättare.",
+        "advice": "Ta av dig ögonbindeln. Beslutet blir inte lättare av att du skjuter upp det ytterligare."
+      },
+      "three": {
+        "keywords": [
+          "hjärtesorg",
+          "svek",
+          "sorg"
+        ],
+        "upright": "en smärta som är skarp och specifik — en sanning, ett svek eller en förlust som skär djupt just för att den är verklig.",
+        "reversed": "de första stegen mot läkning, eller gammal smärta som kommer upp till ytan för att den aldrig bearbetades fullt ut första gången.",
+        "advice": "Låt smärtan vara precis så skarp som den är. Att sätta ord på den är det som påbörjar läkningen."
+      },
+      "four": {
+        "keywords": [
+          "vila",
+          "återhämtning",
+          "kontemplation"
+        ],
+        "upright": "en medveten reträtt efter konflikt eller ansträngning — inte ett nederlag, utan den återhämtning ett sinne behöver innan det kan tänka klart igen.",
+        "reversed": "vila som avbryts innan den är klar, eller rastlöshet som gör verklig återhämtning omöjlig.",
+        "advice": "Ta vilan fullt ut. En halvhjärtad återhämtning innebär bara att du bär med dig utmattningen in i det som kommer härnäst."
+      },
+      "five": {
+        "keywords": [
+          "ihålig seger",
+          "konflikt",
+          "svek"
+        ],
+        "upright": "en vinst som kostar mer än den smakar — en konflikt som drivits till sin spets trots att alla inblandade lämnar den i sämre skick.",
+        "reversed": "agg som dröjer kvar efter en konflikt som aldrig riktigt löstes, eller en chans att sluta fred istället för att pressa sin fördel.",
+        "advice": "Fråga dig själv om det är värt vad det kommer att kosta dig efteråt att vinna just den här striden."
+      },
+      "six": {
+        "keywords": [
+          "övergång",
+          "gå vidare",
+          "lugnare vatten"
+        ],
+        "upright": "en långsam, medveten rörelse bort från turbulens, där du bara bär med dig det nödvändiga mot något stadigare.",
+        "reversed": "att göra motstånd mot en övergång som redan är nödvändig, eller att bära med sig olöst bagage in i det lugnare vattnet framför dig.",
+        "advice": "Låt det svåra vattnet ligga bakom dig. Sluta se tillbaka på stranden du lämnar."
+      },
+      "seven": {
+        "keywords": [
+          "strategi",
+          "bedrägeri",
+          "att agera ensam"
+        ],
+        "upright": "att röra sig tyst och självständigt, ta vad du behöver utan att be om lov — smart, men inte helt ärligt.",
+        "reversed": "en dold strategi som kommer fram i ljuset, eller ett dåligt samvete som äntligen hinner ikapp en genväg som tagits.",
+        "advice": "Fråga dig själv om strategin du använder fortfarande skulle vara rimlig om alla inblandade kunde se den."
+      },
+      "eight": {
+        "keywords": [
+          "fångenskap",
+          "offermentalitet",
+          "självpåtagna begränsningar"
+        ],
+        "upright": "en känsla av att vara instängd från alla håll, trots att repen som håller dig är lösare än de känns — ett fängelse byggt mer av föreställningar än av fakta.",
+        "reversed": "den första verkliga sprickan i den där självpåtagna fällan, när berättelsen om att vara maktlös börjar tappa sitt grepp.",
+        "advice": "Leta efter glipan i repen som du antagit var solida. Det finns mer utrymme att röra sig på än det känns som."
+      },
+      "nine": {
+        "keywords": [
+          "ångest",
+          "oro",
+          "mental vånda"
+        ],
+        "upright": "ett sinne som kör värsta tänkbara scenarier i mörkret, utmattat av rädslor som verkar mycket större klockan tre på natten än i dagsljus.",
+        "reversed": "oro som börjar lätta, eller ett beslut att äntligen sätta ord på rädslan istället för att bära den ensam.",
+        "advice": "Säg oron högt till någon. Den överlever sällan mötet med dagsljuset lika intakt som den känns just nu."
+      },
+      "ten": {
+        "keywords": [
+          "bottennapp",
+          "smärtsamt slut",
+          "svek"
+        ],
+        "upright": "ett slut som är lika definitivt som det är smärtsamt — det värsta ligger redan bakom dig, och härifrån finns ingen annan väg än uppåt.",
+        "reversed": "att göra motstånd mot ett slut som redan har skett, eller en långsam, delvis återhämtning från något som ännu inte läkt helt.",
+        "advice": "Låt detta slut bli fullständigt. Att kämpa för att hålla det halvt vid liv förlänger bara smärtan."
+      },
+      "page": {
+        "keywords": [
+          "nyfikenhet",
+          "vaksamhet",
+          "törst efter sanning"
+        ],
+        "upright": "ett alert, frågande sinne som samlar information och observerar noga innan det bestämmer sig för vad det ska tro på.",
+        "reversed": "skvaller som ersätter verklig undersökning, eller idéer som aldrig går från prat till faktisk handling.",
+        "advice": "Fortsätt ställa frågor, men agera till slut utifrån vad svaren berättar för dig."
+      },
+      "knight": {
+        "keywords": [
+          "beslutsam handling",
+          "självhävdelse",
+          "snabbt tänkande"
+        ],
+        "upright": "att röra sig snabbt och tala rakt ut, gå rakt på sak utan att vänta på någons tillåtelse.",
+        "reversed": "aggression som springer ifrån omdömet, eller impulsiva beslut som fattats snabbare än situationen krävde.",
+        "advice": "Agera beslutsamt, men ta ett andetag innan du säger den skarpaste versionen av vad du tänker."
+      },
+      "queen": {
+        "keywords": [
+          "oberoende tänkande",
+          "tydliga gränser",
+          "direkt kommunikation"
+        ],
+        "upright": "att se situationer klart och säga det utan att mjuka upp det mer än vad sanningen kräver.",
+        "reversed": "direkthet som tippat över i kyla, eller gränser som hålls så stelt att ingen kan komma nära.",
+        "advice": "Behåll klarheten, men kontrollera om din rättframhet är nödvändig eller bara lättare än att vara varsam."
+      },
+      "king": {
+        "keywords": [
+          "intellektuell auktoritet",
+          "strukturerat tänkande",
+          "opartisk sanning"
+        ],
+        "upright": "bedömningar gjorda utifrån principer och bevis snarare än känslor — rättvisa, precisa och svåra att argumentera emot.",
+        "reversed": "logik som används som ett vapen, eller auktoritet som är tekniskt korrekt men ändå grym.",
+        "advice": "Ha rätt, men låt inte det faktum att du har rätt vara en ursäkt för att vara ovänlig."
+      }
+    },
+    "pentacles": {
+      "ace": {
+        "keywords": [
+          "ny möjlighet",
+          "välstånd",
+          "manifestation"
+        ],
+        "upright": "en konkret möjlighet som landar i dina händer – praktisk, verklig och värd att bygga vidare på istället för att bara beundra.",
+        "reversed": "en möjlighet som missats på grund av dålig tajming eller bristande planering, eller en lovande start som aldrig följdes upp.",
+        "advice": "Ta det praktiska steget nu. Den här typen av möjlighet belönar uppföljning mer än entusiasm."
+      },
+      "two": {
+        "keywords": [
+          "balans",
+          "anpassningsförmåga",
+          "jonglera prioriteringar"
+        ],
+        "upright": "att hålla flera krav igång samtidigt, att justera i farten istället för att tappa någon av dem.",
+        "reversed": "en prioritering för mycket i mixen, där något nu håller på att glida ur händerna som inte borde ha gjort det.",
+        "advice": "Se ärligt på vad du jonglerar. Något här kan behöva läggas ner, inte balanseras hårdare."
+      },
+      "three": {
+        "keywords": [
+          "samarbete",
+          "skicklighet",
+          "lagarbete"
+        ],
+        "upright": "olika färdigheter som kombineras till något som ingen av dem kunde ha byggt ensam – gedigna framsteg genom verkligt samarbete.",
+        "reversed": "att arbeta isolerat med något som krävde andras händer, eller ett team som slutat dra åt samma håll.",
+        "advice": "Ta in den hjälp som krävs. Det här är inte ett projekt som byggs väl på egen hand."
+      },
+      "four": {
+        "keywords": [
+          "trygghet",
+          "kontroll",
+          "hålla hårt"
+        ],
+        "upright": "ett fast grepp om det du har byggt, att prioritera trygghet framför risk, även på bekostnad av viss flexibilitet.",
+        "reversed": "att hålla så hårt att inget nytt kan komma in, eller rädsla för förlust som styr beslut mer än något verkligt hot.",
+        "advice": "Lossa greppet något. Det du skyddar är inte så skört som det känns."
+      },
+      "five": {
+        "keywords": [
+          "svårigheter",
+          "ekonomisk förlust",
+          "isolering"
+        ],
+        "upright": "verkliga svårigheter, som känns lika mycket i isoleringen som i själva förlusten – att kämpa samtidigt som det känns som att hjälp är utom räckhåll.",
+        "reversed": "de första tecknen på att stöd blir tillgängligt, eller att svårigheter äntligen börjar lätta efter en tuff period.",
+        "advice": "Leta efter dörren som står öppen i närheten. Hjälp finns här, även om det inte känns så än."
+      },
+      "six": {
+        "keywords": [
+          "generositet",
+          "ge och ta",
+          "balans"
+        ],
+        "upright": "resurser som rör sig rättvist mellan människor – hjälp som ges för att den behövs, och tas emot utan skam.",
+        "reversed": "generositet som kommer med krav, eller ett utbyte som i tysthet blivit ensidigt.",
+        "advice": "Kontrollera om det som ges här är fritt, eller om något förväntas i gengäld."
+      },
+      "seven": {
+        "keywords": [
+          "tålamod",
+          "långsiktighet",
+          "utvärdera framsteg"
+        ],
+        "upright": "en paus för att göra bokslut över investerad ansträngning, och väga om det lönar sig eller om kursen behöver ändras.",
+        "reversed": "otålighet inför en avkastning som ännu inte kommit, eller ansträngning som fortsätter på en väg som slutat ge resultat.",
+        "advice": "Gör en ärlig utvärdering. En del av denna ansträngning förtjänar mer tålamod; en del förtjänar en ny plan."
+      },
+      "eight": {
+        "keywords": [
+          "flit",
+          "hantverk",
+          "färdighetsutveckling"
+        ],
+        "upright": "stadig, upprepad ansträngning som syftar till att bli riktigt bra på något – oglamoröst, men precis vad mästerskap kräver.",
+        "reversed": "perfektionism som stoppar verkliga framsteg, eller genvägar som tas i arbete som förtjänade full ansträngning.",
+        "advice": "Fortsätt med de oglamorösa repetitionerna. Det är så här skicklighet ser ut medan den byggs."
+      },
+      "nine": {
+        "keywords": [
+          "självförsörjning",
+          "överflöd",
+          "oberoende"
+        ],
+        "upright": "komfort och överflöd som till stor del förtjänats på egen hand – en självförsörjning som inte behöver någons godkännande.",
+        "reversed": "framgång som ser bra ut utifrån men känns ihålig, eller övertid som trängt undan någon att dela den med.",
+        "advice": "Njut av det du har byggt utan att behöva någon annans bekräftelse på att det räknas."
+      },
+      "ten": {
+        "keywords": [
+          "arv",
+          "långsiktig trygghet",
+          "familjeförmögenhet"
+        ],
+        "upright": "stabilitet som överlever en enskild person – ett arv eller en grund byggd för att stödja mer än bara dig själv.",
+        "reversed": "ett arv under press, eller familjeoenigheter om resurser som hotar något som byggts för att hålla.",
+        "advice": "Skydda det som är menat att överleva dig, men låt inte tvister om det förstöra det som det byggdes för."
+      },
+      "page": {
+        "keywords": [
+          "ny möjlighet",
+          "studier",
+          "praktisk nyfikenhet"
+        ],
+        "upright": "en praktisk möjlighet värd att studera nära – ny, lovande och fortfarande i stadiet av att lära sig hur den fungerar.",
+        "reversed": "orealistiska planer som inte testats mot verkligheten, eller framsteg som stannat av innan de verkligen börjat.",
+        "advice": "Studera denna möjlighet noga innan du förbinder dig ytterligare. Den är lovande, men ännu obeprövad."
+      },
+      "knight": {
+        "keywords": [
+          "flit",
+          "rutin",
+          "metodiska framsteg"
+        ],
+        "upright": "långsamma, metodiska, pålitliga framsteg – inga genvägar, bara konsekvent arbete som ackumuleras över tid.",
+        "reversed": "rutin som stelnat till stagnation, eller perfektionism så rigid att inget blir färdigställt.",
+        "advice": "Lita på den långsamma metoden som fungerar. Den behöver inte vara snabbare för att vara effektiv."
+      },
+      "queen": {
+        "keywords": [
+          "omvårdnad",
+          "resursrikedom",
+          "jordnära"
+        ],
+        "upright": "praktisk omsorg som visar sig på konkreta sätt – komfort, resurser och jordnära stöd som erbjuds generöst till andra.",
+        "reversed": "omsorg om andra som sker på bekostnad av omsorg om dig själv, eller osäkerhet kring resurser som undergräver generositeten.",
+        "advice": "Ge dig själv samma praktiska omsorg som du så lätt erbjuder alla andra."
+      },
+      "king": {
+        "keywords": [
+          "materiellt mästerskap",
+          "ekonomisk trygghet",
+          "generositet"
+        ],
+        "upright": "materiellt och ekonomiskt mästerskap byggt över tid, nu generöst nog att dela med sig av den trygghet det skapat.",
+        "reversed": "kontroll över resurser som blivit rigid eller besittande, eller ekonomisk trygghet som eftersträvas på bekostnad av allt annat.",
+        "advice": "Använd det du har byggt generöst. Trygghet som inte delas blir till slut bara isolering."
+      }
+    }
+  }
+}

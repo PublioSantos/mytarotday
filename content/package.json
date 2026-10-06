@@ -1,0 +1,17 @@
+{
+  "name": "mytarot-day",
+  "version": "2.0.0",
+  "description": "MyTarot.Day — a daily four-card tarot reading, drawn by clicking through the deck.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "helmet": "^7.1.0"
+  },
+  "license": "MIT"
+}

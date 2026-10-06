@@ -1,0 +1,925 @@
+{
+  "ui": {
+    "logo": "MyTarot.Day",
+    "tagline": "100 % ilmainen päivittäinen tarot-tulkinta, personoitu syntymäaikasi mukaan. Ei rekisteröitymistä, aina maksuton.",
+    "eyebrow": "Neljä korttia. Yksi päivä.",
+    "selectCardsPrompt": "Valitse 4 korttia",
+    "heroTitleLine1": "Mitä tämän päivän kortit kertovat",
+    "heroTitleEm": "sinusta",
+    "submitLabel": "Näytä korttini",
+    "submittingLabel": "Nostetaan...",
+    "loadingText": "Sekoitetaan pakkaa päivälle {date}...",
+    "tryAnotherLabel": "Tee uusi tulkinta?",
+    "buyMeCoffeeLabel": "☕  Osta minulle kahvi 🤗",
+    "funFact": "Tiesitkö: Tarot-korttiemme vintage-ilme on aito. Käytämme perinteistä vuoden 1909 Rider–Waite–Smith Tarot -pakkaa, jossa on Pamela Colman Smithin alkuperäinen kuvitus. Yli vuosisataa myöhemmin tämä klassinen pakka inspiroi edelleen lukijoita ympäri maailmaa ja sitä pidetään yhtenä modernin tarot-tulkinnan vaikutusvaltaisimmista perustoista.",
+    "footerDisclaimer": "MyTarot.Day on tarkoitettu pohdintaan ja viihteeksi. Se ei korvaa ammatillista, lääketieteellistä, taloudellista tai oikeudellista neuvontaa.",
+    "footerTagline": "Kehittänyt P.San Team | Se on ilmainen, ja tulee aina olemaan!",
+    "footerHome": "Etusivu",
+    "footerBlog": "Blogi",
+    "footerPrivacy": "Tietosuojakäytäntö",
+    "footerTerms": "Käyttöehdot",
+    "footerAbout": "Tietoa meistä",
+    "footerContact": "Ota yhteyttä",
+    "todayBadge": "Tänään",
+    "reversedLabel": "Käänteinen",
+    "uprightLabel": "Pystyasento",
+    "supportPromptText": "Piditkö tästä? Tarjoa minulle kahvit",
+    "summaryGuideLabel": "Opas",
+    "summaryPastLabel": "Menneisyys",
+    "summaryFutureLabel": "Tulevaisuus",
+    "freeBadge": "100 % ilmainen — ei rekisteröitymistä, ei maksuja",
+    "freeTitlePhrase": "Ilmainen tarot-tulkinta"
+  },
+  "positions": {
+    "determinant": {
+      "label": "Määrittäjä",
+      "subtitle": "Voima, joka muovaa koko päivää",
+      "intros": [
+        "Kaiken muun yläpuolella tänään on",
+        "Kortti, joka asettaa sävyn koko päivälle, on",
+        "Ennen kaikkea muuta, päivää muovaa"
+      ]
+    },
+    "past": {
+      "label": "Menneisyys",
+      "subtitle": "Mitä kannat mukanasi",
+      "intros": [
+        "Takana, yhä tätä hetkeä vaikuttamassa, on",
+        "Mitä kannat mukanasi viime päiviltä on",
+        "Tähän päivään vaikuttava menneisyys on merkitty kortilla"
+      ]
+    },
+    "present": {
+      "label": "Nykyhetki",
+      "subtitle": "Missä todella seisot",
+      "intros": [
+        "Juuri nyt, asioiden keskipisteessä, on",
+        "Missä todella seisot tänään, on",
+        "Nykyhetkessä käsittelet"
+      ]
+    },
+    "future": {
+      "label": "Tulevaisuus",
+      "subtitle": "Minne tämä on menossa",
+      "intros": [
+        "Aivan edessäpäin, tämä on menossa kohti",
+        "Minne tämä on menossa, jos mikään ei muutu, on",
+        "Lähitulevaisuus osoittaa kohti"
+      ]
+    }
+  },
+  "summaryClauses": [
+    "Yhdessä luettuna tämän päivän levitys piirtää linjan {past} kautta kohti {future}, {determinant} asettaessa ehdot sille, miten kaikki toteutuu.",
+    "Tämän päivän punainen lanka kulkee siitä, mitä {past} on sinulle jo opettanut, nykyhetkesi kautta kohti {future} – kaiken ollessa {determinant} värittämää."
+  ],
+  "ranks": {
+    "ace": "Ässä",
+    "two": "Kakkonen",
+    "three": "Kolmonen",
+    "four": "Nelonen",
+    "five": "Viitonen",
+    "six": "Kuutonen",
+    "seven": "Seiska",
+    "eight": "Kasi",
+    "nine": "Ysi",
+    "ten": "Kymppi",
+    "page": "Lähetti",
+    "knight": "Ritari",
+    "queen": "Kuningatar",
+    "king": "Kuningas"
+  },
+  "suits": {
+    "wands": "Sauvat",
+    "cups": "Maljat",
+    "swords": "Miekat",
+    "pentacles": "Lantit"
+  },
+  "majorArcana": {
+    "0": {
+      "name": "Narri",
+      "keywords": [
+        "uudet alut",
+        "viattomuus",
+        "hyppy tuntemattomaan",
+        "avoimuus"
+      ],
+      "upright": "uusi alku ilman karttaa ja takuita – ei muuta kuin uteliaisuutta ja rohkeutta astua eteenpäin ennen kuin kaikki vastaukset ovat selvillä.",
+      "reversed": "varovaisuudeksi naamioitua epäröintiä, askel jota on harjoiteltu niin monta kertaa ettei sitä koskaan oteta – tai päinvastoin: sokea hyppy tarkistamatta mitä alla on.",
+      "advice": "Ole taas aloittelija. Ainoa virhe tässä on kieltäytyä aloittamasta."
+    },
+    "1": {
+      "name": "Taikuri",
+      "keywords": [
+        "kekseliäisyys",
+        "tahdonvoima",
+        "ilmentäminen"
+      ],
+      "upright": "oivallus siitä, että kaikki tilanteen vaatimat työkalut – äly, taito, ajoitus – ovat jo käsissäsi, ja niiden tietoinen käyttö on ainoa jäljellä oleva askel.",
+      "reversed": "käyttämättä jäänyt lahjakkuus tai taito, jota käytetään manipulointiin rakentamisen sijaan. Joka tapauksessa kyvyt menevät hukkaan tai itseluottamus on enemmän esitystä kuin perustaa.",
+      "advice": "Lopeta uusien työkalujen kerääminen. Ota kädessäsi oleva työkalu ja käytä sitä."
+    },
+    "2": {
+      "name": "Ylipapitar",
+      "keywords": [
+        "intuitio",
+        "alitajunta",
+        "salattu tieto"
+      ],
+      "upright": "tieto, joka tulee kielen ulottumattomista – aavistus, uni, tunne, joka osoittautuu lopulta tarkemmaksi kuin mikään sillä hetkellä käytettävissä ollut todiste.",
+      "reversed": "hiljainen totuus, joka hukkuu meluun, tai vaisto, jota pidetään omana tietona, koska se ei vielä pysty todistamaan itseään.",
+      "advice": "Luota siihen, mitä jo aistit mutta et ole vielä sanonut ääneen. Se tietää jotain, mitä järkesi ei ole vielä tavoittanut."
+    },
+    "3": {
+      "name": "Keisarinna",
+      "keywords": [
+        "runsaus",
+        "hoivaaminen",
+        "luovuus",
+        "kasvu"
+      ],
+      "upright": "kasvun aika, joka kaipaa huolenpitoa, ei pakottamista – projekti, suhde tai osa sinua, joka kukoistaa kun sitä ruokitaan sen sijaan että sitä työnnettäisiin eteenpäin.",
+      "reversed": "huolenpito tai luovuus, joka muuttuu tukahduttavaksi, tai hedelmällinen maa, jota on jätetty hoitamatta kunnes se lakkasi tuottamasta mitään.",
+      "advice": "Anna huomiota sille, mistä välität, älä painetta. Kärsivällisyys on se, mikä saa sen kasvamaan."
+    },
+    "4": {
+      "name": "Keisari",
+      "keywords": [
+        "rakenne",
+        "auktoriteetti",
+        "kuri",
+        "vakaus"
+      ],
+      "upright": "tarkoituksella rakennettu järjestys – kehys, raja tai suunnitelma, joka on riittävän vankka pitämään hyvät aikomukset pystyssä todellisessa paineessa.",
+      "reversed": "liian tiukka kontrolli tai rakenne, joka on niin löysä ettei mikään sen sisällä pysy pystyssä.",
+      "advice": "Pystytä rakennustelineet ennen kuin rakennat talon. Rakenne nyt säästää vaivaa myöhemmin."
+    },
+    "5": {
+      "name": "Hierofantti",
+      "keywords": [
+        "perinteet",
+        "uskomusjärjestelmät",
+        "opastus",
+        "sovinnaisuus"
+      ],
+      "upright": "vakiintuneiden kanavien kautta peritty viisaus – mentori, instituutio tai perinne, jonka ohjausta kannattaa vielä seurata, ainakin toistaiseksi.",
+      "reversed": "sääntö, jota noudatetaan pelkästä tottumuksesta, tai sovinnaisuus, joka on lakannut ansaitsemasta uskollisuutta jo aikaa sitten.",
+      "advice": "Opettele ensin vakiintunut polku. Päätä vasta sitten, jätätkö sen."
+    },
+    "6": {
+      "name": "Rakastavaiset",
+      "keywords": [
+        "yhteys",
+        "arvot",
+        "valinta",
+        "linjassa oleminen"
+      ],
+      "upright": "todellinen yhteys ihmisten, arvojen tai polkujen välillä – valinta, jolla on merkitystä, koska se kertoo mitä edustat, ei vain mistä pidät.",
+      "reversed": "yhteensopimattomuus, jota siedetään hiljaa, tai päätös, jota vältellään, koska sen ääneen sanominen johtaisi vaikeampaan keskusteluun.",
+      "advice": "Nimeä valinta selkeästi, vaikka rehellinen vastaus tekisi asioista sotkuisempia."
+    },
+    "7": {
+      "name": "Sotavaunut",
+      "keywords": [
+        "tahdonvoima",
+        "päättäväisyys",
+        "voitto hallinnan kautta"
+      ],
+      "upright": "eteenpäin meneminen, joka voitetaan pitämällä kahta vastakkaista voimaa käsissä ja ohjaamalla niitä samaan suuntaan.",
+      "reversed": "sisäisen ristiriidan syömä vauhti tai voitto, jota on tavoiteltu niin kovaa, että se talloo juuri sen, mitä sen piti suojella.",
+      "advice": "Lopeta omien ristiriitojesi kanssa painiminen. Suuntaa ne samaan suuntaan ja mene."
+    },
+    "8": {
+      "name": "Voima",
+      "keywords": [
+        "rohkeus",
+        "kärsivällisyys",
+        "hiljainen päättäväisyys",
+        "myötätunto"
+      ],
+      "upright": "voima, jonka ei koskaan tarvitse korottaa ääntään – vakaus, joka syntyy rauhan tekemisestä vaikean asian kanssa, ei sen hautaamisesta.",
+      "reversed": "itseluottamuksen puute, joka naamioituu nöyryydeksi, tai voiman käyttö siellä, missä kärsivällisyys olisi toiminut paremmin.",
+      "advice": "Kohtaa pelottavat asiat rauhalla, älä voimalla. Lempeys ei ole heikkoutta."
+    },
+    "9": {
+      "name": "Erakko",
+      "keywords": [
+        "itsetutkiskelu",
+        "yksinäisyys",
+        "sisäinen opastus"
+      ],
+      "upright": "välttämätön vetäytyminen – askel taaksepäin melusta, jotta kuulet mitä itse ajattelet, et vain mitä kaikki ympärilläsi sanovat.",
+      "reversed": "eristäytyminen, joka muuttuu välttelyksi, tai viisaus, jota pidetään niin lähellä, ettei se koskaan tavoita niitä, jotka sitä tarvitsevat.",
+      "advice": "Ota yksinäisyys. Vastaus, jota etsit, ei löydy väkijoukosta."
+    },
+    "10": {
+      "name": "Onnenpyörä",
+      "keywords": [
+        "syklit",
+        "muutos",
+        "kohtalo",
+        "käännekohdat"
+      ],
+      "upright": "muutos on jo käynnissä, suurempien voimien työntämänä – olosuhteet kääntyvät tavalla, joka muuttaa tilanteen ehdot.",
+      "reversed": "sykli, joka toistaa itseään, koska sen alla oleva kuvio ei ole muuttunut – vain sen asu on vaihtunut.",
+      "advice": "Lopeta kääntymisen kontrolloiminen. Laita energiasi siihen, miten reagoit kun se pysähtyy."
+    },
+    "11": {
+      "name": "Oikeus",
+      "keywords": [
+        "oikeudenmukaisuus",
+        "totuus",
+        "syy ja seuraus",
+        "selkeys"
+      ],
+      "upright": "oikeudenmukainen tilinteko, vaikka se ei olisikaan mukava – selkeä katse syyhyn ja seuraukseen sekä siihen, mitä on velkaa.",
+      "reversed": "epätasapaino, jota kukaan ei ole käsitellyt, tai totuus, jota väistellään, koska sen kohtaaminen vaatisi vastuunottoa.",
+      "advice": "Katso tilannetta kaunistelematta. Oikeudenmukaisuus alkaa rehellisestä tilinteosta."
+    },
+    "12": {
+      "name": "Hirtetty",
+      "keywords": [
+        "antautuminen",
+        "uusi näkökulma",
+        "tauko"
+      ],
+      "upright": "edistys, joka saavutetaan pysähtymällä työntämisen sijaan – harkittu keskeytys, joka avaa uuden näkökulman asioihin, joita et voinut nähdä liikkeessä ollessasi.",
+      "reversed": "viivyttely itsessään tai uhraus, joka ei koskaan tuonut vastineeksi todellista ymmärrystä.",
+      "advice": "Anna tämän pysyä ratkaisemattomana vielä hetken. Oivallus asuu odottamisessa, ei sen jälkeisessä ajassa."
+    },
+    "13": {
+      "name": "Kuolema",
+      "keywords": [
+        "muutos",
+        "loput",
+        "päästäminen irti"
+      ],
+      "upright": "todellinen loppu, joka raivaa tilaa jollekin, mikä ei olisi voinut olla olemassa sen rinnalla – ei tuho, vaan välttämätön muutos.",
+      "reversed": "muutos, jota vastustetaan pitkään sen jälkeen kun se on muuttunut väistämättömäksi, mikä tekee lopusta vain vaikeamman kun se lopulta saapuu.",
+      "advice": "Anna sen osan, joka on jo ohi, olla ohi. Jokin muu tarvitsee sen viemää tilaa."
+    },
+    "14": {
+      "name": "Kohtuullisuus",
+      "keywords": [
+        "tasapaino",
+        "kohtuullisuus",
+        "integraatio",
+        "kärsivällisyys"
+      ],
+      "upright": "kaksi asiaa, jotka näyttivät yhteensopimattomilta, asettuvat toimivaan keskitiehen – kärsivällisyys, sekoittaminen, hidas taito saada mittasuhteet oikeiksi.",
+      "reversed": "liikaa yhteen suuntaan tai kompromissi, joka on kyhätty kasaan niin nopeasti, ettei kumpikaan osapuoli ole tyytyväinen.",
+      "advice": "Hidasta sekoittamista. Oikeaa tasapainoa ei voi pakottaa paikoilleen yhdessä yössä."
+    },
+    "15": {
+      "name": "Paholainen",
+      "keywords": [
+        "kiintymys",
+        "rajoitus",
+        "kiusaus",
+        "vanhat kaavat"
+      ],
+      "upright": "kaava, tapa tai dynamiikka, jolla on enemmän otetta sinusta kuin haluaisit myöntää – vaikka ovi ulos ei ollut koskaan lukossa.",
+      "reversed": "ensimmäinen todellinen veto irti jostakin, mikä piti sinua vankina – ketjun näkeminen selvästi sellaisena kuin se on.",
+      "advice": "Katso rehellisesti sitä, mitä valitset jatkuvasti, vaikka se maksaa sinulle. Sen nimeäminen on alku ulospääsylle."
+    },
+    "16": {
+      "name": "Torni",
+      "keywords": [
+        "äkillinen muutos",
+        "mullistus",
+        "ilmestys"
+      ],
+      "upright": "epävakaalle pohjalle rakennettu rakennelma, joka sortuu nopeasti – häiritsevää, mutta selkeyttävää, koska se raivaa pois sen, mikä ei ollut alun perinkään vakaata.",
+      "reversed": "romahdus, jota vältellään pelkällä välttelyllä, tai pienempi häiriö, joka silti saa jotain irtoamaan.",
+      "advice": "Älä kiirehdi rakentamaan takaisin täsmälleen sitä, mikä kaatui. Kysy ensin, miksi se ei pysynyt pystyssä."
+    },
+    "17": {
+      "name": "Tähti",
+      "keywords": [
+        "toivo",
+        "uudistuminen",
+        "inspiraatio",
+        "parantuminen"
+      ],
+      "upright": "hiljainen toivo palaa vaikean jakson jälkeen – ei naiivia optimismia, vaan todellinen tunne siitä, että asioita voi korjata ja ne ovat menossa parempaan suuntaan.",
+      "reversed": "toivo ohenee tai pirteä asenne, joka on irronnut mistään todellisesta suunnitelmasta.",
+      "advice": "Salli itsesi toivoa taas. Olet ansainnut sen, ja se osoittaa kohti jotain todellista."
+    },
+    "18": {
+      "name": "Kuu",
+      "keywords": [
+        "epävarmuus",
+        "alitajunta",
+        "illuusio",
+        "intuitio"
+      ],
+      "upright": "tilanne, jota valaisee jokin muu kuin pelkkä fakta – vaisto, mielikuvitus ja vanhat pelot sekoittuvat, joten se mitä näet, ei ole vielä koko kuva.",
+      "reversed": "hämmennys alkaa hälvetä tai pelko, joka osoittautuu mielikuvituksessa suuremmaksi kuin todellisuudessa.",
+      "advice": "Älä pakota päätöstä, kun kuva on vielä näin epäselvä. Odota lisää valoa."
+    },
+    "19": {
+      "name": "Aurinko",
+      "keywords": [
+        "ilo",
+        "eloisuus",
+        "selkeys",
+        "menestys"
+      ],
+      "upright": "pelkkää hyvää onnea – selkeyttä, lämpöä, tulos, jota ei tarvitse arvailla uudelleen.",
+      "reversed": "ilo himmenee liiallisen analysoinnin vuoksi tai menestys, jota ei anneta ottaa vastaan ja josta ei anneta nauttia sellaisena kuin se on.",
+      "advice": "Anna tämän olla niin hyvää kuin se on. Sinun ei tarvitse etsiä koukkua."
+    },
+    "20": {
+      "name": "Tuomio",
+      "keywords": [
+        "tilinteko",
+        "herääminen",
+        "reflektio",
+        "sovitus"
+      ],
+      "upright": "rehellinen tilinteko siitä, missä olet ollut, ja kutsu astua sellaiseen versioon itsestäsi, joka vastaa oppimaasi.",
+      "reversed": "itsensä tuomitseminen muuttuu ankaruudeksi tai herätys, jota lykätään vielä hetki.",
+      "advice": "Vastaa kutsuun selkeästi. Se, mitä olet vältellyt, on nyt valmis kohdattavaksi."
+    },
+    "21": {
+      "name": "Maailma",
+      "keywords": [
+        "täyttymys",
+        "kokonaisuus",
+        "saapuminen"
+      ],
+      "upright": "sykli sulkeutuu siististi, kaikki mitä sen piti opettaa on jo hallussa – todellinen saapumisen tunne ennen kuin seuraava matka alkaa.",
+      "reversed": "lähes valmis kokonaisuus, josta puuttuu viimeinen pala, tai loppuun pyrkiminen ennen kuin on sen aika.",
+      "advice": "Tunnusta kuinka pitkälle tämä on tullut ennen kuin kiirehdit kohti seuraavaa."
+    }
+  },
+  "minorArcana": {
+    "wands": {
+      "ace": {
+        "keywords": [
+          "inspiraatio",
+          "uusi hanke",
+          "luova kipinä"
+        ],
+        "upright": "luovan energian äkillinen purkaus — idea, tarjous tai hanke, jota ei ole vielä muotoiltu, mutta joka vetää sinua jo puoleensa.",
+        "reversed": "inspiraatio, joka tyssää ennen kuin siitä tulee toimintaa, tai innostus uudesta hankkeesta, joka hiipuu ennen kuin se ehtii edes alkaa.",
+        "advice": "Toimi kipinän mukaan nyt, kun se on vielä kuuma. Täydellisen suunnitelman odottelu saa sen vain hiipumaan."
+      },
+      "two": {
+        "keywords": [
+          "suunnittelu",
+          "tulevaisuuden visio",
+          "henkilökohtainen voima"
+        ],
+        "upright": "seisot mukavalla näköalapaikalla, jossa on todellisia vaihtoehtoja edessäsi; punnitset jo rakentamaasi suhteessa siihen, mihin voisit viedä sen seuraavaksi.",
+        "reversed": "liiallinen varovaisuus tuntemattoman pelon vuoksi, tai tulevaisuudensuunnitelma, jota ei koskaan testata käytännössä.",
+        "advice": "Lopeta näkymän ihailu siinä missä seisot. Valitse suunta ja ala kulkea sitä kohti."
+      },
+      "three": {
+        "keywords": [
+          "laajentuminen",
+          "ennakointi",
+          "tulosten odottaminen"
+        ],
+        "upright": "odotus työn tekemisen jälkeen — laivat on jo lähetetty, tulokset eivät ole vielä saapuneet, mutta pohjatyö on riittävän vakaata luotettavaksi.",
+        "reversed": "viivästykset kasaantuvat suunnitelmassa, jonka piti toimia varmasti, tai laajentunut näkymä paljastaa esteitä, joita et ollut huomioinut.",
+        "advice": "Pidä katseesi horisontissa vielä hetki. Se, minkä panit alulle, on yhä matkalla."
+      },
+      "four": {
+        "keywords": [
+          "juhla",
+          "kotiinpaluu",
+          "virstanpylväs"
+        ],
+        "upright": "virstanpylväs, jonka äärelle kannattaa pysähtyä — kotiinpaluu, juhla, tunne siitä, että olet ansainnut tämän nimenomaisen levon hetken.",
+        "reversed": "juhla, joka tuntuu tyhjältä, tai kodin ja yhteenkuuluvuuden tunne, jota ei ole vielä aivan saavutettu.",
+        "advice": "Anna itsesi nauttia tästä täysin. Jokaisen hyvän hetken jälkeen ei tarvitse heti seurata seuraavaa tehtävää."
+      },
+      "five": {
+        "keywords": [
+          "kilpailu",
+          "kitka",
+          "erimielisyys"
+        ],
+        "upright": "yhteen törmäävät tahdot avoimesti — äänekästä, ehkä uuvuttavaa, mutta rehellistä ja parempaa kuin sama jännite, joka kytee pinnan alla.",
+        "reversed": "konflikti, josta loppuu vihdoin höyry, tai kilpailu, joka osoittautuu enemmän esittämiseksi kuin todelliseksi asiaksi.",
+        "advice": "Älä sekoita tätä kitkaa epäonnistumiseen. Kilpailevat ideat hiovat toisiaan, kun kukaan ei pelkää olla ääneen eri mieltä."
+      },
+      "six": {
+        "keywords": [
+          "voitto",
+          "tunnustus",
+          "itseluottamus"
+        ],
+        "upright": "voitto, jonka muutkin näkevät — julkinen tunnustus ponnisteluista, jotka olivat tähän asti pääosin näkymättömiä.",
+        "reversed": "ylpeys, joka muuttuu ylimielisyydeksi, tai voitto, joka ei koskaan saanut ansaitsemaansa tunnustusta.",
+        "advice": "Ota tunnustus vastaan selittelemättä sitä pois. Ansaitsit voiton; anna sen seistä omilla jaloillaan."
+      },
+      "seven": {
+        "keywords": [
+          "puolustuskannalla olo",
+          "periksiantamattomuus",
+          "asemissa pysyminen"
+        ],
+        "upright": "aseman pitäminen, jota kaikki muut yrittävät nyt viedä sinulta — väsyttävää, mutta todiste siitä, että rakentamasi asia on puolustamisen arvoinen.",
+        "reversed": "perääntyminen asemista, joita sinun ei olisi tarvinnut luovuttaa, tai niin pitkään puolustaminen, että olet unohtanut, miksi sillä oli merkitystä.",
+        "advice": "Pidä asemasi, mutta tarkista, taisteletko yhä oikean asian puolesta."
+      },
+      "eight": {
+        "keywords": [
+          "vauhti",
+          "nopea toiminta",
+          "nopea liike"
+        ],
+        "upright": "kaikki liikkuu yhtäkkiä samanaikaisesti — viestit saapuvat, suunnitelmat kiihtyvät, jakso nopeaa liikettä pitkän odotuksen jälkeen.",
+        "reversed": "vauhti tyssää juuri silloin, kun sillä oli eniten merkitystä, tai asiat liikkuvat niin nopeasti, ettei millään ole aikaa laskeutua.",
+        "advice": "Liiku nopeasti, kun polku on selvä, mutta älä juokse kovempaa kuin kykenet reagoimaan siihen, mitä seuraavaksi tapahtuu."
+      },
+      "nine": {
+        "keywords": [
+          "resilienssi",
+          "viimeinen ponnistus",
+          "varovainen sinnikkyys"
+        ],
+        "upright": "sinulta pyydetään vielä yksi ponnistus pitkän sarjan jälkeen — väsynyt, varuillaan, mutta yhä pystyssä ja lähempänä loppua kuin miltä tuntuu.",
+        "reversed": "puolustuskannalla olo, joka on kovettunut eristäytymiseksi, tai uupumus, joka saa jokaisen jäljellä olevan haasteen tuntumaan suuremmalta kuin se on.",
+        "advice": "Olet selvinnyt jokaisesta kierroksesta tähän asti. Älä anna varovaisuuden estää sinua ottamasta apua vastaan tässä viimeisessä."
+      },
+      "ten": {
+        "keywords": [
+          "taakka",
+          "ylikuormitus",
+          "vaivalla saavutettu loppu"
+        ],
+        "upright": "kannat enemmän kuin osuutesi, koska olet niin lähellä maaliviivaa, että sen laskeminen nyt tuntuu hukkaan heitetyltä.",
+        "reversed": "taakka, jota pidetään itsepäisyyden vuoksi, tai työ, joka lasketaan vihdoin käsistä liian pitkään kantamisen jälkeen.",
+        "advice": "Kysy itseltäsi, mitä kannat sellaista, jota ei ollut koskaan tarkoitettu sinun loppuunsaatettavaksi. Osaa tästä painosta voi jakaa tai sen voi laskea pois."
+      },
+      "page": {
+        "keywords": [
+          "tutkiminen",
+          "uusi idea",
+          "innostus"
+        ],
+        "upright": "idea, joka on liian jännittävä pysyäkseen paikallaan — levoton uteliaisuus, joka haluaa testata itseään maailmaa vasten välittömästi.",
+        "reversed": "innostus ilman jatkotoimenpiteitä, tai suunnitelmat, jotka julistetaan äänekkäästi ja sitten hiljaa hylätään.",
+        "advice": "Anna innostuksen liikuttaa sinua, mutta anna idealle ainakin yksi todellinen testi ennen kuin jahtaat seuraavaa."
+      },
+      "knight": {
+        "keywords": [
+          "seikkailu",
+          "impulsiivisuus",
+          "rohkea tavoittelu"
+        ],
+        "upright": "syöksyminen kohti seuraavaa asiaa täydellä itseluottamuksella, enemmän ajettuna halusta jahdata kuin kiinteällä suunnitelmalla.",
+        "reversed": "piittaamattomuus, joka alkaa maksaa sinulle, tai levoton energia, jolla ei ole enää tuottavaa paikkaa minne mennä.",
+        "advice": "Ota osa tuosta rohkeudesta hallintaasi ennen kuin se alkaa hallita sinua, sen sijaan että sinä hallitsisit sitä."
+      },
+      "queen": {
+        "keywords": [
+          "itseluottamus",
+          "itsenäisyys",
+          "vetovoima"
+        ],
+        "upright": "lämmin, horjumaton itsevarmuus, joka vetää ihmisiä puoleensa ilman tarvetta esittää heille.",
+        "reversed": "itseluottamus, joka on muuttunut hauraaksi tai vaativaksi, tai itsenäisyys, jota käytetään muiden sulkemiseen ulkopuolelle sen sijaan, että seisot omillasi.",
+        "advice": "Johda sillä itsevarmuudella, joka sinulla jo on. Sinun ei tarvitse todistaa sitä kenellekään muulle ensin."
+      },
+      "king": {
+        "keywords": [
+          "visio",
+          "johtajuus",
+          "rohkea yrittäjyys"
+        ],
+        "upright": "johtajuus, joka inspiroi esimerkillä — rohkea visio yhdistettynä kykyyn toteuttaa se käytännössä.",
+        "reversed": "korkeat odotukset, joista on tullut mahdottomia täyttää, tai kunnianhimo, jota ajetaan niin häikäilemättömästi, että se polttaa loppuun sinua auttavat ihmiset.",
+        "advice": "Johda visiota, mutta tarkista, haluavatko sitä kanssasi toteuttavat ihmiset yhä olla mukana."
+      }
+    },
+    "cups": {
+      "ace": {
+        "keywords": [
+          "uusi rakkaus",
+          "emotionaalinen avautuminen",
+          "ylivuoto"
+        ],
+        "upright": "tunteiden malja, joka täyttyy yli reunojensa — uutta rakkautta, uutta myötätuntoa tai tunne, joka on niin täysi, että sen on läikyttävä johonkin.",
+        "reversed": "emotionaalinen avautuminen, jota pidätellään, tai tarjottu rakkaus ja yhteys, jota ei ole vielä päästetty sisään.",
+        "advice": "Anna tämän tunteen olla juuri niin täysi kuin se on. Ei ole tarvetta säännöstellä jotain näin aitoa."
+      },
+      "two": {
+        "keywords": [
+          "kumppanuus",
+          "keskinäinen vetovoima",
+          "liitto"
+        ],
+        "upright": "kaksi ihmistä, jotka kohtaavat toisensa tasavertaisina — side, joka muodostuu tai syvenee keskinäisin ja suunnilleen tasapuolisin ehdoin.",
+        "reversed": "yhteys, joka on muuttunut epätasapainoiseksi, tai kumppanuus, joka on jännitteen alla, jota ei ole vielä ääneen nimetty.",
+        "advice": "Tarkista, onko tämä yhteys yhä yhtä molemminpuolinen kuin alussa. Sano selkeästi, mikä on muuttunut, jos jotain on muuttunut."
+      },
+      "three": {
+        "keywords": [
+          "ystävyys",
+          "juhla",
+          "yhteisö"
+        ],
+        "upright": "ilo, joka on parempaa jaettuna — kokoontuminen, ystävyys, hetki, joka on juhlimisen arvoinen niiden ihmisten kanssa, jotka ovat tukenasi.",
+        "reversed": "ryhmädynamiikka, joka muuttuu juoruiluksi tai poissulkemiseksi, tai liiallinen nautiskelu, joka latistaa sen, minkä olisi pitänyt olla aito juhla.",
+        "advice": "Tuo tärkeimmät ihmiset tähän hetkeen. Juhla merkitsee enemmän, kun sitä ei vietetä yksin."
+      },
+      "four": {
+        "keywords": [
+          "apatia",
+          "pohdinta",
+          "menetetty mahdollisuus"
+        ],
+        "upright": "tylsistyminen siihen, mitä pöydällä jo on, vaikka aivan edessäsi tarjotaan jotain huomionarvoista.",
+        "reversed": "apatia, joka viimein hellittää, tai halukkuus katsoa ylös ja punnita mahdollisuutta, jota olet aiemmin vältellyt.",
+        "advice": "Nosta katseesi siitä, mikä sinua pettyy, ja huomaa, mitä sinulle tarjotaan. Se saattaa olla arvokkaampaa kuin miltä se aluksi vaikutti."
+      },
+      "five": {
+        "keywords": [
+          "menetys",
+          "suru",
+          "katumus"
+        ],
+        "upright": "suru, joka keskittyy siihen, mikä on läikkynyt ja mennyt, vaikka aivan lähellä on vielä jotain ehjää, jota et huomaa.",
+        "reversed": "suru, joka alkaa hellittää, tai ensimmäiset todelliset askeleet kohti menetyksen hyväksymistä sen sijaan, että kelaat sitä uudelleen.",
+        "advice": "Surra sitä, mikä on todella mennyt, mutta käänny ympäri tarpeeksi pitkäksi aikaa nähdäksesi, mikä vielä seisoo takanasi."
+      },
+      "six": {
+        "keywords": [
+          "nostalgia",
+          "muisto",
+          "viattomuus"
+        ],
+        "upright": "vetovoima kohti yksinkertaisempia aikoja — vanhoja muistoja, tuttuja lohdutuksia tai jälleennäkeminen jonkun kanssa aiemmasta elämänvaiheesta.",
+        "reversed": "nostalgia, josta on tullut piilopaikka, tai idealisoitu menneisyys, joka saa nykyhetken näyttämään huonommalta kuin se on.",
+        "advice": "Vieraile menneisyydessä lohdun vuoksi, mutta älä muuta sinne takaisin. Se, mitä nyt tarvitset, elää tässä hetkessä."
+      },
+      "seven": {
+        "keywords": [
+          "fantasia",
+          "valinnat",
+          "illuusio"
+        ],
+        "upright": "liian monta houkuttelevaa vaihtoehtoa, joista jotkut ovat vakaampia kuin toiset, mikä tekee todellisen mahdollisuuden erottamisesta toiveajattelusta vaikeaa.",
+        "reversed": "sumu hälvenee tarpeeksi, jotta näet, mitkä vaihtoehdot olivat todellisia, ja päätöksenteko muuttuu viimein mahdolliseksi.",
+        "advice": "Testaa jokainen vaihtoehto todellisuutta vasten ennen kuin valitset. Kaikki, mikä täällä kimaltelee, ei kestä tarkastelua."
+      },
+      "eight": {
+        "keywords": [
+          "pois lähteminen",
+          "syvemmän merkityksen etsiminen",
+          "lähtö"
+        ],
+        "upright": "pois lähteminen jostakin, mikä näyttää ulospäin hyvältä, koska se on lakannut ravitsemasta sinua sisäisesti.",
+        "reversed": "jääminen johonkin pelosta siitä, mitä lähteminen tarkoittaisi, tai ajelehtiminen ilman, että koskaan täysin sitoudut lähtöön.",
+        "advice": "Luota siihen osaan itseäsi, joka tietää, ettei tämä enää riitä, vaikka et osaisikaan vielä selittää miksi."
+      },
+      "nine": {
+        "keywords": [
+          "tyytyväisyys",
+          "mielihyvä",
+          "toiveen täyttyminen"
+        ],
+        "upright": "helppo, mukava tyytyväisyys — toive toteutunut, tarve täytetty, tyytyväisyys, jota ei tarvitse perustella.",
+        "reversed": "itsetyytyväisyys, joka korvaa aidon tyytyväisyyden, tai yltäkylläisyys, joka ei silti tunnu riittävältä.",
+        "advice": "Anna tämän tyytyväisyyden olla yksinkertaista. Sinun ei tarvitse ansaita sitä kahdesti murehtimalla, ettei se kestä."
+      },
+      "ten": {
+        "keywords": [
+          "emotionaalinen täyttymys",
+          "perheen harmonia",
+          "kestävä onni"
+        ],
+        "upright": "syvä, vakiintunut onni, joka on rakennettu läheisimpien ihmisten kanssa — ei huippuhetki, vaan kestävä tila.",
+        "reversed": "kotona vallitseva harmonia, joka on enemmän ulkokuorta kuin todellisuutta, tai arvot rakkaiden ihmisten kesken, jotka ovat hiljaa lakanneet kohtaamasta.",
+        "advice": "Katso onnen pintakuvaa syvemmälle ja tarkista, tuntevatko myös muut siinä mukana olevat samoin."
+      },
+      "page": {
+        "keywords": [
+          "luova mahdollisuus",
+          "intuitiivinen viesti",
+          "uteliaisuus"
+        ],
+        "upright": "hellävarainen, odottamaton emotionaalinen tai luova viesti saapuu — jotain, mihin kannattaa kiinnittää huomiota, vaikka se vaikuttaisi pieneltä.",
+        "reversed": "emotionaalinen kypsymättömyys, joka on todellisen mahdollisuuden tiellä, tai luova impulssi, jota käytetään pakenemiseen ilmaisun sijaan.",
+        "advice": "Ota pieni, odottamaton tunne vakavasti. Se kertoo enemmän kuin miltä se näyttää."
+      },
+      "knight": {
+        "keywords": [
+          "romantiikka",
+          "idealismi",
+          "sydämen seuraaminen"
+        ],
+        "upright": "sydämellä johtaminen, romanttisen tai idealistisen vision jahtaaminen aidolla vilpittömyydellä, vaikka se ei olisikaan vielä täysin käytännöllistä.",
+        "reversed": "oikukkuus, joka on puettu herkkyydeksi, tai romanttinen ihanne, joka saa sinut jatkuvasti pettymään.",
+        "advice": "Seuraa sydäntäsi tässä, mutta tarkista se todellisuutta vasten ennen kuin seuraat sitä loppuun asti."
+      },
+      "queen": {
+        "keywords": [
+          "myötätunto",
+          "emotionaalinen turvallisuus",
+          "intuitio"
+        ],
+        "upright": "emotionaalinen syvyys, jota pidetään yllä todellisella vakaudella — myötätunto muita kohtaan, joka ei tapahdu oman vakauden kustannuksella.",
+        "reversed": "myötätunto, joka on kääntynyt itsensä laiminlyönniksi, tai emotionaalinen turvallisuus, joka kestää vain niin kauan kuin kukaan ei testaa sitä.",
+        "advice": "Anna muille myötätuntoasi, mutta säästä siitä tarpeeksi myös itsellesi."
+      },
+      "king": {
+        "keywords": [
+          "emotionaalinen tasapaino",
+          "diplomatia",
+          "rauhallinen hallinta"
+        ],
+        "upright": "rauhallinen hallinta voimakkaiden tunteiden yllä — kyky pysyä vakaana ja oikeudenmukaisena silloinkin, kun tunteet ovat pelissä.",
+        "reversed": "tunteiden hallinta, joka on todellisuudessa tukahduttamista, tai pinnan alla oleva rauhallisuus, joka kätkee sisäänsä manipulointia.",
+        "advice": "Pysy vakaana, mutta anna todellisten tunteidesi tulla tunnetuiksi sen sijaan, että vain hallitset niitä."
+      }
+    },
+    "swords": {
+      "ace": {
+        "keywords": [
+          "läpimurto",
+          "selkeys",
+          "uusi idea"
+        ],
+        "upright": "äkillinen leikkaus hämmennyksen läpi — oivallus, päätös tai totuus, joka saapuu terävänä ja erehtymättömän selkeänä.",
+        "reversed": "selkeys, jota liiallinen melu on sumentanut, tai totuus, joka on vääristynyt ennen kuin se saavutti sinut.",
+        "advice": "Luota kirkkaaseen ajatukseen, kun se tulee. Älä anna muiden puhua sinua takaisin hämmennyksen tilaan."
+      },
+      "two": {
+        "keywords": [
+          "umpikuja",
+          "vaikea päätös",
+          "välttely"
+        ],
+        "upright": "päätös, jota pidetään etäällä, suojeltuna ja tasapainotettuna niin varovasti, ettei kumpaakaan vaihtoehtoa valita.",
+        "reversed": "umpikuja murtuu vihdoin, tai ristiriitaisen tiedon ylikuormitus tekee valinnasta vaikeamman sen sijaan, että se helpottuisi.",
+        "advice": "Ota side silmiltäsi. Päätös ei helpotu viivyttelemällä."
+      },
+      "three": {
+        "keywords": [
+          "sydänsuru",
+          "petos",
+          "suru"
+        ],
+        "upright": "terävä ja täsmällinen kipu — totuus, petos tai menetys, joka viiltää juuri siksi, että se on totta.",
+        "reversed": "paranemisen ensiaskeleet tai vanha kipu nousee pintaan, koska sitä ei koskaan käsitelty kunnolla ensimmäisellä kerralla.",
+        "advice": "Anna kivun olla juuri niin terävä kuin se on. Sen nimeäminen selkeästi on se, mikä aloittaa paranemisen."
+      },
+      "four": {
+        "keywords": [
+          "lepo",
+          "toipuminen",
+          "pohdinta"
+        ],
+        "upright": "tietoinen vetäytyminen konfliktin tai rasituksen jälkeen — ei tappio, vaan toipuminen, jota mieli tarvitsee voidakseen taas ajatella selkeästi.",
+        "reversed": "lepo keskeytyy ennen kuin se on ohi, tai levottomuus, joka tekee todellisesta toipumisesta mahdotonta.",
+        "advice": "Lepää kunnolla. Puolittainen toipuminen tarkoittaa vain uupumuksen kantamista mukana kaikkeen, mitä seuraavaksi tapahtuu."
+      },
+      "five": {
+        "keywords": [
+          "ontto voitto",
+          "konflikti",
+          "petos"
+        ],
+        "upright": "voitto, joka maksaa enemmän kuin on sen arvoista — konflikti, joka viedään loppuun asti, vaikka kaikki osapuolet jäävät huonompaan asemaan.",
+        "reversed": "kauna, joka jää kytemään ratkaisemattoman konfliktin jälkeen, tai mahdollisuus tehdä rauha sen sijaan, että painostaisi etuaan.",
+        "advice": "Kysy itseltäsi, onko tämän nimenomaisen taistelun voittaminen sen arvoista, mitä se maksaa sinulle jälkikäteen."
+      },
+      "six": {
+        "keywords": [
+          "siirtymä",
+          "eteenpäin meneminen",
+          "tyynemmät vedet"
+        ],
+        "upright": "hidas, harkittu siirtyminen pois turbulenssista, kantaen vain välttämätöntä kohti jotain vakaampaa.",
+        "reversed": "vastustaminen siirtymää, joka on jo välttämätön, tai ratkaisemattomien taakkojen kantaminen tyynemmille vesille.",
+        "advice": "Jätä vaikeat vedet taaksesi. Älä jatka taaksepäin katsomista rannalle, jota olet jättämässä."
+      },
+      "seven": {
+        "keywords": [
+          "strategia",
+          "petos",
+          "yksin toimiminen"
+        ],
+        "upright": "hiljainen ja itsenäinen liikkuminen, ottaen mitä tarvitset kysymättä lupaa — ovelaa, mutta ei täysin rehellistä.",
+        "reversed": "piilotettu strategia paljastuu, tai huono omatunto saa vihdoin kiinni tehdystä oikopolusta.",
+        "advice": "Kysy itseltäsi, olisiko käyttämäsi strategia edelleen järkevä, jos kaikki osalliset näkisivät sen."
+      },
+      "eight": {
+        "keywords": [
+          "loukkuun jääminen",
+          "uhriutuminen",
+          "itse asetetut rajoitukset"
+        ],
+        "upright": "tunne, että olet joka puolelta saarrettu, vaikka sinua pitelevät köydet ovat löysempiä kuin miltä ne tuntuvat — vankila, joka on rakennettu enemmän uskomuksista kuin tosiasioista.",
+        "reversed": "ensimmäinen todellinen särö tuossa itse asetetussa ansassa, kun tarina voimattomuudesta alkaa menettää otettaan.",
+        "advice": "Etsi aukkoa köysistä, joiden olet olettanut olevan tiukkoja. Liikkumavaraa on enemmän kuin miltä tuntuu."
+      },
+      "nine": {
+        "keywords": [
+          "ahdistus",
+          "huoli",
+          "henkinen tuska"
+        ],
+        "upright": "mieli, joka pyörittää pahimpia skenaarioita pimeässä, uupuneena peloista, jotka näyttävät kello kolmelta yöllä paljon suuremmilta kuin päivänvalossa.",
+        "reversed": "huoli alkaa helpottaa, tai päätös lausua pelko vihdoin ääneen sen sijaan, että kantaisit sitä yksin.",
+        "advice": "Sano huoli ääneen jollekin. Se selviää harvoin päivänvalon kohtaamisesta yhtä ehjänä kuin miltä se juuri nyt tuntuu."
+      },
+      "ten": {
+        "keywords": [
+          "pohjakosketus",
+          "tuskallinen loppu",
+          "petos"
+        ],
+        "upright": "loppu, joka on yhtä lopullinen kuin tuskallinen — pahin on jo takanasi, ja täältä on suunta vain ylöspäin.",
+        "reversed": "loppumisen vastustaminen, vaikka se on jo tapahtunut, tai hidas, osittainen toipuminen jostain, mikä ei ole vielä täysin parantunut.",
+        "advice": "Anna tämän lopun olla täydellinen. Sen puolittain elossa pitäminen vain pitkittää tuskaa."
+      },
+      "page": {
+        "keywords": [
+          "uteliaisuus",
+          "valppaus",
+          "totuuden jano"
+        ],
+        "upright": "valpas, kyseenalaistava mieli, joka kerää tietoa ja tarkkailee tarkasti ennen kuin päättää, mihin uskoa.",
+        "reversed": "juorut korvaavat todellisen tutkimisen, tai ideat, jotka eivät koskaan etene puheista varsinaiseen toimintaan.",
+        "advice": "Jatka kysymysten esittämistä, mutta toimi lopulta sen mukaan, mitä vastaukset kertovat."
+      },
+      "knight": {
+        "keywords": [
+          "päättäväinen toiminta",
+          "itsevarmuus",
+          "nopea ajattelu"
+        ],
+        "upright": "nopea liikkuminen ja suora puhe, suoraan asiaan meneminen odottamatta kenenkään lupaa.",
+        "reversed": "aggressio menee harkinnan edelle, tai impulsiiviset päätökset, jotka tehtiin nopeammin kuin tilanne vaati.",
+        "advice": "Toimi päättäväisesti, mutta vedä henkeä ennen kuin lausut terävimmän version siitä, mitä ajattelet."
+      },
+      "queen": {
+        "keywords": [
+          "itsenäinen ajattelu",
+          "selkeät rajat",
+          "suora kommunikaatio"
+        ],
+        "upright": "tilanteiden näkeminen selkeästi ja niiden sanominen ääneen ilman, että totuutta pehmennetään enempää kuin on tarpeen.",
+        "reversed": "suoruus, joka on muuttunut kylmyydeksi, tai rajat, joita pidetään niin tiukasti, ettei kukaan pääse lähelle.",
+        "advice": "Säilytä selkeys, mutta tarkista, onko töykeys tarpeellista vai vain helpompaa kuin lempeys."
+      },
+      "king": {
+        "keywords": [
+          "älyllinen auktoriteetti",
+          "rakenteellinen ajattelu",
+          "puolueeton totuus"
+        ],
+        "upright": "periaatteisiin ja todisteisiin perustuva harkinta tunteiden sijaan — oikeudenmukaista, täsmällistä ja vaikeasti kiistettävää.",
+        "reversed": "logiikka aseena, tai auktoriteetti, joka on teknisesti oikeassa, mutta silti julma.",
+        "advice": "Ole oikeassa, mutta älä anna oikeassa olemisen oikeuttaa epäystävällisyyttä."
+      }
+    },
+    "pentacles": {
+      "ace": {
+        "keywords": [
+          "uusi mahdollisuus",
+          "vauraus",
+          "manifestaatio"
+        ],
+        "upright": "konkreettinen mahdollisuus, joka laskeutuu käsiisi – käytännöllinen, todellinen ja sellainen, jonka päälle kannattaa rakentaa sen sijaan, että sitä vain ihailisi.",
+        "reversed": "mahdollisuus, joka meni sivu suun huonon ajoituksen tai suunnittelun vuoksi, tai lupaava alku, jota ei koskaan viety loppuun.",
+        "advice": "Ota käytännön askel nyt. Tämänkaltainen mahdollisuus palkitsee enemmän jatkuvuudella kuin pelkällä innostuksella."
+      },
+      "two": {
+        "keywords": [
+          "tasapaino",
+          "sopeutumiskyky",
+          "prioriteettien hallinta"
+        ],
+        "upright": "usean vaatimuksen pitäminen liikkeessä samanaikaisesti, sopeutuen lennosta sen sijaan, että mikään niistä putoaisi.",
+        "reversed": "yksi prioriteetti liikaa mukana, minkä seurauksena jokin on nyt lipsumassa, vaikka ei pitäisi.",
+        "advice": "Katso rehellisesti, mitä olet tasapainottamassa. Jotain tästä on ehkä laskettava alas, sen sijaan että yrittäisit tasapainottaa sitä entistä kovemmin."
+      },
+      "three": {
+        "keywords": [
+          "yhteistyö",
+          "taito",
+          "tiimityö"
+        ],
+        "upright": "erilaisten taitojen yhdistäminen joksikin sellaiseksi, jota kukaan ei voisi rakentaa yksin – vakaata edistystä todellisen yhteistyön kautta.",
+        "reversed": "yksin työskentely asian parissa, joka olisi vaatinut muita käsiä, tai tiimi, joka ei enää vedä samaan suuntaan.",
+        "advice": "Pyydä apua, jota tämä vaatii. Tämä ei ole projekti, joka rakentuu hyvin yksin."
+      },
+      "four": {
+        "keywords": [
+          "turvallisuus",
+          "kontrolli",
+          "tiukasti kiinni pitäminen"
+        ],
+        "upright": "tiukka ote siitä, mitä olet rakentanut, asettaen turvallisuuden riskin edelle, jopa joustavuuden kustannuksella.",
+        "reversed": "niin tiukasti kiinni pitäminen, ettei mitään uutta pääse sisään, tai menetyksen pelko, joka ohjaa päätöksiä enemmän kuin mikään todellinen uhka.",
+        "advice": "Löysää otetta hieman. Se, mitä suojelet, ei ole niin hauras kuin miltä se tuntuu."
+      },
+      "five": {
+        "keywords": [
+          "vaikeudet",
+          "taloudellinen menetys",
+          "eristyneisyys"
+        ],
+        "upright": "todelliset vaikeudet, jotka tuntuvat yhtä lailla eristyneisyytenä kuin itse menetyksenä – kamppailua samalla kun tuntuu, että apu on ulottumattomissa.",
+        "reversed": "ensimmäiset merkit avun saatavuudesta tai vaikeuksien alkaminen vihdoin helpottaa raskaan jakson jälkeen.",
+        "advice": "Etsi ovi, joka on lähelläsi auki. Apua on olemassa, vaikka se ei vielä siltä tuntuisikaan."
+      },
+      "six": {
+        "keywords": [
+          "anteliaisuus",
+          "antaminen ja vastaanottaminen",
+          "tasapaino"
+        ],
+        "upright": "resurssien oikeudenmukainen liikkuminen ihmisten välillä – apua annetaan, koska sitä tarvitaan, ja otetaan vastaan ilman häpeää.",
+        "reversed": "anteliaisuus, johon liittyy ehtoja, tai vaihtokauppa, josta on hiljaa tullut yksipuolinen.",
+        "advice": "Tarkista, onko se, mitä tässä annetaan, vapaata, vai onko jotain velkaa vastineeksi."
+      },
+      "seven": {
+        "keywords": [
+          "kärsivällisyys",
+          "pitkän aikavälin näkymä",
+          "edistyksen arviointi"
+        ],
+        "upright": "tauko jo sijoitetun vaivan arvioimiseksi, punniten, tuottaako se tulosta vai pitääkö suuntaa muuttaa.",
+        "reversed": "kärsimättömyys tulosten suhteen, joita ei ole vielä tullut, tai ponnistelu polulla, joka ei enää tuota tulosta.",
+        "advice": "Tee rehellinen arviointi. Osa tästä vaivasta ansaitsee lisää kärsivällisyyttä; osa ansaitsee uuden suunnitelman."
+      },
+      "eight": {
+        "keywords": [
+          "ahkeruus",
+          "käsityötaito",
+          "taitojen kehittäminen"
+        ],
+        "upright": "vakaa, toistuva ponnistelu tavoitteena tulla todella hyväksi jossakin – epäglamöörinen, mutta juuri sitä, mitä mestaruus vaatii.",
+        "reversed": "perfektionismi, joka jarruttaa todellista edistystä, tai oikopolkujen ottaminen työssä, joka olisi ansainnut täyden panostuksen.",
+        "advice": "Jatka epäglamööristen toistojen tekemistä. Tältä taito näyttää, kun sitä rakennetaan."
+      },
+      "nine": {
+        "keywords": [
+          "omavaraisuus",
+          "runsaus",
+          "itsenäisyys"
+        ],
+        "upright": "mukavuus ja runsaus, jotka on ansaittu pitkälti itse – omavaraisuus, joka ei tarvitse kenenkään hyväksyntää.",
+        "reversed": "menestys, joka näyttää ulospäin hyvältä mutta tuntuu ontolta, tai ylityö, joka on karkottanut muut, joiden kanssa siitä voisi nauttia.",
+        "advice": "Nauti siitä, mitä olet rakentanut, ilman että tarvitset kenenkään muun vahvistusta sille, että se on arvokasta."
+      },
+      "ten": {
+        "keywords": [
+          "perintö",
+          "pitkän aikavälin turvallisuus",
+          "perhevarallisuus"
+        ],
+        "upright": "vakaus, joka kestää kauemmin kuin yksittäinen ihminen – perintö tai perusta, joka on rakennettu tukemaan muutakin kuin vain itseäsi.",
+        "reversed": "perintö paineen alla tai perheen erimielisyydet resursseista, jotka uhkaavat jotain kestävää.",
+        "advice": "Suojele sitä, minkä on tarkoitus kestää sinua pidempään, mutta älä anna siitä käytävien kiistojen pilata sitä, mitä varten se on rakennettu."
+      },
+      "page": {
+        "keywords": [
+          "uusi mahdollisuus",
+          "opiskelu",
+          "käytännön uteliaisuus"
+        ],
+        "upright": "käytännön mahdollisuus, jota kannattaa tutkia tarkasti – uusi, lupaava ja yhä siinä vaiheessa, kun opitaan miten se toimii.",
+        "reversed": "epärealistiset suunnitelmat, joita ei ole testattu todellisuudessa, tai edistys, joka on pysähtynyt ennen kuin se todella alkoi.",
+        "advice": "Tutki tätä mahdollisuutta tarkasti ennen kuin sitoudut enempään. Se on lupaava, mutta vielä todistamaton."
+      },
+      "knight": {
+        "keywords": [
+          "ahkeruus",
+          "rutiini",
+          "metodinen edistyminen"
+        ],
+        "upright": "hidas, metodinen, luotettava edistyminen – ei oikopolkuja, vain johdonmukaista työtä, joka kasvaa ajan myötä.",
+        "reversed": "rutiini, joka on jähmettynyt pysähtyneisyydeksi, tai perfektionismi, joka on niin jäykkää, ettei mitään saada valmiiksi.",
+        "advice": "Luota hitaaseen menetelmään, joka toimii. Sen ei tarvitse olla nopeampaa ollakseen tehokasta."
+      },
+      "queen": {
+        "keywords": [
+          "hoivaaminen",
+          "kekseliäisyys",
+          "maadoittuneisuus"
+        ],
+        "upright": "käytännön huolenpito, joka näkyy konkreettisilla tavoilla – mukavuutta, resursseja ja maadoittuneisuutta, jota tarjotaan anteliaasti muille.",
+        "reversed": "muiden hoivaaminen oman hyvinvoinnin kustannuksella tai resurssien epävarmuus, joka heikentää anteliaisuutta.",
+        "advice": "Kohdista sama käytännön huolenpito itseesi, jota tarjoat niin helposti kaikille muille."
+      },
+      "king": {
+        "keywords": [
+          "materiaalinen mestaruus",
+          "taloudellinen turvallisuus",
+          "anteliaisuus"
+        ],
+        "upright": "ajan myötä rakennettu materiaalinen ja taloudellinen mestaruus, joka on nyt tarpeeksi antelias jakamaan luomansa turvallisuuden.",
+        "reversed": "resurssien hallinta, joka muuttuu jäykäksi tai omistushaluiseksi, tai taloudellinen turvallisuus, jota tavoitellaan kaiken muun kustannuksella.",
+        "advice": "Käytä rakentamaasi anteliaasti. Turvallisuus, jota ei jaeta, muuttuu lopulta vain eristyneisyydeksi."
+      }
+    }
+  }
+}

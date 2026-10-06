@@ -1,0 +1,925 @@
+{
+  "ui": {
+    "logo": "MyTarot.Day",
+    "tagline": "Lectura de tarot diaria 100% gratuita, personalizada según tu fecha de nacimiento. Sin registro, sin costo, siempre.",
+    "eyebrow": "Cuatro cartas. Un día.",
+    "selectCardsPrompt": "Elige 4 cartas",
+    "heroTitleLine1": "Qué tienen las cartas de hoy para",
+    "heroTitleEm": "ti",
+    "submitLabel": "Mostrar mis cartas",
+    "submittingLabel": "Extrayendo...",
+    "loadingText": "Barajando el mazo para el {date}...",
+    "tryAnotherLabel": "¿Hacer otra lectura?",
+    "buyMeCoffeeLabel": "☕  Cómprame un café 🤗",
+    "funFact": "Dato curioso: El aspecto vintage de nuestras cartas de tarot es auténtico. Utilizamos el tradicional Tarot Rider–Waite–Smith de 1909 con las ilustraciones originales de Pamela Colman Smith. Más de un siglo después, este mazo clásico sigue inspirando a lectores de todo el mundo y es considerado uno de los cimientos más influyentes del tarot moderno.",
+    "footerDisclaimer": "MyTarot.Day se ofrece para la reflexión y el entretenimiento. No sustituye el asesoramiento profesional, médico, financiero o legal.",
+    "footerTagline": "Desarrollado por el equipo de P.San | ¡Es gratis y siempre lo será!",
+    "footerHome": "Inicio",
+    "footerBlog": "Blog",
+    "footerPrivacy": "Política de privacidad",
+    "footerTerms": "Términos y condiciones",
+    "footerAbout": "Sobre nosotros",
+    "footerContact": "Contacto",
+    "todayBadge": "Hoy",
+    "reversedLabel": "Invertida",
+    "uprightLabel": "Al derecho",
+    "supportPromptText": "¿Te ha gustado? Invítame a un café",
+    "summaryGuideLabel": "Guía",
+    "summaryPastLabel": "Pasado",
+    "summaryFutureLabel": "Futuro",
+    "freeBadge": "100% gratis — sin registro, sin costo",
+    "freeTitlePhrase": "Lectura de tarot gratis"
+  },
+  "positions": {
+    "determinant": {
+      "label": "El Determinante",
+      "subtitle": "La fuerza que moldea todo el día",
+      "intros": [
+        "Sobre todo lo demás hoy se encuentra la carta",
+        "La carta que marca el tono de todo el día es",
+        "Antes que nada, el día está siendo moldeado por la carta"
+      ]
+    },
+    "past": {
+      "label": "El Pasado",
+      "subtitle": "Lo que traes contigo",
+      "intros": [
+        "Detrás de ti, aún influyendo en este momento, está la carta",
+        "Lo que traes contigo de días recientes es la carta",
+        "El pasado que alimenta el día de hoy está marcado por la carta"
+      ]
+    },
+    "present": {
+      "label": "El Presente",
+      "subtitle": "Donde realmente te encuentras",
+      "intros": [
+        "Justo ahora, en el centro de las cosas, está la carta",
+        "Donde realmente te encuentras hoy es con la carta",
+        "En el momento presente, estás lidiando con la carta"
+      ]
+    },
+    "future": {
+      "label": "El Futuro",
+      "subtitle": "Hacia dónde se dirige esto",
+      "intros": [
+        "Justo por delante, esto se mueve hacia la carta",
+        "Hacia donde se dirige esto, si nada cambia, es la carta",
+        "El futuro cercano apunta hacia la carta"
+      ]
+    }
+  },
+  "summaryClauses": [
+    "Leída en conjunto, la tirada de hoy traza una línea desde {past} hasta {future}, con la carta {determinant} estableciendo los términos de cómo se desarrolla todo.",
+    "El hilo conductor de hoy va desde lo que {past} ya te enseñó, pasando por donde te encuentras ahora, hacia {future}; todo ello matizado por la carta {determinant}."
+  ],
+  "ranks": {
+    "ace": "As",
+    "two": "Dos",
+    "three": "Tres",
+    "four": "Cuatro",
+    "five": "Cinco",
+    "six": "Seis",
+    "seven": "Siete",
+    "eight": "Ocho",
+    "nine": "Nueve",
+    "ten": "Diez",
+    "page": "Sota",
+    "knight": "Caballo",
+    "queen": "Reina",
+    "king": "Rey"
+  },
+  "suits": {
+    "wands": "Oros",
+    "cups": "Copas",
+    "swords": "Espadas",
+    "pentacles": "Oros"
+  },
+  "majorArcana": {
+    "0": {
+      "name": "El Loco",
+      "keywords": [
+        "comienzos",
+        "inocencia",
+        "salto de fe",
+        "apertura"
+      ],
+      "upright": "un nuevo comienzo sin mapa ni garantías; sin nada más que la curiosidad y el valor para dar un paso adelante antes de tener todas las respuestas.",
+      "reversed": "la duda disfrazada de prudencia, un paso ensayado tantas veces que nunca llega a darse, o lo contrario: un salto a ciegas, sin comprobar qué hay debajo.",
+      "advice": "Vuelve a ser principiante. El único error aquí es negarse a empezar."
+    },
+    "1": {
+      "name": "El Mago",
+      "keywords": [
+        "ingenio",
+        "fuerza de voluntad",
+        "manifestación"
+      ],
+      "upright": "darse cuenta de que todas las herramientas que la situación requiere (intelecto, habilidad, oportunidad) ya están en tus manos, y que usarlas a propósito es el único paso que queda.",
+      "reversed": "talento sin usar o habilidad enfocada en la manipulación en lugar de en construir algo. De cualquier modo, la capacidad se desperdicia o la confianza es más fachada que fundamento.",
+      "advice": "Deja de acumular más herramientas. Toma la que tienes en la mano y úsala."
+    },
+    "2": {
+      "name": "La Sacerdotisa",
+      "keywords": [
+        "intuición",
+        "inconsciente",
+        "conocimiento oculto"
+      ],
+      "upright": "conocimiento que llega más allá del lenguaje: una corazonada, un sueño, un sentimiento que termina siendo más preciso que cualquier evidencia que tuvieras en ese momento.",
+      "reversed": "una verdad silenciosa que es ahogada por el ruido, o un instinto que se mantiene en privado porque aún no puede probarse a sí mismo.",
+      "advice": "Confía en lo que ya sientes pero no has dicho en voz alta. Sabe algo que tu razonamiento aún no ha alcanzado."
+    },
+    "3": {
+      "name": "La Emperatriz",
+      "keywords": [
+        "abundancia",
+        "nutrición",
+        "creatividad",
+        "crecimiento"
+      ],
+      "upright": "una temporada de crecimiento que requiere cuidado, no fuerza; un proyecto, relación o parte de ti mismo que prospera cuando se alimenta en lugar de presionarse.",
+      "reversed": "el cuidado o la creatividad convirtiéndose en asfixia, o tierra fértil dejada sin cultivar hasta que dejó de producir.",
+      "advice": "Presta atención a lo que te importa en lugar de presionarlo. La paciencia es lo que lo hace crecer."
+    },
+    "4": {
+      "name": "El Emperador",
+      "keywords": [
+        "estructura",
+        "autoridad",
+        "disciplina",
+        "estabilidad"
+      ],
+      "upright": "orden construido con propósito: un marco, límite o plan lo suficientemente sólido como para sostener buenas intenciones bajo presión real.",
+      "reversed": "control ejercido con demasiada fuerza, o una estructura tan laxa que nada dentro de ella se mantiene en pie.",
+      "advice": "Levanta el andamiaje antes de construir la casa. La estructura ahora ahorra esfuerzo después."
+    },
+    "5": {
+      "name": "El Hierofante",
+      "keywords": [
+        "tradición",
+        "sistemas de creencias",
+        "guía",
+        "convención"
+      ],
+      "upright": "sabiduría transmitida a través de canales establecidos: un mentor, institución o tradición cuya guía aún merece ser seguida, al menos por ahora.",
+      "reversed": "una regla mantenida por pura costumbre, o una convención que dejó de merecer lealtad hace tiempo.",
+      "advice": "Aprende primero el camino establecido. Decide si dejarlo después."
+    },
+    "6": {
+      "name": "Los Enamorados",
+      "keywords": [
+        "conexión",
+        "valores",
+        "elección",
+        "alineación"
+      ],
+      "upright": "una alineación real entre personas, valores o caminos; una elección que importa porque dice lo que defiendes, no solo lo que te gusta.",
+      "reversed": "una incompatibilidad que se tolera en silencio, o una decisión evadida porque nombrarla en voz alta abriría una conversación más difícil.",
+      "advice": "Nombra la elección claramente, incluso si la respuesta honesta complica las cosas."
+    },
+    "7": {
+      "name": "El Carro",
+      "keywords": [
+        "fuerza de voluntad",
+        "determinación",
+        "victoria mediante el control"
+      ],
+      "upright": "movimiento hacia adelante ganado al sostener dos fuerzas opuestas en una mano y dirigirlas ambas hacia el mismo lado.",
+      "reversed": "impulso consumido por el conflicto interno, o una victoria perseguida con tanta fuerza que pisotea aquello que debía proteger.",
+      "advice": "Deja de luchar con tus propias contradicciones. Apúntalas hacia el mismo lado y avanza."
+    },
+    "8": {
+      "name": "La Fuerza",
+      "keywords": [
+        "coraje",
+        "paciencia",
+        "determinación tranquila",
+        "compasión"
+      ],
+      "upright": "un poder que nunca necesita alzar la voz; una firmeza que proviene de hacer las paces con lo difícil, no de enterrarlo.",
+      "reversed": "la duda personal disfrazada de humildad, o el uso de la fuerza donde la paciencia habría logrado más.",
+      "advice": "Enfréntate a lo que te asusta con calma en lugar de con fuerza. La gentileza no es debilidad."
+    },
+    "9": {
+      "name": "El Ermitaño",
+      "keywords": [
+        "introspección",
+        "soledad",
+        "guía interior"
+      ],
+      "upright": "un retiro necesario: alejarse del ruido para escuchar lo que piensas, no solo lo que todos a tu alrededor están diciendo.",
+      "reversed": "el aislamiento convirtiéndose en evasión, o sabiduría guardada tan cerca que nunca llega a quienes la necesitan.",
+      "advice": "Toma la soledad. La respuesta que buscas no aparecerá en una multitud."
+    },
+    "10": {
+      "name": "La Rueda de la Fortuna",
+      "keywords": [
+        "ciclos",
+        "cambio",
+        "destino",
+        "puntos de inflexión"
+      ],
+      "upright": "un cambio ya en marcha, impulsado por fuerzas mayores que cualquier elección individual; las circunstancias cambian de una manera que altera las condiciones de las cosas.",
+      "reversed": "un ciclo que se repite porque el patrón subyacente no ha cambiado, solo su disfraz.",
+      "advice": "Deja de intentar controlar el giro. Pon tu energía en cómo respondes una vez que se detenga."
+    },
+    "11": {
+      "name": "La Justicia",
+      "keywords": [
+        "equidad",
+        "verdad",
+        "causa y efecto",
+        "claridad"
+      ],
+      "upright": "un ajuste de cuentas justo, aunque no sea cómodo; una mirada clara a la causa y el efecto, y a lo que se debe.",
+      "reversed": "un desequilibrio que nadie ha abordado, o una verdad que se evita porque enfrentarla exigiría rendir cuentas.",
+      "advice": "Mira la situación sin halagarte a ti mismo. La equidad comienza con un recuento honesto."
+    },
+    "12": {
+      "name": "El Colgado",
+      "keywords": [
+        "entrega",
+        "nueva perspectiva",
+        "pausa"
+      ],
+      "upright": "progreso logrado al hacer una pausa en lugar de presionar; una suspensión deliberada que abre un ángulo sobre las cosas que no podías alcanzar mientras te movías.",
+      "reversed": "retraso por sí mismo, o un sacrificio que nunca obtuvo una comprensión real a cambio.",
+      "advice": "Deja que esto permanezca sin resolver un poco más. La percepción vive dentro de la espera, no más allá de ella."
+    },
+    "13": {
+      "name": "La Muerte",
+      "keywords": [
+        "transformación",
+        "finales",
+        "liberación"
+      ],
+      "upright": "un final verdadero que despeja espacio para algo que no podría haber existido junto a él; no es destrucción, sino un cambio necesario.",
+      "reversed": "un cambio resistido mucho después de que se volvió inevitable, lo que solo hace que el final sea más difícil cuando llega.",
+      "advice": "Deja que la parte de esto que ya terminó, termine. Algo más necesita el espacio que está ocupando."
+    },
+    "14": {
+      "name": "La Templanza",
+      "keywords": [
+        "equilibrio",
+        "moderación",
+        "integración",
+        "paciencia"
+      ],
+      "upright": "dos cosas que parecían incompatibles estableciéndose en un punto medio viable; paciencia, mezcla, el oficio lento de obtener las proporciones correctas.",
+      "reversed": "demasiado en una dirección, o un compromiso hecho tan rápido que ninguna de las partes termina satisfecha.",
+      "advice": "Ralentiza la mezcla. El equilibrio correcto no se puede forzar de la noche a la mañana."
+    },
+    "15": {
+      "name": "El Diablo",
+      "keywords": [
+        "apego",
+        "restricción",
+        "tentación",
+        "viejos patrones"
+      ],
+      "upright": "un patrón, hábito o dinámica con más control sobre ti del que te gustaría admitir, aunque la puerta de salida nunca estuvo cerrada con llave.",
+      "reversed": "el primer tirón real para alejarse de algo que te tenía atrapado; ver la cadena claramente por lo que es.",
+      "advice": "Mira honestamente lo que sigues eligiendo a pesar de lo que te cuesta. Nombrarlo es donde comienza la salida."
+    },
+    "16": {
+      "name": "La Torre",
+      "keywords": [
+        "cambio repentino",
+        "conmoción",
+        "revelación"
+      ],
+      "upright": "una estructura construida sobre terreno inestable que cae rápidamente; disruptivo, pero clarificador, ya que elimina lo que nunca fue estable para empezar.",
+      "reversed": "un colapso evitado mediante pura evasión, o una interrupción menor que aún así sacude algo.",
+      "advice": "No te apresures a reconstruir exactamente lo que cayó. Pregunta primero por qué no pudo sostenerse."
+    },
+    "17": {
+      "name": "La Estrella",
+      "keywords": [
+        "esperanza",
+        "renovación",
+        "inspiración",
+        "sanación"
+      ],
+      "upright": "esperanza tranquila que regresa después de un tramo difícil; no es optimismo ingenuo, sino una sensación real de que las cosas pueden repararse y van hacia algo mejor.",
+      "reversed": "esperanza que se debilita, o una perspectiva optimista que se ha desprendido de cualquier plan real.",
+      "advice": "Permítete tener esperanza de nuevo. Te lo has ganado y apunta a algo real."
+    },
+    "18": {
+      "name": "La Luna",
+      "keywords": [
+        "incertidumbre",
+        "subconsciente",
+        "ilusión",
+        "intuición"
+      ],
+      "upright": "una situación iluminada por algo más que hechos simples; instinto, imaginación y viejos miedos mezclándose, por lo que lo que ves aún no es la imagen completa.",
+      "reversed": "la confusión comenzando a disiparse, o un miedo que resulta haber sido mayor en la imaginación que en la realidad.",
+      "advice": "No fuerces una decisión mientras la imagen siga siendo tan confusa. Espera a que haya más luz."
+    },
+    "19": {
+      "name": "El Sol",
+      "keywords": [
+        "alegría",
+        "vitalidad",
+        "claridad",
+        "éxito"
+      ],
+      "upright": "buena fortuna simple; claridad, calidez, un resultado que no necesita una segunda opinión.",
+      "reversed": "alegría atenuada por pensar demasiado en ella, o un éxito que no se permite recibir y disfrutar por lo que es.",
+      "advice": "Deja que esto sea tan bueno como es. No necesitas buscarle el truco."
+    },
+    "20": {
+      "name": "El Juicio",
+      "keywords": [
+        "ajuste de cuentas",
+        "despertar",
+        "reflexión",
+        "absolución"
+      ],
+      "upright": "un ajuste de cuentas honesto con dónde has estado, y un llamado a convertirte en una versión de ti mismo que coincida con lo que has aprendido.",
+      "reversed": "el autojuicio convirtiéndose en dureza, o una llamada de atención que se pospone un poco más.",
+      "advice": "Responde al llamado claramente. Todo lo que has estado evitando está listo para ser enfrentado ahora."
+    },
+    "21": {
+      "name": "El Mundo",
+      "keywords": [
+        "finalización",
+        "plenitud",
+        "llegada"
+      ],
+      "upright": "un ciclo que se cierra limpiamente, con todo lo que debía enseñar ya en mano; una sensación real de llegada antes de que comience el próximo viaje.",
+      "reversed": "una casi finalización a la que aún le falta su última pieza, o un cierre que se busca antes de tiempo.",
+      "advice": "Reconoce lo lejos que has llegado antes de apresurarte hacia lo que sigue."
+    }
+  },
+  "minorArcana": {
+    "wands": {
+      "ace": {
+        "keywords": [
+          "inspiración",
+          "nuevo proyecto",
+          "chispa creativa"
+        ],
+        "upright": "una explosión de energía creativa que llega de golpe: una idea, una oferta o un proyecto que aún no ha tomado forma, pero que ya te atrae hacia él.",
+        "reversed": "una inspiración que se estanca antes de convertirse en acción, o el entusiasmo por un nuevo proyecto que se enfría antes de empezar.",
+        "advice": "Actúa sobre esa chispa ahora, mientras aún está caliente. Esperar al plan perfecto solo hará que se desvanezca."
+      },
+      "two": {
+        "keywords": [
+          "planificación",
+          "visión de futuro",
+          "poder personal"
+        ],
+        "upright": "estar en un punto de vista cómodo con opciones reales por delante, evaluando lo que ya has construido frente a hacia dónde podrías llevarlo ahora.",
+        "reversed": "ser demasiado precavido por miedo a lo desconocido, o un plan para el futuro que nunca llega a ponerse a prueba.",
+        "advice": "Deja de admirar las vistas desde donde estás. Elige una dirección y empieza a caminar hacia ella."
+      },
+      "three": {
+        "keywords": [
+          "expansión",
+          "previsión",
+          "esperando resultados"
+        ],
+        "upright": "la espera después de haber hecho el trabajo: los barcos ya han zarpado, los resultados aún no llegan, pero la base es lo suficientemente sólida como para confiar.",
+        "reversed": "retrasos que se acumulan en un plan que parecía seguro, o una visión ampliada que revela obstáculos que no habías previsto.",
+        "advice": "Mantén la vista en el horizonte un poco más. Lo que pusiste en marcha sigue en camino."
+      },
+      "four": {
+        "keywords": [
+          "celebración",
+          "regreso al hogar",
+          "hito"
+        ],
+        "upright": "un hito que merece una pausa: un regreso a casa, una celebración, la sensación de haber ganado este momento particular de tranquilidad.",
+        "reversed": "una celebración que se siente vacía, o una sensación de hogar y pertenencia que aún no se ha alcanzado del todo.",
+        "advice": "Permítete disfrutar esto plenamente. No todos los buenos momentos necesitan ser seguidos inmediatamente por la siguiente tarea."
+      },
+      "five": {
+        "keywords": [
+          "competencia",
+          "fricción",
+          "desacuerdo"
+        ],
+        "upright": "voluntades que chocan abiertamente: ruidoso, quizás agotador, pero honesto, y mejor que la misma tensión hirviendo a fuego lento bajo la superficie.",
+        "reversed": "un conflicto que finalmente pierde fuerza, o una rivalidad que resulta ser más fachada que sustancia.",
+        "advice": "No confundas esta fricción con el fracaso. Las ideas en competencia se afilan entre sí cuando nadie tiene miedo de discrepar en voz alta."
+      },
+      "six": {
+        "keywords": [
+          "victoria",
+          "reconocimiento",
+          "confianza"
+        ],
+        "upright": "un triunfo que otros también pueden ver: un reconocimiento público por un esfuerzo que, hasta ahora, era mayormente invisible.",
+        "reversed": "el orgullo que se convierte en arrogancia, o una victoria que nunca recibió el reconocimiento que merecía.",
+        "advice": "Acepta el reconocimiento sin tratar de restarle importancia. Te ganaste la victoria; deja que brille."
+      },
+      "seven": {
+        "keywords": [
+          "actitud defensiva",
+          "perseverancia",
+          "mantenerse firme"
+        ],
+        "upright": "mantener una posición que todos los demás intentan arrebatarte: agotador, pero prueba de que lo que construiste vale la pena defenderlo.",
+        "reversed": "ceder terreno que no necesitabas entregar, o defender una posición durante tanto tiempo que has perdido de vista por qué importaba.",
+        "advice": "Mantente firme, pero verifica que todavía estás luchando por la causa correcta."
+      },
+      "eight": {
+        "keywords": [
+          "impulso",
+          "acción rápida",
+          "movimiento veloz"
+        ],
+        "upright": "todo moviéndose de repente a la vez: mensajes que llegan, planes que se aceleran, un periodo de movimiento rápido tras una larga espera.",
+        "reversed": "el impulso se detiene justo cuando más importaba, o las cosas se mueven tan rápido que nada tiene tiempo de asentarse.",
+        "advice": "Muévete rápido mientras el camino esté despejado, pero no corras más de lo que tu capacidad te permite para responder a lo que viene después."
+      },
+      "nine": {
+        "keywords": [
+          "resiliencia",
+          "último esfuerzo",
+          "persistencia cautelosa"
+        ],
+        "upright": "un esfuerzo más que se te pide después de una larga serie de ellos: cansado, cauteloso, pero aún en pie, y más cerca del final de lo que parece.",
+        "reversed": "una actitud defensiva que se ha endurecido hasta el aislamiento, o un agotamiento que hace que cada desafío restante parezca más grande de lo que es.",
+        "advice": "Has sobrevivido a cada ronda hasta ahora. No dejes que la desconfianza te impida aceptar ayuda en esta última."
+      },
+      "ten": {
+        "keywords": [
+          "carga",
+          "sobrecarga",
+          "finalización difícil"
+        ],
+        "upright": "cargar con más de lo que te corresponde porque estás tan cerca de la meta que dejarlo ahora parece un desperdicio.",
+        "reversed": "una carga que se mantiene por terquedad, o trabajo que finalmente se deja de lado después de haberlo cargado durante demasiado tiempo.",
+        "advice": "Pregúntate qué estás cargando que nunca fue tuyo para terminar. Parte de este peso puede compartirse o soltarse."
+      },
+      "page": {
+        "keywords": [
+          "exploración",
+          "nueva idea",
+          "entusiasmo"
+        ],
+        "upright": "una idea demasiado emocionante como para quedarse quieto: una curiosidad inquieta que quiere ponerse a prueba ante el mundo de inmediato.",
+        "reversed": "entusiasmo sin seguimiento, o planes anunciados a gritos que luego son abandonados silenciosamente.",
+        "advice": "Deja que el entusiasmo te mueva, pero dale a la idea al menos una prueba real antes de perseguir la siguiente."
+      },
+      "knight": {
+        "keywords": [
+          "aventura",
+          "impulsividad",
+          "búsqueda audaz"
+        ],
+        "upright": "lanzarse hacia lo siguiente con total confianza, impulsado más por el deseo de la persecución que por un plan fijo.",
+        "reversed": "una imprudencia que empieza a pasarte factura, o una energía inquieta sin un lugar productivo a donde ir.",
+        "advice": "Controla un poco esa audacia antes de que ella te controle a ti, en lugar de que tú la controles a ella."
+      },
+      "queen": {
+        "keywords": [
+          "confianza",
+          "independencia",
+          "magnetismo"
+        ],
+        "upright": "una autoconfianza cálida e inquebrantable que atrae a las personas sin necesidad de actuar para ellas.",
+        "reversed": "una confianza que se ha vuelto frágil o exigente, o una independencia utilizada para excluir a los demás en lugar de valerse por sí misma.",
+        "advice": "Lidera con la confianza que ya tienes. No necesitas demostrárselo a nadie más primero."
+      },
+      "king": {
+        "keywords": [
+          "visión",
+          "liderazgo",
+          "emprendimiento audaz"
+        ],
+        "upright": "un liderazgo que inspira con el ejemplo: una visión audaz combinada con la capacidad de ejecución para hacerla realidad.",
+        "reversed": "altas expectativas que se han vuelto imposibles de cumplir, o una ambición perseguida tan despiadadamente que quema a quienes te ayudan.",
+        "advice": "Lidera la visión, pero asegúrate de que las personas que la llevan a cabo contigo todavía quieran estar ahí."
+      }
+    },
+    "cups": {
+      "ace": {
+        "keywords": [
+          "nuevo amor",
+          "apertura emocional",
+          "desbordamiento"
+        ],
+        "upright": "una copa emocional que se llena hasta desbordarse: un nuevo amor, una nueva compasión o un sentimiento tan pleno que necesita derramarse en algo más.",
+        "reversed": "una apertura emocional que se está conteniendo, o amor y conexión ofrecidos pero que aún no se han dejado entrar.",
+        "advice": "Deja que este sentimiento sea tan pleno como es. No hay necesidad de racionar algo tan real."
+      },
+      "two": {
+        "keywords": [
+          "asociación",
+          "atracción mutua",
+          "unión"
+        ],
+        "upright": "dos personas que se encuentran como iguales: un vínculo que se forma o se profundiza en términos mutuos y equilibrados.",
+        "reversed": "una conexión que se ha vuelto desigual, o una asociación bajo una tensión que aún no se ha expresado en voz alta.",
+        "advice": "Comprueba que esta conexión sigue siendo tan mutua como al principio. Di claramente qué ha cambiado, si es que algo lo ha hecho."
+      },
+      "three": {
+        "keywords": [
+          "amistad",
+          "celebración",
+          "comunidad"
+        ],
+        "upright": "la alegría que es mejor cuando se comparte: una reunión, una amistad, un momento que vale la pena celebrar con las personas que te han apoyado.",
+        "reversed": "una dinámica de grupo que se convierte en chismes o exclusión, o una indulgencia excesiva que empaña lo que debería haber sido una celebración real.",
+        "advice": "Trae a este momento a las personas que más te importan. La celebración significa más cuando no se hace a solas."
+      },
+      "four": {
+        "keywords": [
+          "apatía",
+          "contemplación",
+          "oportunidad perdida"
+        ],
+        "upright": "aburrimiento con lo que ya está sobre la mesa, a pesar de que algo que vale la pena notar se ofrece justo frente a ti.",
+        "reversed": "la apatía perdiendo finalmente su control, o una disposición a levantar la vista y evaluar la oportunidad que habías estado ignorando.",
+        "advice": "Levanta la vista de lo que te decepciona y nota lo que se te ofrece. Puede que valga más de lo que parecía al principio."
+      },
+      "five": {
+        "keywords": [
+          "pérdida",
+          "duelo",
+          "arrepentimiento"
+        ],
+        "upright": "el duelo centrado en lo que se ha derramado y perdido, incluso mientras algo intacto sigue cerca, sin ser notado.",
+        "reversed": "el duelo comenzando a perder su control, o los primeros pasos reales hacia la aceptación de una pérdida en lugar de revivirla.",
+        "advice": "Llora lo que realmente se ha ido, pero date la vuelta lo suficiente como para ver lo que aún permanece detrás de ti."
+      },
+      "six": {
+        "keywords": [
+          "nostalgia",
+          "memoria",
+          "inocencia"
+        ],
+        "upright": "una atracción hacia tiempos más simples: viejos recuerdos, comodidades familiares o un reencuentro con alguien de un capítulo anterior.",
+        "reversed": "una nostalgia que se ha convertido en un escondite, o un pasado idealizado que hace que el presente parezca peor de lo que es.",
+        "advice": "Visita el pasado para buscar consuelo, pero no te mudes allí. Lo que necesitas ahora vive en el presente."
+      },
+      "seven": {
+        "keywords": [
+          "fantasía",
+          "elecciones",
+          "ilusión"
+        ],
+        "upright": "demasiadas opciones atractivas, algunas más sólidas que otras, lo que dificulta distinguir la oportunidad real de las ilusiones.",
+        "reversed": "la niebla despejándose lo suficiente como para ver qué opciones eran reales, y una decisión volviéndose posible finalmente.",
+        "advice": "Pon a prueba cada opción contra la realidad antes de elegir. No todo lo que brilla aquí resistirá el paso del tiempo."
+      },
+      "eight": {
+        "keywords": [
+          "alejarse",
+          "buscar un significado más profundo",
+          "partida"
+        ],
+        "upright": "alejarse de algo que parece estar bien desde fuera porque ha dejado de nutrirte por dentro.",
+        "reversed": "quedarse en algún lugar por miedo a lo que significaría irse, o ir a la deriva sin comprometerse nunca del todo con la partida.",
+        "advice": "Confía en la parte de ti que sabe que esto ya no es suficiente, incluso si aún no puedes explicar completamente por qué."
+      },
+      "nine": {
+        "keywords": [
+          "contentamiento",
+          "satisfacción",
+          "deseo cumplido"
+        ],
+        "upright": "una satisfacción fácil y cómoda: un deseo alcanzado, una necesidad cumplida, un contentamiento que no necesita ser justificado.",
+        "reversed": "la presunción sustituyendo a la satisfacción real, o una abundancia que de alguna manera todavía no se siente suficiente.",
+        "advice": "Deja que este contentamiento sea simple. No necesitas ganártelo dos veces preocupándote de que no dure."
+      },
+      "ten": {
+        "keywords": [
+          "plenitud emocional",
+          "armonía familiar",
+          "felicidad duradera"
+        ],
+        "upright": "una felicidad profunda y asentada construida con las personas más cercanas a ti: no un momento cumbre, sino un estado duradero.",
+        "reversed": "una armonía en el hogar que es más apariencia que sustancia, o valores entre las personas que amas que han dejado de alinearse silenciosamente.",
+        "advice": "Mira más allá de la imagen superficial de felicidad y comprueba que las personas involucradas también la sientan."
+      },
+      "page": {
+        "keywords": [
+          "oportunidad creativa",
+          "mensaje intuitivo",
+          "curiosidad"
+        ],
+        "upright": "un mensaje emocional o creativo suave e inesperado que llega: algo a lo que vale la pena prestar atención, incluso si parece pequeño.",
+        "reversed": "la inmadurez emocional interponiéndose en el camino de una oportunidad real, o un impulso creativo utilizado para escapar en lugar de expresar.",
+        "advice": "Tómate en serio ese sentimiento pequeño e inesperado. Es más informativo de lo que parece."
+      },
+      "knight": {
+        "keywords": [
+          "romance",
+          "idealismo",
+          "seguir al corazón"
+        ],
+        "upright": "liderar con el corazón, persiguiendo una visión romántica o idealista con sinceridad real, incluso si aún no es del todo práctico.",
+        "reversed": "el mal humor disfrazado de sensibilidad, o un ideal romántico que sigue preparándote para la decepción.",
+        "advice": "Sigue a tu corazón aquí, pero compruébalo con la realidad antes de seguirlo hasta el final."
+      },
+      "queen": {
+        "keywords": [
+          "compasión",
+          "seguridad emocional",
+          "intuición"
+        ],
+        "upright": "profundidad emocional sostenida con estabilidad real: compasión por los demás que no viene a costa de tu propio equilibrio.",
+        "reversed": "una compasión que se ha inclinado hacia el descuido personal, o una seguridad emocional que solo se mantiene mientras nadie la pone a prueba.",
+        "advice": "Ofrece a los demás tu compasión, pero guarda suficiente de ella para ti mismo."
+      },
+      "king": {
+        "keywords": [
+          "equilibrio emocional",
+          "diplomacia",
+          "control tranquilo"
+        ],
+        "upright": "un dominio tranquilo sobre los sentimientos fuertes: capaz de mantenerse firme y justo incluso cuando las apuestas emocionales son altas.",
+        "reversed": "un control sobre los sentimientos que en realidad es represión, o una calma en la superficie que oculta manipulación debajo.",
+        "advice": "Mantente firme, pero deja que se sepa lo que realmente sientes en lugar de solo gestionarlo."
+      }
+    },
+    "swords": {
+      "ace": {
+        "keywords": [
+          "avance",
+          "claridad",
+          "nueva idea"
+        ],
+        "upright": "un corte repentino a través de la confusión: una revelación, una decisión o una verdad que llega de forma nítida e inconfundible.",
+        "reversed": "una claridad nublada por demasiado ruido, o una verdad que ha sido distorsionada antes de llegar a ti.",
+        "advice": "Confía en ese pensamiento claro cuando aparezca. No permitas que te convenzan de volver a la confusión."
+      },
+      "two": {
+        "keywords": [
+          "estancamiento",
+          "decisión difícil",
+          "evasión"
+        ],
+        "upright": "una decisión mantenida a distancia, guardada y equilibrada con tanto cuidado que ninguna de las opciones llega a elegirse.",
+        "reversed": "el estancamiento que finalmente se rompe, o una sobrecarga de información contradictoria que hace que elegir sea más difícil en lugar de más fácil.",
+        "advice": "Quítate la venda. La decisión no será más fácil por seguir retrasándola."
+      },
+      "three": {
+        "keywords": [
+          "desamor",
+          "traición",
+          "dolor"
+        ],
+        "upright": "un dolor agudo y específico: una verdad, traición o pérdida que corta precisamente porque es real.",
+        "reversed": "las primeras etapas de la sanación, o un viejo dolor que resurge porque nunca se afrontó del todo la primera vez.",
+        "advice": "Deja que el dolor sea exactamente tan agudo como es. Ponerle nombre claramente es lo que inicia la sanación."
+      },
+      "four": {
+        "keywords": [
+          "descanso",
+          "recuperación",
+          "contemplación"
+        ],
+        "upright": "un retiro deliberado tras un conflicto o tensión; no es una derrota, sino la recuperación que la mente necesita antes de poder pensar con claridad de nuevo.",
+        "reversed": "un descanso interrumpido antes de terminar, o una inquietud que hace imposible una recuperación real.",
+        "advice": "Tómate el descanso por completo. Una recuperación a medias solo significa arrastrar el agotamiento a lo que venga después."
+      },
+      "five": {
+        "keywords": [
+          "victoria pírrica",
+          "conflicto",
+          "traición"
+        ],
+        "upright": "una victoria que cuesta más de lo que vale: un conflicto llevado hasta el final aunque todos los involucrados salgan perdiendo.",
+        "reversed": "resentimiento persistente tras un conflicto que nunca se resolvió realmente, o una oportunidad de hacer las paces en lugar de aprovechar la ventaja.",
+        "advice": "Pregúntate si ganar esta pelea en particular vale lo que te costará después."
+      },
+      "six": {
+        "keywords": [
+          "transición",
+          "seguir adelante",
+          "aguas más tranquilas"
+        ],
+        "upright": "un movimiento lento y deliberado lejos de la turbulencia, llevando solo lo necesario hacia algo más estable.",
+        "reversed": "resistirse a una transición que ya es necesaria, o cargar con equipaje sin resolver hacia las aguas más tranquilas que te esperan.",
+        "advice": "Deja atrás las aguas difíciles. No sigas mirando hacia la orilla que estás dejando."
+      },
+      "seven": {
+        "keywords": [
+          "estrategia",
+          "engaño",
+          "actuar solo"
+        ],
+        "upright": "moverse en silencio y de forma independiente, tomando lo que necesitas sin pedir permiso: astuto, pero no del todo honesto.",
+        "reversed": "una estrategia oculta que sale a la luz, o una conciencia culpable que finalmente alcanza a alguien que tomó un atajo.",
+        "advice": "Pregúntate si la estrategia que estás siguiendo tendría sentido si todos los involucrados pudieran verla."
+      },
+      "eight": {
+        "keywords": [
+          "atrapamiento",
+          "mentalidad de víctima",
+          "límites autoimpuestos"
+        ],
+        "upright": "sentirse acorralado por todos lados, aunque las cuerdas que te sujetan sean más flojas de lo que parecen: una prisión construida más por creencias que por hechos.",
+        "reversed": "la primera grieta real en esa trampa autoimpuesta, a medida que la historia de sentirse impotente empieza a perder fuerza.",
+        "advice": "Busca el hueco en las cuerdas que dabas por sentado que eran sólidas. Hay más espacio para moverse de lo que parece."
+      },
+      "nine": {
+        "keywords": [
+          "ansiedad",
+          "preocupación",
+          "angustia mental"
+        ],
+        "upright": "una mente que imagina los peores escenarios en la oscuridad, agotada por miedos que parecen mucho más grandes a las 3 de la mañana que a la luz del día.",
+        "reversed": "la preocupación que empieza a disminuir, o la decisión de expresar el miedo en voz alta por fin en lugar de cargarlo a solas.",
+        "advice": "Expresa tu preocupación en voz alta ante alguien. Rara vez sobrevive al contacto con la luz del día tan intacta como se siente ahora."
+      },
+      "ten": {
+        "keywords": [
+          "tocar fondo",
+          "final doloroso",
+          "traición"
+        ],
+        "upright": "un final tan definitivo como doloroso: lo peor ya ha quedado atrás, y desde aquí solo queda subir.",
+        "reversed": "resistirse a un final que ya ha ocurrido, o una recuperación lenta y parcial de algo que aún no ha sanado del todo.",
+        "advice": "Deja que este final sea completo. Luchar por mantenerlo medio vivo solo prolonga el dolor."
+      },
+      "page": {
+        "keywords": [
+          "curiosidad",
+          "vigilancia",
+          "sed de verdad"
+        ],
+        "upright": "una mente alerta y cuestionadora, que reúne información y observa de cerca antes de decidir qué creer.",
+        "reversed": "chismes que sustituyen a una investigación real, o ideas que nunca pasan de las palabras a la acción.",
+        "advice": "Sigue haciendo preguntas, pero eventualmente actúa según lo que te digan las respuestas."
+      },
+      "knight": {
+        "keywords": [
+          "acción decisiva",
+          "asertividad",
+          "pensamiento rápido"
+        ],
+        "upright": "moverse rápido y hablar claro, yendo directo al grano sin esperar el permiso de nadie.",
+        "reversed": "agresividad que supera al juicio, o decisiones impulsivas tomadas más rápido de lo que la situación requería.",
+        "advice": "Actúa con decisión, pero respira una vez antes de decir la versión más cortante de lo que estás pensando."
+      },
+      "queen": {
+        "keywords": [
+          "pensamiento independiente",
+          "límites claros",
+          "comunicación directa"
+        ],
+        "upright": "ver las situaciones con claridad y expresarlo sin suavizarlo más de lo que la verdad requiere.",
+        "reversed": "una franqueza que se ha convertido en frialdad, o límites mantenidos tan rígidamente que nadie puede acercarse.",
+        "advice": "Mantén la claridad, pero comprueba si la brusquedad es necesaria o si es solo más fácil que ser amable."
+      },
+      "king": {
+        "keywords": [
+          "autoridad intelectual",
+          "pensamiento estructurado",
+          "verdad imparcial"
+        ],
+        "upright": "juicios basados en principios y evidencias más que en sentimientos: justos, precisos y difíciles de refutar.",
+        "reversed": "lógica utilizada como arma, o una autoridad que es técnicamente correcta pero sigue siendo cruel.",
+        "advice": "Ten razón, pero no dejes que tener la razón sea una excusa para ser cruel al respecto."
+      }
+    },
+    "pentacles": {
+      "ace": {
+        "keywords": [
+          "nueva oportunidad",
+          "prosperidad",
+          "manifestación"
+        ],
+        "upright": "una oportunidad concreta que llega a tus manos: práctica, real y digna de ser aprovechada en lugar de solo admirada.",
+        "reversed": "una oportunidad perdida por falta de tiempo o mala planificación, o un comienzo prometedor que nunca se concretó.",
+        "advice": "Da el paso práctico ahora. Este tipo de oportunidad recompensa más la constancia que el entusiasmo."
+      },
+      "two": {
+        "keywords": [
+          "equilibrio",
+          "adaptabilidad",
+          "gestión de prioridades"
+        ],
+        "upright": "mantener varias demandas en movimiento a la vez, ajustándote sobre la marcha en lugar de abandonar alguna.",
+        "reversed": "una prioridad de más añadida a la mezcla, con algo que ahora se escapa cuando no debería.",
+        "advice": "Observa con honestidad lo que estás manejando. Quizás necesites soltar algo en lugar de intentar equilibrarlo con más fuerza."
+      },
+      "three": {
+        "keywords": [
+          "colaboración",
+          "habilidad",
+          "trabajo en equipo"
+        ],
+        "upright": "diferentes habilidades combinándose en algo que ninguna podría construir sola: progreso sólido logrado mediante una colaboración real.",
+        "reversed": "trabajar de forma aislada en algo que necesitaba otras manos, o un equipo que ha dejado de remar en la misma dirección.",
+        "advice": "Busca la ayuda que esto requiere. Este no es un proyecto que se construya bien en solitario."
+      },
+      "four": {
+        "keywords": [
+          "seguridad",
+          "control",
+          "aferrarse"
+        ],
+        "upright": "un control firme sobre lo que has construido, priorizando la seguridad sobre el riesgo, incluso a costa de cierta flexibilidad.",
+        "reversed": "aferrarse tan fuerte que nada nuevo puede entrar, o el miedo a la pérdida impulsando decisiones más que cualquier amenaza real.",
+        "advice": "Afloja un poco el agarre. Lo que estás protegiendo no es tan frágil como parece."
+      },
+      "five": {
+        "keywords": [
+          "dificultad",
+          "pérdida financiera",
+          "aislamiento"
+        ],
+        "upright": "dificultades reales, sentidas tanto en el aislamiento como en la pérdida misma: luchar sintiendo que la ayuda está fuera de alcance.",
+        "reversed": "las primeras señales de que el apoyo está disponible, o las dificultades que finalmente comienzan a disminuir tras una etapa dura.",
+        "advice": "Busca la puerta que está abierta cerca. La ayuda existe aquí, aunque aún no lo sientas así."
+      },
+      "six": {
+        "keywords": [
+          "generosidad",
+          "dar y recibir",
+          "equilibrio"
+        ],
+        "upright": "recursos moviéndose de manera justa entre las personas: ayuda dada porque es necesaria y recibida sin vergüenza.",
+        "reversed": "generosidad que viene con condiciones, o un intercambio que silenciosamente se ha vuelto unilateral.",
+        "advice": "Comprueba si lo que se está dando aquí es libre o si se debe algo a cambio."
+      },
+      "seven": {
+        "keywords": [
+          "paciencia",
+          "visión a largo plazo",
+          "evaluar el progreso"
+        ],
+        "upright": "una pausa para hacer balance del esfuerzo ya invertido, sopesando si está dando frutos o si es necesario cambiar el rumbo.",
+        "reversed": "impaciencia ante un resultado que aún no llega, o esfuerzo que continúa en un camino que ha dejado de ser rentable.",
+        "advice": "Haz una auditoría honesta. Parte de este esfuerzo merece más paciencia; otra parte merece un nuevo plan."
+      },
+      "eight": {
+        "keywords": [
+          "diligencia",
+          "artesanía",
+          "desarrollo de habilidades"
+        ],
+        "upright": "esfuerzo constante y repetido destinado a ser realmente bueno en algo: poco glamuroso, pero exactamente lo que requiere la maestría.",
+        "reversed": "perfeccionismo que estanca el progreso real, o tomar atajos en un trabajo que merecía el esfuerzo completo.",
+        "advice": "Sigue haciendo las repeticiones poco glamurosas. Así es como se ve la habilidad mientras se construye."
+      },
+      "nine": {
+        "keywords": [
+          "autosuficiencia",
+          "abundancia",
+          "independencia"
+        ],
+        "upright": "comodidad y abundancia ganadas en gran medida por ti mismo: una autosuficiencia que no necesita la aprobación de nadie.",
+        "reversed": "un éxito que se ve bien desde fuera mientras se siente vacío, o exceso de trabajo que ha dejado fuera a alguien con quien disfrutarlo.",
+        "advice": "Disfruta de lo que has construido sin necesitar que nadie más confirme que tiene valor."
+      },
+      "ten": {
+        "keywords": [
+          "legado",
+          "seguridad a largo plazo",
+          "riqueza familiar"
+        ],
+        "upright": "estabilidad que perdura más allá de una sola persona: un legado o base construida para apoyar a más que solo a ti mismo.",
+        "reversed": "un legado bajo presión, o desacuerdos familiares sobre recursos que amenazan algo construido para durar.",
+        "advice": "Protege lo que está destinado a sobrevivirte, pero no permitas que las disputas sobre ello deshagan aquello para lo que fue construido."
+      },
+      "page": {
+        "keywords": [
+          "nueva oportunidad",
+          "estudio",
+          "curiosidad práctica"
+        ],
+        "upright": "una oportunidad práctica que vale la pena estudiar de cerca: nueva, prometedora y aún en la etapa de aprender cómo funciona.",
+        "reversed": "planes poco realistas que no han sido probados frente a la realidad, o progreso que se ha estancado antes de comenzar realmente.",
+        "advice": "Estudia esta oportunidad de cerca antes de comprometerte más. Es prometedora, pero aún no está probada."
+      },
+      "knight": {
+        "keywords": [
+          "diligencia",
+          "rutina",
+          "progreso metódico"
+        ],
+        "upright": "progreso lento, metódico y fiable: sin atajos, solo trabajo constante que suma con el tiempo.",
+        "reversed": "rutina que se ha calcificado en estancamiento, o perfeccionismo tan rígido que ha impedido que algo vea la luz.",
+        "advice": "Confía en el método lento que está funcionando. No necesita ser más rápido para ser eficaz."
+      },
+      "queen": {
+        "keywords": [
+          "cuidado",
+          "ingenio",
+          "conexión a tierra"
+        ],
+        "upright": "cuidado práctico que se manifiesta de formas tangibles: comodidad, recursos y estabilidad ofrecidos generosamente a los demás.",
+        "reversed": "cuidar de los demás a costa de cuidarte a ti mismo, o inseguridad sobre los recursos que socava esa generosidad.",
+        "advice": "Extiende a ti mismo el mismo cuidado práctico que tan fácilmente ofreces a todos los demás."
+      },
+      "king": {
+        "keywords": [
+          "maestría material",
+          "seguridad financiera",
+          "generosidad"
+        ],
+        "upright": "maestría material y financiera construida con el tiempo, ahora lo suficientemente generosa como para compartir la seguridad que ha creado.",
+        "reversed": "control sobre los recursos que se vuelve rígido o posesivo, o seguridad financiera perseguida a costa de todo lo demás.",
+        "advice": "Usa generosamente lo que has construido. La seguridad que no se comparte eventualmente solo se convierte en aislamiento."
+      }
+    }
+  }
+}

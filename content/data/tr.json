@@ -1,0 +1,925 @@
+{
+  "ui": {
+    "logo": "MyTarot.Day",
+    "tagline": "Doğum tarihinize göre kişiselleştirilmiş %100 ücretsiz günlük tarot okuması. Hesap gerekmez, tamamen ücretsiz.",
+    "eyebrow": "Dört kart. Bir gün.",
+    "selectCardsPrompt": "4 kart seçin",
+    "heroTitleLine1": "Bugünün kartları ne söylüyor",
+    "heroTitleEm": "sizin",
+    "submitLabel": "Kartlarımı göster",
+    "submittingLabel": "Çekiliyor...",
+    "loadingText": "{date} için deste karıştırılıyor...",
+    "tryAnotherLabel": "Başka bir okuma yapılsın mı?",
+    "buyMeCoffeeLabel": "☕  Bana bir kahve al 🤗",
+    "funFact": "İlginç bir bilgi: Tarot kartlarımızın nostaljik görünümü otantiktir. Pamela Colman Smith'in orijinal çizimlerini içeren geleneksel 1909 Rider–Waite–Smith Tarot destesini kullanıyoruz. Bir asırdan fazla bir süre sonra, bu klasik deste dünyanın dört bir yanındaki okuyuculara ilham vermeye devam ediyor ve modern tarotun en etkili temellerinden biri olarak kabul ediliyor.",
+    "footerDisclaimer": "MyTarot.Day yansıma ve eğlence amaçlı sunulmaktadır. Profesyonel, tıbbi, finansal veya hukuki tavsiyelerin yerini tutmaz.",
+    "footerTagline": "P.San Ekibi tarafından geliştirilmiştir | Ücretsizdir ve her zaman öyle kalacaktır!",
+    "footerHome": "Anasayfa",
+    "footerBlog": "Blog",
+    "footerPrivacy": "Gizlilik Politikası",
+    "footerTerms": "Şartlar ve Koşullar",
+    "footerAbout": "Hakkında",
+    "footerContact": "İletişim",
+    "todayBadge": "Bugün",
+    "reversedLabel": "Ters",
+    "uprightLabel": "Düz",
+    "supportPromptText": "Beğendin mi? Bana bir kahve ısmarla",
+    "summaryGuideLabel": "Rehber",
+    "summaryPastLabel": "Geçmiş",
+    "summaryFutureLabel": "Gelecek",
+    "freeBadge": "%100 Ücretsiz — Kayıt Yok, Ücret Yok",
+    "freeTitlePhrase": "Ücretsiz Tarot Falı"
+  },
+  "positions": {
+    "determinant": {
+      "label": "Belirleyici",
+      "subtitle": "Tüm günü şekillendiren güç",
+      "intros": [
+        "Bugün her şeyin üzerinde duran",
+        "Tüm günün tonunu belirleyen kart",
+        "Her şeyden önce, günün şekillenmesini sağlayan"
+      ]
+    },
+    "past": {
+      "label": "Geçmiş",
+      "subtitle": "Yanınızda getirdikleriniz",
+      "intros": [
+        "Arkanızda duran ve bu anı hala etkileyen",
+        "Geçtiğimiz günlerden yanınızda getirdikleriniz",
+        "Bugüne yansıyan geçmişin işareti"
+      ]
+    },
+    "present": {
+      "label": "Bugün",
+      "subtitle": "Gerçekte nerede durduğunuz",
+      "intros": [
+        "Şu anda, olayların merkezinde duran",
+        "Bugün gerçekte bulunduğunuz yer",
+        "Şu anki anda uğraştığınız şey"
+      ]
+    },
+    "future": {
+      "label": "Gelecek",
+      "subtitle": "Bunun nereye gittiği",
+      "intros": [
+        "Hemen ileride, buna doğru gidiliyor",
+        "Hiçbir şey değişmezse, gidişat şuna doğru",
+        "Yakın gelecek şuna işaret ediyor"
+      ]
+    }
+  },
+  "summaryClauses": [
+    "Birlikte okunduğunda, bugünkü açılım {past} noktasından {future} noktasına bir çizgi çizerken, {determinant} tüm bunların nasıl gerçekleşeceğinin şartlarını belirliyor.",
+    "Bugünkü ana hat, {past} noktasının size öğrettiklerinden, şu an durduğunuz yere ve {future} noktasına uzanıyor — hepsi {determinant} ile renklendirilmiş durumda."
+  ],
+  "ranks": {
+    "ace": "As",
+    "two": "İkili",
+    "three": "Üçlü",
+    "four": "Dörtlü",
+    "five": "Beşli",
+    "six": "Altılı",
+    "seven": "Yedili",
+    "eight": "Sekizli",
+    "nine": "Dokuzlu",
+    "ten": "Onlu",
+    "page": "Şövalye Yardımcısı",
+    "knight": "Şövalye",
+    "queen": "Kraliçe",
+    "king": "Kral"
+  },
+  "suits": {
+    "wands": "Değnekler",
+    "cups": "Kupalar",
+    "swords": "Kılıçlar",
+    "pentacles": "Tılsımlar"
+  },
+  "majorArcana": {
+    "0": {
+      "name": "Deli",
+      "keywords": [
+        "başlangıçlar",
+        "masumiyet",
+        "inanç sıçraması",
+        "açıklık"
+      ],
+      "upright": "Haritasız ve garantisiz taze bir başlangıç; elinizde sadece merak ve her cevap gelmeden önce ileriye adım atma cesareti var.",
+      "reversed": "İhtiyat kılığına girmiş tereddüt, o kadar çok prova edilmiş ki asla atılamayan bir adım; ya da tam tersi: körü körüne, altındakini kontrol etmeden yapılan bir sıçrama.",
+      "advice": "Yeniden yeni başlayan biri olun. Buradaki tek hata, başlamayı reddetmektir."
+    },
+    "1": {
+      "name": "Büyücü",
+      "keywords": [
+        "beceriklilik",
+        "irade gücü",
+        "tezahür"
+      ],
+      "upright": "Durumun gerektirdiği her aracın (zeka, beceri, zamanlama) zaten elinizin altında olduğunu fark etmek ve bunları bilinçli bir şekilde kullanmak atılacak tek adımdır.",
+      "reversed": "Kullanılmayan yetenek veya bir şeyler inşa etmek yerine manipülasyona yönelen beceri. Her iki durumda da yetenek boşa gidiyor ya da özgüven temelden ziyade bir gösterişten ibaret.",
+      "advice": "Daha fazla araç toplamayı bırakın. Elinizdekini alın ve kullanın."
+    },
+    "2": {
+      "name": "Azize",
+      "keywords": [
+        "sezgi",
+        "bilinçaltı",
+        "gizli bilgi"
+      ],
+      "upright": "Dilin altında kalan bilgi; bir his, bir rüya, o an elinizdeki tüm kanıtlardan daha doğru çıkan bir önsezi.",
+      "reversed": "Gürültü yüzünden bastırılan sessiz bir gerçek ya da henüz kendini kanıtlayamadığı için gizli tutulan bir içgüdü.",
+      "advice": "Henüz yüksek sesle söylemediğiniz ama hissettiğiniz şeye güvenin. O, mantığınızın henüz yetişemediği bir şeyi biliyor."
+    },
+    "3": {
+      "name": "İmparatoriçe",
+      "keywords": [
+        "bolluk",
+        "besleyicilik",
+        "yaratıcılık",
+        "büyüme"
+      ],
+      "upright": "Zorlamayı değil, ilgilenmeyi gerektiren bir büyüme mevsimi; beslendiğinde zorlanmadan gelişen bir proje, ilişki veya kendinizin bir parçası.",
+      "reversed": "Boğucu hale gelen ilgi veya yaratıcılık ya da hiçbir şey üretmeyene kadar ihmal edilmiş verimli bir toprak.",
+      "advice": "Önem verdiğiniz şeye baskı yerine ilgi gösterin. Sabır, onu büyüten şeydir."
+    },
+    "4": {
+      "name": "İmparator",
+      "keywords": [
+        "yapı",
+        "otorite",
+        "disiplin",
+        "istikrar"
+      ],
+      "upright": "Bilinçli olarak inşa edilmiş düzen; iyi niyetleri gerçek baskı altında tutacak kadar sağlam bir çerçeve, sınır veya plan.",
+      "reversed": "Çok sıkı tutulan kontrol ya da içindeki hiçbir şeyin dik duramadığı kadar gevşek bir yapı.",
+      "advice": "Evi inşa etmeden önce iskeleyi kurun. Şimdiki yapı, sonradan harcayacağınız çabadan tasarruf sağlar."
+    },
+    "5": {
+      "name": "Aziz",
+      "keywords": [
+        "gelenek",
+        "inanç sistemleri",
+        "rehberlik",
+        "geleneksel yöntemler"
+      ],
+      "upright": "Kurulmuş kanallar aracılığıyla aktarılan bilgelik; rehberliği en azından şimdilik takip edilmeyi hak eden bir mentor, kurum veya gelenek.",
+      "reversed": "Sırf alışkanlıktan sürdürülen bir kural veya sadakatini çoktan yitirmiş bir gelenek.",
+      "advice": "Önce yerleşik yolu öğrenin. Ondan ayrılıp ayrılmamaya sonra karar verin."
+    },
+    "6": {
+      "name": "Aşıklar",
+      "keywords": [
+        "bağlantı",
+        "değerler",
+        "seçim",
+        "uyum"
+      ],
+      "upright": "İnsanlar, değerler veya yollar arasında gerçek bir uyum; sadece neyi sevdiğinizi değil, neyi savunduğunuzu gösterdiği için önemli olan bir seçim.",
+      "reversed": "Sessizce katlanılan bir uyumsuzluk ya da yüksek sesle dile getirmenin daha zor bir konuşmaya yol açacağı için kaçınılan bir karar.",
+      "advice": "Dürüst cevap işleri karıştıracak olsa bile seçiminizi açıkça belirtin."
+    },
+    "7": {
+      "name": "Araba",
+      "keywords": [
+        "irade gücü",
+        "kararlılık",
+        "kontrol yoluyla zafer"
+      ],
+      "upright": "İki zıt gücü tek elde tutarak ve ikisini de aynı yöne sürerek kazanılan ileri hareket.",
+      "reversed": "İç çatışma yüzünden tükenen ivme ya da koruması gereken şeyi ezip geçen hırslı bir zafer arayışı.",
+      "advice": "Kendi çelişkilerinizle güreşmeyi bırakın. Onları aynı yöne çevirin ve ilerleyin."
+    },
+    "8": {
+      "name": "Güç",
+      "keywords": [
+        "cesaret",
+        "sabır",
+        "sessiz kararlılık",
+        "şefkat"
+      ],
+      "upright": "Asla sesini yükseltmeye ihtiyaç duymayan güç; zor olanla barışmaktan gelen bir metanet, onu gömmekten değil.",
+      "reversed": "Alçakgönüllülük maskesi takan özgüvensizlik ya da sabrın daha etkili olacağı yerde başvurulan zorlama.",
+      "advice": "Sizi korkutan şeyle güçle değil, sakinlikle karşılaşın. Naziklik zayıflık değildir."
+    },
+    "9": {
+      "name": "Ermiş",
+      "keywords": [
+        "iç gözlem",
+        "yalnızlık",
+        "içsel rehberlik"
+      ],
+      "upright": "Gerekli bir geri çekilme; sadece etrafınızdakilerin ne dediğini değil, sizin ne düşündüğünüzü duymak için gürültüden uzaklaşmak.",
+      "reversed": "Kaçışa dönüşen izolasyon ya da o kadar sıkı tutulan bilgelik ki, ona ihtiyacı olanlara asla ulaşmaması.",
+      "advice": "Yalnızlığı kabul edin. Aradığınız cevap kalabalıkta karşınıza çıkmayacak."
+    },
+    "10": {
+      "name": "Kader Çarkı",
+      "keywords": [
+        "döngüler",
+        "değişim",
+        "kader",
+        "dönüm noktaları"
+      ],
+      "upright": "Tek bir seçimden daha büyük güçlerin ittiği, halihazırda devam eden bir değişim; koşulların işleyişi değiştirecek şekilde dönmesi.",
+      "reversed": "Altındaki kalıp değişmediği için kendini tekrarlayan bir döngü; sadece kostümü değişmiş.",
+      "advice": "Dönüşü kontrol etmeye çalışmayı bırakın. Enerjinizi, çark durduğunda nasıl tepki vereceğinize harcayın."
+    },
+    "11": {
+      "name": "Adalet",
+      "keywords": [
+        "adalet",
+        "gerçek",
+        "neden-sonuç",
+        "netlik"
+      ],
+      "upright": "Rahat olmasa bile adil bir hesaplaşma; neden ve sonuçlara, neyin borçlanıldığına dair net bir bakış.",
+      "reversed": "Kimsenin ele almadığı bir dengesizlik ya da doğrudan yüzleşmenin hesap verebilirlik gerektireceği için kaçınılan bir gerçek.",
+      "advice": "Duruma kendinizi kandırmadan bakın. Adalet, dürüst bir hesaplaşmayla başlar."
+    },
+    "12": {
+      "name": "Asılan Adam",
+      "keywords": [
+        "teslimiyet",
+        "yeni bakış açısı",
+        "duraklama"
+      ],
+      "upright": "İtmek yerine duraklayarak elde edilen ilerleme; hareket halindeyken ulaşamayacağınız bir açıyı ortaya çıkaran kasıtlı bir askıya alma.",
+      "reversed": "Sırf gecikmiş olmak için gecikme ya da karşılığında hiçbir gerçek anlayış kazandırmayan bir fedakarlık.",
+      "advice": "Bunun bir süre daha çözümsüz kalmasına izin verin. İçgörü beklemenin içindedir, ötesinde değil."
+    },
+    "13": {
+      "name": "Ölüm",
+      "keywords": [
+        "dönüşüm",
+        "bitişler",
+        "serbest bırakma"
+      ],
+      "upright": "Onunla birlikte var olamayacak bir şeye yer açan gerçek bir bitiş; yıkım değil, gerekli bir değişim.",
+      "reversed": "Kaçınılmaz olduktan çok sonra bile direnilen bir değişim; bu sadece bitişi daha da zorlaştırır.",
+      "advice": "Bunun bitmiş olan kısmının bitmesine izin verin. Başka bir şeyin kapladığı alana ihtiyacı var."
+    },
+    "14": {
+      "name": "Denge",
+      "keywords": [
+        "denge",
+        "ölçülülük",
+        "bütünleşme",
+        "sabır"
+      ],
+      "upright": "Uyumsuz görünen iki şeyin işe yarar bir ortada buluşması; sabır, harmanlama, oranları doğru tutturmanın yavaş zanaatı.",
+      "reversed": "Bir yöne aşırı kayma ya da o kadar hızlı bir araya getirilmiş bir uzlaşma ki, iki taraf da tatmin olmuyor.",
+      "advice": "Karışımı yavaşlatın. Doğru denge bir gecede zorla kurulamaz."
+    },
+    "15": {
+      "name": "Şeytan",
+      "keywords": [
+        "bağlılık",
+        "kısıtlama",
+        "baştan çıkarılma",
+        "eski kalıplar"
+      ],
+      "upright": "Dışarı çıkış kapısının hiç kilitli olmadığını bilseniz bile, üzerinizde itiraf etmek istediğinizden daha fazla hakimiyet kuran bir kalıp, alışkanlık veya dinamik.",
+      "reversed": "Sizi tuzağa düşüren bir şeyden ilk gerçek uzaklaşma; zinciri olduğu gibi, net bir şekilde görmek.",
+      "advice": "Size bedel ödettiği halde seçmeye devam ettiğiniz şeye dürüstçe bakın. Onu adlandırmak, çıkış yolunun başlangıcıdır."
+    },
+    "16": {
+      "name": "Yıkılan Kule",
+      "keywords": [
+        "ani değişim",
+        "altüst oluş",
+        "vahiy"
+      ],
+      "upright": "Zayıf bir zemin üzerine inşa edilmiş yapının hızla çöküşü; yıkıcı ama netleştirici, çünkü en baştan beri sağlam olmayan ne varsa temizliyor.",
+      "reversed": "Sırf kaçınma yoluyla ertelenen bir çöküş ya da yine de bir şeyleri yerinden oynatan daha küçük bir sarsıntı.",
+      "advice": "Yıkılanı aynen yeniden inşa etmek için acele etmeyin. Önce neden ayakta duramadığını sorun."
+    },
+    "17": {
+      "name": "Yıldız",
+      "keywords": [
+        "umut",
+        "yenilenme",
+        "ilham",
+        "şifa"
+      ],
+      "upright": "Zor bir süreçten sonra geri dönen sessiz umut; saf iyimserlik değil, işlerin onarılabileceğine ve daha iyiye gittiğine dair gerçek bir his.",
+      "reversed": "Zayıflayan umut ya da herhangi bir gerçek plandan kopmuş neşeli bir bakış açısı.",
+      "advice": "Yeniden umut etmenize izin verin. Bunu hak ettiniz ve bu gerçek bir yere işaret ediyor."
+    },
+    "18": {
+      "name": "Ay",
+      "keywords": [
+        "belirsizlik",
+        "bilinçaltı",
+        "illüzyon",
+        "sezgi"
+      ],
+      "upright": "Sadece gerçeklerle değil, başka şeylerle aydınlanan bir durum; içgüdü, hayal gücü ve eski korkuların birbirine karışması, bu yüzden gördükleriniz henüz resmin tamamı değil.",
+      "reversed": "Dağılmaya başlayan kafa karışıklığı ya da hayal gücünde gerçekte olduğundan daha büyük görünen bir korku.",
+      "advice": "Resim bu kadar belirsizken karar vermeye zorlamayın. Daha fazla ışık bekleyin."
+    },
+    "19": {
+      "name": "Güneş",
+      "keywords": [
+        "neşe",
+        "canlılık",
+        "netlik",
+        "başarı"
+      ],
+      "upright": "Saf iyi şans; netlik, sıcaklık, ikinci bir tahmine ihtiyaç duymayan bir sonuç.",
+      "reversed": "Üzerinde çok düşünülerek gölgelenen neşe ya da olduğu gibi kabul edilip tadı çıkarılmayan bir başarı.",
+      "advice": "Bunun olduğu kadar iyi olmasına izin verin. Altında bir bit yeniği aramanıza gerek yok."
+    },
+    "20": {
+      "name": "Mahkeme",
+      "keywords": [
+        "hesaplaşma",
+        "uyanış",
+        "yansıma",
+        "affedilme"
+      ],
+      "upright": "Nerede olduğunuza dair dürüst bir hesaplaşma ve öğrendiklerinizle eşleşen bir benliğe adım atma çağrısı.",
+      "reversed": "Sertliğe dönüşen öz-yargılama ya da biraz daha ertelenen bir uyanış çağrısı.",
+      "advice": "Çağrıya açıkça cevap verin. Kaçındığınız her neyse, artık yüzleşilmeye hazır."
+    },
+    "21": {
+      "name": "Dünya",
+      "keywords": [
+        "tamamlanma",
+        "bütünlük",
+        "varış"
+      ],
+      "upright": "Temiz bir şekilde kapanan bir döngü, öğretmesi gereken her şey elinizde; bir sonraki yolculuk başlamadan önce gerçek bir varış hissi.",
+      "reversed": "Son parçası eksik olan bir tamamlanma ya da zamanı gelmeden ulaşılmaya çalışılan bir kapanış.",
+      "advice": "Bir sonrakine acele etmeden önce buraya ne kadar geldiğinizi kabul edin."
+    }
+  },
+  "minorArcana": {
+    "wands": {
+      "ace": {
+        "keywords": [
+          "ilham",
+          "yeni girişim",
+          "yaratıcı kıvılcım"
+        ],
+        "upright": "Bir anda gelen yaratıcı enerji patlaması; henüz şekillenmemiş ancak sizi şimdiden kendine çeken bir fikir, teklif veya girişim.",
+        "reversed": "Eyleme dönüşemeden sönüp giden ilham veya daha başlamadan soğumaya başlayan yeni bir girişimin heyecanı.",
+        "advice": "Kıvılcım henüz sıcakken harekete geçin. Mükemmel planı beklemek, onun sönüp gitmesine neden olacaktır."
+      },
+      "two": {
+        "keywords": [
+          "planlama",
+          "gelecek vizyonu",
+          "kişisel güç"
+        ],
+        "upright": "Önünüzde gerçek seçeneklerle rahat bir bakış açısında durmak; inşa ettiklerinizi, bir sonraki adımda nereye taşıyabileceğinizle kıyaslamak.",
+        "reversed": "Bilinmezlik korkusuyla gereğinden fazla temkinli davranmak veya hiçbir zaman test edilmeyen bir gelecek planı.",
+        "advice": "Durduğunuz yerden manzarayı seyretmeyi bırakın. Bir yön seçin ve ona doğru yürümeye başlayın."
+      },
+      "three": {
+        "keywords": [
+          "genişleme",
+          "öngörü",
+          "sonuçları bekleme"
+        ],
+        "upright": "İş bittikten sonraki bekleme süreci; gemiler çoktan gönderildi, sonuçlar henüz gelmedi ancak temel güvenilecek kadar sağlam.",
+        "reversed": "İşe yarayacağı kesin görünen bir planda biriken gecikmeler veya genişleyen bakış açısının daha önce planlamadığınız engelleri ortaya çıkarması.",
+        "advice": "Gözlerinizi biraz daha ufukta tutun. Harekete geçirdiğiniz şeyler hala yolda."
+      },
+      "four": {
+        "keywords": [
+          "kutlama",
+          "eve dönüş",
+          "dönüm noktası"
+        ],
+        "upright": "Durup kutlamaya değer bir dönüm noktası; eve dönüş, bir kutlama, bu huzur anını hak etmiş olmanın verdiği his.",
+        "reversed": "İçi boş hissettiren bir kutlama veya henüz tam olarak ulaşılamamış bir ev ve aidiyet duygusu.",
+        "advice": "Bunun tadını tam anlamıyla çıkarın. Her güzel anın hemen ardından bir sonraki görevin gelmesi gerekmez."
+      },
+      "five": {
+        "keywords": [
+          "rekabet",
+          "sürtüşme",
+          "anlaşmazlık"
+        ],
+        "upright": "Çatışan iradelerin açıkça karşı karşıya gelmesi; gürültülü, belki yorucu ama dürüst; yer altında kaynayan bir gerginlikten daha iyidir.",
+        "reversed": "Nihayet etkisini kaybeden çatışma veya aslında göründüğünden daha az önemli olduğu anlaşılan bir rekabet.",
+        "advice": "Bu sürtüşmeyi başarısızlık sanmayın. Kimse yüksek sesle fikir ayrılığı yaşamaktan korkmadığında, rekabet eden fikirler birbirini keskinleştirir."
+      },
+      "six": {
+        "keywords": [
+          "zafer",
+          "takdir",
+          "özgüven"
+        ],
+        "upright": "Başkalarının da görebildiği bir başarı; şimdiye kadar çoğunlukla görünmez olan çabanın kamusal alanda takdir görmesi.",
+        "reversed": "Kibre dönüşen gurur veya hak ettiği takdiri asla görmeyen bir zafer.",
+        "advice": "Takdiri, gereğinden fazla açıklama yapmadan kabul edin. Başarıyı siz kazandınız; bırakın olduğu gibi kalsın."
+      },
+      "seven": {
+        "keywords": [
+          "savunmacılık",
+          "azim",
+          "yerini koruma"
+        ],
+        "upright": "Herkesin elinizden almaya çalıştığı bir konumu korumak; yorucu olsa da inşa ettiğiniz şeyin savunulmaya değer olduğunun kanıtı.",
+        "reversed": "Gerekmediği halde pes etmek veya neden önemli olduğunu unuttuğunuz bir konumu çok uzun süre savunmak.",
+        "advice": "Yerinizde durun, ancak hala doğru tepe için savaşıp savaşmadığınızı kontrol edin."
+      },
+      "eight": {
+        "keywords": [
+          "ivme",
+          "hızlı eylem",
+          "hızlı hareket"
+        ],
+        "upright": "Her şeyin aniden aynı anda hareket etmesi; mesajların ulaşması, planların hızlanması, uzun bir bekleyişten sonra gelen hızlı hareket dönemi.",
+        "reversed": "Tam da önemli olduğu anda ivmenin durması veya her şeyin o kadar hızlı ilerlemesi ki hiçbir şeyin yerine oturmaması.",
+        "advice": "Yol açıkken hızla ilerleyin, ancak bir sonraki adıma yanıt verme yeteneğinizin önüne geçmeyin."
+      },
+      "nine": {
+        "keywords": [
+          "dayanıklılık",
+          "son direniş",
+          "temkinli ısrar"
+        ],
+        "upright": "Uzun bir dizi çabadan sonra sizden istenen bir gayret daha; yorgun, temkinli ama hala ayakta ve hissettiğinizden daha sona yakınsınız.",
+        "reversed": "İzolasyona dönüşen savunmacılık veya her kalan zorluğu olduğundan daha büyük gösteren bir tükenmişlik.",
+        "advice": "Şimdiye kadarki her turu atlattınız. Temkinli olmanın, bu sonuncusu için yardım kabul etmenize engel olmasına izin vermeyin."
+      },
+      "ten": {
+        "keywords": [
+          "yük",
+          "aşırı yüklenme",
+          "zor kazanılmış tamamlanma"
+        ],
+        "upright": "Payınıza düşenden fazlasını taşımak, çünkü bitiş çizgisine o kadar yakınsınız ki şimdi bırakmak boşa çaba gibi hissettiriyor.",
+        "reversed": "İnatçılık yüzünden taşınmaya devam edilen bir yük veya çok uzun süre taşındıktan sonra nihayet yere bırakılan iş.",
+        "advice": "Bitirmek için size ait olmayan neyi taşıdığınızı kendinize sorun. Bu ağırlığın bir kısmı paylaşılabilir veya bırakılabilir."
+      },
+      "page": {
+        "keywords": [
+          "keşif",
+          "yeni fikir",
+          "coşku"
+        ],
+        "upright": "Hareketsiz durulamayacak kadar heyecan verici bir fikir; kendini dünyada hemen test etmek isteyen huzursuz bir merak.",
+        "reversed": "Takibi yapılmayan heyecan veya yüksek sesle duyurulup sessizce terk edilen planlar.",
+        "advice": "Coşkunun sizi harekete geçirmesine izin verin, ancak bir sonrakinin peşinden gitmeden önce fikri en az bir kez gerçek bir teste tabi tutun."
+      },
+      "knight": {
+        "keywords": [
+          "macera",
+          "dürtüsellik",
+          "cesur arayış"
+        ],
+        "upright": "Sabit bir plandan ziyade avlanma iştahıyla sürüklenerek, tam bir güvenle bir sonraki şeye doğru hücum etmek.",
+        "reversed": "Size bedeli ağır olmaya başlayan pervasızlık veya gidecek üretken bir yeri kalmamış huzursuz enerji.",
+        "advice": "Siz onu yönetmek yerine o sizi yönetmeden önce, bu cesaretin bir kısmını kontrol altına alın."
+      },
+      "queen": {
+        "keywords": [
+          "özgüven",
+          "bağımsızlık",
+          "manyetizma"
+        ],
+        "upright": "İnsanları, onlar için bir performans sergilemeye gerek duymadan kendine çeken sıcak ve sarsılmaz bir özgüven.",
+        "reversed": "Kırılgan veya talepkar bir hale gelmiş özgüven ya da başkalarıyla bağ kurmak yerine onları dışlamak için kullanılan bağımsızlık.",
+        "advice": "Zaten sahip olduğunuz özgüvenle liderlik edin. Bunu önce başka birine kanıtlamanıza gerek yok."
+      },
+      "king": {
+        "keywords": [
+          "vizyon",
+          "liderlik",
+          "cesur girişimcilik"
+        ],
+        "upright": "Örnek olarak ilham veren liderlik; cesur bir vizyon ve onu gerçeğe dönüştürecek kararlılık.",
+        "reversed": "Karşılanması imkansız hale gelen yüksek beklentiler veya acımasızca sürdürülen, size yardım edenleri yakan hırs.",
+        "advice": "Vizyona liderlik edin, ancak sizinle birlikte onu gerçekleştiren insanların hala orada olmak isteyip istemediklerini kontrol edin."
+      }
+    },
+    "cups": {
+      "ace": {
+        "keywords": [
+          "yeni aşk",
+          "duygusal açılım",
+          "taşma"
+        ],
+        "upright": "kenarından taşan duygusal bir kupa — yeni bir aşk, yeni bir şefkat veya içine sığmayıp dışarı taşması gereken yoğun bir his.",
+        "reversed": "engellenen bir duygusal açılım ya da sunulan ancak henüz içeri alınmamış sevgi ve bağ.",
+        "advice": "Bu hissin doluluğuna izin ver. Bu kadar gerçek bir şeyi kısıtlamana gerek yok."
+      },
+      "two": {
+        "keywords": [
+          "ortaklık",
+          "karşılıklı çekim",
+          "birleşme"
+        ],
+        "upright": "iki insanın birbirini eşit olarak karşılaması — karşılıklı ve aşağı yukarı denk şartlarda kurulan veya derinleşen bir bağ.",
+        "reversed": "dengesizleşmiş bir bağ ya da henüz yüksek sesle dile getirilmemiş bir gerilim altındaki ortaklık.",
+        "advice": "Bu bağın başladığı gibi karşılıklı olup olmadığını kontrol et. Eğer bir şeyler değiştiyse, bunu açıkça ifade et."
+      },
+      "three": {
+        "keywords": [
+          "arkadaşlık",
+          "kutlama",
+          "topluluk"
+        ],
+        "upright": "paylaşıldığında güzelleşen neşe — bir buluşma, bir dostluk, yanında duran insanlarla kutlamaya değer bir an.",
+        "reversed": "dedikoduya veya dışlanmaya dönüşen bir grup dinamiği ya da gerçek bir kutlama olması gereken şeyi gölgeleyen aşırılık.",
+        "advice": "Senin için en önemli olan insanları bu ana dahil et. Kutlama, yalnız yapılmadığında daha anlamlıdır."
+      },
+      "four": {
+        "keywords": [
+          "ilgisizlik",
+          "tefekkür",
+          "kaçırılan fırsat"
+        ],
+        "upright": "önünde fark edilmeye değer bir şey sunulsa bile, masada olana karşı duyulan can sıkıntısı.",
+        "reversed": "ilgisizliğin nihayet etkisini yitirmesi ya da görmezden geldiğin fırsatı değerlendirmek için başını kaldırıp bakma isteği.",
+        "advice": "Seni hayal kırıklığına uğratan şeyden başını kaldır ve neyin sunulduğuna bak. İlk başta göründüğünden daha değerli olabilir."
+      },
+      "five": {
+        "keywords": [
+          "kayıp",
+          "yas",
+          "pişmanlık"
+        ],
+        "upright": "dökülüp gidenlere odaklanan yas; oysa hemen yanı başında bozulmamış, fark edilmemiş bir şeyler hâlâ duruyor.",
+        "reversed": "yasın etkisini yitirmeye başlaması ya da bir kaybı sürekli tekrarlamak yerine onu kabullenmeye doğru atılan ilk gerçek adımlar.",
+        "advice": "Gerçekten gidene yas tut, ama arkanda hâlâ nelerin durduğunu görecek kadar arkana dönmeyi ihmal etme."
+      },
+      "six": {
+        "keywords": [
+          "nostalji",
+          "anı",
+          "masumiyet"
+        ],
+        "upright": "daha basit zamanlara duyulan özlem — eski anılar, tanıdık huzurlar veya hayatın daha önceki bir bölümünden biriyle yeniden bir araya gelme.",
+        "reversed": "bir saklanma yerine dönüşen nostalji ya da bugünü olduğundan daha kötü gösteren idealize edilmiş bir geçmiş.",
+        "advice": "Huzur bulmak için geçmişi ziyaret et ama oraya geri taşınma. Şimdi ihtiyacın olan şey şimdiki zamanda yaşıyor."
+      },
+      "seven": {
+        "keywords": [
+          "fantezi",
+          "seçimler",
+          "yanılsama"
+        ],
+        "upright": "bazıları diğerlerinden daha sağlam olan çok fazla cazip seçenek; gerçek fırsatı hayal ürünü olandan ayırmayı zorlaştırıyor.",
+        "reversed": "sisin dağılarak hangi seçeneklerin gerçek olduğunun görülmesi ve nihayet bir karar vermenin mümkün hale gelmesi.",
+        "advice": "Seçim yapmadan önce her seçeneği gerçeklik testinden geçir. Burada parlayan her şey kalıcı olmayabilir."
+      },
+      "eight": {
+        "keywords": [
+          "uzaklaşma",
+          "daha derin anlam arayışı",
+          "ayrılış"
+        ],
+        "upright": "dışarıdan iyi görünmesine rağmen içeride seni beslemeyi bıraktığı için bir şeyden uzaklaşmak.",
+        "reversed": "ayrılmanın ne anlama geleceğinden korktuğun için bir yerde kalmak ya da ayrılışa tam olarak karar vermeden sürüklenmek.",
+        "advice": "Nedenini henüz tam olarak açıklayamasan bile, bunun artık yeterli olmadığını bilen parçana güven."
+      },
+      "nine": {
+        "keywords": [
+          "hoşnutluk",
+          "tatmin",
+          "gerçekleşen dilek"
+        ],
+        "upright": "kolay, rahat bir tatmin — karşılanmış bir dilek, yerine gelmiş bir istek, gerekçelendirilmesi gerekmeyen bir huzur.",
+        "reversed": "gerçek tatminin yerini alan kendini beğenmişlik ya da bir şekilde hâlâ yetersiz hissettiren bolluk.",
+        "advice": "Bu hoşnutluğun basit kalmasına izin ver. Sürmeyeceğinden endişelenerek onu tekrar kazanmana gerek yok."
+      },
+      "ten": {
+        "keywords": [
+          "duygusal tatmin",
+          "aile uyumu",
+          "kalıcı mutluluk"
+        ],
+        "upright": "en yakınındaki insanlarla inşa edilmiş derin, oturmuş bir mutluluk — anlık bir zirve değil, kalıcı bir durum.",
+        "reversed": "içerikten çok görüntüden ibaret olan evdeki uyum ya da sevdiğin insanlar arasındaki değerlerin sessizce uyumsuz hale gelmesi.",
+        "advice": "Mutluluğun dış görünüşünün ötesine bak ve bu resimdeki insanların da bunu hissedip hissetmediğini kontrol et."
+      },
+      "page": {
+        "keywords": [
+          "yaratıcı fırsat",
+          "sezgisel mesaj",
+          "merak"
+        ],
+        "upright": "nazik, beklenmedik duygusal veya yaratıcı bir mesajın gelişi — küçük görünse bile dikkate almaya değer bir şey.",
+        "reversed": "gerçek bir fırsatın önünde duran duygusal olgunlaşmamışlık ya da ifade etmek yerine kaçmak için kullanılan yaratıcı bir dürtü.",
+        "advice": "Küçük, beklenmedik hissi ciddiye al. Göründüğünden daha bilgilendirici."
+      },
+      "knight": {
+        "keywords": [
+          "romantizm",
+          "idealizm",
+          "kalbin sesini dinlemek"
+        ],
+        "upright": "kalbiyle hareket etmek, henüz tam olarak pratik olmasa bile romantik veya idealist bir vizyonu gerçek bir samimiyetle takip etmek.",
+        "reversed": "duyarlılık gibi görünen karamsarlık ya da seni sürekli hayal kırıklığına uğratan romantik bir ideal.",
+        "advice": "Burada kalbinin sesini dinle, ancak onu sonuna kadar takip etmeden önce gerçeklerle karşılaştır."
+      },
+      "queen": {
+        "keywords": [
+          "şefkat",
+          "duygusal güvenlik",
+          "sezgi"
+        ],
+        "upright": "gerçek bir istikrarla tutulan duygusal derinlik — kendi dengeni bozmadan başkalarına gösterilen şefkat.",
+        "reversed": "kendini ihmal etmeye dönüşen şefkat ya da kimse tarafından test edilmediği sürece ayakta kalan duygusal güvenlik.",
+        "advice": "Başkalarına şefkatini ver, ancak kendin için de yeteri kadarını saklı tut."
+      },
+      "king": {
+        "keywords": [
+          "duygusal denge",
+          "diplomasi",
+          "sakin kontrol"
+        ],
+        "upright": "güçlü duygular üzerinde sakin bir ustalık — duygusal riskler yüksek olduğunda bile dengeli ve adil kalabilme yetisi.",
+        "reversed": "aslında bastırma olan duygu kontrolü ya da altında manipülasyon gizleyen yüzeydeki sakinlik.",
+        "advice": "Dengeli kal, ancak ne hissettiğinin sadece yönetilmesine değil, bilinmesine de izin ver."
+      }
+    },
+    "swords": {
+      "ace": {
+        "keywords": [
+          "çığır açan",
+          "berraklık",
+          "yeni fikir"
+        ],
+        "upright": "Karmaşayı kesip atan ani bir durum; bir farkındalık, karar veya keskin ve tartışmasız bir gerçekliğin gelişi.",
+        "reversed": "Çok fazla gürültüyle bulanan bir berraklık ya da size ulaşmadan önce çarpıtılmış bir gerçek.",
+        "advice": "Net düşünce geldiğinde ona güvenin. Onun tekrar karmaşaya sürüklenmesine izin vermeyin."
+      },
+      "two": {
+        "keywords": [
+          "çıkmaz",
+          "zor karar",
+          "kaçınma"
+        ],
+        "upright": "Uzak tutulan, korunan ve o kadar dikkatli dengelenen bir karar ki, seçeneklerden hiçbiri seçilemiyor.",
+        "reversed": "Çıkmazın nihayet kırılması veya çelişkili bilgilerin fazlalığı nedeniyle seçimin kolaylaşmak yerine zorlaşması.",
+        "advice": "Göz bandını çıkarın. Kararı ertelemek onu daha kolay hale getirmeyecek."
+      },
+      "three": {
+        "keywords": [
+          "kalp kırıklığı",
+          "ihanet",
+          "keder"
+        ],
+        "upright": "Keskin ve belirgin bir acı; gerçek olduğu için tam kalbinden vuran bir hakikat, ihanet veya kayıp.",
+        "reversed": "İyileşmenin ilk aşamaları veya ilk seferinde tam olarak ele alınmadığı için yeniden yüzeye çıkan eski acılar.",
+        "advice": "Acının tam olarak ne kadar keskin olduğunu kabul edin. Onu net bir şekilde adlandırmak, iyileşmeyi başlatan şeydir."
+      },
+      "four": {
+        "keywords": [
+          "dinlenme",
+          "iyileşme",
+          "tefekkür"
+        ],
+        "upright": "Çatışma veya gerginlik sonrası bilinçli bir geri çekilme; bir yenilgi değil, zihnin tekrar berrak düşünebilmesi için ihtiyaç duyduğu toparlanma.",
+        "reversed": "Tamamlanmadan kesintiye uğrayan dinlenme veya gerçek bir iyileşmeyi imkansız kılan huzursuzluk.",
+        "advice": "Tam anlamıyla dinlenin. Yarım bir iyileşme, yorgunluğu bir sonraki aşamaya taşımak demektir."
+      },
+      "five": {
+        "keywords": [
+          "boş zafer",
+          "çatışma",
+          "ihanet"
+        ],
+        "upright": "Değerinden fazlasına mal olan bir kazanım; herkesin daha kötü durumda kaldığı, sonuna kadar zorlanmış bir çatışma.",
+        "reversed": "Asla çözülmemiş bir çatışmadan sonra kalan kırgınlık veya avantaj sağlamak yerine barış yapma şansı.",
+        "advice": "Bu kavgayı kazanmanın, sonrasında size neye mal olacağını kendinize sorun."
+      },
+      "six": {
+        "keywords": [
+          "geçiş",
+          "ilerleme",
+          "daha sakin sular"
+        ],
+        "upright": "Türbülanstan uzaklaşan yavaş ve bilinçli bir hareket; sadece gerekli olanı daha istikrarlı bir şeye doğru taşımak.",
+        "reversed": "Zaten gerekli olan bir geçişe direnme veya çözülmemiş yükleri önümüzdeki sakin sulara taşıma.",
+        "advice": "Zorlu suları arkanızda bırakın. Terk ettiğiniz kıyıya bakıp durmayın."
+      },
+      "seven": {
+        "keywords": [
+          "strateji",
+          "aldatma",
+          "yalnız hareket etme"
+        ],
+        "upright": "Sessizce ve bağımsızca ilerlemek, izin istemeden ihtiyacınız olanı almak; zekice ama tam anlamıyla dürüst değil.",
+        "reversed": "Gizli bir stratejinin gün yüzüne çıkması veya alınan bir kestirme yolun sonunda suçluluk duygusuyla yüzleşmek.",
+        "advice": "Uyguladığınız stratejinin, ilgili herkes tarafından görülmesi durumunda hala mantıklı olup olmayacağını kendinize sorun."
+      },
+      "eight": {
+        "keywords": [
+          "kapana kısılma",
+          "kurban psikolojisi",
+          "kendi koyduğumuz sınırlar"
+        ],
+        "upright": "Her taraftan kuşatılmış hissetmek, oysa sizi tutan ipler hissettiğinizden daha gevşek; gerçeklerden çok inançlarla inşa edilmiş bir hapishane.",
+        "reversed": "Güçsüz olma hikayesi etkisini yitirmeye başladıkça, kendi koyduğunuz o tuzaktaki ilk gerçek çatlak.",
+        "advice": "Sağlam olduğunu varsaydığınız iplerdeki boşluğu arayın. Hareket etmek için hissettiğinizden daha fazla alan var."
+      },
+      "nine": {
+        "keywords": [
+          "kaygı",
+          "endişe",
+          "zihinsel ıstırap"
+        ],
+        "upright": "Karanlıkta en kötü senaryoları kuran bir zihin; gece saat 3'te gün ışığındakinden çok daha büyük görünen korkularla tükenmişlik.",
+        "reversed": "Endişenin hafiflemeye başlaması veya korkuyu tek başına taşımak yerine nihayet yüksek sesle dile getirme kararı.",
+        "advice": "Endişenizi birine yüksek sesle söyleyin. Gün ışığıyla temas ettiğinde, şu an hissettiğiniz kadar bütün kalması nadirdir."
+      },
+      "ten": {
+        "keywords": [
+          "dip noktası",
+          "acı verici son",
+          "ihanet"
+        ],
+        "upright": "Acı verici olduğu kadar nihai olan bir son; en kötüsü zaten geride kaldı, buradan yukarıdan başka gidecek yer yok.",
+        "reversed": "Zaten gerçekleşmiş bir sona direnme veya henüz tam olarak iyileşmemiş bir şeyden yavaş, kısmi bir toparlanma.",
+        "advice": "Bu sonun tamamlanmasına izin verin. Onu yarı canlı tutmaya çalışmak sadece acıyı uzatır."
+      },
+      "page": {
+        "keywords": [
+          "merak",
+          "tetikte olma",
+          "gerçek arayışı"
+        ],
+        "upright": "Neye inanacağına karar vermeden önce bilgi toplayan ve yakından izleyen, tetikte ve sorgulayan bir zihin.",
+        "reversed": "Gerçek bir araştırmanın yerini alan dedikodu veya eyleme dönüşmeyen fikirler.",
+        "advice": "Soru sormaya devam edin, ancak sonunda cevapların size söylediklerine göre hareket edin."
+      },
+      "knight": {
+        "keywords": [
+          "kararlı eylem",
+          "iddialılık",
+          "hızlı düşünme"
+        ],
+        "upright": "Hızlı hareket etmek ve açık konuşmak; kimsenin iznini beklemeden doğrudan konuya girmek.",
+        "reversed": "Muhakemeyi aşan saldırganlık veya durumun gerektirdiğinden daha hızlı alınan fevri kararlar.",
+        "advice": "Kararlı hareket edin, ancak düşündüğünüz şeyin en keskin halini söylemeden önce bir nefes alın."
+      },
+      "queen": {
+        "keywords": [
+          "bağımsız düşünce",
+          "net sınırlar",
+          "doğrudan iletişim"
+        ],
+        "upright": "Durumları olduğu gibi görmek ve gerçeğin gerektirdiğinden daha fazla yumuşatmadan dile getirmek.",
+        "reversed": "Soğukluğa dönüşen doğrudanlık veya kimsenin yaklaşamayacağı kadar katı tutulan sınırlar.",
+        "advice": "Berraklığı koruyun, ancak sertliğin gerekli olup olmadığını veya sadece nazik olmaktan daha mı kolay olduğunu kontrol edin."
+      },
+      "king": {
+        "keywords": [
+          "entelektüel otorite",
+          "yapılandırılmış düşünce",
+          "tarafsız gerçek"
+        ],
+        "upright": "Duygudan ziyade ilke ve kanıta dayalı yargı; adil, kesin ve tartışılması zor.",
+        "reversed": "Silah olarak kullanılan mantık veya teknik olarak doğruyken hala zalimce olan bir otorite.",
+        "advice": "Haklı olun, ancak haklı olmanın kabalığı mazur görmesine izin vermeyin."
+      }
+    },
+    "pentacles": {
+      "ace": {
+        "keywords": [
+          "yeni fırsat",
+          "refah",
+          "tezahür"
+        ],
+        "upright": "ellerinize ulaşan somut bir fırsat; sadece hayran kalmak yerine üzerine inşa etmeye değer, gerçek ve pratik bir başlangıç.",
+        "reversed": "kötü zamanlama veya yetersiz planlama nedeniyle kaçırılan bir fırsat ya da devamı gelmeyen umut verici bir başlangıç.",
+        "advice": "Şimdi pratik adımı atın. Bu tür bir fırsat, coşkudan ziyade kararlılıkla takip edilmeyi ödüllendirir."
+      },
+      "two": {
+        "keywords": [
+          "denge",
+          "uyum sağlama",
+          "öncelikleri yönetme"
+        ],
+        "upright": "aynı anda birden fazla talebi yürütmek, hiçbirini bırakmadan anlık ayarlamalar yapmak.",
+        "reversed": "karışıma eklenen bir fazla öncelik ve artık ihmal edilmemesi gereken bir şeyin elden kaçması.",
+        "advice": "Neleri yönetmeye çalıştığınıza dürüstçe bakın. Burada bir şeyin dengelenmesi değil, bırakılması gerekebilir."
+      },
+      "three": {
+        "keywords": [
+          "iş birliği",
+          "beceri",
+          "takım çalışması"
+        ],
+        "upright": "farklı becerilerin, tek başlarına inşa edemeyecekleri bir şey için birleşmesi; gerçek bir iş birliğiyle sağlanan sağlam ilerleme.",
+        "reversed": "başka ellere ihtiyaç duyulan bir konuda tek başına çalışmak veya aynı yöne çekmeyi bırakmış bir ekip.",
+        "advice": "Bunun gerektirdiği yardımı alın. Bu, tek başına iyi inşa edilebilecek bir proje değil."
+      },
+      "four": {
+        "keywords": [
+          "güvenlik",
+          "kontrol",
+          "sıkı tutunma"
+        ],
+        "upright": "inşa ettiğiniz şeye sıkı sıkıya tutunmak, esneklikten ödün vererek de olsa riske karşı güvenliği önceliklendirmek.",
+        "reversed": "hiçbir yeniliğin girmesine izin vermeyecek kadar sıkı tutunmak veya gerçek bir tehditten ziyade kaybetme korkusuyla kararlar almak.",
+        "advice": "Tutuşunuzu biraz gevşetin. Koruduğunuz şey hissettiğiniz kadar kırılgan değil."
+      },
+      "five": {
+        "keywords": [
+          "zorluk",
+          "finansal kayıp",
+          "yalnızlık"
+        ],
+        "upright": "gerçek bir zorluk; hem kayıptan hem de yalnızlıktan hissedilen, yardımın ulaşılamaz olduğu duygusuyla verilen mücadele.",
+        "reversed": "destek belirtilerinin ortaya çıkmaya başlaması veya zorlu bir dönemden sonra sıkıntıların nihayet hafiflemesi.",
+        "advice": "Yakındaki açık kapıyı arayın. Henüz öyle hissettirmese de yardım burada mevcut."
+      },
+      "six": {
+        "keywords": [
+          "cömertlik",
+          "vermek ve almak",
+          "denge"
+        ],
+        "upright": "kaynakların insanlar arasında adilce akışı; ihtiyaç duyulduğu için verilen ve utanç duyulmadan kabul edilen yardım.",
+        "reversed": "karşılığında beklentiler barındıran bir cömertlik veya sessizce tek taraflı hale gelmiş bir alışveriş.",
+        "advice": "Burada verilenin karşılıksız olup olmadığını veya geri ödenmesi gereken bir borç doğup doğmadığını kontrol edin."
+      },
+      "seven": {
+        "keywords": [
+          "sabır",
+          "uzun vadeli bakış",
+          "ilerlemeyi değerlendirme"
+        ],
+        "upright": "yatırılan çabayı gözden geçirmek için bir duraklama; meyvesini verip vermediğini veya rotanın değişmesi gerekip gerekmediğini tartmak.",
+        "reversed": "henüz gelmeyen bir sonuç için sabırsızlanmak veya artık sonuç vermeyen bir yolda çabalamaya devam etmek.",
+        "advice": "Dürüst bir değerlendirme yapın. Bu çabanın bir kısmı daha fazla sabrı, bir kısmı ise yeni bir planı hak ediyor."
+      },
+      "eight": {
+        "keywords": [
+          "çalışkanlık",
+          "ustalık",
+          "beceri geliştirme"
+        ],
+        "upright": "bir konuda gerçekten iyi olmaya yönelik istikrarlı, tekrarlanan çaba; gösterişsiz ama ustalığın gerektirdiği şey tam olarak bu.",
+        "reversed": "mükemmeliyetçiliğin gerçek ilerlemeyi durdurması veya tam çabayı hak eden işlerde kestirme yollara sapılması.",
+        "advice": "Gösterişsiz tekrarları yapmaya devam edin. Beceri inşa edilirken tam olarak böyle görünür."
+      },
+      "nine": {
+        "keywords": [
+          "kendi kendine yetme",
+          "bolluk",
+          "bağımsızlık"
+        ],
+        "upright": "büyük ölçüde kendi çabanızla kazanılmış konfor ve bolluk; kimsenin onayına ihtiyaç duymayan bir öz yeterlilik.",
+        "reversed": "dışarıdan iyi görünen ama içi boş hissettiren bir başarı veya başkalarıyla paylaşmaya vakit bırakmayan aşırı çalışma.",
+        "advice": "İnşa ettiğiniz şeyin değerini başkasının onayına ihtiyaç duymadan keyifle yaşayın."
+      },
+      "ten": {
+        "keywords": [
+          "miras",
+          "uzun vadeli güvenlik",
+          "aile serveti"
+        ],
+        "upright": "tek bir kişiden daha uzun ömürlü olan istikrar; sadece kendinizi değil, daha fazlasını desteklemek için inşa edilmiş bir miras veya temel.",
+        "reversed": "baskı altındaki bir miras veya kaynaklar üzerindeki aile anlaşmazlıklarının, kalıcı olması için inşa edilen şeyi tehdit etmesi.",
+        "advice": "Sizden sonraya kalması gerekeni koruyun, ancak üzerindeki anlaşmazlıkların onu inşa etme amacınızı bozmasına izin vermeyin."
+      },
+      "page": {
+        "keywords": [
+          "yeni fırsat",
+          "çalışma",
+          "pratik merak"
+        ],
+        "upright": "yakından incelemeye değer pratik bir fırsat; yeni, umut verici ve hala nasıl çalıştığını öğrenme aşamasında.",
+        "reversed": "gerçeklikle test edilmemiş gerçekçi olmayan planlar veya başlamadan duraksayan ilerleme.",
+        "advice": "Daha fazla taahhütte bulunmadan önce bu fırsatı yakından inceleyin. Umut verici ama henüz kanıtlanmamış."
+      },
+      "knight": {
+        "keywords": [
+          "çalışkanlık",
+          "rutin",
+          "metodik ilerleme"
+        ],
+        "upright": "yavaş, metodik, güvenilir ilerleme; kestirme yol yok, sadece zamanla biriken tutarlı çalışma.",
+        "reversed": "durgunluğa dönüşmüş rutin veya bir şeyin ortaya çıkmasını engelleyecek kadar katı bir mükemmeliyetçilik.",
+        "advice": "İşe yarayan yavaş yönteme güvenin. Etkili olması için daha hızlı olmasına gerek yok."
+      },
+      "queen": {
+        "keywords": [
+          "besleyicilik",
+          "beceriklilik",
+          "ayakları yere basma"
+        ],
+        "upright": "somut yollarla kendini gösteren pratik bakım; başkalarına cömertçe sunulan konfor, kaynaklar ve sağlam bir duruş.",
+        "reversed": "başkalarına gösterilen ilginin kendinize olan bakımı ihmal etmesi veya kaynaklar konusundaki güvensizliğin cömertliği zayıflatması.",
+        "advice": "Herkese kolayca sunduğunuz pratik bakımı kendinize de gösterin."
+      },
+      "king": {
+        "keywords": [
+          "maddi ustalık",
+          "finansal güvenlik",
+          "cömertlik"
+        ],
+        "upright": "zamanla inşa edilmiş maddi ve finansal ustalık; artık yarattığı güvenliği paylaşacak kadar cömert.",
+        "reversed": "kaynaklar üzerindeki kontrolün katılaşması veya sahiplenici hale gelmesi, ya da finansal güvenliğin her şeyin önüne geçmesi.",
+        "advice": "İnşa ettiğiniz şeyi cömertçe kullanın. Paylaşılmayan güvenlik sonunda sadece yalnızlığa dönüşür."
+      }
+    }
+  }
+}
