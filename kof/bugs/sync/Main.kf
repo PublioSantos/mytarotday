@@ -1,0 +1,28 @@
+class Contador {
+    Map<String, Int> dados
+
+    public constructor() {
+        this.dados = mapOf()
+    }
+
+    synchronized Int somar(String chave) {
+        var n = 1
+        if (this.dados.contains(chave)) {
+            var v = this.dados.get(chave)
+            if (v != null) {
+                n = v + 1
+            }
+        }
+        this.dados.put(chave, n)
+        return n
+    }
+}
+
+main() {
+    var c = new Contador()
+    var i = 0
+    while (i < 5) {
+        println("somar -> " + c.somar("x"))
+        i = i + 1
+    }
+}

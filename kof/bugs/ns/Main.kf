@@ -1,0 +1,3 @@
+main() {
+    println("time.now(): " + time.now())
+}

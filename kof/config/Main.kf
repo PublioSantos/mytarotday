@@ -1,0 +1,102 @@
+// ==========================================================================
+// mytarot.day — porte nativo do extrair-config.js para Kof.
+//
+// Escreve engine/locales.json: a config canonica por idioma (RTL, formato de
+// data, simbolo de interrogacao, nome nativo) + os aliases de negociacao de
+// locale. Tudo aqui e' tabela fixa copiada de content/lib/i18n.js (o "codigo
+// fonte" continua sendo aquele arquivo Node — isto so precisa ser mantido em
+// sincronia manualmente se as tabelas de la mudarem, exatamente como
+// MINOR_CARD_PREPOSITION ja e' copiado a mao para prepPara() em
+// reshape/Main.kf).
+//
+//   kof run Main.kf
+// ==========================================================================
+
+record IdiomaCfg(String code, String nativeName, Int isRtl, String questionMark, String dateFormat)
+record Alias(String from, String to)
+record Locales(List<String> supported, String fallback, List<Alias> aliases, List<IdiomaCfg> idiomas)
+
+// Mesma lista de content/data/*.json (sem cards-structure.json).
+List<String> codigos() {
+    return listOf("ar", "cs", "da", "de", "el", "en", "es", "fi", "fr", "he",
+        "hi", "hu", "id", "it", "ja", "ko", "nl", "no", "pl", "pt", "ro",
+        "ru", "sv", "th", "tr", "uk", "vi", "zh")
+}
+
+String nomeNativo(String code) {
+    if (code == "ar") { return "العربية" }
+    if (code == "cs") { return "Čeština" }
+    if (code == "da") { return "Dansk" }
+    if (code == "de") { return "Deutsch" }
+    if (code == "el") { return "Ελληνικά" }
+    if (code == "en") { return "English" }
+    if (code == "es") { return "Español" }
+    if (code == "fi") { return "Suomi" }
+    if (code == "fr") { return "Français" }
+    if (code == "he") { return "עברית" }
+    if (code == "hi") { return "हिन्दी" }
+    if (code == "hu") { return "Magyar" }
+    if (code == "id") { return "Bahasa Indonesia" }
+    if (code == "it") { return "Italiano" }
+    if (code == "ja") { return "日本語" }
+    if (code == "ko") { return "한국어" }
+    if (code == "nl") { return "Nederlands" }
+    if (code == "no") { return "Norsk" }
+    if (code == "pl") { return "Polski" }
+    if (code == "pt") { return "Português" }
+    if (code == "ro") { return "Română" }
+    if (code == "ru") { return "Русский" }
+    if (code == "sv") { return "Svenska" }
+    if (code == "th") { return "ไทย" }
+    if (code == "tr") { return "Türkçe" }
+    if (code == "uk") { return "Українська" }
+    if (code == "vi") { return "Tiếng Việt" }
+    if (code == "zh") { return "中文" }
+    return code
+}
+
+Int ehRtl(String code) {
+    if (code == "ar" || code == "he") {
+        return 1
+    }
+    return 0
+}
+
+String interrogacao(String code) {
+    if (code == "ar" || code == "he") {
+        return "؟"
+    }
+    return "?"
+}
+
+// "MDY" | "DMY" | "YMD" — ordem dos segmentos na mascara de data.
+String formatoData(String code) {
+    if (code == "en") {
+        return "MDY"
+    }
+    if (code == "ja" || code == "ko" || code == "zh" || code == "hu" || code == "sv") {
+        return "YMD"
+    }
+    return "DMY"
+}
+
+main() {
+    var codes = codigos()
+    var idiomas = listOf()
+    var i = 0
+    while (i < codes.size) {
+        var code = codes.get(i)
+        idiomas.add(IdiomaCfg(code, nomeNativo(code), ehRtl(code), interrogacao(code), formatoData(code)))
+        i = i + 1
+    }
+
+    var aliases = listOf()
+    aliases.add(Alias("nb", "no"))
+    aliases.add(Alias("nn", "no"))
+    aliases.add(Alias("iw", "he"))
+    aliases.add(Alias("in", "id"))
+
+    var doc = Locales(codes, "en", aliases, idiomas)
+    var ok = File("/home/publio/Downloads/install/mytarot-kof/engine/locales.json").writeText(json.encode(doc))
+    println("locales.json escrito: " + ok + " | " + idiomas.size + " idiomas | " + aliases.size + " aliases")
+}

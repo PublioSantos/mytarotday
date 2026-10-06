@@ -1,0 +1,216 @@
+// ==========================================================================
+// mytarot.day — readingEngine portado para Kof
+//
+// Porte fiel de lib/readingEngine.js + lib/rng.js. Consome a MESMA sequencia
+// de numeros aleatorios, na mesma ordem, para dar saida identica ao JS quando
+// os dois usam a mesma semente:
+//   4 sorteios no pickUnique, depois 2 por carta (orientacao, intro), e 1 na
+//   clausula de sumario = 13 no total.
+//
+// Os dados vem achatados por reshape.py em majorArcana/minorArcana como um
+// array unico alinhado por id (json.decode<Map<String,T>> so passou a
+// funcionar a partir do 0.4.x; ver historico em [[project-mytarot-kof-port]]).
+// ==========================================================================
+
+record NeutralCard(Int id, String glyph, String image, String suitKey, String rankKey, Int isMajor)
+record CardText(Int id, String name, List<String> keywords, String upright, String reversed, String advice)
+record Position(String key, String label, String subtitle, List<String> intros)
+record Meta(List<Position> positions, List<String> summaryClauses, String reversedLabel)
+
+// -------------------------------------------------------------------- RNG
+
+// Lehmer / MINSTD. Escolhido porque cabe exato em Long no Kof e em double no
+// JS (2^31 * 48271 < 2^53), entao os dois lados geram a MESMA sequencia.
+// Em producao usar seed <= 0, que cai no random da plataforma.
+class Rng {
+    Long state
+    Int seeded
+
+    public constructor(Int seed) {
+        if (seed > 0) {
+            this.seeded = 1
+            this.state = seed
+        } else {
+            this.seeded = 0
+            this.state = 1
+        }
+    }
+
+    Double next() {
+        if (this.seeded == 1) {
+            this.state = (this.state * 48271) % 2147483647
+            return this.state / 2147483647.0
+        }
+        return random.randomInt(2147483647) / 2147483647.0
+    }
+
+    Int below(Int n) {
+        var d = this.next() * n
+        return d as Int
+    }
+}
+
+// ---------------------------------------------------------------- helpers
+
+// Equivalente a meaning.replace(/\.\s*$/, "") do JS.
+String stripTrailingPeriod(String s) {
+    var end = s.length
+    while (end > 0 && isSpaceAt(s, end - 1)) {
+        end = end - 1
+    }
+    if (end > 0 && s.charAt(end - 1) == '.') {
+        end = end - 1
+    }
+    return s.substring(0, end)
+}
+
+Bool isSpaceAt(String s, Int i) {
+    var c = s.charAt(i)
+    return c == ' ' || c == '\t' || c == '\n' || c == '\r'
+}
+
+String replaceAll(String src, String needle, String rep) {
+    var out = ""
+    var rest = src
+    var guard = 0
+    while (guard < 50) {
+        var at = rest.indexOf(needle)
+        if (at < 0) {
+            guard = 50
+        } else {
+            out = out + rest.substring(0, at) + rep
+            rest = rest.substring(at + needle.length)
+            guard = guard + 1
+        }
+    }
+    return out + rest
+}
+
+String readAll(String path) {
+    var raw = File(path).readText()
+    if (raw != null) {
+        return raw
+    }
+    return ""
+}
+
+// --------------------------------------------------------------- engine
+
+class Engine {
+    List<NeutralCard> deck
+    List<CardText> cards
+    Meta meta
+
+    public constructor(String code) {
+        this.deck = json.decode<List<NeutralCard>>(readAll("deck.json"))
+        this.cards = json.decode<List<CardText>>(readAll(code + ".cards.json"))
+        this.meta = json.decode<Meta>(readAll(code + ".meta.json"))
+    }
+
+    // pickUnique: sorteia indices sem repor, igual ao pool.splice do JS.
+    Int[] drawIndices(Int count, Rng rng) {
+        var n = this.deck.size
+        var pool = new Int[n]
+        var i = 0
+        while (i < n) {
+            pool[i] = i
+            i = i + 1
+        }
+        var poolSize = n
+        var picked = new Int[count]
+        var k = 0
+        while (k < count) {
+            var idx = rng.below(poolSize)
+            picked[k] = pool[idx]
+            var j = idx
+            while (j < poolSize - 1) {
+                pool[j] = pool[j + 1]
+                j = j + 1
+            }
+            poolSize = poolSize - 1
+            k = k + 1
+        }
+        return picked
+    }
+
+    String composeParagraph(Position pos, CardText card, Bool reversed, Rng rng, String reversedWord) {
+        var intros = pos.intros()
+        var intro = intros.get(rng.below(intros.size))
+        var raw = card.upright()
+        if (reversed) {
+            raw = card.reversed()
+        }
+        var meaning = stripTrailingPeriod(raw)
+        var orientationWord = ","
+        if (reversed) {
+            orientationWord = ", " + reversedWord + ","
+        }
+        return intro + " **" + card.name() + "**" + orientationWord + " " + meaning + ". " + card.advice()
+    }
+
+    String generate(String dateStr, Rng rng) {
+        var positions = this.meta.positions()
+        var count = positions.size
+        var chosen = this.drawIndices(count, rng)
+        var reversedWord = this.meta.reversedLabel()
+
+        var out = "date=" + dateStr + "\n"
+        var names = new Int[count]
+        var i = 0
+        while (i < count) {
+            var pos = positions.get(i)
+            var card = this.cards.get(chosen[i])
+            var reversed = rng.next() < 0.35
+            var paragraph = this.composeParagraph(pos, card, reversed, rng, reversedWord)
+            var orientation = "upright"
+            if (reversed) {
+                orientation = "reversed"
+            }
+            var kw = card.keywords()
+            var kwLine = ""
+            var j = 0
+            while (j < kw.size) {
+                if (j > 0) {
+                    kwLine = kwLine + "|"
+                }
+                kwLine = kwLine + kw.get(j)
+                j = j + 1
+            }
+            names[i] = chosen[i]
+            out = out + "position=" + pos.key() + "\n"
+            out = out + "label=" + pos.label() + "\n"
+            out = out + "subtitle=" + pos.subtitle() + "\n"
+            out = out + "cardId=" + card.id() + "\n"
+            out = out + "cardName=" + card.name() + "\n"
+            out = out + "orientation=" + orientation + "\n"
+            out = out + "keywords=" + kwLine + "\n"
+            out = out + "reading=" + paragraph + "\n"
+            i = i + 1
+        }
+
+        var clauses = this.meta.summaryClauses()
+        var clause = clauses.get(rng.below(clauses.size))
+        var determinant = "**" + this.cards.get(names[0]).name() + "**"
+        var past = this.cards.get(names[1]).name().toLowerCase()
+        var future = this.cards.get(names[3]).name().toLowerCase()
+        var summary = replaceAll(clause, "{determinant}", determinant)
+        summary = replaceAll(summary, "{past}", past)
+        summary = replaceAll(summary, "{future}", future)
+        out = out + "summary=" + summary
+        return out
+    }
+}
+
+main() {
+    var code = readAll("cfg.txt").trim()
+    if (code.length == 0) {
+        code = "en"
+    }
+    var engine = new Engine(code)
+    var seed = 1
+    while (seed <= 5) {
+        println("--- seed " + seed + " locale " + code)
+        println(engine.generate("2026-09-12", new Rng(seed)))
+        seed = seed + 1
+    }
+}

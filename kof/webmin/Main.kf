@@ -1,0 +1,17 @@
+main() {
+    var app = web.app()
+
+    app.get("/ok") {
+        return "ok"
+    }
+
+    app.post("/semcorpo") {
+        return "post sem ler corpo"
+    }
+
+    app.post("/comcorpo") {
+        return "corpo=" + body()
+    }
+
+    app.listen(8101)
+}

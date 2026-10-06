@@ -1,0 +1,4 @@
+record No(String tipo, String nome)
+main() {
+    println(json.encode(No("WebApplication", "MyTarot.Day")))
+}

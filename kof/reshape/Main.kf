@@ -1,0 +1,257 @@
+// ==========================================================================
+// mytarot.day — porte nativo do reshape.py para Kof.
+//
+// Achata os dados de /home/publio/mytarot/data (mount SSHFS, so leitura) nos
+// arquivos que o servidor consome: deck.json, <code>.cards.json,
+// <code>.meta.json (copiados para server/ pelo deploy.sh) e ainda
+// <code>.render.json / <code>.ui.json (insumos de build vestigiais, nao
+// copiados para server/, mantidos so por paridade com o pipeline antigo).
+//
+// json.decode<Map<String,T>> ja funciona no Kof 0.4.4-beta (issue #103
+// fechada), MAS decodificar um Map<String,Record> quando ele e' CAMPO de
+// outro record (ou aninhado dentro de outro Map) devolve o Map vazio, sem
+// erro — bug ainda nao reportado, achado ao portar isto. Contorno: nunca
+// decodificar Map<String,Record> a nao ser como ARGUMENTO DE TIPO DIRETO de
+// json.decode<...>(...); para isolar cada trecho antes de decodificar, um
+// extrator manual (campoBruto/extraiValorBalanceado) faz o corte respeitando
+// aspas e escapes — o mesmo estilo ja usado em jsonField() no server/Main.kf
+// para o corpo do POST, so que aqui com objetos/arrays inteiros em vez de um
+// unico valor escalar.
+//
+//   cd /home/publio/Downloads/install/mytarot-kof/reshape && kof run Main.kf <codigos...>
+// ==========================================================================
+
+record IdiomaCfg(String code, String nativeName, Int isRtl, String questionMark, String dateFormat)
+record Tabela(List<String> supported, String fallback, List<IdiomaCfg> idiomas)
+
+record MajorRef(Int id, String glyph, String image)
+record MinorRef(Int id, String glyph, String image, String suitKey, String rankKey)
+record Structure(List<MajorRef> major, List<MinorRef> minor)
+
+record ArcanaMajor(String name, List<String> keywords, String upright, String reversed, String advice)
+record ArcanaMinor(List<String> keywords, String upright, String reversed, String advice)
+record PositionRaw(String label, String subtitle, List<String> intros)
+record Faq(String q, String a)
+
+// Mesma forma que server/Main.kf e engine/Main.kf esperam decodificar.
+record NeutralCard(Int id, String glyph, String image, String suitKey, String rankKey, Int isMajor)
+record CardText(Int id, String name, List<String> keywords, String upright, String reversed, String advice)
+record Position(String key, String label, String subtitle, List<String> intros)
+record Meta(List<Position> positions, List<String> summaryClauses, String reversedLabel)
+record UiPar(String k, String v)
+record RenderJson(String code, Int isRtl, String questionMark, List<UiPar> ui, List<Faq> faq)
+
+String srcData() { return "/home/publio/mytarot/data" }
+String outDir() { return "/home/publio/Downloads/install/mytarot-kof/engine" }
+
+// Mesma tabela fixa do reshape.py original (nao vem de arquivo).
+String prepPara(String code) {
+    if (code == "en") { return "of" }
+    if (code == "pt") { return "de" }
+    if (code == "es") { return "de" }
+    if (code == "fr") { return "de" }
+    if (code == "ro") { return "de" }
+    if (code == "it") { return "di" }
+    if (code == "nl") { return "van" }
+    return ""
+}
+
+// As 30 chaves fixas de `ui` (mesmo conjunto do record Ui em gerador/Main.kf).
+// So usado para montar render.json (vestigial); ui.json em si e' o trecho
+// bruto extraido, entao preserva chaves extras/ausentes fielmente.
+List<String> chavesUi() {
+    return listOf("logo", "tagline", "eyebrow", "selectCardsPrompt", "heroTitleLine1",
+        "heroTitleEm", "submitLabel", "submittingLabel", "loadingText", "tryAnotherLabel",
+        "buyMeCoffeeLabel", "funFact", "footerDisclaimer", "footerTagline", "footerHome",
+        "footerBlog", "footerPrivacy", "footerTerms", "footerAbout", "footerContact",
+        "todayBadge", "reversedLabel", "uprightLabel", "supportPromptText",
+        "summaryGuideLabel", "summaryPastLabel", "summaryFutureLabel", "freeBadge",
+        "freeTitlePhrase", "skipToContent")
+}
+
+String ler(String caminho) {
+    var raw = File(caminho).readText()
+    if (raw != null) {
+        return raw
+    }
+    return ""
+}
+
+// Extrai o VALOR bruto (objeto, array ou escalar) que comeca em `inicio`,
+// respeitando aspas e escapes para nao contar `{`/`}`/`[`/`]` dentro de
+// strings (os textos das cartas usam literalmente "{determinant}" etc).
+String extraiValorBalanceado(String s, Int inicio) {
+    var i = inicio
+    while (i < s.length && s.charAt(i) != '{' && s.charAt(i) != '[') {
+        i = i + 1
+    }
+    var abre = s.charAt(i)
+    var fecha = '}'
+    if (abre == '[') {
+        fecha = ']'
+    }
+    var profundidade = 0
+    var dentroDeString = 0
+    var j = i
+    while (j < s.length) {
+        var c = s.charAt(j)
+        if (dentroDeString == 1) {
+            if (c == '\\') {
+                j = j + 1
+            } else if (c == '"') {
+                dentroDeString = 0
+            }
+        } else {
+            if (c == '"') {
+                dentroDeString = 1
+            } else if (c == abre) {
+                profundidade = profundidade + 1
+            } else if (c == fecha) {
+                profundidade = profundidade - 1
+                if (profundidade == 0) {
+                    return s.substring(i, j + 1)
+                }
+            }
+        }
+        j = j + 1
+    }
+    return ""
+}
+
+// Localiza a chave de nivel superior `"chave":` e devolve o valor bruto
+// (ainda como texto JSON) que vem depois. Vazio se a chave nao existe.
+String campoBruto(String json, String chave) {
+    var agulha = "\"" + chave + "\""
+    var at = json.indexOf(agulha)
+    if (at < 0) {
+        return ""
+    }
+    var resto = json.substring(at + agulha.length)
+    var doisPontos = resto.indexOf(":")
+    if (doisPontos < 0) {
+        return ""
+    }
+    return extraiValorBalanceado(json, at + agulha.length + doisPontos + 1)
+}
+
+main() {
+    var tabela = json.decode<Tabela>(ler(outDir() + "/locales.json"))
+    var idiomas = tabela.idiomas()
+
+    var structure = json.decode<Structure>(ler(srcData() + "/cards-structure.json"))
+
+    var deck = listOf()
+    var mi = 0
+    while (mi < structure.major().size) {
+        var m = structure.major().get(mi)
+        deck.add(NeutralCard(m.id(), m.glyph(), m.image(), "", "", 1))
+        mi = mi + 1
+    }
+    var ni = 0
+    while (ni < structure.minor().size) {
+        var n = structure.minor().get(ni)
+        deck.add(NeutralCard(n.id(), n.glyph(), n.image(), n.suitKey(), n.rankKey(), 0))
+        ni = ni + 1
+    }
+    File(outDir() + "/deck.json").writeText(json.encode(deck))
+
+    var ordem = listOf("determinant", "past", "present", "future")
+    var chaves = chavesUi()
+
+    var i = 0
+    while (i < idiomas.size) {
+        var cfg = idiomas.get(i)
+        var code = cfg.code()
+        var raw = ler(srcData() + "/" + code + ".json")
+
+        var majorMap = json.decode<Map<String, ArcanaMajor>>(campoBruto(raw, "majorArcana"))
+
+        var minorJson = campoBruto(raw, "minorArcana")
+        var wandsMap = json.decode<Map<String, ArcanaMinor>>(campoBruto(minorJson, "wands"))
+        var cupsMap = json.decode<Map<String, ArcanaMinor>>(campoBruto(minorJson, "cups"))
+        var swordsMap = json.decode<Map<String, ArcanaMinor>>(campoBruto(minorJson, "swords"))
+        var pentaclesMap = json.decode<Map<String, ArcanaMinor>>(campoBruto(minorJson, "pentacles"))
+
+        var ranksMap = json.decode<Map<String, String>>(campoBruto(raw, "ranks"))
+        var suitsMap = json.decode<Map<String, String>>(campoBruto(raw, "suits"))
+
+        var prep = prepPara(code)
+
+        var cards = listOf()
+        var ci = 0
+        while (ci < deck.size) {
+            var c = deck.get(ci)
+            if (c.isMajor() == 1) {
+                var e = majorMap.get(c.id() + "")
+                cards.add(CardText(c.id(), e.name(), e.keywords(), e.upright(), e.reversed(), e.advice()))
+            } else {
+                var suitMap = wandsMap
+                if (c.suitKey() == "cups") {
+                    suitMap = cupsMap
+                } else if (c.suitKey() == "swords") {
+                    suitMap = swordsMap
+                } else if (c.suitKey() == "pentacles") {
+                    suitMap = pentaclesMap
+                }
+                var e = suitMap.get(c.rankKey())
+                var rank = ranksMap.get(c.rankKey())
+                var suit = suitsMap.get(c.suitKey())
+                var nome = rank + " " + suit
+                if (prep.length > 0) {
+                    nome = rank + " " + prep + " " + suit
+                }
+                cards.add(CardText(c.id(), nome, e.keywords(), e.upright(), e.reversed(), e.advice()))
+            }
+            ci = ci + 1
+        }
+
+        var posMap = json.decode<Map<String, PositionRaw>>(campoBruto(raw, "positions"))
+        var positions = listOf()
+        var oi = 0
+        while (oi < ordem.size) {
+            var k = ordem.get(oi)
+            var p = posMap.get(k)
+            positions.add(Position(k, p.label(), p.subtitle(), p.intros()))
+            oi = oi + 1
+        }
+
+        var summaryClauses = json.decode<List<String>>(campoBruto(raw, "summaryClauses"))
+
+        var uiJson = campoBruto(raw, "ui")
+        var uiMap = json.decode<Map<String, String>>(uiJson)
+        var reversedLabel = uiMap.get("reversedLabel")
+        if (reversedLabel == null) {
+            reversedLabel = "Reversed"
+        }
+        reversedLabel = reversedLabel.toLowerCase()
+
+        var meta = Meta(positions, summaryClauses, reversedLabel)
+
+        var faqJson = campoBruto(raw, "faq")
+        var faq = listOf()
+        if (faqJson.length > 0) {
+            faq = json.decode<List<Faq>>(faqJson)
+        }
+
+        var uiPares = listOf()
+        var ki = 0
+        while (ki < chaves.size) {
+            var k = chaves.get(ki)
+            var v = uiMap.get(k)
+            if (v == null) {
+                v = ""
+            }
+            uiPares.add(UiPar(k, v))
+            ki = ki + 1
+        }
+        var render = RenderJson(code, cfg.isRtl(), cfg.questionMark(), uiPares, faq)
+
+        File(outDir() + "/" + code + ".cards.json").writeText(json.encode(cards))
+        File(outDir() + "/" + code + ".meta.json").writeText(json.encode(meta))
+        File(outDir() + "/" + code + ".render.json").writeText(json.encode(render))
+        File(outDir() + "/" + code + ".ui.json").writeText(uiJson)
+
+        println(code + ": deck " + deck.size + " | cards " + cards.size + " | posicoes " + positions.size + " | clauses " + summaryClauses.size)
+        i = i + 1
+    }
+}

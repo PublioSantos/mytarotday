@@ -1,0 +1,11 @@
+record Carta(Int id, String name, String glyph, String image, Bool isMajor)
+record Posicao(String position, String label, List<String> keywords, Carta card, String reading)
+record Leitura(String date, List<Posicao> cards, String summary)
+
+main() {
+    var kw = listOf("começos", "inocência")
+    var c = Carta(0, "O Louco \"citado\"", "fool", "RWS_00.jpg", true)
+    var p = Posicao("determinant", "O Determinante", kw, c, "texto com \" aspas e \\ barra")
+    var leitura = Leitura("2026-09-13", listOf(p), "resumo")
+    println(json.encode(leitura))
+}

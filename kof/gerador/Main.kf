@@ -1,0 +1,101 @@
+// ==========================================================================
+// Gerador de artefatos do mytarot.day — em Kof.
+//
+// Substitui o gen-api.js, que fazia `require()` do lib/i18n.js de producao.
+// Le locales.json + <code>.ui.json (produzidos por config/Main.kf e
+// reshape/Main.kf) e escreve <code>.api.json — o corpo exato de
+// GET /api/locale/:code, que o servidor so devolve.
+//
+// `ui` e' Map<String,String>, nao um record de campos fixos: o objeto `ui`
+// de origem e' esparso (26 dos 28 idiomas nao tem `skipToContent`), e
+// json.encode de um Map so emite as chaves que de fato existem nele — testado
+// e confirmado nesta sessao. Um record fixo emitiria `"skipToContent":null`
+// aonde o JS original simplesmente omite a chave, mudando o payload publico.
+//
+// BUG do Kof 0.4.4-beta encontrado ao escrever isto (nao reportado ainda):
+// passar um Map vindo de json.decode<Map<...>> como ARGUMENTO de uma funcao
+// definida pelo usuario (mesmo com o parametro tipado exatamente
+// Map<String,String>) quebra a VERIFICACAO DE BYTECODE — nem a primeira
+// linha do main() chega a rodar — desde que em algum ponto do mesmo programa
+// um record contendo um Map<String,String> tambem passe por json.encode().
+// O erro reportado pela JVM e' totalmente enganoso ("os componentes de
+// runtime do JavaFX nao foram encontrados"). Isolado com repros minimos:
+// o mesmo Map construido via mapOf()+put() (em vez de decode) funciona
+// normalmente passado pela mesma funcao, no mesmo contexto. Contorno:
+// nunca passar um Map decodificado por uma funcao — so usar `.get()` nele
+// diretamente, no mesmo escopo onde o decode aconteceu, copiando pra um
+// mapOf() novo ali mesmo.
+//
+//   kof run Main.kf
+// ==========================================================================
+
+record IdiomaCfg(String code, String nativeName, Int isRtl, String questionMark, String dateFormat)
+record Tabela(List<String> supported, String fallback, List<IdiomaCfg> idiomas)
+
+// Forma exata da resposta: a ordem dos campos e a ordem das chaves no JSON.
+record LocaleRef(String code, String name)
+record ApiResposta(String code, Bool isRtl, String dateFormat, String questionMark,
+                   Map<String, String> ui, List<LocaleRef> locales)
+
+String outDir() { return "/home/publio/Downloads/install/mytarot-kof/engine" }
+
+// As 30 chaves fixas do objeto `ui` de cada idioma.
+List<String> chavesUi() {
+    return listOf("logo", "tagline", "eyebrow", "selectCardsPrompt", "heroTitleLine1",
+        "heroTitleEm", "submitLabel", "submittingLabel", "loadingText", "tryAnotherLabel",
+        "buyMeCoffeeLabel", "funFact", "footerDisclaimer", "footerTagline", "footerHome",
+        "footerBlog", "footerPrivacy", "footerTerms", "footerAbout", "footerContact",
+        "todayBadge", "reversedLabel", "uprightLabel", "supportPromptText",
+        "summaryGuideLabel", "summaryPastLabel", "summaryFutureLabel", "freeBadge",
+        "freeTitlePhrase", "skipToContent")
+}
+
+String ler(String caminho) {
+    var raw = File(caminho).readText()
+    if (raw != null) {
+        return raw
+    }
+    return ""
+}
+
+main() {
+    var tabela = json.decode<Tabela>(ler(outDir() + "/locales.json"))
+    var idiomas = tabela.idiomas()
+
+    // lista de idiomas para o seletor, igual em todas as respostas
+    var refs = listOf()
+    var i = 0
+    while (i < idiomas.size) {
+        var cfg = idiomas.get(i)
+        refs.add(LocaleRef(cfg.code(), cfg.nativeName()))
+        i = i + 1
+    }
+
+    var chaves = chavesUi()
+    var escritos = 0
+    var j = 0
+    while (j < idiomas.size) {
+        var cfg = idiomas.get(j)
+        var code = cfg.code()
+        var decodificado = json.decode<Map<String, String>>(ler(outDir() + "/" + code + ".ui.json"))
+        // copia inline (nunca passar `decodificado` por uma funcao — ver bug acima)
+        var ui = mapOf<String, String>()
+        var k = 0
+        while (k < chaves.size) {
+            var chave = chaves.get(k)
+            var valor = decodificado.get(chave)
+            if (valor != null) {
+                ui.put(chave, valor)
+            }
+            k = k + 1
+        }
+        var corpo = ApiResposta(code, cfg.isRtl() == 1, cfg.dateFormat(),
+                                cfg.questionMark(), ui, refs)
+        var ok = File(outDir() + "/" + code + ".api.json").writeText(json.encode(corpo))
+        if (ok) {
+            escritos = escritos + 1
+        }
+        j = j + 1
+    }
+    println("api.json escritos: " + escritos + " de " + idiomas.size)
+}

@@ -1,0 +1,26 @@
+// Reproduz a escada 0 / 5s / 10s / 20s do server.js usando o limitador da
+// plataforma: uma chave por degrau, todas incrementadas a cada requisicao.
+Int atrasoPara(String ip) {
+    var ate4 = security.rateLimit(ip + "|t4", 4, 3600)
+    var ate5 = security.rateLimit(ip + "|t5", 5, 3600)
+    var ate6 = security.rateLimit(ip + "|t6", 6, 3600)
+    if (ate4) {
+        return 0
+    }
+    if (ate5) {
+        return 5000
+    }
+    if (ate6) {
+        return 10000
+    }
+    return 20000
+}
+
+main() {
+    var i = 1
+    while (i <= 8) {
+        println("requisicao " + i + " -> atraso " + atrasoPara("1.2.3.4") + " ms")
+        i = i + 1
+    }
+    println("IP diferente -> atraso " + atrasoPara("9.9.9.9") + " ms")
+}

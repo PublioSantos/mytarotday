@@ -1,0 +1,11 @@
+main() {
+    var app = web.app()
+    app.get("/h") {
+        var c = header("cookie")
+        if (c == null) {
+            return "header ausente devolve NULL"
+        }
+        return "header ausente devolve string de tamanho " + c.length
+    }
+    app.listen(8100)
+}

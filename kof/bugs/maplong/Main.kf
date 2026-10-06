@@ -1,0 +1,6 @@
+main() {
+    var m = mapOf()
+    var agora = now()
+    m.put("k", agora)
+    println("guardado")
+}

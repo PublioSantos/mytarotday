@@ -1,0 +1,6 @@
+main() {
+    var m = mapOf()
+    Double d = 1.5
+    m.put("k", d)
+    println("ok")
+}

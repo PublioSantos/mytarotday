@@ -1,0 +1,13 @@
+record Ui(String logo, String skipToContent)
+record No(String tipo, String nome)
+
+main() {
+    // candidato 2: existe saida indentada?
+    println("compacto: " + json.encode(No("WebApplication", "MyTarot")))
+    // candidato 3: campo nulo e omitido ou emitido?
+    var raw = File("ui.json").readText()
+    if (raw != null) {
+        var ui = json.decode<Ui>(raw)
+        println("reencode: " + json.encode(ui))
+    }
+}

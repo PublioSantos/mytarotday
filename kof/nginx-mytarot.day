@@ -1,0 +1,68 @@
+# mytarot.day — Nginx servindo estaticos e o canonico, app Kof no backend.
+#
+# O que mudou em relacao a config antiga:
+#  1. O 301 canonico (www -> apex, http -> https) saiu do app e veio pra ca.
+#     O porte Kof deliberadamente nao o implementa.
+#  2. Os arquivos de public/ passam a ser servidos pelo Nginx, nao pelo
+#     express.static. Mesmos tempos de cache: 30d imutavel em /images/,
+#     5 minutos no resto.
+#  3. O proxy aponta para 3001 (Kof) em vez de 3000 (Node).
+#
+# Rollback: trocar 3001 por 3000 nos dois proxy_pass e recarregar.
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name mytarot.day www.mytarot.day;
+
+    # --- canonico (era o primeiro middleware do server.js) -----------------
+    # TLS termina no Cloudflare, entao a origem so ve porta 80; quem decide e
+    # o X-Forwarded-Proto repassado pelo Cloudflare.
+    if ($host ~* ^www\.) {
+        return 301 https://mytarot.day$request_uri;
+    }
+    if ($http_x_forwarded_proto != "https") {
+        return 301 https://mytarot.day$request_uri;
+    }
+
+    root /var/www/mytarot/public;
+
+    # --- imagens das cartas: 30 dias, imutavel ----------------------------
+    location /images/ {
+        alias /var/www/mytarot/public/images/;
+        try_files $uri =404;
+        access_log off;
+        expires 30d;
+        add_header Cache-Control "public, immutable";
+    }
+
+    # --- API: sempre do app, nunca do disco -------------------------------
+    location /api/ {
+        proxy_pass http://127.0.0.1:3001;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $http_x_forwarded_proto;
+        proxy_set_header CF-Connecting-IP $http_cf_connecting_ip;
+    }
+
+    # --- estatico se existir no disco, senao o app ------------------------
+    # Espelha a ordem do express: static primeiro, rotas depois.
+    # $uri/index.html cobre /blog/, que tem index proprio.
+    location / {
+        try_files $uri $uri/index.html @app;
+        expires 5m;
+        add_header Cache-Control "public, max-age=300";
+    }
+
+    location @app {
+        proxy_pass http://127.0.0.1:3001;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $http_x_forwarded_proto;
+        proxy_set_header CF-Connecting-IP $http_cf_connecting_ip;
+    }
+}

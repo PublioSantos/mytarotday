@@ -1,0 +1,11 @@
+class Holder {
+    Long value
+    public constructor(Int n) {
+        this.value = n
+    }
+}
+
+main() {
+    var h = new Holder(42)
+    println(h.value)
+}

@@ -1,0 +1,6 @@
+main() {
+    var m = mapOf()
+    m.put("k", 42)
+    var v = m.get("k")
+    println("Int no Map: " + v)
+}

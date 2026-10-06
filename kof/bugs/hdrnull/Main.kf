@@ -1,0 +1,11 @@
+main() {
+    var app = web.app()
+    app.get("/h") {
+        var c = header("x-ausente")
+        if (c == null) {
+            return "header() devolveu null, mas o tipo declarado e String"
+        }
+        return "tamanho: " + c.length
+    }
+    app.listen(8123)
+}

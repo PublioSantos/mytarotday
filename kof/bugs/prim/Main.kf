@@ -1,0 +1,16 @@
+record Item(Int id, String nome)
+
+main() {
+    // lista vazia + add, para montar as cartas
+    var l = listOf()
+    l.add(Item(1, "um"))
+    l.add(Item(2, "dois"))
+    println("lista: " + l.size + " -> " + json.encode(l))
+
+    // calendario da plataforma
+    println("daysInMonth(2028,2) = " + time.daysInMonth(2028, 2))
+    println("daysInMonth(2026,2) = " + time.daysInMonth(2026, 2))
+    println("daysInMonth(2026,4) = " + time.daysInMonth(2026, 4))
+    println("daysInMonth(2100,2) = " + time.daysInMonth(2100, 2))
+    println("isLeapYear(2028)    = " + time.isLeapYear(2028))
+}

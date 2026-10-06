@@ -1,0 +1,708 @@
+// ==========================================================================
+// mytarot.day — servidor em Kof (alvo JVM)
+//
+// Serve o site inteiro: duas rotas de HTML (/ e /:code/) e quatro de API.
+// Roda sob systemd em duas instancias identicas (blue-green), com a porta lida
+// de port.txt e o Nginx decidindo qual delas recebe trafego.
+//
+// O que NAO vive aqui, de proposito:
+//   - arquivos estaticos e o 301 canonico de host/HTTPS ficam no Nginx, que
+//     ja fronteia o app e faz isso melhor. (`app.static` tambem nao existiria:
+//     `static` e palavra reservada, entao nem parseia.)
+//   - o HTML e pre-renderizado por idioma no build; aqui so e' servido.
+//
+// Dados pre-achatados por reshape/Main.kf em arrays alinhados por id, porque
+// os arquivos de idioma de origem sao objetos chaveados (majorArcana/
+// minorArcana). O build inteiro (config/reshape/gerador/renderizador) e'
+// 100% Kof desde 26/09 — os dois bloqueios antigos ("Item 3": json.encode
+// sem indentacao, record de forma fixa emitindo null) foram contornados:
+// o JSON-LD e' montado a mao com a indentacao literal certa em vez de via
+// json.encode, e `ui` e' Map<String,String> (nao record), que so emite as
+// chaves que de fato existem. Ver [[project-mytarot-kof-port]].
+// ==========================================================================
+
+record NeutralCard(Int id, String glyph, String image, String suitKey, String rankKey, Int isMajor)
+record CardText(Int id, String name, List<String> keywords, String upright, String reversed, String advice)
+record Position(String key, String label, String subtitle, List<String> intros)
+record Meta(List<Position> positions, List<String> summaryClauses, String reversedLabel)
+// Forma exata da resposta de /api/reading. A ordem dos campos aqui e' a ordem
+// das chaves no JSON: o json.encode segue a declaracao do record.
+record CartaJson(Int id, String name, String glyph, String image, Bool isMajor)
+record PosicaoJson(String position, String label, String subtitle, CartaJson card, String orientation, List<String> keywords, String reading)
+record LeituraJson(String date, List<PosicaoJson> cards, String summary)
+
+record Alias(String from, String to)
+record LocaleTable(List<String> supported, String fallback, List<Alias> aliases)
+
+// ------------------------------------------------------------------- RNG
+
+class Rng {
+    Long state
+    Int seeded
+
+    public constructor(Int seed) {
+        if (seed > 0) {
+            this.seeded = 1
+            this.state = seed
+        } else {
+            this.seeded = 0
+            this.state = 1
+        }
+    }
+
+    Double next() {
+        if (this.seeded == 1) {
+            this.state = (this.state * 48271) % 2147483647
+            return this.state / 2147483647.0
+        }
+        return random.randomInt(2147483647) / 2147483647.0
+    }
+
+    Int below(Int n) {
+        var d = this.next() * n
+        return d as Int
+    }
+}
+
+// --------------------------------------------------------------- helpers
+
+String readAll(String path) {
+    var raw = File(path).readText()
+    if (raw != null) {
+        return raw
+    }
+    return ""
+}
+
+Bool isSpaceAt(String s, Int i) {
+    var c = s.charAt(i)
+    return c == ' ' || c == '\t' || c == '\n' || c == '\r'
+}
+
+String stripTrailingPeriod(String s) {
+    var end = s.length
+    while (end > 0 && isSpaceAt(s, end - 1)) {
+        end = end - 1
+    }
+    if (end > 0 && s.charAt(end - 1) == '.') {
+        end = end - 1
+    }
+    return s.substring(0, end)
+}
+
+String replaceAll(String src, String needle, String rep) {
+    var out = ""
+    var rest = src
+    var guard = 0
+    while (guard < 50) {
+        var at = rest.indexOf(needle)
+        if (at < 0) {
+            guard = 50
+        } else {
+            out = out + rest.substring(0, at) + rep
+            rest = rest.substring(at + needle.length)
+            guard = guard + 1
+        }
+    }
+    return out + rest
+}
+
+String pad2(Long v) {
+    if (v < 10) {
+        return "0" + v
+    }
+    return "" + v
+}
+
+String pad3(Long v) {
+    if (v < 10) {
+        return "00" + v
+    }
+    if (v < 100) {
+        return "0" + v
+    }
+    return "" + v
+}
+
+// epoch millis -> "YYYY-MM-DDTHH:MM:SS.mmmZ", pelo algoritmo civil_from_days.
+// Escrito a mao porque o kof.time nao tem formatacao de data: a superficie e'
+// now/sleep/interval mais aritmetica de calendario.
+String isoFromMillis(Long ms) {
+    var days = ms / 86400000
+    var rem = ms % 86400000
+    var z = days + 719468
+    var era = z / 146097
+    var doe = z - era * 146097
+    var yoe = (doe - doe / 1460 + doe / 36524 - doe / 146096) / 365
+    var y = yoe + era * 400
+    var doy = doe - (365 * yoe + yoe / 4 - yoe / 100)
+    var mp = (5 * doy + 2) / 153
+    var d = doy - (153 * mp + 2) / 5 + 1
+    var m = mp + 3
+    if (mp >= 10) {
+        m = mp - 9
+    }
+    if (m <= 2) {
+        y = y + 1
+    }
+    var hh = rem / 3600000
+    var mm = (rem % 3600000) / 60000
+    var ss = (rem % 60000) / 1000
+    var mi = rem % 1000
+    return y + "-" + pad2(m) + "-" + pad2(d) + "T" + pad2(hh) + ":" + pad2(mm) + ":" + pad2(ss) + "." + pad3(mi) + "Z"
+}
+
+String jsonStr(String s) {
+    return "\"" + strings.escapeJson(s) + "\""
+}
+
+// ---------------------------------------------------------------- engine
+
+class Engine {
+    List<NeutralCard> deck
+    List<CardText> cards
+    Meta meta
+
+    public constructor(String code) {
+        this.deck = json.decode<List<NeutralCard>>(readAll("deck.json"))
+        this.cards = json.decode<List<CardText>>(readAll(code + ".cards.json"))
+        this.meta = json.decode<Meta>(readAll(code + ".meta.json"))
+    }
+
+    Int[] drawIndices(Int count, Rng rng) {
+        var n = this.deck.size
+        var pool = new Int[n]
+        var i = 0
+        while (i < n) {
+            pool[i] = i
+            i = i + 1
+        }
+        var poolSize = n
+        var picked = new Int[count]
+        var k = 0
+        while (k < count) {
+            var idx = rng.below(poolSize)
+            picked[k] = pool[idx]
+            var j = idx
+            while (j < poolSize - 1) {
+                pool[j] = pool[j + 1]
+                j = j + 1
+            }
+            poolSize = poolSize - 1
+            k = k + 1
+        }
+        return picked
+    }
+
+    String composeParagraph(Position pos, CardText card, Bool reversed, Rng rng, String reversedWord) {
+        var intros = pos.intros()
+        var intro = intros.get(rng.below(intros.size))
+        var raw = card.upright()
+        if (reversed) {
+            raw = card.reversed()
+        }
+        var meaning = stripTrailingPeriod(raw)
+        var orientationWord = ","
+        if (reversed) {
+            orientationWord = ", " + reversedWord + ","
+        }
+        return intro + " **" + card.name() + "**" + orientationWord + " " + meaning + ". " + card.advice()
+    }
+
+    String generateJson(String dateStr, Rng rng) {
+        var positions = this.meta.positions()
+        var count = positions.size
+        var chosen = this.drawIndices(count, rng)
+        var reversedWord = this.meta.reversedLabel()
+
+        var saidas = listOf()
+        var i = 0
+        while (i < count) {
+            var pos = positions.get(i)
+            var card = this.cards.get(chosen[i])
+            var neutral = this.deck.get(chosen[i])
+            // ordem dos sorteios preservada: orientacao, depois a abertura
+            var reversed = rng.next() < 0.35
+            var paragraph = this.composeParagraph(pos, card, reversed, rng, reversedWord)
+            var orientation = "upright"
+            if (reversed) {
+                orientation = "reversed"
+            }
+            var carta = CartaJson(card.id(), card.name(), neutral.glyph(),
+                                  neutral.image(), neutral.isMajor() == 1)
+            saidas.add(PosicaoJson(pos.key(), pos.label(), pos.subtitle(), carta,
+                                   orientation, card.keywords(), paragraph))
+            i = i + 1
+        }
+
+        var clauses = this.meta.summaryClauses()
+        var clause = clauses.get(rng.below(clauses.size))
+        var determinant = "**" + this.cards.get(chosen[0]).name() + "**"
+        var past = this.cards.get(chosen[1]).name().toLowerCase()
+        var future = this.cards.get(chosen[3]).name().toLowerCase()
+        var summary = replaceAll(clause, "{determinant}", determinant)
+        summary = replaceAll(summary, "{past}", past)
+        summary = replaceAll(summary, "{future}", future)
+
+        return json.encode(LeituraJson(dateStr, saidas, summary))
+    }
+}
+
+
+// --------------------------------------------------------- rate limit
+
+// Anti-spam por atraso, nunca por recusa: numa janela de 1h, os 4 primeiros
+// pedidos de um IP passam direto; do 5o em diante a resposta demora 5s, 10s e
+// 20s. Quem usa o site normalmente nunca percebe.
+//
+// O estado fica no `security.rateLimit` da plataforma, com uma chave por
+// degrau. As tres sao incrementadas a cada requisicao, entao avancam juntas e
+// a combinacao dos booleanos revela a contagem.
+//
+// Nao usar Map proprio aqui: as conexoes sao atendidas por virtual threads
+// concorrentes, e um Map mutavel corromperia. `synchronized` nao resolve —
+// e um non-goal do modelo de memoria do Kof (SEM091: "use spawn/await/Channel").
+Int atrasoPara(String ip) {
+    var chave = ip
+    if (chave.length == 0) {
+        chave = "desconhecido"
+    }
+    var ate4 = security.rateLimit(chave + "|t4", 4, 3600)
+    var ate5 = security.rateLimit(chave + "|t5", 5, 3600)
+    var ate6 = security.rateLimit(chave + "|t6", 6, 3600)
+    if (ate4) {
+        return 0
+    }
+    if (ate5) {
+        return 5000
+    }
+    if (ate6) {
+        return 10000
+    }
+    return 20000
+}
+
+// ------------------------------------------------------------ validacao
+
+Bool allDigits(String s, Int from, Int to) {
+    var i = from
+    while (i < to) {
+        var c = s.charAt(i)
+        if (c < '0' || c > '9') {
+            return false
+        }
+        i = i + 1
+    }
+    return true
+}
+
+// Data do dispositivo do visitante: "YYYY-MM-DD", ano entre 2000 e 2200, e o
+// dia tem que existir no mes (bissexto incluso, via time.daysInMonth).
+Bool isValidClientDate(String s) {
+    if (s.length != 10) {
+        return false
+    }
+    if (s.charAt(4) != '-' || s.charAt(7) != '-') {
+        return false
+    }
+    if (!allDigits(s, 0, 4) || !allDigits(s, 5, 7) || !allDigits(s, 8, 10)) {
+        return false
+    }
+    var y = s.substring(0, 4).toInt()
+    var m = s.substring(5, 7).toInt()
+    var d = s.substring(8, 10).toInt()
+    if (y < 2000 || y > 2200) {
+        return false
+    }
+    if (m < 1 || m > 12) {
+        return false
+    }
+    if (d < 1 || d > time.daysInMonth(y, m)) {
+        return false
+    }
+    return true
+}
+
+// --------------------------------------------------------------- cookie
+
+String cookieValue(String raw, String name) {
+    if (raw.length == 0) {
+        return ""
+    }
+    var needle = name + "="
+    var rest = raw
+    var guard = 0
+    while (guard < 40) {
+        var at = rest.indexOf(needle)
+        if (at < 0) {
+            return ""
+        }
+        var before = " "
+        if (at > 0) {
+            before = String.valueOf(rest.charAt(at - 1))
+        }
+        if (at == 0 || before == " " || before == ";") {
+            var tail = rest.substring(at + needle.length)
+            var end = tail.indexOf(";")
+            if (end < 0) {
+                return tail.trim()
+            }
+            return tail.substring(0, end).trim()
+        }
+        rest = rest.substring(at + needle.length)
+        guard = guard + 1
+    }
+    return ""
+}
+
+// -------------------------------------------------------------- i18n
+
+String resolveLocale(LocaleTable table, String code) {
+    var sup = table.supported()
+    var i = 0
+    while (i < sup.size) {
+        if (sup.get(i) == code) {
+            return code
+        }
+        i = i + 1
+    }
+    var al = table.aliases()
+    var j = 0
+    while (j < al.size) {
+        var a = al.get(j)
+        if (a.from() == code) {
+            var target = a.to()
+            var k = 0
+            while (k < sup.size) {
+                if (sup.get(k) == target) {
+                    return target
+                }
+                k = k + 1
+            }
+        }
+        j = j + 1
+    }
+    return table.fallback()
+}
+
+
+Bool isSupported(LocaleTable table, String code) {
+    var sup = table.supported()
+    var i = 0
+    while (i < sup.size) {
+        if (sup.get(i) == code) {
+            return true
+        }
+        i = i + 1
+    }
+    return false
+}
+
+String aliasOf(LocaleTable table, String code) {
+    var al = table.aliases()
+    var j = 0
+    while (j < al.size) {
+        var a = al.get(j)
+        if (a.from() == code) {
+            return a.to()
+        }
+        j = j + 1
+    }
+    return ""
+}
+
+// Le o Accept-Language: ordena por q (decrescente, com ordenacao estavel para
+// empates), fica com o subtag primario de cada entrada e aceita alias.
+// Devolve "" quando nenhum idioma do cabecalho e suportado.
+String negotiateLocale(LocaleTable table, String raw) {
+    if (raw.length == 0) {
+        return ""
+    }
+    var parts = raw.split(",")
+    var n = parts.length
+    var tags = new String[n]
+    var qs = new Double[n]
+    var count = 0
+    var i = 0
+    while (i < n) {
+        var part = parts[i].trim()
+        var tag = part
+        var q = 1.0
+        var at = part.indexOf(";q=")
+        if (at >= 0) {
+            tag = part.substring(0, at).trim()
+            var qtxt = part.substring(at + 3).trim()
+            if (qtxt.length > 0) {
+                q = qtxt.toDouble()
+            }
+        }
+        tag = tag.toLowerCase()
+        if (tag.length > 0) {
+            tags[count] = tag
+            qs[count] = q
+            count = count + 1
+        }
+        i = i + 1
+    }
+    // insertion sort estavel, q decrescente
+    var k = 1
+    while (k < count) {
+        var tagK = tags[k]
+        var qK = qs[k]
+        var j = k - 1
+        while (j >= 0 && qs[j] < qK) {
+            tags[j + 1] = tags[j]
+            qs[j + 1] = qs[j]
+            j = j - 1
+        }
+        tags[j + 1] = tagK
+        qs[j + 1] = qK
+        k = k + 1
+    }
+    var t = 0
+    while (t < count) {
+        var primary = tags[t]
+        var dash = primary.indexOf("-")
+        if (dash >= 0) {
+            primary = primary.substring(0, dash)
+        }
+        if (isSupported(table, primary)) {
+            return primary
+        }
+        var al = aliasOf(table, primary)
+        if (al.length > 0 && isSupported(table, al)) {
+            return al
+        }
+        t = t + 1
+    }
+    return ""
+}
+
+String cookieHeader(String code) {
+    return "locale_choice=" + code + "; Max-Age=31536000; Path=/; HttpOnly; SameSite=Lax"
+}
+
+// Extrai um campo string de um JSON plano sem decodificar o objeto inteiro.
+// O corpo do POST tem so clientDate e locale, entao um record para isso seria
+// cerimonia sem retorno.
+String jsonField(String body, String key) {
+    var needle = "\"" + key + "\""
+    var at = body.indexOf(needle)
+    if (at < 0) {
+        return ""
+    }
+    var rest = body.substring(at + needle.length)
+    var colon = rest.indexOf(":")
+    if (colon < 0) {
+        return ""
+    }
+    rest = rest.substring(colon + 1)
+    var q1 = rest.indexOf("\"")
+    if (q1 < 0) {
+        return ""
+    }
+    rest = rest.substring(q1 + 1)
+    var q2 = rest.indexOf("\"")
+    if (q2 < 0) {
+        return ""
+    }
+    return rest.substring(0, q2)
+}
+
+// ---------------------------------------------------------------- cache
+
+// Tudo o que e' estatico por idioma e' carregado UMA vez, antes do listen.
+// Depois disso os mapas sao so-leitura, entao nao ha mutacao concorrente entre
+// as virtual threads que atendem as conexoes — e por isso nao precisam de
+// sincronizacao.
+//
+// Ganho medido: antes, cada POST /api/reading relia e redecodificava ~45 KB de
+// JSON (baralho + cartas + meta), com mediana de 5,6 ms; com o cache, 1,5 ms.
+// A cauda de ~70 ms que aparece em poucos por cento das requisicoes NAO vem
+// daqui: ela atinge todas as rotas por igual, inclusive /api/health, e e'
+// evento periodico da JVM.
+class Catalogo {
+    Map<String, Engine> motores
+    Map<String, String> paginas
+    Map<String, String> apis
+
+    public constructor(LocaleTable table) {
+        this.motores = mapOf()
+        this.paginas = mapOf()
+        this.apis = mapOf()
+        var sup = table.supported()
+        var i = 0
+        while (i < sup.size) {
+            var code = sup.get(i)
+            this.motores.put(code, new Engine(code))
+            this.paginas.put(code, readAll(code + ".html"))
+            this.apis.put(code, readAll(code + ".api.json"))
+            i = i + 1
+        }
+    }
+
+    Engine motor(String code) {
+        var e = this.motores.get(code)
+        if (e != null) {
+            return e
+        }
+        return new Engine(code)
+    }
+
+    String pagina(String code) {
+        var h = this.paginas.get(code)
+        if (h != null) {
+            return h
+        }
+        return readAll(code + ".html")
+    }
+
+    String api(String code) {
+        var a = this.apis.get(code)
+        if (a != null) {
+            return a
+        }
+        return readAll(code + ".api.json")
+    }
+}
+
+// header() e query() sao tipados como String mas devolvem NULL quando ausentes
+// (verificado: sem o header, `h == null` e true). Estes wrappers normalizam.
+String hdr(String name) {
+    val v = header(name)
+    return if (v == null) "" else v
+}
+
+String qry(String name) {
+    val v = query(name)
+    return if (v == null) "" else v
+}
+
+// /:code/ — grava o cookie de idioma e serve a pagina. Para o idioma padrao
+// devolve 301 para "/", porque a URL canonica dele e a raiz. O `no-store` e
+// deliberado: sem ele o navegador memoriza o 301 e pula a requisicao numa
+// visita seguinte, perdendo justamente o Set-Cookie que era o objetivo.
+String servirLocale(LocaleTable table, Catalogo catalogo, String code) {
+    if (!isSupported(table, code)) {
+        return null
+    }
+    headerSet("Set-Cookie", cookieHeader(code))
+    if (code == table.fallback()) {
+        headerSet("Cache-Control", "no-store")
+        headerSet("Location", "/")
+        return status(301, "")
+    }
+    headerSet("Content-Type", "text/html; charset=utf-8")
+    return catalogo.pagina(code)
+}
+
+main() {
+    var table = json.decode<LocaleTable>(readAll("locales.json"))
+    var catalogo = new Catalogo(table)
+    var app = web.app()
+
+    // web.app() aplica por padrao um Content-Security-Policy restritivo
+    // (default-src 'self') mesmo sem chamar app.security() — confirmado com
+    // um app minimo, nao e so na producao. Isso quebra o leque de 78 cartas
+    // do frontend, que usa `style=` inline pra posicionar cada carta (ver
+    // views/index.html), e bloqueia o script inline do gtag. app.security()
+    // com headers:"false" desliga so esses 4 headers automaticos; csrf:"false"
+    // porque o double-submit-cookie exigiria um token que o app.js nunca
+    // manda no POST /api/reading. mapOf() e' homogeneo por valor (SEM056),
+    // entao os dois precisam ser String "false", nao Bool.
+    var seguranca = mapOf()
+    seguranca.put("headers", "false")
+    seguranca.put("csrf", "false")
+    app.security(seguranca)
+
+    // CORS liberado apenas em /api, onde nao ha cookie nem credencial em jogo.
+    // Nunca nas rotas de HTML, que carregam o cookie de idioma.
+    app.use {
+        if (path().startsWith("/api")) {
+            headerSet("Access-Control-Allow-Origin", "*")
+            headerSet("Access-Control-Allow-Methods", "GET,POST,OPTIONS")
+            headerSet("Access-Control-Allow-Headers", "Content-Type")
+            if (method() == "OPTIONS") {
+                return status(204, "")
+            }
+        }
+        return null
+    }
+
+    app.get("/api/health") {
+        headerSet("Content-Type", "application/json; charset=utf-8")
+        return "{\"status\":\"ok\",\"time\":" + jsonStr(isoFromMillis(now())) + "}"
+    }
+
+    app.get("/api/locale/:code") {
+        var code = resolveLocale(table, param("code"))
+        headerSet("Content-Type", "application/json; charset=utf-8")
+        return catalogo.api(code)
+    }
+
+    app.post("/api/reading") {
+        var raw = body()
+        var code = resolveLocale(table, jsonField(raw, "locale"))
+        var clientDate = jsonField(raw, "clientDate")
+        headerSet("Content-Type", "application/json; charset=utf-8")
+        if (!isValidClientDate(clientDate)) {
+            return status(400, "{\"error\":\"Your device's date couldn't be read correctly. Please refresh and try again.\"}")
+        }
+        var ip = hdr("cf-connecting-ip")
+        if (ip.length == 0) {
+            ip = hdr("x-forwarded-for")
+        }
+        var espera = atrasoPara(ip)
+        if (espera > 0) {
+            time.sleep(espera)
+        }
+        return catalogo.motor(code).generateJson(clientDate, new Rng(0))
+    }
+
+    // GET / — ?lang=en grava o cookie e serve EN; senao decide por cookie,
+    // e por Accept-Language quando nao ha cookie valido.
+    app.get("/") {
+        headerSet("Content-Type", "text/html; charset=utf-8")
+        if (qry("lang") == table.fallback()) {
+            headerSet("Set-Cookie", cookieHeader(table.fallback()))
+            return catalogo.pagina(table.fallback())
+        }
+        var escolhido = cookieValue(hdr("cookie"), "locale_choice")
+        if (isSupported(table, escolhido)) {
+            if (escolhido != table.fallback()) {
+                headerSet("Location", "/" + escolhido + "/")
+                return status(302, "")
+            }
+        } else {
+            var negociado = negotiateLocale(table, hdr("accept-language"))
+            var gravar = negociado
+            if (gravar.length == 0) {
+                gravar = table.fallback()
+            }
+            headerSet("Set-Cookie", cookieHeader(gravar))
+            if (negociado.length > 0 && negociado != table.fallback()) {
+                headerSet("Location", "/" + negociado + "/")
+                return status(302, "")
+            }
+        }
+        return catalogo.pagina(table.fallback())
+    }
+
+    app.get("/:code/") {
+        return servirLocale(table, catalogo, param("code"))
+    }
+
+    app.get("/:code") {
+        return servirLocale(table, catalogo, param("code"))
+    }
+
+    // Porta vem de port.txt para permitir blue-green: duas instancias
+    // identicas em portas diferentes, com o Nginx trocando o upstream.
+    var porta = 3001
+    var cfg = readAll("port.txt").trim()
+    if (cfg.length > 0 && strings.isNumeric(cfg)) {
+        porta = cfg.toInt()
+    }
+    println("mytarot-kof ouvindo em " + porta)
+    app.listen(porta)
+}

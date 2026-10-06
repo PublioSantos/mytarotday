@@ -1,0 +1,4 @@
+main() {
+    println("escapeJson: " + strings.escapeJson("aspas \" e barra \\ e novalinha"))
+    println("now: " + now())
+}

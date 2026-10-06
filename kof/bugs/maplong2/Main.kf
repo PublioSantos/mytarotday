@@ -1,0 +1,6 @@
+main() {
+    var m = mapOf()
+    Long v = 42 as Long
+    m.put("k", v)
+    println("ok")
+}
