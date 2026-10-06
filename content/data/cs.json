@@ -1,0 +1,925 @@
+{
+  "ui": {
+    "logo": "MyTarot.Day",
+    "tagline": "100% bezplatný denní výklad tarotu, personalizovaný podle data narození. Bez registrace, navždy zdarma.",
+    "eyebrow": "Čtyři karty. Jeden den.",
+    "selectCardsPrompt": "Vyberte 4 karty",
+    "heroTitleLine1": "Co dnešní karty říkají",
+    "heroTitleEm": "vám",
+    "submitLabel": "Ukázat mé karty",
+    "submittingLabel": "Tahám karty…",
+    "loadingText": "Míchám balíček pro {date}…",
+    "tryAnotherLabel": "Udělat další výklad?",
+    "buyMeCoffeeLabel": "☕  Kupte mi kávu 🤗",
+    "funFact": "Zajímavost: Vintage vzhled našich tarotových karet je autentický. Používáme tradiční tarot Rider–Waite–Smith z roku 1909 s původními ilustracemi Pamely Colman Smith. O více než století později tento klasický balíček stále inspiruje čtenáře po celém světě a je považován za jeden z nejvlivnějších základů moderního tarotu.",
+    "footerDisclaimer": "MyTarot.Day je nabízen pro účely reflexe a zábavy. Nenahrazuje odbornou lékařskou, finanční ani právní pomoc.",
+    "footerTagline": "Vyvinuto týmem P.San | Je to zdarma a vždy bude!",
+    "footerHome": "Domů",
+    "footerBlog": "Blog",
+    "footerPrivacy": "Zásady ochrany osobních údajů",
+    "footerTerms": "Obchodní podmínky",
+    "footerAbout": "O nás",
+    "footerContact": "Kontakt",
+    "todayBadge": "Dnes",
+    "reversedLabel": "Obrácená",
+    "uprightLabel": "Vzpřímená",
+    "supportPromptText": "Líbilo se ti to? Kup mi kávu",
+    "summaryGuideLabel": "Průvodce",
+    "summaryPastLabel": "Minulost",
+    "summaryFutureLabel": "Budoucnost",
+    "freeBadge": "100% zdarma — bez registrace, bez poplatků",
+    "freeTitlePhrase": "Bezplatný výklad tarotu"
+  },
+  "positions": {
+    "determinant": {
+      "label": "Determinant",
+      "subtitle": "Síla, která formuje celý den",
+      "intros": [
+        "Nad vším ostatním dnes stojí",
+        "Kartou, která udává tón celému dni, je",
+        "Před vším ostatním je dnešní den formován"
+      ]
+    },
+    "past": {
+      "label": "Minulost",
+      "subtitle": "Co si s sebou nesete",
+      "intros": [
+        "Za vámi, stále ovlivňující tento okamžik, je",
+        "To, co si nesete z posledních dní, je",
+        "Minulost, která se promítá do dneška, je označena"
+      ]
+    },
+    "present": {
+      "label": "Přítomnost",
+      "subtitle": "Kde skutečně stojíte",
+      "intros": [
+        "Právě teď, v centru dění, je",
+        "Tam, kde dnes skutečně stojíte, je",
+        "V přítomném okamžiku se potýkáte s"
+      ]
+    },
+    "future": {
+      "label": "Budoucnost",
+      "subtitle": "Kam to směřuje",
+      "intros": [
+        "Přímo před vámi, toto směřuje k",
+        "Tam, kam to směřuje, pokud se nic nezmění, je",
+        "Blízká budoucnost ukazuje směrem k"
+      ]
+    }
+  },
+  "summaryClauses": [
+    "Při společném čtení dnešní výklad sleduje linii od {past} až po {future}, přičemž {determinant} určuje podmínky toho, jak se vše odehraje.",
+    "Dnešní hlavní linie vede od toho, co vás {past} již naučila, přes to, kde stojíte nyní, směrem k {future} — to vše je zabarveno kartou {determinant}."
+  ],
+  "ranks": {
+    "ace": "Eso",
+    "two": "Dvojka",
+    "three": "Trojka",
+    "four": "Čtyřka",
+    "five": "Pětka",
+    "six": "Šestka",
+    "seven": "Sedmička",
+    "eight": "Osmička",
+    "nine": "Devítka",
+    "ten": "Desítka",
+    "page": "Páže",
+    "knight": "Rytíř",
+    "queen": "Královna",
+    "king": "Král"
+  },
+  "suits": {
+    "wands": "Hole",
+    "cups": "Poháry",
+    "swords": "Meče",
+    "pentacles": "Pentakly"
+  },
+  "majorArcana": {
+    "0": {
+      "name": "Blázen",
+      "keywords": [
+        "začátky",
+        "nevinnost",
+        "skok víry",
+        "otevřenost"
+      ],
+      "upright": "čerstvý start bez mapy a záruk – nemáte nic než zvědavost a odvahu vykročit vpřed dříve, než znáte všechny odpovědi.",
+      "reversed": "váhání převlečené za obezřetnost, krok nacvičený tolikrát, že k němu nikdy nedojde – nebo naopak: slepý skok bez ověření toho, co je pod vámi.",
+      "advice": "Buďte znovu začátečníkem. Jedinou chybou je zde odmítnutí začít."
+    },
+    "1": {
+      "name": "Mág",
+      "keywords": [
+        "vynalézavost",
+        "vůle",
+        "manifestace"
+      ],
+      "upright": "uvědomění si, že každý nástroj, který situace vyžaduje – intelekt, dovednost, načasování – už máte v rukou, a jejich cílené použití je jediným zbývajícím krokem.",
+      "reversed": "nevyužitý talent nebo dovednost zaměřená na manipulaci místo na budování něčeho smysluplného. V každém případě schopnosti přicházejí vniveč nebo je sebevědomí spíše pózou než základem.",
+      "advice": "Přestaňte sbírat další nástroje. Vezměte ten, který máte v ruce, a použijte ho."
+    },
+    "2": {
+      "name": "Velekněžka",
+      "keywords": [
+        "intuice",
+        "nevědomí",
+        "skryté vědění"
+      ],
+      "upright": "vědění, které přichází pod úrovní jazyka – tušení, sen, pocit, který je nakonec přesnější než jakýkoli důkaz, který jste v tu chvíli měli.",
+      "reversed": "tichá pravda přehlušená hlukem nebo instinkt držený v soukromí, protože se zatím nemůže prokázat.",
+      "advice": "Důvěřujte tomu, co už cítíte, ale zatím jste to neřekli nahlas. Ví to něco, co vaše rozumové úvahy ještě nedohnaly."
+    },
+    "3": {
+      "name": "Císařovna",
+      "keywords": [
+        "hojnost",
+        "péče",
+        "kreativita",
+        "růst"
+      ],
+      "upright": "období růstu, které vyžaduje péči, nikoli nátlak – projekt, vztah nebo část vás samotných, která vzkvétá, když je vyživována místo popoháněna.",
+      "reversed": "péče nebo kreativita přecházející v dusivou kontrolu, nebo úrodná půda ponechaná ladem, dokud přestala cokoli produkovat.",
+      "advice": "Věnujte tomu, na čem vám záleží, pozornost místo tlaku. Trpělivost je to, co přináší růst."
+    },
+    "4": {
+      "name": "Císař",
+      "keywords": [
+        "struktura",
+        "autorita",
+        "disciplína",
+        "stabilita"
+      ],
+      "upright": "řád vybudovaný se záměrem – rámec, hranice nebo plán dostatečně pevný na to, aby udržel dobré úmysly i pod skutečným tlakem.",
+      "reversed": "příliš těsná kontrola nebo struktura tak volná, že v ní nic neudrží svůj tvar.",
+      "advice": "Postavte lešení, než začnete stavět dům. Struktura nyní ušetří úsilí později."
+    },
+    "5": {
+      "name": "Velekněz",
+      "keywords": [
+        "tradice",
+        "systémy víry",
+        "vedení",
+        "konvence"
+      ],
+      "upright": "moudrost předávaná zavedenými kanály – mentor, instituce nebo tradice, jejichž vedení si stále zaslouží následování, alespoň prozatím.",
+      "reversed": "pravidlo dodržované ze zvyku nebo konvence, která už dávno přestala být smysluplná.",
+      "advice": "Nejprve se naučte zavedenou cestu. Rozhodněte se, zda ji opustíte až poté."
+    },
+    "6": {
+      "name": "Milenci",
+      "keywords": [
+        "spojení",
+        "hodnoty",
+        "volba",
+        "soulad"
+      ],
+      "upright": "skutečný soulad mezi lidmi, hodnotami nebo cestami – volba, na které záleží, protože vypovídá o tom, za čím si stojíte, nejen o tom, co se vám líbí.",
+      "reversed": "nesoulad, který tiše přehlížíte, nebo rozhodnutí, kterému se vyhýbáte, protože jeho pojmenování by otevřelo těžší rozhovor.",
+      "advice": "Pojmenujte svou volbu jasně, i když upřímná odpověď věci zkomplikuje."
+    },
+    "7": {
+      "name": "Vůz",
+      "keywords": [
+        "vůle",
+        "odhodlání",
+        "vítězství skrze kontrolu"
+      ],
+      "upright": "pohyb vpřed dosažený tím, že držíte dvě protichůdné síly v jedné ruce a řídíte je stejným směrem.",
+      "reversed": "hybnost pohlcená vnitřním konfliktem nebo vítězství, za kterým se žene tak tvrdě, až pošlape to, co mělo chránit.",
+      "advice": "Přestaňte zápasit se svými vlastními rozpory. Nasměrujte je stejným směrem a vydejte se vpřed."
+    },
+    "8": {
+      "name": "Síla",
+      "keywords": [
+        "odvaha",
+        "trpělivost",
+        "tiché odhodlání",
+        "soucit"
+      ],
+      "upright": "síla, která nikdy nemusí zvyšovat hlas – vyrovnanost, která pramení z uzavření míru s těžkou věcí, nikoli z jejího potlačování.",
+      "reversed": "pochybnosti o sobě samém maskované jako pokora, nebo použití síly tam, kde by trpělivost dokázala víc.",
+      "advice": "Čelte tomu, co vás děsí, klidem místo násilí. Jemnost není slabost."
+    },
+    "9": {
+      "name": "Poustevník",
+      "keywords": [
+        "introspekce",
+        "samota",
+        "vnitřní vedení"
+      ],
+      "upright": "nezbytný ústup – odstoupení od hluku, abyste slyšeli, co si myslíte vy sami, nejen to, co říkají všichni kolem.",
+      "reversed": "izolace, která se mění ve vyhýbání se realitě, nebo moudrost držená tak blízko, že se nikdy nedostane k lidem, kteří ji potřebují.",
+      "advice": "Dopřejte si samotu. Odpověď, kterou hledáte, v davu nenajdete."
+    },
+    "10": {
+      "name": "Kolo štěstí",
+      "keywords": [
+        "cykly",
+        "změna",
+        "osud",
+        "bod obratu"
+      ],
+      "upright": "posun, který je již v chodu, poháněný silami většími než jakákoli jednotlivá volba – okolnosti se mění způsobem, který mění pravidla hry.",
+      "reversed": "cyklus, který se opakuje, protože vzorec pod ním se nezměnil – změnil se jen jeho kostým.",
+      "advice": "Přestaňte se snažit ovládat otáčení kola. Vložte svou energii do toho, jak zareagujete, až se zastaví."
+    },
+    "11": {
+      "name": "Spravedlnost",
+      "keywords": [
+        "férovost",
+        "pravda",
+        "příčina a následek",
+        "jasnost"
+      ],
+      "upright": "spravedlivé zúčtování, i když není pohodlné – jasný pohled na příčinu a následek a na to, co je dluženo.",
+      "reversed": "nerovnováha, kterou nikdo neřeší, nebo pravda, které se vyhýbáte, protože přímý pohled na ni by vyžadoval zodpovědnost.",
+      "advice": "Podívejte se na situaci bez přikrášlování. Férovost začíná poctivým zúčtováním."
+    },
+    "12": {
+      "name": "Viselec",
+      "keywords": [
+        "odevzdání",
+        "nová perspektiva",
+        "pauza"
+      ],
+      "upright": "pokrok dosažený zastavením místo tlačení – záměrné pozastavení, které otevírá úhel pohledu na věci, ke kterým jste se při pohybu nemohli dostat.",
+      "reversed": "odklad pro odklad samotný nebo oběť, která nikdy nepřinesla žádné skutečné pochopení.",
+      "advice": "Nechte to ještě chvíli nevyřešené. Vhled žije v čekání, ne někde za ním."
+    },
+    "13": {
+      "name": "Smrt",
+      "keywords": [
+        "transformace",
+        "konce",
+        "propuštění"
+      ],
+      "upright": "skutečný konec, který uvolňuje místo pro něco, co vedle něj nemohlo existovat – nejde o destrukci, ale o nezbytnou změnu.",
+      "reversed": "změna, které se bráníte dlouho poté, co se stala nevyhnutelnou, což jen ztěžuje konec, až nakonec přijde.",
+      "advice": "Nechte to, co už skončilo, skutečně skončit. Něco jiného potřebuje prostor, který to zabírá."
+    },
+    "14": {
+      "name": "Mírnost",
+      "keywords": [
+        "rovnováha",
+        "umírněnost",
+        "integrace",
+        "trpělivost"
+      ],
+      "upright": "dvě věci, které vypadaly neslučitelně, se usazují do funkčního středu – trpělivost, míchání, pomalé řemeslo správného poměru.",
+      "reversed": "příliš mnoho v jednom směru nebo kompromis spíchnutý tak rychle, že ani jedna strana není spokojená.",
+      "advice": "Zpomalte míchání. Správnou rovnováhu nelze vynutit přes noc."
+    },
+    "15": {
+      "name": "Ďábel",
+      "keywords": [
+        "připoutanost",
+        "omezení",
+        "pokušení",
+        "staré vzorce"
+      ],
+      "upright": "vzorec, zvyk nebo dynamika, která vás drží víc, než byste si chtěli přiznat – i když dveře ven nebyly nikdy zamčené.",
+      "reversed": "první skutečné odtržení od něčeho, co vás věznilo – jasné vidění řetězu takového, jaký je.",
+      "advice": "Podívejte se upřímně na to, co si stále vybíráte, i když vás to něco stojí. Pojmenování je začátek cesty ven."
+    },
+    "16": {
+      "name": "Věž",
+      "keywords": [
+        "náhlá změna",
+        "otřes",
+        "zjevení"
+      ],
+      "upright": "struktura postavená na vratkých základech, která se rychle hroutí – je to rušivé, ale očišťující, protože to odstraňuje to, co nikdy nebylo stabilní.",
+      "reversed": "zhroucení oddalované pouhým vyhýbáním se nebo menší narušení, které přesto něco uvolní.",
+      "advice": "Nespěchejte s obnovou přesně toho, co spadlo. Nejprve se zeptejte, proč to nemohlo stát."
+    },
+    "17": {
+      "name": "Hvězda",
+      "keywords": [
+        "naděje",
+        "obnova",
+        "inspirace",
+        "léčení"
+      ],
+      "upright": "tichá naděje vracející se po těžkém období – ne naivní optimismus, ale skutečný pocit, že věci lze napravit a směřují k něčemu lepšímu.",
+      "reversed": "naděje, která slábne, nebo optimistický výhled, který ztratil kontakt s jakýmkoli skutečným plánem.",
+      "advice": "Dovolte si znovu doufat. Zasloužíte si to a ukazuje to někam, kde je to skutečné."
+    },
+    "18": {
+      "name": "Měsíc",
+      "keywords": [
+        "nejistota",
+        "podvědomí",
+        "iluze",
+        "intuice"
+      ],
+      "upright": "situace osvětlená něčím jiným než prostými fakty – instinkt, představivost a staré obavy se mísí dohromady, takže to, co vidíte, zatím není celý obraz.",
+      "reversed": "zmatek, který začíná ustupovat, nebo strach, který se ukazuje být v představivosti větší než ve skutečnosti.",
+      "advice": "Nenuťte se k rozhodnutí, dokud je obraz stále tak nejasný. Počkejte na více světla."
+    },
+    "19": {
+      "name": "Slunce",
+      "keywords": [
+        "radost",
+        "vitalita",
+        "jasnost",
+        "úspěch"
+      ],
+      "upright": "prosté štěstí – jasnost, teplo, výsledek, který nepotřebuje žádné pochybnosti.",
+      "reversed": "radost tlumená přílišným přemýšlením nebo úspěch, kterému nedovolíte, aby byl přijat a užit takový, jaký je.",
+      "advice": "Nechte to být tak dobré, jak to je. Nemusíte hledat háček."
+    },
+    "20": {
+      "name": "Soud",
+      "keywords": [
+        "zúčtování",
+        "probuzení",
+        "reflexe",
+        "rozhřešení"
+      ],
+      "upright": "upřímné zúčtování s tím, kde jste byli, a výzva vykročit do verze sebe sama, která odpovídá tomu, co jste se naučili.",
+      "reversed": "sebesoud měnící se v krutost nebo probuzení, které se stále odkládá.",
+      "advice": "Odpovězte na výzvu jasně. Vše, čemu jste se vyhýbali, je nyní připraveno k tomu, abyste tomu čelili."
+    },
+    "21": {
+      "name": "Svět",
+      "keywords": [
+        "dokončení",
+        "celistvost",
+        "příchod"
+      ],
+      "upright": "cyklus, který se čistě uzavírá, vše, co vás měl naučit, už máte v rukou – skutečný pocit příchodu do cíle, než začne další cesta.",
+      "reversed": "téměř dokončený proces, kterému chybí poslední kousek, nebo snaha o uzavření dříve, než je čas.",
+      "advice": "Uvědomte si, jak daleko jste došli, než se začnete hnát za tím, co přijde dál."
+    }
+  },
+  "minorArcana": {
+    "wands": {
+      "ace": {
+        "keywords": [
+          "inspirace",
+          "nový projekt",
+          "kreativní jiskra"
+        ],
+        "upright": "příval kreativní energie, který přichází najednou – nápad, nabídka nebo projekt, který ještě není vytvarován, ale už vás k sobě neodolatelně táhne.",
+        "reversed": "inspirace, která neustále uvadá, než se stihne přetavit v čin, nebo nadšení pro nový projekt, které vyprchá dříve, než vůbec začne.",
+        "advice": "Jednejte podle té jiskry hned, dokud je žhavá. Čekání na dokonalý plán způsobí jen to, že vyhasne."
+      },
+      "two": {
+        "keywords": [
+          "plánování",
+          "vize budoucnosti",
+          "osobní síla"
+        ],
+        "upright": "stojíte na pohodlném vyhlídkovém bodě se skutečnými možnostmi před sebou a zvažujete, co jste již vybudovali a kam byste se mohli vydat dál.",
+        "reversed": "přílišná opatrnost ze strachu z neznáma, nebo plán pro budoucnost, který nikdy nebyl podroben zkoušce.",
+        "advice": "Přestaňte jen obdivovat výhled z místa, kde stojíte. Vyberte si směr a začněte k němu kráčet."
+      },
+      "three": {
+        "keywords": [
+          "expanze",
+          "předvídavost",
+          "očekávání výsledků"
+        ],
+        "upright": "čekání poté, co je práce hotová – lodě už vypluly, výsledky ještě nejsou na stole, ale základy jsou dost pevné na to, abyste jim mohli věřit.",
+        "reversed": "zpoždění hromadící se u plánu, který vypadal jako sázka na jistotu, nebo rozšířený obzor, který odhaluje překážky, s nimiž jste nepočítali.",
+        "advice": "Sledujte obzor ještě o chvíli déle. To, co jste uvedli do pohybu, je stále na cestě."
+      },
+      "four": {
+        "keywords": [
+          "oslava",
+          "návrat domů",
+          "milník"
+        ],
+        "upright": "milník, u kterého stojí za to se zastavit – návrat domů, oslava, pocit, že jste si zasloužili tento konkrétní okamžik klidu.",
+        "reversed": "oslava, která působí prázdně, nebo pocit domova a sounáležitosti, kterého ještě nebylo tak docela dosaženo.",
+        "advice": "Dovolte si užít si to naplno. Ne každý dobrý okamžik musí být okamžitě následován dalším úkolem."
+      },
+      "five": {
+        "keywords": [
+          "soutěživost",
+          "tření",
+          "neshoda"
+        ],
+        "upright": "střet soupeřících vůlí přímo na očích – hlučný, možná vyčerpávající, ale upřímný, a lepší než stejné napětí, které by doutnalo pod povrchem.",
+        "reversed": "konflikt, který konečně ztrácí dech, nebo rivalita, která se ukázala být spíše pózováním než něčím podstatným.",
+        "advice": "Nezaměňujte toto tření za selhání. Konkurenční nápady se vzájemně tříbí, když se nikdo nebojí nahlas nesouhlasit."
+      },
+      "six": {
+        "keywords": [
+          "vítězství",
+          "uznání",
+          "sebevědomí"
+        ],
+        "upright": "výhra, kterou vidí i ostatní – veřejné uznání za úsilí, které bylo až dosud většinou neviditelné.",
+        "reversed": "pýcha, která se mění v aroganci, nebo vítězství, které se nikdy nedočkalo uznání, jaké si zasloužilo.",
+        "advice": "Přijměte uznání, aniž byste ho zlehčovali. Zasloužili jste si tu výhru; nechte ji zazářit."
+      },
+      "seven": {
+        "keywords": [
+          "defenziva",
+          "vytrvalost",
+          "obhajoba pozice"
+        ],
+        "upright": "udržování pozice, kterou se vám všichni ostatní snaží vzít – je to únavné, ale je to důkaz, že to, co jste vybudovali, stojí za obranu.",
+        "reversed": "vzdávání se půdy pod nohama, aniž by to bylo nutné, nebo tak dlouhá obrana pozice, že jste ztratili ze zřetele, proč na ní záleželo.",
+        "advice": "Stůjte si za svým, ale ověřte si, zda stále bojujete za ten správný kopec."
+      },
+      "eight": {
+        "keywords": [
+          "hybnost",
+          "rychlá akce",
+          "prudký pohyb"
+        ],
+        "upright": "všechno se najednou dává do pohybu – zprávy přicházejí, plány zrychlují, období rychlého pohybu po dlouhém čekání.",
+        "reversed": "hybnost, která se zadrhne právě tehdy, když na tom nejvíce záleželo, nebo věci, které se pohybují tak rychle, že nic nemá čas dopadnout na zem.",
+        "advice": "Pohybujte se rychle, dokud je cesta volná, ale nepředbíhejte svou vlastní schopnost reagovat na to, co přijde potom."
+      },
+      "nine": {
+        "keywords": [
+          "odolnost",
+          "poslední obrana",
+          "ostražitá vytrvalost"
+        ],
+        "upright": "další úsilí, které je po vás vyžadováno po dlouhé řadě předchozích – jste unavení, obezřetní, ale stále stojíte a jste blíž ke konci, než se zdá.",
+        "reversed": "defenziva, která ztvrdla v izolaci, nebo vyčerpání, kvůli kterému každá zbývající výzva působí větší, než ve skutečnosti je.",
+        "advice": "Přežili jste každé kolo až doteď. Nenechte ostražitost, aby vám zabránila přijmout pomoc s tímto posledním úkolem."
+      },
+      "ten": {
+        "keywords": [
+          "břemeno",
+          "přetížení",
+          "těžce vybojované dokončení"
+        ],
+        "upright": "nesete víc, než je váš díl, protože jste tak blízko cílové čáře, že odložit to teď působí jako plýtvání.",
+        "reversed": "břemeno, které si držíte ze svéhlavosti, nebo práce, která byla konečně odložena poté, co jste ji nesli příliš dlouho.",
+        "advice": "Zeptejte se sami sebe, co nesete, co nikdy nebylo vaším úkolem dokončit. Část této váhy lze sdílet nebo odložit."
+      },
+      "page": {
+        "keywords": [
+          "průzkum",
+          "nový nápad",
+          "nadšení"
+        ],
+        "upright": "nápad tak vzrušující, že u něj nelze jen tak sedět – neklidná zvědavost, která se chce okamžitě vyzkoušet v reálném světě.",
+        "reversed": "nadšení bez následných činů, nebo plány, které byly hlasitě oznámeny a pak potichu opuštěny.",
+        "advice": "Nechte se unášet nadšením, ale dejte nápadu alespoň jednu skutečnou zkoušku, než se začnete honit za dalším."
+      },
+      "knight": {
+        "keywords": [
+          "dobrodružství",
+          "impulzivnost",
+          "odvážné pronásledování"
+        ],
+        "upright": "řítíte se k další věci s naprostou jistotou, poháněni spíše chutí po lovu než pevným plánem.",
+        "reversed": "bezohlednost, která vás začíná něco stát, nebo neklidná energie, která nemá kam produktivně směřovat.",
+        "advice": "Dostaňte část té odvahy pod kontrolu, než začne ovládat ona vás, místo abyste vy ovládali ji."
+      },
+      "queen": {
+        "keywords": [
+          "sebevědomí",
+          "nezávislost",
+          "magnetismus"
+        ],
+        "upright": "vřelá, neotřesitelná sebedůvěra, která přitahuje lidi, aniž byste pro ně museli hrát divadlo.",
+        "reversed": "sebevědomí, které se stalo křehkým nebo náročným, nebo nezávislost využívaná k tomu, abyste ostatní drželi od těla, místo abyste stáli na vlastních nohou.",
+        "advice": "Veďte s tou sebedůvěrou, kterou už máte. Nemusíte ji nikomu jinému nejprve dokazovat."
+      },
+      "king": {
+        "keywords": [
+          "vize",
+          "vedení",
+          "odvážné podnikání"
+        ],
+        "upright": "vedení, které inspiruje příkladem – odvážná vize spojená s činy, které ji přetvářejí v realitu.",
+        "reversed": "vysoká očekávání, která se stala nesplnitelnými, nebo ambice prosazované tak bezohledně, že pálí lidi, kteří vám pomáhají.",
+        "advice": "Veďte svou vizi, ale ověřte si, zda lidé, kteří ji s vámi realizují, u toho chtějí stále být."
+      }
+    },
+    "cups": {
+      "ace": {
+        "keywords": [
+          "nová láska",
+          "emoční otevřenost",
+          "přetékání"
+        ],
+        "upright": "emoční pohár přetékající přes okraj — nová láska, nový soucit nebo pocit tak plný, že musí přetéct do něčeho dalšího.",
+        "reversed": "emoční otevřenost, která je zadržována, nebo láska a spojení, které jsou nabízeny, ale zatím nebyly přijaty.",
+        "advice": "Nechte tento pocit, aby byl tak plný, jak jen může. Není třeba šetřit něčím tak skutečným."
+      },
+      "two": {
+        "keywords": [
+          "partnerství",
+          "vzájemná přitažlivost",
+          "spojení"
+        ],
+        "upright": "dva lidé, kteří se setkávají jako rovní — pouto, které vzniká nebo se prohlubuje na vzájemných a víceméně vyrovnaných základech.",
+        "reversed": "spojení, které se stalo nevyrovnaným, nebo partnerství pod tlakem, který ještě nebyl nahlas pojmenován.",
+        "advice": "Prověřte, zda je toto spojení stále tak vzájemné, jako když začínalo. Pokud se něco změnilo, řekněte to jasně."
+      },
+      "three": {
+        "keywords": [
+          "přátelství",
+          "oslava",
+          "komunita"
+        ],
+        "upright": "radost, která je lepší, když se sdílí — setkání, přátelství, okamžik, který stojí za to oslavit s lidmi, kteří při vás stáli.",
+        "reversed": "skupinová dynamika, která se mění v pomluvy nebo vylučování, nebo nadměrné hýření, které otupuje to, co mělo být skutečnou oslavou.",
+        "advice": "Přizvěte do tohoto okamžiku lidi, na kterých vám nejvíce záleží. Oslava znamená víc, když na ni nejste sami."
+      },
+      "four": {
+        "keywords": [
+          "apatie",
+          "rozjímání",
+          "promarněná nabídka"
+        ],
+        "upright": "nuda z toho, co už je na stole, i když přímo před vámi je nabízeno něco, co stojí za povšimnutí.",
+        "reversed": "apatie, která konečně ztrácí svou sílu, nebo ochota vzhlédnout a zvážit příležitost, kterou jste dosud ignorovali.",
+        "advice": "Odvraťte zrak od toho, co vás zklamalo, a všimněte si, co je vám nabízeno. Možná to má větší cenu, než se na první pohled zdálo."
+      },
+      "five": {
+        "keywords": [
+          "ztráta",
+          "zármutek",
+          "lítost"
+        ],
+        "upright": "zármutek soustředěný na to, co se vylilo a je pryč, i když kousek vedle stále stojí něco neporušeného, čeho si nevšímáte.",
+        "reversed": "zármutek, který začíná polevovat, nebo první skutečné kroky k přijetí ztráty namísto jejího neustálého přehrávání.",
+        "advice": "Truchlete pro to, co je skutečně pryč, ale otočte se dostatečně dlouho na to, abyste viděli, co stále stojí za vámi."
+      },
+      "six": {
+        "keywords": [
+          "nostalgie",
+          "vzpomínka",
+          "nevinnost"
+        ],
+        "upright": "tah zpět do jednodušších časů — staré vzpomínky, známé pohodlí nebo shledání s někým z dřívější kapitoly života.",
+        "reversed": "nostalgie, která se stala úkrytem, nebo idealizovaná minulost, kvůli které přítomnost vypadá hůře, než ve skutečnosti je.",
+        "advice": "Navštivte minulost pro útěchu, ale nestěhujte se zpět. To, co nyní potřebujete, žije v přítomnosti."
+      },
+      "seven": {
+        "keywords": [
+          "fantazie",
+          "volby",
+          "iluze"
+        ],
+        "upright": "příliš mnoho lákavých možností, některé solidnější než jiné, což ztěžuje rozpoznání skutečné příležitosti od pouhého zbožného přání.",
+        "reversed": "mlha se rozplývá natolik, že je vidět, které možnosti byly skutečné, a rozhodnutí se konečně stává možným.",
+        "advice": "Před výběrem prověřte každou možnost realitou. Ne vše, co se zde třpytí, obstojí."
+      },
+      "eight": {
+        "keywords": [
+          "odchod",
+          "hledání hlubšího smyslu",
+          "odloučení"
+        ],
+        "upright": "odchod od něčeho, co zvenčí vypadá v pořádku, protože vás to uvnitř přestalo naplňovat.",
+        "reversed": "setrvávání někde ze strachu z toho, co by odchod znamenal, nebo unášení se proudem bez plného odhodlání k odchodu.",
+        "advice": "Důvěřujte té části sebe, která ví, že už to nestačí, i když to zatím nedokážete plně vysvětlit."
+      },
+      "nine": {
+        "keywords": [
+          "spokojenost",
+          "naplnění",
+          "splněné přání"
+        ],
+        "upright": "snadná, pohodlná spokojenost — splněné přání, naplněná touha, spokojenost, kterou není třeba obhajovat.",
+        "reversed": "samolibost nahrazující skutečnou spokojenost, nebo hojnost, která přesto nějak nepůsobí jako dostatečná.",
+        "advice": "Nechte tuto spokojenost být prostou. Nemusíte si ji zasloužit dvakrát tím, že se budete bát, že nevydrží."
+      },
+      "ten": {
+        "keywords": [
+          "emoční naplnění",
+          "rodinná harmonie",
+          "trvalé štěstí"
+        ],
+        "upright": "hluboké, usazené štěstí vybudované s lidmi, kteří jsou vám nejblíže — ne vrcholný okamžik, ale trvalý stav.",
+        "reversed": "harmonie doma, která je spíše zdáním než podstatou, nebo hodnoty mezi lidmi, které milujete, které se potichu přestaly shodovat.",
+        "advice": "Podívejte se za povrchní obrázek štěstí a ověřte si, zda to tak cítí i lidé v něm."
+      },
+      "page": {
+        "keywords": [
+          "kreativní příležitost",
+          "intuitivní zpráva",
+          "zvědavost"
+        ],
+        "upright": "jemná, nečekaná emoční nebo kreativní zpráva — něco, čemu stojí za to věnovat pozornost, i když se to zdá malé.",
+        "reversed": "emoční nezralost, která stojí v cestě skutečné příležitosti, nebo kreativní impuls použitý k úniku namísto vyjádření.",
+        "advice": "Berte tento malý, nečekaný pocit vážně. Je informativnější, než vypadá."
+      },
+      "knight": {
+        "keywords": [
+          "romantika",
+          "idealismus",
+          "následování srdce"
+        ],
+        "upright": "vedení srdcem, pronásledování romantické nebo idealistické vize se skutečnou upřímností, i když to zatím není zcela praktické.",
+        "reversed": "náladovost převlečená za citlivost, nebo romantický ideál, který vás neustále připravuje na zklamání.",
+        "advice": "Následujte zde své srdce, ale předtím, než ho budete následovat až do konce, ho prověřte realitou."
+      },
+      "queen": {
+        "keywords": [
+          "soucit",
+          "emoční bezpečí",
+          "intuice"
+        ],
+        "upright": "emoční hloubka držená se skutečnou stabilitou — soucit s ostatními, který není na úkor vaší vlastní jistoty.",
+        "reversed": "soucit, který sklouzl k zanedbávání sebe sama, nebo emoční bezpečí, které drží jen tak dlouho, dokud ho nikdo nezkouší.",
+        "advice": "Darujte ostatním svůj soucit, ale nechte si dostatek i pro sebe."
+      },
+      "king": {
+        "keywords": [
+          "emoční rovnováha",
+          "diplomacie",
+          "klidná kontrola"
+        ],
+        "upright": "klidné mistrovství nad silnými pocity — schopnost zůstat vyrovnaný a spravedlivý, i když jsou emoční sázky vysoké.",
+        "reversed": "kontrola nad pocity, která je ve skutečnosti potlačováním, nebo klid na povrchu, který skrývá manipulaci pod ním.",
+        "advice": "Zůstaňte vyrovnaní, ale dejte najevo, co skutečně cítíte, namísto toho, abyste to jen zvládali."
+      }
+    },
+    "swords": {
+      "ace": {
+        "keywords": [
+          "průlom",
+          "jasnost",
+          "nová myšlenka"
+        ],
+        "upright": "náhlé protnutí zmatku – prozření, rozhodnutí nebo pravda, která přichází ostře a nezpochybnitelně jasně.",
+        "reversed": "jasnost, která byla zastřena přílišným hlukem, nebo pravda, která byla překroucena dříve, než se k vám dostala.",
+        "advice": "Důvěřujte jasné myšlence, když přijde. Nenechte se přesvědčit zpět do zmatku."
+      },
+      "two": {
+        "keywords": [
+          "patová situace",
+          "těžké rozhodnutí",
+          "vyhýbání se"
+        ],
+        "upright": "rozhodnutí držené v odstupu, střežené a vyvážené tak pečlivě, že ani jedna z možností není zvolena.",
+        "reversed": "konečné prolomení patové situace nebo přehlcení protichůdnými informacemi, které činí volbu těžší, nikoliv snazší.",
+        "advice": "Sundejte si pásku z očí. Odkládáním se rozhodnutí nestane snazším."
+      },
+      "three": {
+        "keywords": [
+          "zlomené srdce",
+          "zrada",
+          "zármutek"
+        ],
+        "upright": "bolest, která je ostrá a konkrétní – pravda, zrada nebo ztráta, která řeže přesně proto, že je skutečná.",
+        "reversed": "první fáze uzdravování nebo stará bolest, která se vrací, protože nebyla poprvé plně zpracována.",
+        "advice": "Nechte bolest, ať je přesně tak ostrá, jaká je. Jasné pojmenování je to, co zahajuje léčení."
+      },
+      "four": {
+        "keywords": [
+          "odpočinek",
+          "zotavení",
+          "rozjímání"
+        ],
+        "upright": "záměrný ústup po konfliktu nebo vypětí – nikoliv porážka, ale zotavení, které mysl potřebuje, než bude moci opět jasně myslet.",
+        "reversed": "odpočinek přerušený dříve, než skončil, nebo neklid, který znemožňuje skutečné zotavení.",
+        "advice": "Odpočívejte naplno. Poloviční zotavení znamená jen přenášení vyčerpání do všeho, co přijde potom."
+      },
+      "five": {
+        "keywords": [
+          "prázdné vítězství",
+          "konflikt",
+          "zrada"
+        ],
+        "upright": "výhra, která stojí víc, než za co stojí – konflikt dovedený do konce, i když všichni zúčastnění odcházejí v horším stavu.",
+        "reversed": "zahořklost přetrvávající po konfliktu, který nebyl nikdy skutečně vyřešen, nebo šance uzavřít mír místo prosazování výhody.",
+        "advice": "Zeptejte se, zda vítězství v tomto konkrétním boji stojí za to, co vás bude stát potom."
+      },
+      "six": {
+        "keywords": [
+          "přechod",
+          "posun dál",
+          "klidnější vody"
+        ],
+        "upright": "pomalý, záměrný pohyb pryč od turbulence, nesoucí jen to nezbytné směrem k něčemu stabilnějšímu.",
+        "reversed": "odpor k přechodu, který je již nutný, nebo nevyřešená zavazadla nesená do klidnějších vod před vámi.",
+        "advice": "Nechte obtížné vody za sebou. Neustále se neohlížejte na břeh, který opouštíte."
+      },
+      "seven": {
+        "keywords": [
+          "strategie",
+          "klam",
+          "jednání o samotě"
+        ],
+        "upright": "tichý a nezávislý pohyb, braní si toho, co potřebujete, bez žádosti o svolení – chytré, ale ne zcela upřímné.",
+        "reversed": "skrytá strategie vycházející najevo nebo výčitky svědomí, které konečně dohánějí zkratku, jež byla zvolena.",
+        "advice": "Zeptejte se, zda by strategie, kterou používáte, dávala smysl, kdyby ji všichni zúčastnění viděli."
+      },
+      "eight": {
+        "keywords": [
+          "uvěznění",
+          "mentalita oběti",
+          "sebeomezení"
+        ],
+        "upright": "pocit sevření ze všech stran, i když lana, která vás drží, jsou volnější, než se zdají – vězení postavené spíše z přesvědčení než z faktů.",
+        "reversed": "první skutečná trhlina v této pasti, kterou jste si sami vytvořili, jak příběh o bezmoci začíná ztrácet svou sílu.",
+        "advice": "Hledejte mezeru v lanech, o kterých jste předpokládali, že jsou pevná. Je v nich víc prostoru k pohybu, než se zdá."
+      },
+      "nine": {
+        "keywords": [
+          "úzkost",
+          "obavy",
+          "duševní muka"
+        ],
+        "upright": "mysl běžící v temnotě scénáře nejhoršího možného vývoje, vyčerpaná strachy, které ve 3 ráno vypadají mnohem větší než za denního světla.",
+        "reversed": "obavy začínající ustupovat nebo rozhodnutí konečně vyslovit strach nahlas, místo abyste ho nesli sami.",
+        "advice": "Vyslovte obavu nahlas někomu jinému. Málokdy přežije kontakt s denním světlem tak neporušená, jak se teď zdá."
+      },
+      "ten": {
+        "keywords": [
+          "dno",
+          "bolestný konec",
+          "zrada"
+        ],
+        "upright": "konec, který je stejně definitivní jako bolestný – to nejhorší už máte za sebou a odtud už vede cesta jen nahoru.",
+        "reversed": "odpor ke konci, který už nastal, nebo pomalé, částečné zotavení z něčeho, co se ještě zcela nezahojilo.",
+        "advice": "Nechte tento konec být úplný. Snaha udržet ho napůl živý jen prodlužuje bolest."
+      },
+      "page": {
+        "keywords": [
+          "zvědavost",
+          "bdělost",
+          "žízeň po pravdě"
+        ],
+        "upright": "bdělá, tázající se mysl, shromažďující informace a pozorně sledující, než se rozhodne, čemu věřit.",
+        "reversed": "drby nahrazující skutečné vyšetřování nebo nápady, které se nikdy nepohnou od řečí ke skutečné akci.",
+        "advice": "Ptejte se dál, ale nakonec jednejte podle toho, co vám odpovědi říkají."
+      },
+      "knight": {
+        "keywords": [
+          "rozhodná akce",
+          "průbojnost",
+          "rychlé myšlení"
+        ],
+        "upright": "rychlý pohyb a přímá mluva, přecházení přímo k věci bez čekání na něčí svolení.",
+        "reversed": "agrese předbíhající úsudek nebo impulzivní rozhodnutí učiněná rychleji, než situace vyžadovala.",
+        "advice": "Jednejte rozhodně, ale předtím, než vyslovíte tu nejostřejší verzi toho, co si myslíte, se jednou nadechněte."
+      },
+      "queen": {
+        "keywords": [
+          "nezávislé myšlení",
+          "jasné hranice",
+          "přímá komunikace"
+        ],
+        "upright": "vidění situací jasně a pojmenování věcí bez zjemňování, než vyžaduje pravda.",
+        "reversed": "přímost, která sklouzla do chladu, nebo hranice držené tak rigidně, že se k vám nikdo nemůže přiblížit.",
+        "advice": "Udržte si jasnost, ale zkontrolujte, zda je ta úsečnost nutná, nebo jen snazší než být laskavý."
+      },
+      "king": {
+        "keywords": [
+          "intelektuální autorita",
+          "strukturované myšlení",
+          "nestranná pravda"
+        ],
+        "upright": "úsudek založený na principech a důkazech spíše než na citech – spravedlivý, přesný a těžko zpochybnitelný.",
+        "reversed": "logika použitá jako zbraň nebo autorita, která je technicky správná, ale přesto krutá.",
+        "advice": "Mějte pravdu, ale nenechte to, že máte pravdu, omluvit to, že jste nevlídní."
+      }
+    },
+    "pentacles": {
+      "ace": {
+        "keywords": [
+          "nová příležitost",
+          "prosperita",
+          "manifestace"
+        ],
+        "upright": "konkrétní příležitost, která se vám dostává do rukou – praktická, reálná a stojí za to na ní stavět, místo abyste ji jen obdivovali.",
+        "reversed": "promarněná příležitost kvůli špatnému načasování nebo plánování, případně slibný začátek, který nebyl dotažen do konce.",
+        "advice": "Udělejte nyní praktický krok. Tento druh příležitosti odměňuje spíše vytrvalost než nadšení."
+      },
+      "two": {
+        "keywords": [
+          "rovnováha",
+          "přizpůsobivost",
+          "žonglování s prioritami"
+        ],
+        "upright": "udržování několika požadavků v chodu najednou, přizpůsobování se za pochodu, aniž byste cokoli pustili z ruky.",
+        "reversed": "přidání jedné priority navíc, kvůli čemuž začíná něco důležitého vypadávat z rukou.",
+        "advice": "Upřímně se podívejte na to, s čím žonglujete. Něco z toho možná potřebuje odložit, ne se to snažit udržet v rovnováze za každou cenu."
+      },
+      "three": {
+        "keywords": [
+          "spolupráce",
+          "dovednost",
+          "týmová práce"
+        ],
+        "upright": "spojení různých dovedností v něco, co by nikdo z nich sám nevybudoval – solidní pokrok dosažený díky skutečné spolupráci.",
+        "reversed": "práce v izolaci na něčem, co vyžadovalo pomoc druhých, nebo tým, který přestal táhnout za jeden provaz.",
+        "advice": "Přizvěte si na pomoc někoho dalšího. Tento projekt nelze dobře vybudovat o samotě."
+      },
+      "four": {
+        "keywords": [
+          "bezpečí",
+          "kontrola",
+          "lpění"
+        ],
+        "upright": "pevné držení toho, co jste vybudovali, upřednostňování jistoty před rizikem, i za cenu určité ztráty flexibility.",
+        "reversed": "tak silné lpění, že nic nového nemůže přijít, nebo strach ze ztráty, který ovládá rozhodování více než jakákoli skutečná hrozba.",
+        "advice": "Trochu povolte sevření. To, co chráníte, není tak křehké, jak se zdá."
+      },
+      "five": {
+        "keywords": [
+          "těžkosti",
+          "finanční ztráta",
+          "izolace"
+        ],
+        "upright": "skutečné těžkosti, které pociťujete stejně v izolaci jako v samotné ztrátě – bojujete a máte pocit, že pomoc je v nedohlednu.",
+        "reversed": "první známky dostupné podpory nebo konec těžkého období, kdy se situace konečně začíná zlepšovat.",
+        "advice": "Hledejte dveře, které jsou nablízku otevřené. Pomoc existuje, i když to tak zatím nevypadá."
+      },
+      "six": {
+        "keywords": [
+          "štědrost",
+          "dávání a přijímání",
+          "rovnováha"
+        ],
+        "upright": "spravedlivé rozdělování zdrojů mezi lidmi – pomoc poskytnutá tam, kde je potřeba, a přijatá bez pocitu studu.",
+        "reversed": "štědrost, která má své podmínky, nebo výměna, která se nenápadně stala jednostrannou.",
+        "advice": "Prověřte, zda je to, co dostáváte, skutečně svobodný dar, nebo zda za to budete muset něco splácet."
+      },
+      "seven": {
+        "keywords": [
+          "trpělivost",
+          "dlouhodobý výhled",
+          "hodnocení pokroku"
+        ],
+        "upright": "pauza na zhodnocení již vynaloženého úsilí, zvažování, zda se vyplácí, nebo zda je třeba změnit směr.",
+        "reversed": "netrpělivost kvůli výsledkům, které se ještě nedostavily, nebo pokračování v úsilí na cestě, která už přestala nést ovoce.",
+        "advice": "Udělejte si upřímnou inventuru. Část tohoto úsilí si zaslouží více trpělivosti, část si zaslouží nový plán."
+      },
+      "eight": {
+        "keywords": [
+          "píle",
+          "řemeslná zručnost",
+          "rozvoj dovedností"
+        ],
+        "upright": "stálé, opakované úsilí zaměřené na to, abyste se v něčem skutečně zdokonalili – nic okázalého, ale přesně to, co mistrovství vyžaduje.",
+        "reversed": "perfekcionismus, který brzdí skutečný pokrok, nebo zkratky v práci, která si zasloužila plné nasazení.",
+        "advice": "Pokračujte v těch neokázalých opakováních. Takhle vypadá dovednost, když se buduje."
+      },
+      "nine": {
+        "keywords": [
+          "soběstačnost",
+          "hojnost",
+          "nezávislost"
+        ],
+        "upright": "pohodlí a hojnost, které jste si z velké části vydobyli sami – soběstačnost, která nepotřebuje ničí schválení.",
+        "reversed": "úspěch, který zvenčí vypadá dobře, ale uvnitř působí prázdně, nebo přepracovanost, kvůli které nezbyl nikdo, s kým byste si ho užili.",
+        "advice": "Užívejte si to, co jste vybudovali, aniž byste potřebovali, aby vám kdokoli jiný potvrzoval, že to má hodnotu."
+      },
+      "ten": {
+        "keywords": [
+          "odkaz",
+          "dlouhodobé bezpečí",
+          "rodinné bohatství"
+        ],
+        "upright": "stabilita, která přetrvá jednotlivce – odkaz nebo základ vybudovaný tak, aby podporoval víc než jen vás samotné.",
+        "reversed": "odkaz pod tlakem nebo rodinné neshody ohledně zdrojů, které ohrožují něco, co mělo vydržet.",
+        "advice": "Chraňte to, co má přežít vás, ale nenechte spory o to zničit účel, pro který to bylo vybudováno."
+      },
+      "page": {
+        "keywords": [
+          "nová příležitost",
+          "studium",
+          "praktická zvídavost"
+        ],
+        "upright": "praktická příležitost, kterou stojí za to podrobně prozkoumat – nová, slibná a stále ve fázi učení se, jak funguje.",
+        "reversed": "nereálné plány, které nebyly prověřeny realitou, nebo pokrok, který se zastavil dřív, než skutečně začal.",
+        "advice": "Než se hlouběji zavážete, tuto příležitost si dobře nastudujte. Je slibná, ale zatím neprověřená."
+      },
+      "knight": {
+        "keywords": [
+          "píle",
+          "rutina",
+          "metodický pokrok"
+        ],
+        "upright": "pomalý, metodický a spolehlivý pokrok – žádné zkratky, jen důsledná práce, která se časem sčítá.",
+        "reversed": "rutina, která zkostnatěla ve stagnaci, nebo perfekcionismus tak rigidní, že brání jakémukoli výsledku.",
+        "advice": "Důvěřujte pomalé metodě, která funguje. Nemusí být rychlejší, aby byla efektivní."
+      },
+      "queen": {
+        "keywords": [
+          "pečování",
+          "vynalézavost",
+          "uzemnění"
+        ],
+        "upright": "praktická péče, která se projevuje hmatatelnými způsoby – pohodlí, zdroje a uzemnění, které štědře nabízíte druhým.",
+        "reversed": "péče o druhé na úkor péče o sebe, nebo nejistota ohledně zdrojů, která podkopává vaši štědrost.",
+        "advice": "Věnujte stejnou praktickou péči sami sobě, jakou tak snadno nabízíte všem ostatním."
+      },
+      "king": {
+        "keywords": [
+          "materiální mistrovství",
+          "finanční jistota",
+          "štědrost"
+        ],
+        "upright": "materiální a finanční mistrovství vybudované časem, nyní dostatečně štědré na to, aby se podělilo o vytvořenou jistotu.",
+        "reversed": "kontrola nad zdroji, která se stává rigidní nebo majetnickou, nebo finanční jistota, za kterou se jde přes mrtvoly.",
+        "advice": "Využívejte to, co jste vybudovali, štědře. Jistota, o kterou se člověk nedělí, se nakonec změní v izolaci."
+      }
+    }
+  }
+}

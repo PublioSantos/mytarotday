@@ -1,0 +1,925 @@
+{
+  "ui": {
+    "logo": "MyTarot.Day",
+    "tagline": "Bacaan tarot harian 100% gratis, dipersonalisasi berdasarkan tanggal lahir Anda. Tanpa pendaftaran, tanpa biaya, selamanya.",
+    "eyebrow": "Empat kartu. Satu hari.",
+    "selectCardsPrompt": "Pilih 4 kartu",
+    "heroTitleLine1": "Apa yang dikatakan kartu hari ini untuk",
+    "heroTitleEm": "Anda",
+    "submitLabel": "Tampilkan kartu saya",
+    "submittingLabel": "Sedang menarik...",
+    "loadingText": "Mengocok dek untuk {date}...",
+    "tryAnotherLabel": "Buat bacaan lain?",
+    "buyMeCoffeeLabel": "☕  Belikan saya kopi 🤗",
+    "funFact": "Fakta menarik: Tampilan klasik kartu tarot kami adalah asli. Kami menggunakan Tarot Rider–Waite–Smith tahun 1909 tradisional dengan karya seni asli oleh Pamela Colman Smith. Lebih dari seabad kemudian, dek klasik ini terus menginspirasi para pembaca di seluruh dunia dan dianggap sebagai salah satu fondasi paling berpengaruh dalam tarot modern.",
+    "footerDisclaimer": "MyTarot.Day ditawarkan untuk refleksi dan hiburan. Ini bukan pengganti saran profesional, medis, keuangan, atau hukum.",
+    "footerTagline": "Dikembangkan oleh Tim P.San | Gratis, dan akan selalu gratis!",
+    "footerHome": "Beranda",
+    "footerBlog": "Blog",
+    "footerPrivacy": "Kebijakan Privasi",
+    "footerTerms": "Syarat & Ketentuan",
+    "footerAbout": "Tentang",
+    "footerContact": "Kontak",
+    "todayBadge": "Hari Ini",
+    "reversedLabel": "Terbalik",
+    "uprightLabel": "Tegak",
+    "supportPromptText": "Suka? Traktir saya kopi",
+    "summaryGuideLabel": "Panduan",
+    "summaryPastLabel": "Masa Lalu",
+    "summaryFutureLabel": "Masa Depan",
+    "freeBadge": "100% Gratis — Tanpa Daftar, Tanpa Biaya",
+    "freeTitlePhrase": "Bacaan Tarot Gratis"
+  },
+  "positions": {
+    "determinant": {
+      "label": "Sang Penentu",
+      "subtitle": "Kekuatan yang membentuk sepanjang hari",
+      "intros": [
+        "Yang menaungi segalanya hari ini adalah",
+        "Kartu yang menetapkan nada untuk sepanjang hari adalah",
+        "Sebelum hal lainnya, hari ini dibentuk oleh"
+      ]
+    },
+    "past": {
+      "label": "Masa Lalu",
+      "subtitle": "Apa yang Anda bawa",
+      "intros": [
+        "Di belakang Anda, yang masih memengaruhi momen ini adalah",
+        "Apa yang Anda bawa dari hari-hari terakhir adalah",
+        "Masa lalu yang mengalir ke hari ini ditandai oleh"
+      ]
+    },
+    "present": {
+      "label": "Masa Kini",
+      "subtitle": "Di mana Anda sebenarnya berdiri",
+      "intros": [
+        "Saat ini, di pusat segalanya, adalah",
+        "Di mana Anda sebenarnya berdiri hari ini adalah dengan",
+        "Pada momen saat ini, Anda sedang berurusan dengan"
+      ]
+    },
+    "future": {
+      "label": "Masa Depan",
+      "subtitle": "Ke mana arahnya",
+      "intros": [
+        "Tepat di depan, ini bergerak menuju",
+        "Ke mana arahnya, jika tidak ada yang berubah, adalah",
+        "Masa depan dekat mengarah pada"
+      ]
+    }
+  },
+  "summaryClauses": [
+    "Jika dibaca bersama, sebaran hari ini menarik garis dari {past} hingga {future}, dengan {determinant} yang menentukan bagaimana semuanya akan terjadi.",
+    "Alur hari ini berjalan dari apa yang {past} telah ajarkan kepada Anda, melalui posisi Anda saat ini, menuju {future} — semuanya diwarnai oleh {determinant}."
+  ],
+  "ranks": {
+    "ace": "As",
+    "two": "Dua",
+    "three": "Tiga",
+    "four": "Empat",
+    "five": "Lima",
+    "six": "Enam",
+    "seven": "Tujuh",
+    "eight": "Delapan",
+    "nine": "Sembilan",
+    "ten": "Sepuluh",
+    "page": "Page",
+    "knight": "Knight",
+    "queen": "Queen",
+    "king": "King"
+  },
+  "suits": {
+    "wands": "Wands",
+    "cups": "Cups",
+    "swords": "Swords",
+    "pentacles": "Pentacles"
+  },
+  "majorArcana": {
+    "0": {
+      "name": "The Fool",
+      "keywords": [
+        "awal baru",
+        "kepolosan",
+        "lompatan keyakinan",
+        "keterbukaan"
+      ],
+      "upright": "sebuah awal yang segar tanpa peta dan tanpa jaminan — tidak ada yang bisa diandalkan selain rasa ingin tahu dan keberanian untuk melangkah maju sebelum semua jawaban tersedia.",
+      "reversed": "keraguan yang dibungkus sebagai kehati-hatian, sebuah langkah yang sudah dilatih berkali-kali namun tidak pernah diambil — atau sebaliknya: lompatan buta tanpa memeriksa apa yang ada di bawahnya.",
+      "advice": "Jadilah pemula lagi. Satu-satunya kesalahan di sini adalah menolak untuk memulai."
+    },
+    "1": {
+      "name": "The Magician",
+      "keywords": [
+        "kecerdikan",
+        "tekad",
+        "manifestasi"
+      ],
+      "upright": "menyadari bahwa setiap alat yang dibutuhkan situasi — kecerdasan, keterampilan, waktu — sudah ada di tangan Anda, dan menggunakannya dengan sengaja adalah satu-satunya langkah yang tersisa.",
+      "reversed": "bakat yang tidak digunakan, atau keterampilan yang disalahgunakan untuk manipulasi alih-alih membangun sesuatu. Bagaimanapun, kemampuan terbuang sia-sia, atau kepercayaan diri hanyalah pertunjukan tanpa fondasi.",
+      "advice": "Berhentilah mengumpulkan lebih banyak alat. Ambil yang ada di tanganmu dan gunakan."
+    },
+    "2": {
+      "name": "The High Priestess",
+      "keywords": [
+        "intuisi",
+        "ketidaksadaran",
+        "pengetahuan tersembunyi"
+      ],
+      "upright": "pengetahuan yang datang di bawah bahasa — firasat, mimpi, perasaan yang akhirnya lebih akurat daripada bukti apa pun yang Anda miliki saat itu.",
+      "reversed": "kebenaran yang tenang tenggelam oleh kebisingan, atau naluri yang dirahasiakan karena belum bisa membuktikan dirinya sendiri.",
+      "advice": "Percayalah pada apa yang sudah Anda rasakan tetapi belum diucapkan dengan lantang. Itu mengetahui sesuatu yang belum terjangkau oleh penalaran Anda."
+    },
+    "3": {
+      "name": "The Empress",
+      "keywords": [
+        "kelimpahan",
+        "pengasuhan",
+        "kreativitas",
+        "pertumbuhan"
+      ],
+      "upright": "musim pertumbuhan yang perlu dirawat, bukan dipaksa — sebuah proyek, hubungan, atau bagian dari diri Anda yang berkembang setelah diberi makan alih-alih didorong.",
+      "reversed": "perhatian atau kreativitas yang berubah menjadi kekangan, atau lahan subur yang dibiarkan tidak terawat hingga berhenti menghasilkan apa pun.",
+      "advice": "Berikan perhatian pada apa yang Anda pedulikan alih-alih tekanan. Kesabaran adalah apa yang membuatnya tumbuh."
+    },
+    "4": {
+      "name": "The Emperor",
+      "keywords": [
+        "struktur",
+        "otoritas",
+        "disiplin",
+        "stabilitas"
+      ],
+      "upright": "tatanan yang dibangun dengan tujuan — kerangka kerja, batasan, atau rencana yang cukup kokoh untuk mempertahankan niat baik di bawah tekanan nyata.",
+      "reversed": "kendali yang digenggam terlalu erat, atau struktur yang begitu longgar sehingga tidak ada apa pun di dalamnya yang tetap tegak.",
+      "advice": "Pasang perancah sebelum Anda membangun rumah. Struktur sekarang menghemat usaha di kemudian hari."
+    },
+    "5": {
+      "name": "The Hierophant",
+      "keywords": [
+        "tradisi",
+        "sistem kepercayaan",
+        "bimbingan",
+        "konvensi"
+      ],
+      "upright": "kebijaksanaan yang diturunkan melalui saluran yang mapan — mentor, institusi, atau tradisi yang bimbingannya masih layak diikuti, setidaknya untuk saat ini.",
+      "reversed": "aturan yang dipertahankan hanya karena kebiasaan, atau konvensi yang sudah lama kehilangan relevansinya.",
+      "advice": "Pelajari jalan yang sudah mapan terlebih dahulu. Putuskan apakah akan meninggalkannya setelahnya."
+    },
+    "6": {
+      "name": "The Lovers",
+      "keywords": [
+        "koneksi",
+        "nilai-nilai",
+        "pilihan",
+        "penyelarasan"
+      ],
+      "upright": "penyelarasan nyata antara orang, nilai, atau jalan — pilihan yang penting karena menunjukkan apa yang Anda perjuangkan, bukan hanya apa yang Anda sukai.",
+      "reversed": "ketidakcocokan yang dibiarkan begitu saja, atau keputusan yang dihindari karena mengucapkannya dengan lantang akan membuka percakapan yang lebih sulit.",
+      "advice": "Sebutkan pilihannya dengan jelas, bahkan jika jawaban jujur membuat keadaan menjadi lebih rumit."
+    },
+    "7": {
+      "name": "The Chariot",
+      "keywords": [
+        "tekad",
+        "kegigihan",
+        "kemenangan melalui kendali"
+      ],
+      "upright": "gerakan maju yang dimenangkan dengan memegang dua kekuatan yang berlawanan di satu tangan dan mengarahkan keduanya ke arah yang sama.",
+      "reversed": "momentum yang habis karena konflik internal, atau kemenangan yang dikejar begitu keras hingga menginjak-injak hal yang seharusnya dilindungi.",
+      "advice": "Berhentilah bergulat dengan kontradiksi Anda sendiri. Arahkan mereka ke tujuan yang sama dan melajulah."
+    },
+    "8": {
+      "name": "Strength",
+      "keywords": [
+        "keberanian",
+        "kesabaran",
+        "tekad tenang",
+        "welas asih"
+      ],
+      "upright": "kekuatan yang tidak perlu meninggikan suara — ketenangan yang datang dari berdamai dengan hal yang sulit, bukan menguburnya.",
+      "reversed": "keraguan diri yang menyamar sebagai kerendahan hati, atau penggunaan kekuatan di tempat yang seharusnya membutuhkan kesabaran.",
+      "advice": "Hadapi apa yang membuat Anda takut dengan ketenangan alih-alih kekerasan. Kelembutan bukanlah kelemahan."
+    },
+    "9": {
+      "name": "The Hermit",
+      "keywords": [
+        "introspeksi",
+        "kesendirian",
+        "bimbingan batin"
+      ],
+      "upright": "penarikan diri yang diperlukan — melangkah mundur dari kebisingan untuk mendengar apa yang Anda pikirkan, bukan hanya apa yang dikatakan orang di sekitar Anda.",
+      "reversed": "isolasi yang berubah menjadi penghindaran, atau kebijaksanaan yang disimpan begitu rapat sehingga tidak pernah mencapai orang yang membutuhkannya.",
+      "advice": "Ambillah kesendirian itu. Jawaban apa pun yang Anda cari tidak akan muncul di tengah keramaian."
+    },
+    "10": {
+      "name": "Wheel of Fortune",
+      "keywords": [
+        "siklus",
+        "perubahan",
+        "takdir",
+        "titik balik"
+      ],
+      "upright": "pergeseran yang sudah berlangsung, didorong oleh kekuatan yang lebih besar dari pilihan tunggal mana pun — keadaan berubah dengan cara yang mengubah ketentuan segalanya.",
+      "reversed": "siklus yang berulang karena pola di bawahnya belum berubah — hanya kostumnya saja yang berganti.",
+      "advice": "Berhentilah mencoba mengendalikan putaran. Fokuskan energi Anda pada bagaimana Anda merespons setelah roda itu berhenti."
+    },
+    "11": {
+      "name": "Justice",
+      "keywords": [
+        "keadilan",
+        "kebenaran",
+        "sebab akibat",
+        "kejernihan"
+      ],
+      "upright": "perhitungan yang adil, meskipun tidak nyaman — mata yang jernih terhadap sebab dan akibat, serta apa yang menjadi kewajiban.",
+      "reversed": "ketidakseimbangan yang tidak ditangani siapa pun, atau kebenaran yang dihindari karena menghadapinya secara langsung akan menuntut akuntabilitas.",
+      "advice": "Lihat situasinya tanpa memuji diri sendiri. Keadilan dimulai dengan perhitungan yang jujur."
+    },
+    "12": {
+      "name": "The Hanged Man",
+      "keywords": [
+        "penyerahan diri",
+        "perspektif baru",
+        "jeda"
+      ],
+      "upright": "kemajuan yang dibuat dengan berhenti sejenak alih-alih mendorong — penangguhan yang disengaja yang membuka sudut pandang yang tidak bisa Anda capai saat bergerak.",
+      "reversed": "penundaan demi kepentingannya sendiri, atau pengorbanan yang tidak pernah membuahkan pemahaman nyata sebagai imbalannya.",
+      "advice": "Biarkan ini tetap belum terselesaikan sedikit lebih lama. Wawasan hidup di dalam penantian, bukan di suatu tempat setelahnya."
+    },
+    "13": {
+      "name": "Death",
+      "keywords": [
+        "transformasi",
+        "akhir",
+        "pelepasan"
+      ],
+      "upright": "akhir yang nyata yang memberi ruang bagi sesuatu yang tidak mungkin ada bersamanya — bukan kehancuran, melainkan perubahan yang diperlukan.",
+      "reversed": "perubahan yang ditolak lama setelah menjadi tak terelakkan, yang hanya membuat akhir menjadi lebih sulit saat akhirnya tiba.",
+      "advice": "Biarkan bagian yang sudah berakhir ini benar-benar berakhir. Sesuatu yang lain membutuhkan ruang yang sedang ditempatinya."
+    },
+    "14": {
+      "name": "Temperance",
+      "keywords": [
+        "keseimbangan",
+        "moderasi",
+        "integrasi",
+        "kesabaran"
+      ],
+      "upright": "dua hal yang tampak tidak kompatibel menetap ke tengah yang bisa dikerjakan — kesabaran, perpaduan, kerajinan lambat untuk mendapatkan proporsi yang tepat.",
+      "reversed": "terlalu banyak ke satu arah, atau kompromi yang disatukan begitu cepat sehingga tidak ada pihak yang puas.",
+      "advice": "Perlambat campurannya. Keseimbangan yang tepat tidak akan bisa dipaksakan dalam semalam."
+    },
+    "15": {
+      "name": "The Devil",
+      "keywords": [
+        "keterikatan",
+        "pembatasan",
+        "godaan",
+        "pola lama"
+      ],
+      "upright": "pola, kebiasaan, atau dinamika yang memiliki cengkeraman lebih kuat pada Anda daripada yang ingin Anda akui — meskipun pintu keluarnya tidak pernah terkunci.",
+      "reversed": "tarikan nyata pertama menjauh dari sesuatu yang menjebak Anda — melihat rantai itu dengan jelas apa adanya.",
+      "advice": "Lihatlah dengan jujur pada apa yang terus Anda pilih meskipun itu merugikan Anda. Menamainya adalah awal dari jalan keluar."
+    },
+    "16": {
+      "name": "The Tower",
+      "keywords": [
+        "perubahan mendadak",
+        "gejolak",
+        "wahyu"
+      ],
+      "upright": "struktur yang dibangun di atas tanah yang goyah, runtuh dengan cepat — mengganggu, tetapi menjernihkan, karena membersihkan apa yang memang tidak pernah stabil sejak awal.",
+      "reversed": "keruntuhan yang ditahan melalui penghindaran murni, atau gangguan kecil yang masih mengguncang sesuatu hingga lepas.",
+      "advice": "Jangan terburu-buru membangun kembali apa yang jatuh. Tanyakan dulu mengapa itu tidak bisa berdiri."
+    },
+    "17": {
+      "name": "The Star",
+      "keywords": [
+        "harapan",
+        "pembaruan",
+        "inspirasi",
+        "penyembuhan"
+      ],
+      "upright": "harapan tenang yang kembali setelah masa sulit — bukan optimisme naif, tetapi rasa nyata bahwa hal-hal dapat diperbaiki dan menuju ke arah yang lebih baik.",
+      "reversed": "harapan yang menipis, atau pandangan optimis yang terlepas dari rencana nyata apa pun.",
+      "advice": "Biarkan dirimu berharap lagi. Anda telah mendapatkannya, dan itu menunjuk ke suatu tempat yang nyata."
+    },
+    "18": {
+      "name": "The Moon",
+      "keywords": [
+        "ketidakpastian",
+        "alam bawah sadar",
+        "ilusi",
+        "intuisi"
+      ],
+      "upright": "situasi yang diterangi oleh sesuatu selain fakta yang jelas — naluri, imajinasi, dan ketakutan lama yang bercampur, sehingga apa yang Anda lihat belum merupakan gambaran utuh.",
+      "reversed": "kebingungan yang mulai terangkat, atau ketakutan yang ternyata tampak lebih besar dalam imajinasi daripada dalam kenyataan.",
+      "advice": "Jangan memaksakan keputusan saat gambaran masih belum jelas. Tunggu cahaya lebih terang."
+    },
+    "19": {
+      "name": "The Sun",
+      "keywords": [
+        "kegembiraan",
+        "vitalitas",
+        "kejernihan",
+        "kesuksesan"
+      ],
+      "upright": "keberuntungan yang jelas — kejernihan, kehangatan, hasil yang tidak perlu ditebak dua kali.",
+      "reversed": "kegembiraan yang meredup karena terlalu banyak berpikir, atau kesuksesan yang tidak dibiarkan masuk dan dinikmati apa adanya.",
+      "advice": "Biarkan ini menjadi sebaik yang seharusnya. Anda tidak perlu mencari-cari kekurangannya."
+    },
+    "20": {
+      "name": "Judgement",
+      "keywords": [
+        "perhitungan",
+        "kebangkitan",
+        "refleksi",
+        "absolusi"
+      ],
+      "upright": "perhitungan jujur dengan tempat Anda berada, dan panggilan untuk melangkah ke versi diri Anda yang sesuai dengan apa yang telah Anda pelajari.",
+      "reversed": "penghakiman diri yang berubah menjadi kekerasan, atau panggilan bangun yang ditunda sedikit lebih lama.",
+      "advice": "Jawab panggilannya dengan jelas. Apa pun yang Anda hindari sudah siap untuk dihadapi sekarang."
+    },
+    "21": {
+      "name": "The World",
+      "keywords": [
+        "penyelesaian",
+        "keutuhan",
+        "kedatangan"
+      ],
+      "upright": "siklus yang ditutup dengan bersih, semua yang dimaksudkan untuk diajarkan sudah ada di tangan — rasa kedatangan yang nyata sebelum perjalanan berikutnya dimulai.",
+      "reversed": "penyelesaian yang hampir selesai namun kehilangan bagian terakhirnya, atau penutupan yang dicapai sebelum waktunya.",
+      "advice": "Akui seberapa jauh ini telah berjalan sebelum terburu-buru menuju apa pun yang berikutnya."
+    }
+  },
+  "minorArcana": {
+    "wands": {
+      "ace": {
+        "keywords": [
+          "inspirasi",
+          "usaha baru",
+          "percikan kreatif"
+        ],
+        "upright": "ledakan energi kreatif yang datang sekaligus — sebuah ide, tawaran, atau usaha yang belum terbentuk namun sudah menarik Anda ke arahnya.",
+        "reversed": "inspirasi yang terus terhambat sebelum menjadi tindakan, atau antusiasme untuk usaha baru yang meredup bahkan sebelum dimulai.",
+        "advice": "Bertindaklah pada percikan itu sekarang, selagi masih panas. Menunggu rencana yang sempurna hanya akan membuatnya memudar."
+      },
+      "two": {
+        "keywords": [
+          "perencanaan",
+          "visi masa depan",
+          "kekuatan pribadi"
+        ],
+        "upright": "berdiri di titik pandang yang nyaman dengan pilihan nyata di depan, menimbang apa yang telah Anda bangun dengan ke mana Anda bisa membawanya selanjutnya.",
+        "reversed": "terlalu bermain aman karena takut akan hal yang tidak diketahui, atau rencana masa depan yang tidak pernah diuji.",
+        "advice": "Berhentilah mengagumi pemandangan dari tempat Anda berdiri. Pilih satu arah dan mulailah berjalan ke sana."
+      },
+      "three": {
+        "keywords": [
+          "ekspansi",
+          "pandangan jauh ke depan",
+          "menunggu hasil"
+        ],
+        "upright": "masa tunggu setelah pekerjaan selesai — kapal sudah dikirim, hasil belum tiba, tetapi dasar yang dibangun cukup kuat untuk dipercaya.",
+        "reversed": "penundaan yang menumpuk pada rencana yang terlihat pasti berhasil, atau pandangan luas yang mengungkap hambatan yang tidak Anda rencanakan.",
+        "advice": "Tetaplah menatap cakrawala sedikit lebih lama. Apa yang Anda mulai sedang dalam perjalanan."
+      },
+      "four": {
+        "keywords": [
+          "perayaan",
+          "pulang ke rumah",
+          "pencapaian"
+        ],
+        "upright": "pencapaian yang layak untuk dirayakan — kepulangan, perayaan, rasa telah mendapatkan momen ketenangan ini.",
+        "reversed": "perayaan yang terasa hampa, atau rasa memiliki rumah dan tempat bernaung yang belum sepenuhnya tercapai.",
+        "advice": "Biarkan diri Anda menikmati ini sepenuhnya. Tidak setiap momen baik harus segera diikuti oleh tugas berikutnya."
+      },
+      "five": {
+        "keywords": [
+          "kompetisi",
+          "gesekan",
+          "ketidaksepakatan"
+        ],
+        "upright": "kehendak yang bersaing dan berbenturan secara terbuka — bising, mungkin melelahkan, tetapi jujur, dan lebih baik daripada ketegangan yang dibiarkan membara di bawah permukaan.",
+        "reversed": "konflik yang akhirnya mereda, atau persaingan yang ternyata lebih banyak gaya daripada substansi.",
+        "advice": "Jangan menganggap gesekan ini sebagai kegagalan. Ide yang bersaing akan saling mengasah ketika tidak ada yang takut untuk tidak setuju secara terbuka."
+      },
+      "six": {
+        "keywords": [
+          "kemenangan",
+          "pengakuan",
+          "kepercayaan diri"
+        ],
+        "upright": "kemenangan yang juga bisa dilihat orang lain — pengakuan yang datang secara publik atas usaha yang, sampai sekarang, sebagian besar tidak terlihat.",
+        "reversed": "kebanggaan yang berubah menjadi kesombongan, atau kemenangan yang tidak pernah mendapatkan pengakuan yang layak.",
+        "advice": "Terimalah pengakuan itu tanpa perlu menjelaskannya secara berlebihan. Anda telah memenangkan kemenangan itu; biarkan itu berdiri."
+      },
+      "seven": {
+        "keywords": [
+          "sikap defensif",
+          "ketekunan",
+          "mempertahankan posisi"
+        ],
+        "upright": "mempertahankan posisi yang sedang coba direbut orang lain dari Anda — melelahkan, tetapi bukti bahwa apa yang Anda bangun layak dipertahankan.",
+        "reversed": "melepaskan posisi yang sebenarnya tidak perlu, atau mempertahankan posisi begitu lama hingga Anda kehilangan alasan mengapa itu penting.",
+        "advice": "Pertahankan posisi Anda, tetapi periksa apakah Anda masih berjuang untuk bukit yang tepat."
+      },
+      "eight": {
+        "keywords": [
+          "momentum",
+          "tindakan cepat",
+          "pergerakan cepat"
+        ],
+        "upright": "segalanya tiba-tiba bergerak sekaligus — pesan datang, rencana dipercepat, rentang gerak cepat setelah penantian panjang.",
+        "reversed": "momentum terhenti tepat saat itu paling penting, atau hal-hal bergerak begitu cepat sehingga tidak ada waktu untuk mendarat.",
+        "advice": "Bergeraklah dengan cepat selagi jalan terbuka, tetapi jangan berlari lebih cepat dari kemampuan Anda untuk merespons apa yang akan terjadi selanjutnya."
+      },
+      "nine": {
+        "keywords": [
+          "ketahanan",
+          "perjuangan terakhir",
+          "kewaspadaan"
+        ],
+        "upright": "satu usaha lagi diminta dari Anda setelah serangkaian usaha panjang — lelah, waspada, tetapi masih berdiri, dan lebih dekat ke akhir daripada yang terasa.",
+        "reversed": "sikap defensif yang mengeras menjadi isolasi, atau kelelahan yang membuat setiap tantangan yang tersisa terasa lebih besar dari yang sebenarnya.",
+        "advice": "Anda telah selamat dari setiap putaran sejauh ini. Jangan biarkan kewaspadaan menghentikan Anda untuk menerima bantuan pada putaran terakhir ini."
+      },
+      "ten": {
+        "keywords": [
+          "beban",
+          "kelebihan beban",
+          "penyelesaian yang sulit"
+        ],
+        "upright": "membawa lebih dari bagian Anda karena Anda sudah cukup dekat dengan garis finis sehingga meletakkannya sekarang terasa sia-sia.",
+        "reversed": "beban yang dipertahankan karena keras kepala, atau pekerjaan yang akhirnya diletakkan setelah dibawa terlalu lama.",
+        "advice": "Tanyakan apa yang Anda bawa yang sebenarnya bukan tugas Anda untuk diselesaikan. Sebagian dari beban ini bisa dibagikan atau dilepaskan."
+      },
+      "page": {
+        "keywords": [
+          "eksplorasi",
+          "ide baru",
+          "antusiasme"
+        ],
+        "upright": "ide yang terlalu menarik untuk didiamkan — rasa ingin tahu yang gelisah yang ingin segera menguji dirinya terhadap dunia.",
+        "reversed": "kegembiraan tanpa tindak lanjut, atau rencana yang diumumkan dengan lantang lalu ditinggalkan begitu saja.",
+        "advice": "Biarkan antusiasme menggerakkan Anda, tetapi berikan ide itu setidaknya satu ujian nyata sebelum mengejar yang berikutnya."
+      },
+      "knight": {
+        "keywords": [
+          "petualangan",
+          "impulsif",
+          "pengejaran berani"
+        ],
+        "upright": "menuju hal berikutnya dengan kepercayaan diri penuh, didorong lebih oleh nafsu untuk mengejar daripada rencana yang tetap.",
+        "reversed": "kecerobohan yang mulai merugikan Anda, atau energi gelisah yang tidak memiliki tempat produktif untuk disalurkan.",
+        "advice": "Kendalikan keberanian itu sebelum ia mengendalikan Anda, alih-alih Anda yang mengendalikannya."
+      },
+      "queen": {
+        "keywords": [
+          "kepercayaan diri",
+          "kemandirian",
+          "daya tarik"
+        ],
+        "upright": "keyakinan diri yang hangat dan tak tergoyahkan yang menarik orang lain tanpa perlu tampil untuk mereka.",
+        "reversed": "kepercayaan diri yang berubah menjadi rapuh atau menuntut, atau kemandirian yang digunakan untuk menutup diri dari orang lain alih-alih berdiri di atas kaki sendiri.",
+        "advice": "Pimpinlah dengan kepercayaan diri yang sudah Anda miliki. Anda tidak perlu membuktikannya kepada orang lain terlebih dahulu."
+      },
+      "king": {
+        "keywords": [
+          "visi",
+          "kepemimpinan",
+          "kewirausahaan berani"
+        ],
+        "upright": "kepemimpinan yang menginspirasi dengan memberi contoh — visi yang berani dipadukan dengan tindak lanjut untuk mewujudkannya.",
+        "reversed": "ekspektasi tinggi yang menjadi mustahil untuk dipenuhi, atau ambisi yang dikejar begitu kejam hingga membakar orang-orang yang membantu Anda.",
+        "advice": "Pimpin visinya, tetapi pastikan orang-orang yang menjalankannya bersama Anda masih ingin berada di sana."
+      }
+    },
+    "cups": {
+      "ace": {
+        "keywords": [
+          "cinta baru",
+          "pembukaan emosional",
+          "meluap"
+        ],
+        "upright": "cawan emosional yang terisi hingga melampaui tepinya — cinta baru, kasih sayang baru, atau perasaan yang begitu penuh hingga harus meluap menjadi sesuatu yang lain.",
+        "reversed": "pembukaan emosional yang tertahan, atau cinta dan koneksi yang ditawarkan namun belum diterima.",
+        "advice": "Biarkan perasaan ini sepenuh apa adanya. Tidak perlu menjatah sesuatu yang begitu nyata."
+      },
+      "two": {
+        "keywords": [
+          "kemitraan",
+          "ketertarikan timbal balik",
+          "persatuan"
+        ],
+        "upright": "dua orang yang bertemu sebagai setara — ikatan yang terbentuk, atau semakin dalam, atas dasar saling pengertian dan syarat yang kurang lebih seimbang.",
+        "reversed": "koneksi yang tumbuh tidak seimbang, atau kemitraan di bawah tekanan yang belum diucapkan dengan lantang.",
+        "advice": "Pastikan koneksi ini masih bersifat timbal balik seperti saat dimulai. Katakan dengan jelas apa yang telah berubah, jika memang ada."
+      },
+      "three": {
+        "keywords": [
+          "persahabatan",
+          "perayaan",
+          "komunitas"
+        ],
+        "upright": "kebahagiaan yang lebih baik jika dibagikan — sebuah pertemuan, persahabatan, momen yang layak dirayakan bersama orang-orang yang telah mendukungmu.",
+        "reversed": "dinamika kelompok yang memburuk menjadi gosip atau pengucilan, atau kesenangan berlebihan yang menumpulkan apa yang seharusnya menjadi perayaan nyata.",
+        "advice": "Bawa orang-orang yang paling berarti ke dalam momen ini. Perayaan lebih bermakna jika tidak dilakukan sendirian."
+      },
+      "four": {
+        "keywords": [
+          "apatis",
+          "kontemplasi",
+          "tawaran yang terlewat"
+        ],
+        "upright": "kebosanan dengan apa yang sudah ada di depan mata, padahal sesuatu yang layak diperhatikan sedang ditawarkan tepat di hadapanmu.",
+        "reversed": "apatis yang akhirnya mulai melonggar, atau kesediaan untuk mendongak dan mempertimbangkan peluang yang tadinya kamu abaikan.",
+        "advice": "Berhentilah melihat apa yang mengecewakanmu dan perhatikan apa yang sedang ditawarkan. Mungkin nilainya lebih besar dari yang terlihat."
+      },
+      "five": {
+        "keywords": [
+          "kehilangan",
+          "duka",
+          "penyesalan"
+        ],
+        "upright": "duka yang berpusat pada apa yang tumpah dan hilang, bahkan saat sesuatu yang utuh masih berdiri di dekatmu tanpa disadari.",
+        "reversed": "duka yang mulai melonggar, atau langkah nyata pertama menuju penerimaan atas kehilangan alih-alih terus mengulanginya.",
+        "advice": "Ratapi apa yang benar-benar hilang, tetapi berbaliklah cukup lama untuk melihat apa yang masih berdiri di belakangmu."
+      },
+      "six": {
+        "keywords": [
+          "nostalgia",
+          "kenangan",
+          "kepolosan"
+        ],
+        "upright": "tarikan kembali ke masa yang lebih sederhana — kenangan lama, kenyamanan yang familiar, atau reuni dengan seseorang dari bab kehidupan sebelumnya.",
+        "reversed": "nostalgia yang telah menjadi tempat persembunyian, atau masa lalu yang diidealkan yang membuat masa kini terlihat lebih buruk dari yang sebenarnya.",
+        "advice": "Kunjungi masa lalu untuk kenyamanan, tetapi jangan pindah kembali ke sana. Apa yang kamu butuhkan sekarang ada di masa kini."
+      },
+      "seven": {
+        "keywords": [
+          "fantasi",
+          "pilihan",
+          "ilusi"
+        ],
+        "upright": "terlalu banyak pilihan menarik, beberapa lebih solid daripada yang lain, membuat sulit untuk membedakan peluang nyata dari angan-angan.",
+        "reversed": "kabut yang cukup menipis untuk melihat pilihan mana yang nyata, dan keputusan akhirnya menjadi mungkin untuk diambil.",
+        "advice": "Uji setiap pilihan dengan realitas sebelum memilih. Tidak semua yang berkilau di sini akan bertahan."
+      },
+      "eight": {
+        "keywords": [
+          "pergi meninggalkan",
+          "mencari makna lebih dalam",
+          "keberangkatan"
+        ],
+        "upright": "pergi meninggalkan sesuatu yang terlihat baik dari luar karena hal itu sudah tidak lagi memberimu makan dari dalam.",
+        "reversed": "bertahan di suatu tempat karena takut akan arti dari kepergian, atau hanyut tanpa pernah benar-benar berkomitmen untuk pergi.",
+        "advice": "Percayalah pada bagian dirimu yang tahu bahwa ini sudah tidak cukup lagi, meskipun kamu belum bisa menjelaskannya sepenuhnya."
+      },
+      "nine": {
+        "keywords": [
+          "kepuasan",
+          "pemenuhan",
+          "keinginan terpenuhi"
+        ],
+        "upright": "kepuasan yang mudah dan nyaman — keinginan tercapai, kebutuhan terpenuhi, kepuasan yang tidak perlu dibenarkan.",
+        "reversed": "rasa puas diri yang menggantikan kepuasan nyata, atau kelimpahan yang entah mengapa masih terasa tidak cukup.",
+        "advice": "Biarkan kepuasan ini sederhana. Kamu tidak perlu mendapatkannya dua kali dengan mengkhawatirkan bahwa ini tidak akan bertahan."
+      },
+      "ten": {
+        "keywords": [
+          "pemenuhan emosional",
+          "keharmonisan keluarga",
+          "kebahagiaan abadi"
+        ],
+        "upright": "kebahagiaan mendalam dan mapan yang dibangun bersama orang-orang terdekatmu — bukan momen puncak, melainkan keadaan yang bertahan lama.",
+        "reversed": "keharmonisan di rumah yang lebih tampak sebagai penampilan daripada substansi, atau nilai-nilai di antara orang yang kamu cintai yang diam-diam tidak lagi sejalan.",
+        "advice": "Lihat melampaui gambaran kebahagiaan di permukaan dan pastikan orang-orang di dalamnya juga merasakannya."
+      },
+      "page": {
+        "keywords": [
+          "peluang kreatif",
+          "pesan intuitif",
+          "rasa ingin tahu"
+        ],
+        "upright": "pesan emosional atau kreatif yang lembut dan tak terduga datang — sesuatu yang layak diperhatikan, meskipun tampak kecil.",
+        "reversed": "ketidakdewasaan emosional yang menghalangi peluang nyata, atau dorongan kreatif yang digunakan untuk melarikan diri alih-alih berekspresi.",
+        "advice": "Anggap serius perasaan kecil yang tak terduga itu. Itu lebih informatif daripada kelihatannya."
+      },
+      "knight": {
+        "keywords": [
+          "romansa",
+          "idealisme",
+          "mengikuti kata hati"
+        ],
+        "upright": "memimpin dengan hati, mengejar visi romantis atau idealis dengan ketulusan nyata, meskipun belum sepenuhnya praktis.",
+        "reversed": "suasana hati yang berubah-ubah yang disamarkan sebagai kepekaan, atau ideal romantis yang terus membuatmu kecewa.",
+        "advice": "Ikuti kata hatimu di sini, tetapi periksa dengan realitas sebelum kamu mengikutinya sepenuhnya."
+      },
+      "queen": {
+        "keywords": [
+          "kasih sayang",
+          "keamanan emosional",
+          "intuisi"
+        ],
+        "upright": "kedalaman emosional yang dipegang dengan stabilitas nyata — kasih sayang untuk orang lain yang tidak mengorbankan pijakanmu sendiri.",
+        "reversed": "kasih sayang yang berubah menjadi pengabaian diri, atau keamanan emosional yang hanya bertahan selama tidak ada yang mengujinya.",
+        "advice": "Berikan kasih sayangmu kepada orang lain, tetapi simpan cukup banyak untuk dirimu sendiri."
+      },
+      "king": {
+        "keywords": [
+          "keseimbangan emosional",
+          "diplomasi",
+          "kontrol yang tenang"
+        ],
+        "upright": "penguasaan yang tenang atas perasaan yang kuat — mampu tetap stabil dan adil bahkan ketika taruhan emosional tinggi.",
+        "reversed": "kontrol atas perasaan yang sebenarnya adalah penekanan, atau ketenangan di permukaan yang menyembunyikan manipulasi di baliknya.",
+        "advice": "Tetaplah stabil, tetapi biarkan apa yang benar-benar kamu rasakan diketahui alih-alih hanya dikelola."
+      }
+    },
+    "swords": {
+      "ace": {
+        "keywords": [
+          "terobosan",
+          "kejelasan",
+          "ide baru"
+        ],
+        "upright": "pemotongan tiba-tiba melalui kebingungan — sebuah kesadaran, keputusan, atau potongan kebenaran yang datang dengan tajam dan sangat jelas.",
+        "reversed": "kejelasan yang tertutup oleh terlalu banyak kebisingan, atau kebenaran yang telah diputarbalikkan sebelum sampai kepada Anda.",
+        "advice": "Percayalah pada pemikiran jernih saat itu muncul. Jangan biarkan hal itu kembali menjadi kebingungan karena perkataan orang lain."
+      },
+      "two": {
+        "keywords": [
+          "jalan buntu",
+          "keputusan sulit",
+          "penghindaran"
+        ],
+        "upright": "keputusan yang ditahan, dijaga dan diseimbangkan dengan sangat hati-hati sehingga tidak ada pilihan yang benar-benar diambil.",
+        "reversed": "kebuntuan yang akhirnya pecah, atau kelebihan informasi yang bertentangan yang membuat pilihan menjadi lebih sulit daripada lebih mudah.",
+        "advice": "Buka penutup mata Anda. Keputusan tidak akan menjadi lebih mudah dengan menundanya lebih lama lagi."
+      },
+      "three": {
+        "keywords": [
+          "patah hati",
+          "pengkhianatan",
+          "kesedihan"
+        ],
+        "upright": "rasa sakit yang tajam dan spesifik — sebuah kebenaran, pengkhianatan, atau kehilangan yang melukai justru karena itu nyata.",
+        "reversed": "tahap awal penyembuhan, atau rasa sakit lama yang muncul kembali karena tidak pernah benar-benar ditangani sejak awal.",
+        "advice": "Biarkan rasa sakit itu terasa setajam apa adanya. Menamainya dengan jelas adalah hal yang memulai penyembuhan."
+      },
+      "four": {
+        "keywords": [
+          "istirahat",
+          "pemulihan",
+          "kontemplasi"
+        ],
+        "upright": "penarikan diri yang disengaja setelah konflik atau ketegangan — bukan kekalahan, melainkan pemulihan yang dibutuhkan pikiran sebelum bisa berpikir jernih kembali.",
+        "reversed": "istirahat yang terputus sebelum selesai, atau kegelisahan yang membuat pemulihan nyata menjadi mustahil.",
+        "advice": "Beristirahatlah sepenuhnya. Pemulihan setengah-setengah hanya berarti membawa kelelahan ke hal apa pun yang akan datang berikutnya."
+      },
+      "five": {
+        "keywords": [
+          "kemenangan hampa",
+          "konflik",
+          "pengkhianatan"
+        ],
+        "upright": "kemenangan yang memakan biaya lebih besar daripada nilainya — sebuah konflik yang dipaksakan sampai akhir meskipun semua orang yang terlibat berakhir dalam kondisi yang lebih buruk.",
+        "reversed": "kebencian yang tertinggal setelah konflik yang tidak pernah benar-benar terselesaikan, atau kesempatan untuk berdamai alih-alih menekan keunggulan.",
+        "advice": "Tanyakan apakah memenangkan pertarungan ini sepadan dengan apa yang akan merugikan Anda setelahnya."
+      },
+      "six": {
+        "keywords": [
+          "transisi",
+          "melangkah maju",
+          "perairan yang lebih tenang"
+        ],
+        "upright": "langkah yang lambat dan disengaja menjauh dari turbulensi, hanya membawa apa yang perlu menuju sesuatu yang lebih stabil.",
+        "reversed": "menolak transisi yang sebenarnya sudah diperlukan, atau membawa beban masa lalu yang belum terselesaikan ke perairan yang lebih tenang di depan.",
+        "advice": "Biarkan perairan yang sulit itu berada di belakang Anda. Jangan terus menoleh ke pantai yang Anda tinggalkan."
+      },
+      "seven": {
+        "keywords": [
+          "strategi",
+          "penipuan",
+          "bertindak sendiri"
+        ],
+        "upright": "bergerak secara diam-diam dan mandiri, mengambil apa yang Anda butuhkan tanpa meminta izin — cerdik, namun tidak sepenuhnya jujur.",
+        "reversed": "strategi tersembunyi yang terungkap, atau hati nurani yang akhirnya mengejar jalan pintas yang telah diambil.",
+        "advice": "Tanyakan apakah strategi yang Anda jalankan akan tetap masuk akal jika semua orang yang terlibat bisa melihatnya."
+      },
+      "eight": {
+        "keywords": [
+          "keterjebakan",
+          "mentalitas korban",
+          "batasan yang dibuat sendiri"
+        ],
+        "upright": "merasa terkurung di setiap sisi, meskipun tali yang mengikat Anda lebih longgar daripada yang terasa — penjara yang dibangun lebih dari keyakinan daripada fakta.",
+        "reversed": "celah nyata pertama dalam jebakan yang dibuat sendiri itu, saat cerita tentang ketidakberdayaan mulai melonggarkan cengkeramannya.",
+        "advice": "Cari celah pada tali yang Anda asumsikan kuat. Ada lebih banyak ruang untuk bergerak daripada yang Anda rasakan."
+      },
+      "nine": {
+        "keywords": [
+          "kecemasan",
+          "kekhawatiran",
+          "penderitaan mental"
+        ],
+        "upright": "pikiran yang menjalankan skenario terburuk dalam kegelapan, kelelahan oleh ketakutan yang tampak jauh lebih besar pada jam 3 pagi daripada di siang hari.",
+        "reversed": "kekhawatiran yang mulai mereda, atau keputusan untuk akhirnya menyuarakan ketakutan tersebut alih-alih membawanya sendirian.",
+        "advice": "Ucapkan kekhawatiran itu dengan lantang kepada seseorang. Jarang sekali ketakutan itu tetap utuh saat berhadapan dengan cahaya siang seperti yang Anda rasakan sekarang."
+      },
+      "ten": {
+        "keywords": [
+          "titik terendah",
+          "akhir yang menyakitkan",
+          "pengkhianatan"
+        ],
+        "upright": "sebuah akhir yang final sekaligus menyakitkan — bagian terburuknya sudah berlalu, dan tidak ada tempat untuk pergi dari sini selain ke atas.",
+        "reversed": "menolak akhir yang sebenarnya sudah terjadi, atau pemulihan lambat dan sebagian dari sesuatu yang belum sepenuhnya sembuh.",
+        "advice": "Biarkan akhir ini selesai. Berjuang untuk menjaganya tetap hidup hanya akan memperpanjang rasa sakitnya."
+      },
+      "page": {
+        "keywords": [
+          "keingintahuan",
+          "kewaspadaan",
+          "haus akan kebenaran"
+        ],
+        "upright": "pikiran yang waspada dan penuh pertanyaan, mengumpulkan informasi dan mengamati dengan cermat sebelum memutuskan apa yang harus dipercayai.",
+        "reversed": "gosip yang menggantikan penyelidikan nyata, atau ide-ide yang tidak pernah beranjak dari sekadar pembicaraan menjadi tindakan nyata.",
+        "advice": "Teruslah bertanya, tetapi pada akhirnya bertindaklah berdasarkan apa yang dikatakan oleh jawaban-jawaban tersebut."
+      },
+      "knight": {
+        "keywords": [
+          "tindakan tegas",
+          "ketegasan",
+          "berpikir cepat"
+        ],
+        "upright": "bergerak cepat dan berbicara terus terang, langsung ke inti permasalahan tanpa menunggu izin siapa pun.",
+        "reversed": "agresi yang melampaui penilaian, atau keputusan impulsif yang dibuat lebih cepat daripada yang dibutuhkan situasi.",
+        "advice": "Bertindaklah dengan tegas, tetapi tarik napas sejenak sebelum Anda mengucapkan versi paling tajam dari apa yang Anda pikirkan."
+      },
+      "queen": {
+        "keywords": [
+          "pemikiran mandiri",
+          "batasan yang jelas",
+          "komunikasi langsung"
+        ],
+        "upright": "melihat situasi dengan jelas dan mengatakannya tanpa melunakkannya lebih dari yang diperlukan oleh kebenaran.",
+        "reversed": "kejujuran yang berubah menjadi kekakuan, atau batasan yang dipegang begitu erat sehingga tidak ada orang yang bisa mendekat.",
+        "advice": "Pertahankan kejelasan, tetapi periksa apakah ketajaman kata-kata itu perlu atau hanya lebih mudah daripada bersikap lembut."
+      },
+      "king": {
+        "keywords": [
+          "otoritas intelektual",
+          "pemikiran terstruktur",
+          "kebenaran yang tidak memihak"
+        ],
+        "upright": "penilaian yang dibuat berdasarkan prinsip dan bukti daripada perasaan — adil, tepat, dan sulit untuk didebat.",
+        "reversed": "logika yang digunakan sebagai senjata, atau otoritas yang secara teknis benar namun tetap kejam.",
+        "advice": "Jadilah benar, tetapi jangan biarkan kebenaran itu menjadi alasan untuk bersikap tidak baik."
+      }
+    },
+    "pentacles": {
+      "ace": {
+        "keywords": [
+          "peluang baru",
+          "kemakmuran",
+          "manifestasi"
+        ],
+        "upright": "peluang nyata yang ada di tangan Anda — praktis, konkret, dan layak untuk dikembangkan daripada sekadar dikagumi.",
+        "reversed": "peluang yang terlewatkan karena waktu atau perencanaan yang buruk, atau awal yang menjanjikan namun tidak pernah ditindaklanjuti.",
+        "advice": "Ambil langkah praktis sekarang. Peluang seperti ini lebih menghargai tindak lanjut daripada sekadar antusiasme."
+      },
+      "two": {
+        "keywords": [
+          "keseimbangan",
+          "kemampuan beradaptasi",
+          "mengatur prioritas"
+        ],
+        "upright": "menjaga beberapa tuntutan tetap berjalan sekaligus, menyesuaikan diri dengan cepat daripada membiarkan salah satunya terbengkalai.",
+        "reversed": "terlalu banyak prioritas yang ditambahkan, sehingga ada sesuatu yang terlepas padahal seharusnya tidak.",
+        "advice": "Lihatlah dengan jujur apa yang sedang Anda tangani. Mungkin ada sesuatu yang perlu diletakkan, bukan dipaksakan untuk diseimbangkan."
+      },
+      "three": {
+        "keywords": [
+          "kolaborasi",
+          "keterampilan",
+          "kerja sama tim"
+        ],
+        "upright": "berbagai keterampilan yang digabungkan menjadi sesuatu yang tidak bisa dibangun sendiri — kemajuan solid yang dicapai melalui kolaborasi nyata.",
+        "reversed": "bekerja dalam isolasi pada sesuatu yang membutuhkan bantuan orang lain, atau tim yang tidak lagi sejalan.",
+        "advice": "Libatkan bantuan yang diperlukan. Ini bukan proyek yang bisa dibangun dengan baik sendirian."
+      },
+      "four": {
+        "keywords": [
+          "keamanan",
+          "kendali",
+          "memegang erat"
+        ],
+        "upright": "genggaman erat pada apa yang telah Anda bangun, memprioritaskan keamanan di atas risiko, bahkan dengan mengorbankan fleksibilitas.",
+        "reversed": "memegang terlalu erat sehingga tidak ada hal baru yang bisa masuk, atau ketakutan akan kehilangan yang lebih mendominasi keputusan daripada ancaman nyata.",
+        "advice": "Longgarkan sedikit genggaman Anda. Apa yang Anda lindungi tidak serapuh yang Anda rasakan."
+      },
+      "five": {
+        "keywords": [
+          "kesulitan",
+          "kerugian finansial",
+          "isolasi"
+        ],
+        "upright": "kesulitan nyata, yang dirasakan dalam isolasi sama beratnya dengan kerugian itu sendiri — berjuang sambil merasa bantuan tidak terjangkau.",
+        "reversed": "tanda-tanda awal dukungan mulai tersedia, atau kesulitan akhirnya mulai mereda setelah masa yang berat.",
+        "advice": "Carilah pintu yang terbuka di dekat Anda. Bantuan itu ada, meskipun belum terasa demikian."
+      },
+      "six": {
+        "keywords": [
+          "kedermawanan",
+          "memberi dan menerima",
+          "keseimbangan"
+        ],
+        "upright": "sumber daya yang mengalir secara adil antar sesama — bantuan diberikan karena dibutuhkan, dan diterima tanpa rasa malu.",
+        "reversed": "kedermawanan yang disertai syarat, atau pertukaran yang diam-diam menjadi tidak seimbang.",
+        "advice": "Periksa apakah apa yang diberikan di sini benar-benar tulus, atau apakah ada sesuatu yang harus dibayar kembali."
+      },
+      "seven": {
+        "keywords": [
+          "kesabaran",
+          "pandangan jangka panjang",
+          "menilai kemajuan"
+        ],
+        "upright": "jeda untuk menilai upaya yang telah diinvestasikan, menimbang apakah itu membuahkan hasil atau perlu mengubah arah.",
+        "reversed": "ketidaksabaran terhadap hasil yang belum datang, atau upaya yang terus berlanjut di jalur yang tidak lagi menguntungkan.",
+        "advice": "Lakukan audit yang jujur. Sebagian dari upaya ini layak mendapatkan lebih banyak kesabaran; sebagian lainnya layak mendapatkan rencana baru."
+      },
+      "eight": {
+        "keywords": [
+          "ketekunan",
+          "keahlian",
+          "membangun keterampilan"
+        ],
+        "upright": "upaya yang stabil dan berulang yang ditujukan untuk benar-benar mahir dalam sesuatu — tidak glamor, tetapi itulah yang dibutuhkan untuk penguasaan.",
+        "reversed": "perfeksionisme yang menghambat kemajuan nyata, atau jalan pintas yang diambil pada pekerjaan yang seharusnya dilakukan dengan usaha penuh.",
+        "advice": "Terus lakukan pengulangan yang tidak glamor itu. Seperti inilah wujud keterampilan saat sedang dibangun."
+      },
+      "nine": {
+        "keywords": [
+          "kemandirian",
+          "kelimpahan",
+          "kebebasan"
+        ],
+        "upright": "kenyamanan dan kelimpahan yang diperoleh sebagian besar atas usaha sendiri — kemandirian yang tidak membutuhkan persetujuan siapa pun.",
+        "reversed": "kesuksesan yang terlihat bagus dari luar namun terasa hampa, atau terlalu banyak bekerja hingga tidak ada waktu untuk menikmatinya bersama orang lain.",
+        "advice": "Nikmati apa yang telah Anda bangun tanpa perlu orang lain mengonfirmasi nilainya."
+      },
+      "ten": {
+        "keywords": [
+          "warisan",
+          "keamanan jangka panjang",
+          "kekayaan keluarga"
+        ],
+        "upright": "stabilitas yang bertahan lebih lama dari satu orang — warisan atau fondasi yang dibangun untuk mendukung lebih dari sekadar diri Anda sendiri.",
+        "reversed": "warisan yang sedang dalam tekanan, atau perselisihan keluarga mengenai sumber daya yang mengancam sesuatu yang dibangun untuk bertahan lama.",
+        "advice": "Lindungi apa yang dimaksudkan untuk bertahan setelah Anda tiada, tetapi jangan biarkan perselisihan mengenainya merusak tujuan pembangunannya."
+      },
+      "page": {
+        "keywords": [
+          "peluang baru",
+          "studi",
+          "keingintahuan praktis"
+        ],
+        "upright": "peluang praktis yang layak dipelajari dengan cermat — baru, menjanjikan, dan masih dalam tahap mempelajari cara kerjanya.",
+        "reversed": "rencana tidak realistis yang belum diuji dengan kenyataan, atau kemajuan yang terhenti sebelum benar-benar dimulai.",
+        "advice": "Pelajari peluang ini dengan cermat sebelum berkomitmen lebih jauh. Ini menjanjikan, tetapi belum terbukti."
+      },
+      "knight": {
+        "keywords": [
+          "ketekunan",
+          "rutinitas",
+          "kemajuan metodis"
+        ],
+        "upright": "kemajuan yang lambat, metodis, dan dapat diandalkan — tidak ada jalan pintas, hanya pekerjaan konsisten yang terakumulasi seiring waktu.",
+        "reversed": "rutinitas yang mengeras menjadi stagnasi, atau perfeksionisme yang terlalu kaku sehingga menghambat penyelesaian apa pun.",
+        "advice": "Percayalah pada metode lambat yang sedang berjalan. Tidak perlu lebih cepat untuk menjadi efektif."
+      },
+      "queen": {
+        "keywords": [
+          "pengasuhan",
+          "sumber daya",
+          "pembumian"
+        ],
+        "upright": "perhatian praktis yang ditunjukkan dengan cara nyata — kenyamanan, sumber daya, dan pembumian yang ditawarkan dengan murah hati kepada orang lain.",
+        "reversed": "perhatian kepada orang lain yang mengorbankan perhatian pada diri sendiri, atau rasa tidak aman tentang sumber daya yang merusak kedermawanan tersebut.",
+        "advice": "Berikan perhatian praktis yang sama kepada diri sendiri seperti yang Anda berikan dengan mudah kepada orang lain."
+      },
+      "king": {
+        "keywords": [
+          "penguasaan materi",
+          "keamanan finansial",
+          "kedermawanan"
+        ],
+        "upright": "penguasaan materi dan finansial yang dibangun seiring waktu, kini cukup murah hati untuk membagikan keamanan yang telah diciptakannya.",
+        "reversed": "kendali atas sumber daya yang berubah menjadi kaku atau posesif, atau keamanan finansial yang dikejar dengan mengorbankan segalanya.",
+        "advice": "Gunakan apa yang telah Anda bangun dengan murah hati. Keamanan yang tidak dibagikan pada akhirnya hanya akan menjadi isolasi."
+      }
+    }
+  }
+}

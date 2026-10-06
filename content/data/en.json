@@ -1,0 +1,944 @@
+{
+  "ui": {
+    "logo": "MyTarot.Day",
+    "tagline": "100% free daily tarot reading. Pick your own cards from the deck. No signup, no cost, ever.",
+    "eyebrow": "Four cards. One day.",
+    "selectCardsPrompt": "Select 4 cards",
+    "heroTitleLine1": "What do today's cards reveal about",
+    "heroTitleEm": "you",
+    "submitLabel": "Show my cards",
+    "submittingLabel": "Drawing…",
+    "loadingText": "Shuffling the deck for {date}…",
+    "tryAnotherLabel": "Do another reading?",
+    "buyMeCoffeeLabel": "☕  Buy me a coffee 🤗",
+    "funFact": "Fun fact: The vintage look of our tarot cards is authentic. We use the traditional 1909 Rider–Waite–Smith Tarot with the original artwork by Pamela Colman Smith. More than a century later, this classic deck continues to inspire readers around the world and is considered one of the most influential foundations of modern tarot.",
+    "footerDisclaimer": "MyTarot.Day is offered for reflection and entertainment. It isn't a substitute for professional, medical, financial, or legal advice.",
+    "footerTagline": "Developed by P.San Team | It is free, and always will be!",
+    "footerHome": "Home",
+    "footerBlog": "Blog",
+    "footerPrivacy": "Privacy Policy",
+    "footerTerms": "Terms & Conditions",
+    "footerAbout": "About",
+    "footerContact": "Contact",
+    "todayBadge": "Today",
+    "reversedLabel": "Reversed",
+    "uprightLabel": "Upright",
+    "supportPromptText": "Did you like it? Buy me a coffee",
+    "summaryGuideLabel": "Guide",
+    "summaryPastLabel": "Past",
+    "summaryFutureLabel": "Future",
+    "freeBadge": "100% Free — No Signup, No Cost",
+    "freeTitlePhrase": "Free Tarot Reading",
+    "skipToContent": "Skip to main content"
+  },
+  "positions": {
+    "determinant": {
+      "label": "The Determinant",
+      "subtitle": "The force shaping the whole day",
+      "intros": [
+        "Sitting over everything else today:",
+        "Setting the tone for the whole day:",
+        "Before anything else, shaping the day:"
+      ]
+    },
+    "past": {
+      "label": "The Past",
+      "subtitle": "What you're carrying in",
+      "intros": [
+        "Still influencing this moment:",
+        "Carried in from recent days:",
+        "Feeding into today:"
+      ]
+    },
+    "present": {
+      "label": "The Present",
+      "subtitle": "Where you actually stand",
+      "intros": [
+        "Right now, at the center of things:",
+        "Where you actually stand today:",
+        "What you're dealing with right now:"
+      ]
+    },
+    "future": {
+      "label": "The Future",
+      "subtitle": "Where this is heading",
+      "intros": [
+        "Just ahead, this is moving toward:",
+        "Where this is heading, if nothing changes:",
+        "The near future is pointing toward:"
+      ]
+    }
+  },
+  "summaryClauses": [
+    "{determinant} anchors today's reading. {past} and {future} complete the arc.",
+    "{determinant} sets the tone for today. {past} shaped where you've been; {future} shows where you're headed."
+  ],
+  "ranks": {
+    "ace": "Ace",
+    "two": "Two",
+    "three": "Three",
+    "four": "Four",
+    "five": "Five",
+    "six": "Six",
+    "seven": "Seven",
+    "eight": "Eight",
+    "nine": "Nine",
+    "ten": "Ten",
+    "page": "Page",
+    "knight": "Knight",
+    "queen": "Queen",
+    "king": "King"
+  },
+  "suits": {
+    "wands": "Wands",
+    "cups": "Cups",
+    "swords": "Swords",
+    "pentacles": "Pentacles"
+  },
+  "majorArcana": {
+    "0": {
+      "name": "The Fool",
+      "keywords": [
+        "beginnings",
+        "innocence",
+        "leap of faith",
+        "openness"
+      ],
+      "upright": "a fresh start with no map and no guarantees — nothing to go on but curiosity and the nerve to step forward before every answer is in.",
+      "reversed": "hesitation dressed up as prudence, a step rehearsed so many times it never gets taken — or the opposite: a leap made blind, without checking what's underneath.",
+      "advice": "Be a beginner again. The only mistake here is refusing to start."
+    },
+    "1": {
+      "name": "The Magician",
+      "keywords": [
+        "resourcefulness",
+        "willpower",
+        "manifestation"
+      ],
+      "upright": "realizing every tool the situation calls for — intellect, skill, timing — is already in your hands, and using them on purpose is the only step left.",
+      "reversed": "talent sitting unused, or skill bent toward manipulation instead of building something. Either way, ability is going to waste, or confidence is more performance than foundation.",
+      "advice": "Stop collecting more tools. Pick up the one in your hand and use it."
+    },
+    "2": {
+      "name": "The High Priestess",
+      "keywords": [
+        "intuition",
+        "the unconscious",
+        "hidden knowledge"
+      ],
+      "upright": "knowledge that comes in under language — a hunch, a dream, a feeling that ends up more accurate than any evidence you had at the time.",
+      "reversed": "a quiet truth getting drowned out by noise, or an instinct kept private because it can't yet prove itself.",
+      "advice": "Trust what you already sense but haven't said out loud. It knows something your reasoning hasn't caught up to yet."
+    },
+    "3": {
+      "name": "The Empress",
+      "keywords": [
+        "abundance",
+        "nurturing",
+        "creativity",
+        "growth"
+      ],
+      "upright": "a season of growth that wants tending, not forcing — a project, relationship, or part of yourself that thrives once it's fed instead of pushed.",
+      "reversed": "care or creativity tipping into smothering, or fertile ground left untended until it stopped producing anything.",
+      "advice": "Give what you care about attention instead of pressure. Patience is what grows it."
+    },
+    "4": {
+      "name": "The Emperor",
+      "keywords": [
+        "structure",
+        "authority",
+        "discipline",
+        "stability"
+      ],
+      "upright": "order built on purpose — a framework, boundary, or plan sturdy enough to hold good intentions up under real pressure.",
+      "reversed": "control gripped too tightly, or a structure so loose nothing inside it stays upright.",
+      "advice": "Put up the scaffolding before you build the house. Structure now saves effort later."
+    },
+    "5": {
+      "name": "The Hierophant",
+      "keywords": [
+        "tradition",
+        "belief systems",
+        "guidance",
+        "convention"
+      ],
+      "upright": "wisdom handed down through established channels — a mentor, institution, or tradition whose guidance still deserves following, at least for now.",
+      "reversed": "a rule kept out of pure habit, or a convention that stopped earning its loyalty a while ago.",
+      "advice": "Learn the established path first. Decide whether to leave it after."
+    },
+    "6": {
+      "name": "The Lovers",
+      "keywords": [
+        "connection",
+        "values",
+        "choice",
+        "alignment"
+      ],
+      "upright": "a real alignment between people, values, or paths — a choice that matters because it says what you stand for, not just what you like.",
+      "reversed": "a mismatch quietly put up with, or a decision dodged because naming it out loud would open a harder conversation.",
+      "advice": "Name the choice plainly, even if the honest answer makes things messier."
+    },
+    "7": {
+      "name": "The Chariot",
+      "keywords": [
+        "willpower",
+        "determination",
+        "victory through control"
+      ],
+      "upright": "forward motion won by holding two opposing forces in one hand and steering them both the same way.",
+      "reversed": "momentum eaten up by internal conflict, or a victory chased so hard it tramples the very thing it was supposed to protect.",
+      "advice": "Stop wrestling with your own contradictions. Point them the same way and go."
+    },
+    "8": {
+      "name": "Strength",
+      "keywords": [
+        "courage",
+        "patience",
+        "quiet resolve",
+        "compassion"
+      ],
+      "upright": "power that never needs to raise its voice — a steadiness that comes from making peace with the hard thing, not burying it.",
+      "reversed": "self-doubt wearing humility as a disguise, or force reached for where patience would have done more.",
+      "advice": "Meet what frightens you with calm instead of force. Gentleness isn't weakness."
+    },
+    "9": {
+      "name": "The Hermit",
+      "keywords": [
+        "introspection",
+        "solitude",
+        "inner guidance"
+      ],
+      "upright": "a necessary retreat — stepping back from the noise to hear what you think, not just what everyone around you is saying.",
+      "reversed": "isolation curdling into avoidance, or wisdom held so close it never reaches the people who need it.",
+      "advice": "Take the solitude. Whatever answer you're after won't turn up in a crowd."
+    },
+    "10": {
+      "name": "Wheel of Fortune",
+      "keywords": [
+        "cycles",
+        "change",
+        "fate",
+        "turning points"
+      ],
+      "upright": "a shift already underway, pushed by forces bigger than any single choice — circumstance turning in a way that changes the terms of things.",
+      "reversed": "a cycle repeating itself because the pattern underneath hasn't changed — only its costume has.",
+      "advice": "Stop trying to control the turning. Put your energy into how you respond once it lands."
+    },
+    "11": {
+      "name": "Justice",
+      "keywords": [
+        "fairness",
+        "truth",
+        "cause and effect",
+        "clarity"
+      ],
+      "upright": "a fair reckoning, even if not a comfortable one — clear eyes on cause and effect, and on what's owed.",
+      "reversed": "an imbalance nobody's addressed, or a truth being sidestepped because facing it head-on would demand accountability.",
+      "advice": "Look at the situation without flattering yourself. Fairness begins with an honest accounting."
+    },
+    "12": {
+      "name": "The Hanged Man",
+      "keywords": [
+        "surrender",
+        "new perspective",
+        "pause"
+      ],
+      "upright": "progress made by pausing instead of pushing — a deliberate suspension that opens up an angle on things you couldn't reach while moving.",
+      "reversed": "delay for its own sake, or a sacrifice that never earned any real understanding in return.",
+      "advice": "Let this stay unresolved a while longer. The insight lives inside the waiting, not somewhere past it."
+    },
+    "13": {
+      "name": "Death",
+      "keywords": [
+        "transformation",
+        "endings",
+        "release"
+      ],
+      "upright": "a true ending that clears room for something that couldn't have existed alongside it — not destruction, but necessary change.",
+      "reversed": "a change resisted long after it became inevitable, which only makes the ending harder once it does arrive.",
+      "advice": "Let the part of this that's already over be over. Something else needs the space it's taking up."
+    },
+    "14": {
+      "name": "Temperance",
+      "keywords": [
+        "balance",
+        "moderation",
+        "integration",
+        "patience"
+      ],
+      "upright": "two things that looked incompatible settling into a workable middle — patience, blending, the slow craft of getting the proportions right.",
+      "reversed": "too much in one direction, or a compromise thrown together so fast neither side ends up satisfied.",
+      "advice": "Slow the mixture down. The right balance won't be forced into place overnight."
+    },
+    "15": {
+      "name": "The Devil",
+      "keywords": [
+        "attachment",
+        "restriction",
+        "temptation",
+        "old patterns"
+      ],
+      "upright": "a pattern, habit, or dynamic with more grip on you than you'd like to admit — even though the door out was never locked.",
+      "reversed": "the first real pull away from something that had you trapped — seeing the chain clearly for what it is.",
+      "advice": "Look honestly at what you keep choosing even though it costs you. Naming it is where the way out starts."
+    },
+    "16": {
+      "name": "The Tower",
+      "keywords": [
+        "sudden change",
+        "upheaval",
+        "revelation"
+      ],
+      "upright": "a structure built on shaky ground, coming down fast — disruptive, but clarifying, since it clears out what was never stable to begin with.",
+      "reversed": "a collapse held off through sheer avoidance, or a smaller disruption that still shakes something loose.",
+      "advice": "Don't rush to rebuild exactly what fell. Ask first why it couldn't stand."
+    },
+    "17": {
+      "name": "The Star",
+      "keywords": [
+        "hope",
+        "renewal",
+        "inspiration",
+        "healing"
+      ],
+      "upright": "quiet hope returning after a hard stretch — not naive optimism, but a real sense that things can be mended and are heading somewhere better.",
+      "reversed": "hope wearing thin, or an upbeat outlook that's drifted loose from any actual plan.",
+      "advice": "Let yourself hope again. You've earned it, and it's pointing somewhere real."
+    },
+    "18": {
+      "name": "The Moon",
+      "keywords": [
+        "uncertainty",
+        "the subconscious",
+        "illusion",
+        "intuition"
+      ],
+      "upright": "a situation lit by something other than plain fact — instinct, imagination, and old fears mixing together, so what you're seeing isn't the whole picture yet.",
+      "reversed": "confusion beginning to lift, or a fear that turns out to have loomed bigger in imagination than in reality.",
+      "advice": "Don't force a decision while the picture's still this unclear. Wait for more light."
+    },
+    "19": {
+      "name": "The Sun",
+      "keywords": [
+        "joy",
+        "vitality",
+        "clarity",
+        "success"
+      ],
+      "upright": "plain good fortune — clarity, warmth, a result that doesn't need a second guess.",
+      "reversed": "joy dimmed by overthinking it, or a success that isn't being allowed in and enjoyed for what it is.",
+      "advice": "Let this be as good as it is. You don't need to go looking for the catch."
+    },
+    "20": {
+      "name": "Judgement",
+      "keywords": [
+        "reckoning",
+        "awakening",
+        "reflection",
+        "absolution"
+      ],
+      "upright": "an honest reckoning with where you've been, and a call to step into a version of yourself that matches what you've learned.",
+      "reversed": "self-judgment curdling into harshness, or a wake-up call getting put off a little longer.",
+      "advice": "Answer the call plainly. Whatever you've been avoiding is ready to be faced now."
+    },
+    "21": {
+      "name": "The World",
+      "keywords": [
+        "completion",
+        "wholeness",
+        "arrival"
+      ],
+      "upright": "a cycle closing cleanly, everything it was meant to teach already in hand — a real sense of arrival before the next journey starts.",
+      "reversed": "a near-completion still missing its last piece, or closure being reached for before it's time.",
+      "advice": "Acknowledge how far this has come before rushing toward whatever's next."
+    }
+  },
+  "minorArcana": {
+    "wands": {
+      "ace": {
+        "keywords": [
+          "inspiration",
+          "new venture",
+          "creative spark"
+        ],
+        "upright": "a burst of creative energy arriving all at once — an idea, offer, or venture that hasn't been shaped yet but is already pulling you toward it.",
+        "reversed": "inspiration that keeps stalling before it becomes action, or excitement for a new venture that's cooling off before it even starts.",
+        "advice": "Act on the spark now, while it's still hot. Waiting for the perfect plan will only let it fade."
+      },
+      "two": {
+        "keywords": [
+          "planning",
+          "future vision",
+          "personal power"
+        ],
+        "upright": "standing at a comfortable vantage point with real options ahead, weighing what you've already built against where you could take it next.",
+        "reversed": "playing it too safe out of fear of the unknown, or a plan for the future that never gets put to the test.",
+        "advice": "Stop admiring the view from where you're standing. Pick a direction and start walking toward it."
+      },
+      "three": {
+        "keywords": [
+          "expansion",
+          "foresight",
+          "awaiting results"
+        ],
+        "upright": "the wait after the work is done — ships already sent out, results not yet in, but the groundwork solid enough to trust.",
+        "reversed": "delays piling up on a plan that looked sure to work, or a widened view that's revealing obstacles you hadn't planned for.",
+        "advice": "Keep your eyes on the horizon a little longer. What you set in motion is still on its way."
+      },
+      "four": {
+        "keywords": [
+          "celebration",
+          "homecoming",
+          "milestone"
+        ],
+        "upright": "a milestone worth stopping for — a homecoming, a celebration, a sense of having earned this particular moment of ease.",
+        "reversed": "a celebration that feels hollow, or a sense of home and belonging that hasn't quite been reached yet.",
+        "advice": "Let yourself enjoy this fully. Not every good moment needs to be immediately followed by the next task."
+      },
+      "five": {
+        "keywords": [
+          "competition",
+          "friction",
+          "disagreement"
+        ],
+        "upright": "competing wills clashing in the open — noisy, maybe exhausting, but honest, and better than the same tension left to simmer underground.",
+        "reversed": "conflict losing steam at last, or a rivalry that turns out to have been more posturing than substance.",
+        "advice": "Don't mistake this friction for failure. Competing ideas sharpen each other when no one's afraid to disagree out loud."
+      },
+      "six": {
+        "keywords": [
+          "victory",
+          "recognition",
+          "confidence"
+        ],
+        "upright": "a win that others can see too — recognition arriving publicly for effort that was, until now, mostly invisible.",
+        "reversed": "pride curdling into arrogance, or a victory that never got the recognition it deserved.",
+        "advice": "Accept the recognition without over-explaining it away. You earned the win; let it stand."
+      },
+      "seven": {
+        "keywords": [
+          "defensiveness",
+          "perseverance",
+          "standing ground"
+        ],
+        "upright": "holding a position everyone else is now trying to take from you — tiring, but proof that what you built is worth defending.",
+        "reversed": "giving up ground you didn't need to, or defending a position so long you've lost sight of why it mattered.",
+        "advice": "Hold your ground, but check that you're still fighting for the right hill."
+      },
+      "eight": {
+        "keywords": [
+          "momentum",
+          "swift action",
+          "rapid movement"
+        ],
+        "upright": "everything suddenly moving at once — messages landing, plans accelerating, a stretch of rapid motion after a long wait.",
+        "reversed": "momentum stalling right when it mattered most, or things moving so fast that nothing has time to land.",
+        "advice": "Move quickly while the path is clear, but don't outrun your own ability to respond to what comes next."
+      },
+      "nine": {
+        "keywords": [
+          "resilience",
+          "last stand",
+          "guarded persistence"
+        ],
+        "upright": "one more effort asked of you after a long series of them — tired, wary, but still standing, and closer to the end than it feels.",
+        "reversed": "defensiveness that's hardened into isolation, or exhaustion that's making every remaining challenge feel bigger than it is.",
+        "advice": "You've survived every round so far. Don't let guardedness stop you from accepting help with this last one."
+      },
+      "ten": {
+        "keywords": [
+          "burden",
+          "overload",
+          "hard-won completion"
+        ],
+        "upright": "carrying more than your share because you're close enough to the finish line that putting it down now feels wasteful.",
+        "reversed": "a burden kept out of stubbornness, or work set down at last after being carried for far too long.",
+        "advice": "Ask what you're carrying that was never yours to finish. Some of this weight can be shared or dropped."
+      },
+      "page": {
+        "keywords": [
+          "exploration",
+          "new idea",
+          "enthusiasm"
+        ],
+        "upright": "an idea too exciting to sit still with — restless curiosity that wants to test itself against the world immediately.",
+        "reversed": "excitement with no follow-through, or plans announced loudly and then quietly abandoned.",
+        "advice": "Let the enthusiasm move you, but give the idea at least one real test before chasing the next one."
+      },
+      "knight": {
+        "keywords": [
+          "adventure",
+          "impulsiveness",
+          "bold pursuit"
+        ],
+        "upright": "charging toward the next thing with total confidence, driven more by appetite for the chase than by a fixed plan.",
+        "reversed": "recklessness that's starting to cost you, or restless energy with nowhere productive left to go.",
+        "advice": "Bring some of that boldness under control before it runs you, instead of you running it."
+      },
+      "queen": {
+        "keywords": [
+          "confidence",
+          "independence",
+          "magnetism"
+        ],
+        "upright": "a warm, unshakeable self-assurance that draws people in without needing to perform for them.",
+        "reversed": "confidence that's turned brittle or demanding, or independence used to shut others out rather than stand on your own.",
+        "advice": "Lead with the confidence you already have. You don't need to prove it to anyone else first."
+      },
+      "king": {
+        "keywords": [
+          "vision",
+          "leadership",
+          "bold entrepreneurship"
+        ],
+        "upright": "leadership that inspires by example — a bold vision paired with the follow-through to make it real.",
+        "reversed": "high expectations that have become impossible to meet, or ambition pursued so ruthlessly it burns the people helping you.",
+        "advice": "Lead the vision, but check that the people carrying it out with you still want to be there."
+      }
+    },
+    "cups": {
+      "ace": {
+        "keywords": [
+          "new love",
+          "emotional opening",
+          "overflow"
+        ],
+        "upright": "an emotional cup filling past its rim — new love, new compassion, or a feeling so full it has to spill into something.",
+        "reversed": "an emotional opening that's being held back, or love and connection offered but not yet let in.",
+        "advice": "Let this feeling be as full as it is. There's no need to ration something this real."
+      },
+      "two": {
+        "keywords": [
+          "partnership",
+          "mutual attraction",
+          "union"
+        ],
+        "upright": "two people meeting each other as equals — a bond forming, or deepening, on mutual and roughly even terms.",
+        "reversed": "a connection that's grown lopsided, or a partnership under a strain that hasn't been named out loud yet.",
+        "advice": "Check that this connection is still as mutual as it started out. Say plainly what's shifted, if anything has."
+      },
+      "three": {
+        "keywords": [
+          "friendship",
+          "celebration",
+          "community"
+        ],
+        "upright": "joy that's better shared — a gathering, a friendship, a moment worth celebrating with the people who've stood by you.",
+        "reversed": "a group dynamic curdling into gossip or exclusion, or overindulgence dulling what should have been a real celebration.",
+        "advice": "Bring the people who matter most into this moment. Celebration means more when it isn't done alone."
+      },
+      "four": {
+        "keywords": [
+          "apathy",
+          "contemplation",
+          "missed offer"
+        ],
+        "upright": "boredom with what's already on the table, even though something worth noticing is being offered right in front of you.",
+        "reversed": "apathy loosening its grip at last, or a willingness to look up and weigh the opportunity you'd been ignoring.",
+        "advice": "Look up from what's disappointing you and notice what's being offered. It may be worth more than it first seemed."
+      },
+      "five": {
+        "keywords": [
+          "loss",
+          "grief",
+          "regret"
+        ],
+        "upright": "grief centered on what's spilled and gone, even while something intact is still standing close by, unnoticed.",
+        "reversed": "grief starting to loosen its grip, or the first real steps toward accepting a loss rather than replaying it.",
+        "advice": "Mourn what's truly gone, but turn around long enough to see what's still standing behind you."
+      },
+      "six": {
+        "keywords": [
+          "nostalgia",
+          "memory",
+          "innocence"
+        ],
+        "upright": "a pull back toward simpler times — old memories, familiar comforts, or a reunion with someone from an earlier chapter.",
+        "reversed": "nostalgia that's become a hiding place, or an idealized past that's making the present look worse than it is.",
+        "advice": "Visit the past for comfort, but don't move back in. What you need now lives in the present."
+      },
+      "seven": {
+        "keywords": [
+          "fantasy",
+          "choices",
+          "illusion"
+        ],
+        "upright": "too many appealing options, some more solid than others, making it hard to tell real opportunity from wishful thinking.",
+        "reversed": "the fog clearing enough to see which options were ever real, and a decision becoming possible at last.",
+        "advice": "Test each option against reality before choosing. Not everything glittering here will hold up."
+      },
+      "eight": {
+        "keywords": [
+          "walking away",
+          "seeking deeper meaning",
+          "departure"
+        ],
+        "upright": "walking away from something that looks fine from the outside because it's stopped feeding you on the inside.",
+        "reversed": "staying somewhere out of fear of what leaving would mean, or drifting without ever fully committing to the departure.",
+        "advice": "Trust the part of you that knows this isn't enough anymore, even if you can't fully explain why yet."
+      },
+      "nine": {
+        "keywords": [
+          "contentment",
+          "satisfaction",
+          "wish fulfilled"
+        ],
+        "upright": "an easy, comfortable satisfaction — a wish met, a want fulfilled, contentment that doesn't need to be justified.",
+        "reversed": "smugness standing in for real satisfaction, or abundance that somehow still doesn't feel like enough.",
+        "advice": "Let this contentment be simple. You don't need to earn it twice by worrying it won't last."
+      },
+      "ten": {
+        "keywords": [
+          "emotional fulfillment",
+          "family harmony",
+          "lasting happiness"
+        ],
+        "upright": "a deep, settled happiness built with the people closest to you — not a peak moment, but a lasting state.",
+        "reversed": "harmony at home that's more appearance than substance, or values among the people you love that have quietly stopped aligning.",
+        "advice": "Look past the surface picture of happiness and check that the people in it feel it too."
+      },
+      "page": {
+        "keywords": [
+          "creative opportunity",
+          "intuitive message",
+          "curiosity"
+        ],
+        "upright": "a gentle, unexpected emotional or creative message arriving — something worth paying attention to, even if it seems small.",
+        "reversed": "emotional immaturity getting in the way of a real opportunity, or a creative impulse used to escape rather than express.",
+        "advice": "Take the small, unexpected feeling seriously. It's more informative than it looks."
+      },
+      "knight": {
+        "keywords": [
+          "romance",
+          "idealism",
+          "following the heart"
+        ],
+        "upright": "leading with the heart, chasing a romantic or idealistic vision with real sincerity, even if it isn't fully practical yet.",
+        "reversed": "moodiness dressed up as sensitivity, or a romantic ideal that keeps setting you up for disappointment.",
+        "advice": "Follow your heart here, but check it against reality before you follow it all the way."
+      },
+      "queen": {
+        "keywords": [
+          "compassion",
+          "emotional security",
+          "intuition"
+        ],
+        "upright": "emotional depth held with real stability — compassion for others that doesn't come at the cost of your own footing.",
+        "reversed": "compassion that's tipped into self-neglect, or emotional security that only holds up as long as no one tests it.",
+        "advice": "Give others your compassion, but keep enough of it in reserve for yourself."
+      },
+      "king": {
+        "keywords": [
+          "emotional balance",
+          "diplomacy",
+          "calm control"
+        ],
+        "upright": "a calm mastery over strong feeling — able to stay steady and fair even when the emotional stakes are high.",
+        "reversed": "control over feeling that's really suppression, or calm on the surface hiding manipulation underneath.",
+        "advice": "Stay steady, but let what you really feel be known rather than only managed."
+      }
+    },
+    "swords": {
+      "ace": {
+        "keywords": [
+          "breakthrough",
+          "clarity",
+          "new idea"
+        ],
+        "upright": "a sudden cut through confusion — a realization, decision, or piece of truth arriving sharp and unmistakably clear.",
+        "reversed": "clarity that's been clouded by too much noise, or a truth that's been twisted before it reached you.",
+        "advice": "Trust the clear thought when it comes. Don't let it get talked back into confusion."
+      },
+      "two": {
+        "keywords": [
+          "stalemate",
+          "difficult decision",
+          "avoidance"
+        ],
+        "upright": "a decision held at arm's length, guarded and balanced so carefully that neither option ever gets chosen.",
+        "reversed": "the standoff breaking at last, or an overload of conflicting information making the choice harder rather than easier.",
+        "advice": "Take the blindfold off. The decision won't get easier by delaying it further."
+      },
+      "three": {
+        "keywords": [
+          "heartbreak",
+          "betrayal",
+          "sorrow"
+        ],
+        "upright": "a pain that's sharp and specific — a truth, betrayal, or loss that cuts precisely because it's real.",
+        "reversed": "the first stages of healing, or old pain resurfacing because it was never fully dealt with the first time.",
+        "advice": "Let the pain be exactly as sharp as it is. Naming it clearly is what starts the healing."
+      },
+      "four": {
+        "keywords": [
+          "rest",
+          "recovery",
+          "contemplation"
+        ],
+        "upright": "a deliberate retreat after conflict or strain — not defeat, but the recovery a mind needs before it can think clearly again.",
+        "reversed": "rest interrupted before it's finished, or restlessness that's making real recovery impossible.",
+        "advice": "Take the rest fully. Half a recovery just means carrying the exhaustion into whatever comes next."
+      },
+      "five": {
+        "keywords": [
+          "hollow victory",
+          "conflict",
+          "betrayal"
+        ],
+        "upright": "a win that costs more than it's worth — a conflict pushed to the end even though everyone involved leaves worse off.",
+        "reversed": "resentment lingering after a conflict that was never really resolved, or a chance to make peace instead of pressing the advantage.",
+        "advice": "Ask whether winning this particular fight is worth what it will cost you afterward."
+      },
+      "six": {
+        "keywords": [
+          "transition",
+          "moving on",
+          "calmer waters"
+        ],
+        "upright": "a slow, deliberate move away from turbulence, carrying only what's necessary toward something steadier.",
+        "reversed": "resisting a transition that's already necessary, or unresolved baggage being carried into the calmer waters ahead.",
+        "advice": "Let the difficult waters be behind you. Don't keep looking back at the shore you're leaving."
+      },
+      "seven": {
+        "keywords": [
+          "strategy",
+          "deception",
+          "acting alone"
+        ],
+        "upright": "moving quietly and independently, taking what you need without asking permission — clever, but not fully honest.",
+        "reversed": "a hidden strategy coming to light, or a guilty conscience catching up at last to a shortcut that was taken.",
+        "advice": "Ask whether the strategy you're running would still make sense if everyone involved could see it."
+      },
+      "eight": {
+        "keywords": [
+          "entrapment",
+          "victim mentality",
+          "self-imposed limits"
+        ],
+        "upright": "feeling boxed in on every side, even though the ropes holding you are looser than they feel — a prison built more from belief than from fact.",
+        "reversed": "the first real crack in that self-imposed trap, as the story of being powerless starts to loosen its grip.",
+        "advice": "Look for the gap in the ropes you've been assuming were solid. There's more room to move than it feels like."
+      },
+      "nine": {
+        "keywords": [
+          "anxiety",
+          "worry",
+          "mental anguish"
+        ],
+        "upright": "a mind running worst-case scenarios in the dark, exhausted by fears that loom far larger at 3am than in daylight.",
+        "reversed": "worry starting to ease, or a decision to speak the fear aloud at last instead of carrying it alone.",
+        "advice": "Say the worry out loud to someone. It rarely survives contact with daylight as intact as it feels right now."
+      },
+      "ten": {
+        "keywords": [
+          "rock bottom",
+          "painful ending",
+          "betrayal"
+        ],
+        "upright": "an ending that's as final as it is painful — the worst of it already behind you, with nowhere to go from here but up.",
+        "reversed": "resisting an ending that's already happened, or a slow, partial recovery from something that hasn't fully healed yet.",
+        "advice": "Let this ending be complete. Fighting to keep it half-alive only prolongs the pain of it."
+      },
+      "page": {
+        "keywords": [
+          "curiosity",
+          "vigilance",
+          "thirst for truth"
+        ],
+        "upright": "an alert, questioning mind, gathering information and watching closely before deciding what to believe.",
+        "reversed": "gossip standing in for real investigation, or ideas that never move past talk into actual action.",
+        "advice": "Keep asking questions, but eventually act on what the answers tell you."
+      },
+      "knight": {
+        "keywords": [
+          "decisive action",
+          "assertiveness",
+          "fast thinking"
+        ],
+        "upright": "moving fast and speaking plainly, cutting straight to the point without waiting for anyone's permission.",
+        "reversed": "aggression outrunning judgment, or impulsive decisions made faster than the situation required.",
+        "advice": "Act decisively, but take one breath before you speak the sharpest version of what you're thinking."
+      },
+      "queen": {
+        "keywords": [
+          "independent thinking",
+          "clear boundaries",
+          "direct communication"
+        ],
+        "upright": "seeing situations plainly and saying so without softening it more than the truth requires.",
+        "reversed": "directness that's tipped into coldness, or boundaries held so rigidly that no one can get close.",
+        "advice": "Keep the clarity, but check whether the bluntness is necessary or just easier than being gentle."
+      },
+      "king": {
+        "keywords": [
+          "intellectual authority",
+          "structured thinking",
+          "impartial truth"
+        ],
+        "upright": "judgment made on principle and evidence rather than feeling — fair, precise, and hard to argue with.",
+        "reversed": "logic used as a weapon, or authority that's technically correct while still being cruel.",
+        "advice": "Be right, but don't let being right excuse being unkind about it."
+      }
+    },
+    "pentacles": {
+      "ace": {
+        "keywords": [
+          "new opportunity",
+          "prosperity",
+          "manifestation"
+        ],
+        "upright": "a concrete opportunity landing in your hands — practical, real, and worth building on rather than just admiring.",
+        "reversed": "an opportunity missed through poor timing or poor planning, or a promising start that never got followed through.",
+        "advice": "Take the practical step now. This kind of opportunity rewards follow-through more than enthusiasm."
+      },
+      "two": {
+        "keywords": [
+          "balance",
+          "adaptability",
+          "juggling priorities"
+        ],
+        "upright": "keeping several demands moving at once, adjusting on the fly rather than dropping any of them.",
+        "reversed": "one too many priorities added to the mix, with something now slipping that shouldn't have.",
+        "advice": "Look honestly at what you're juggling. Something here may need to be set down, not balanced harder."
+      },
+      "three": {
+        "keywords": [
+          "collaboration",
+          "skill",
+          "teamwork"
+        ],
+        "upright": "different skills combining into something none of them could build alone — solid progress made through real collaboration.",
+        "reversed": "working in isolation on something that needed other hands, or a team that's stopped pulling in the same direction.",
+        "advice": "Bring in the help this requires. This isn't a project built well alone."
+      },
+      "four": {
+        "keywords": [
+          "security",
+          "control",
+          "holding tight"
+        ],
+        "upright": "a tight grip on what you've built, prioritizing security over risk, even at the cost of some flexibility.",
+        "reversed": "holding on so tightly that nothing new can get in, or fear of loss driving decisions more than any real threat.",
+        "advice": "Loosen the grip slightly. What you're protecting isn't as fragile as it feels."
+      },
+      "five": {
+        "keywords": [
+          "hardship",
+          "financial loss",
+          "isolation"
+        ],
+        "upright": "real hardship, felt as much in isolation as in the loss itself — struggling while feeling like help is out of reach.",
+        "reversed": "the first signs of support becoming available, or hardship starting to ease at last after a hard stretch.",
+        "advice": "Look for the door that's open nearby. Help exists here, even if it doesn't feel like it yet."
+      },
+      "six": {
+        "keywords": [
+          "generosity",
+          "giving and receiving",
+          "balance"
+        ],
+        "upright": "resources moving fairly between people — help given because it's needed, and received without shame.",
+        "reversed": "generosity that comes with strings attached, or an exchange that's quietly become one-sided.",
+        "advice": "Check whether what's being given here is free, or whether something's owed in return."
+      },
+      "seven": {
+        "keywords": [
+          "patience",
+          "long view",
+          "assessing progress"
+        ],
+        "upright": "a pause to take stock of effort already invested, weighing whether it's paying off or needs to change course.",
+        "reversed": "impatience with a return that hasn't come yet, or effort continuing on a path that's stopped paying off.",
+        "advice": "Take the honest audit. Some of this effort deserves more patience; some of it deserves a new plan."
+      },
+      "eight": {
+        "keywords": [
+          "diligence",
+          "craftsmanship",
+          "skill-building"
+        ],
+        "upright": "steady, repeated effort aimed at getting truly good at something — unglamorous, but exactly what mastery requires.",
+        "reversed": "perfectionism stalling real progress, or shortcuts being taken on work that deserved the full effort.",
+        "advice": "Keep doing the unglamorous repetitions. This is what skill looks like while it's being built."
+      },
+      "nine": {
+        "keywords": [
+          "self-sufficiency",
+          "abundance",
+          "independence"
+        ],
+        "upright": "comfort and abundance earned largely on your own — a self-sufficiency that doesn't need anyone's approval.",
+        "reversed": "success that looks good from the outside while feeling hollow, or overwork that's crowded out anyone to enjoy it with.",
+        "advice": "Enjoy what you've built without needing anyone else to confirm it counts."
+      },
+      "ten": {
+        "keywords": [
+          "legacy",
+          "long-term security",
+          "family wealth"
+        ],
+        "upright": "stability that outlasts any one person — a legacy or foundation built to support more than just yourself.",
+        "reversed": "a legacy under strain, or family disagreements over resources threatening something built to last.",
+        "advice": "Protect what's meant to outlast you, but don't let disputes over it undo what it was built for."
+      },
+      "page": {
+        "keywords": [
+          "new opportunity",
+          "study",
+          "practical curiosity"
+        ],
+        "upright": "a practical opportunity worth studying closely — new, promising, and still in the stage of learning how it works.",
+        "reversed": "unrealistic plans that haven't been tested against reality, or progress that's stalled before it really started.",
+        "advice": "Study this opportunity closely before committing further. It's promising, but still unproven."
+      },
+      "knight": {
+        "keywords": [
+          "diligence",
+          "routine",
+          "methodical progress"
+        ],
+        "upright": "slow, methodical, reliable progress — no shortcuts, just consistent work that adds up over time.",
+        "reversed": "routine that's calcified into stagnation, or perfectionism so rigid it's stopped anything from shipping.",
+        "advice": "Trust the slow method that's working. It doesn't need to be faster to be effective."
+      },
+      "queen": {
+        "keywords": [
+          "nurturing",
+          "resourcefulness",
+          "groundedness"
+        ],
+        "upright": "practical care that shows up in tangible ways — comfort, resources, and groundedness offered generously to others.",
+        "reversed": "care for others coming at the cost of care for yourself, or insecurity about resources undermining that generosity.",
+        "advice": "Extend the same practical care to yourself that you so easily offer everyone else."
+      },
+      "king": {
+        "keywords": [
+          "material mastery",
+          "financial security",
+          "generosity"
+        ],
+        "upright": "material and financial mastery built over time, now generous enough to share the security it's created.",
+        "reversed": "control over resources turning rigid or possessive, or financial security pursued at the cost of everything else.",
+        "advice": "Use what you've built generously. Security that isn't shared eventually just becomes isolation."
+      }
+    }
+  },
+  "faq": [
+    {
+      "q": "How does MyTarot.Day work?",
+      "a": "Shuffle the deck, then click any four cards from the open fan. Your four-card reading — Determinant, Past, Present, and Future — is revealed instantly. No birth date or personal number needed."
+    },
+    {
+      "q": "Is MyTarot.Day free?",
+      "a": "Yes, completely free, with no sign-up, no account, and no cost, ever."
+    },
+    {
+      "q": "What does a reversed card mean?",
+      "a": "A reversed card (drawn upside down) points to blocked energy, a more internal version of the card's usual meaning, or something not yet fully expressed — read it together with the card's upright meaning, not as a simple opposite."
+    },
+    {
+      "q": "Can I get more than one reading a day?",
+      "a": "Yes. Click \"Do another reading?\" after your results to shuffle a brand-new set of four cards any time — every draw is genuinely random."
+    }
+  ]
+}

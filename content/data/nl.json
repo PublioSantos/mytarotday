@@ -1,0 +1,925 @@
+{
+  "ui": {
+    "logo": "MyTarot.Day",
+    "tagline": "100% gratis dagelijkse tarotreading, gepersonaliseerd op basis van je geboortedatum. Geen account nodig, voor altijd kosteloos.",
+    "eyebrow": "Vier kaarten. Eén dag.",
+    "selectCardsPrompt": "Kies 4 kaarten",
+    "heroTitleLine1": "Wat vertellen de kaarten van vandaag over",
+    "heroTitleEm": "jou",
+    "submitLabel": "Toon mijn kaarten",
+    "submittingLabel": "Bezig met trekken...",
+    "loadingText": "Het deck schudden voor {date}...",
+    "tryAnotherLabel": "Nog een reading doen?",
+    "buyMeCoffeeLabel": "☕  Koop mij een koffie 🤗",
+    "funFact": "Leuk weetje: De vintage uitstraling van onze tarotkaarten is authentiek. We gebruiken de traditionele 1909 Rider–Waite–Smith Tarot met de originele illustraties van Pamela Colman Smith. Meer dan een eeuw later inspireert dit klassieke deck nog steeds lezers over de hele wereld en wordt het beschouwd als een van de meest invloedrijke fundamenten van de moderne tarot.",
+    "footerDisclaimer": "MyTarot.Day wordt aangeboden voor reflectie en entertainment. Het is geen vervanging voor professioneel medisch, financieel of juridisch advies.",
+    "footerTagline": "Ontwikkeld door P.San Team | Het is gratis, en zal dat altijd blijven!",
+    "footerHome": "Home",
+    "footerBlog": "Blog",
+    "footerPrivacy": "Privacybeleid",
+    "footerTerms": "Algemene Voorwaarden",
+    "footerAbout": "Over ons",
+    "footerContact": "Contact",
+    "todayBadge": "Vandaag",
+    "reversedLabel": "Omgekeerd",
+    "uprightLabel": "Rechtop",
+    "supportPromptText": "Vond je het leuk? Trakteer me op een koffie",
+    "summaryGuideLabel": "Gids",
+    "summaryPastLabel": "Verleden",
+    "summaryFutureLabel": "Toekomst",
+    "freeBadge": "100% gratis — zonder registratie, zonder kosten",
+    "freeTitlePhrase": "Gratis tarotreading"
+  },
+  "positions": {
+    "determinant": {
+      "label": "De Determinant",
+      "subtitle": "De kracht die de hele dag vormgeeft",
+      "intros": [
+        "Boven alles uit vandaag staat de kaart",
+        "De kaart die de toon zet voor de hele dag is",
+        "Voordat er iets anders gebeurt, wordt de dag gevormd door de kaart"
+      ]
+    },
+    "past": {
+      "label": "Het Verleden",
+      "subtitle": "Wat je met je meedraagt",
+      "intros": [
+        "Achter je, nog steeds van invloed op dit moment, is de kaart",
+        "Wat je vanuit de afgelopen dagen met je meedraagt is de kaart",
+        "Het verleden dat doorwerkt in vandaag wordt gemarkeerd door de kaart"
+      ]
+    },
+    "present": {
+      "label": "Het Heden",
+      "subtitle": "Waar je nu werkelijk staat",
+      "intros": [
+        "Op dit moment, in het centrum van alles, is de kaart",
+        "Waar je vandaag werkelijk staat is met de kaart",
+        "In het huidige moment heb je te maken met de kaart"
+      ]
+    },
+    "future": {
+      "label": "De Toekomst",
+      "subtitle": "Waar dit naartoe leidt",
+      "intros": [
+        "Vlak voor je, dit beweegt richting de kaart",
+        "Waar dit naartoe leidt, als er niets verandert, is de kaart",
+        "De nabije toekomst wijst richting de kaart"
+      ]
+    }
+  },
+  "summaryClauses": [
+    "Samen gelezen trekt de legging van vandaag een lijn van {past} naar {future}, waarbij de kaart {determinant} de voorwaarden schept voor hoe dit alles zich ontvouwt.",
+    "De rode draad van vandaag loopt van wat {past} je al heeft geleerd, via waar je nu staat, naar {future} — alles gekleurd door de kaart {determinant}."
+  ],
+  "ranks": {
+    "ace": "Aas",
+    "two": "Twee",
+    "three": "Drie",
+    "four": "Vier",
+    "five": "Vijf",
+    "six": "Zes",
+    "seven": "Zeven",
+    "eight": "Acht",
+    "nine": "Negen",
+    "ten": "Tien",
+    "page": "Schildknaap",
+    "knight": "Ridder",
+    "queen": "Koningin",
+    "king": "Koning"
+  },
+  "suits": {
+    "wands": "Staven",
+    "cups": "Bekers",
+    "swords": "Zwaarden",
+    "pentacles": "Pentakels"
+  },
+  "majorArcana": {
+    "0": {
+      "name": "De Dwaas",
+      "keywords": [
+        "begin",
+        "onschuld",
+        "sprong in het diepe",
+        "openheid"
+      ],
+      "upright": "een nieuw begin zonder kaart en zonder garanties — niets om op te vertrouwen behalve nieuwsgierigheid en de moed om vooruit te stappen voordat alle antwoorden er zijn.",
+      "reversed": "aarzeling vermomd als voorzichtigheid, een stap die zo vaak is geoefend dat hij nooit wordt gezet — of het tegenovergestelde: een blinde sprong, zonder te kijken wat eronder ligt.",
+      "advice": "Wees weer een beginner. De enige fout hier is weigeren om te beginnen."
+    },
+    "1": {
+      "name": "De Magiër",
+      "keywords": [
+        "vindingrijkheid",
+        "wilskracht",
+        "manifestatie"
+      ],
+      "upright": "beseffen dat elk hulpmiddel dat de situatie vereist — intellect, vaardigheid, timing — al in je handen ligt, en het bewust gebruiken ervan is de enige stap die nog rest.",
+      "reversed": "talent dat ongebruikt blijft, of vaardigheid die wordt ingezet voor manipulatie in plaats van opbouw. Hoe dan ook, bekwaamheid gaat verloren of zelfvertrouwen is meer uiterlijk vertoon dan fundament.",
+      "advice": "Stop met het verzamelen van meer gereedschap. Pak wat je in je hand hebt en gebruik het."
+    },
+    "2": {
+      "name": "De Hogepriesteres",
+      "keywords": [
+        "intuïtie",
+        "het onderbewuste",
+        "verborgen kennis"
+      ],
+      "upright": "kennis die onder de taal door komt — een onderbuikgevoel, een droom, een intuïtie die uiteindelijk nauwkeuriger blijkt dan elk bewijs dat je op dat moment had.",
+      "reversed": "een stille waarheid die wordt overstemd door lawaai, of een instinct dat privé wordt gehouden omdat het zichzelf nog niet kan bewijzen.",
+      "advice": "Vertrouw op wat je al aanvoelt maar nog niet hardop hebt uitgesproken. Het weet iets waar je verstand nog niet bij kan."
+    },
+    "3": {
+      "name": "De Keizerin",
+      "keywords": [
+        "overvloed",
+        "koestering",
+        "creativiteit",
+        "groei"
+      ],
+      "upright": "een seizoen van groei dat verzorging vraagt, geen dwang — een project, relatie of deel van jezelf dat opbloeit zodra het wordt gevoed in plaats van gepusht.",
+      "reversed": "zorg of creativiteit die doorslaat in verstikking, of vruchtbare grond die onbeheerd is gelaten totdat er niets meer groeide.",
+      "advice": "Geef waar je om geeft aandacht in plaats van druk. Geduld is wat het laat groeien."
+    },
+    "4": {
+      "name": "De Keizer",
+      "keywords": [
+        "structuur",
+        "autoriteit",
+        "discipline",
+        "stabiliteit"
+      ],
+      "upright": "orde gebouwd met een doel — een kader, grens of plan dat stevig genoeg is om goede intenties onder echte druk overeind te houden.",
+      "reversed": "controle die te strak wordt vastgehouden, of een structuur die zo los is dat niets erin overeind blijft.",
+      "advice": "Zet de steigers op voordat je het huis bouwt. Structuur nu bespaart moeite later."
+    },
+    "5": {
+      "name": "De Hiërofant",
+      "keywords": [
+        "traditie",
+        "geloofssystemen",
+        "begeleiding",
+        "conventie"
+      ],
+      "upright": "wijsheid die via gevestigde kanalen wordt doorgegeven — een mentor, instituut of traditie wiens begeleiding het nog steeds verdient om gevolgd te worden, in ieder geval voor nu.",
+      "reversed": "een regel die uit pure gewoonte wordt gevolgd, of een conventie die zijn loyaliteit al een tijdje niet meer heeft verdiend.",
+      "advice": "Leer eerst het gebaande pad kennen. Beslis daarna of je ervan afwijkt."
+    },
+    "6": {
+      "name": "De Geliefden",
+      "keywords": [
+        "verbinding",
+        "waarden",
+        "keuze",
+        "afstemming"
+      ],
+      "upright": "een echte afstemming tussen mensen, waarden of paden — een keuze die ertoe doet omdat het zegt waar je voor staat, niet alleen wat je leuk vindt.",
+      "reversed": "een mismatch die stilletjes wordt getolereerd, of een beslissing die wordt ontweken omdat het hardop benoemen ervan een moeilijkere discussie zou openen.",
+      "advice": "Benoem de keuze duidelijk, ook als het eerlijke antwoord de zaken ingewikkelder maakt."
+    },
+    "7": {
+      "name": "De Zegewagen",
+      "keywords": [
+        "wilskracht",
+        "vastberadenheid",
+        "overwinning door controle"
+      ],
+      "upright": "vooruitgang die wordt gewonnen door twee tegengestelde krachten in één hand te houden en ze allebei dezelfde kant op te sturen.",
+      "reversed": "momentum dat wordt opgegeten door interne conflicten, of een overwinning die zo hard wordt nagejaagd dat het juist datgene vertrapt wat het moest beschermen.",
+      "advice": "Stop met worstelen met je eigen tegenstrijdigheden. Richt ze dezelfde kant op en ga."
+    },
+    "8": {
+      "name": "De Kracht",
+      "keywords": [
+        "moed",
+        "geduld",
+        "stille vastberadenheid",
+        "compassie"
+      ],
+      "upright": "kracht die nooit zijn stem hoeft te verheffen — een standvastigheid die voortkomt uit vrede sluiten met het moeilijke, in plaats van het te begraven.",
+      "reversed": "zelftwijfel die nederigheid als vermomming draagt, of kracht gebruiken waar geduld meer had opgeleverd.",
+      "advice": "Ontmoet wat je beangstigt met kalmte in plaats van met geweld. Zachtheid is geen zwakte."
+    },
+    "9": {
+      "name": "De Kluizenaar",
+      "keywords": [
+        "introspectie",
+        "eenzaamheid",
+        "innerlijke leiding"
+      ],
+      "upright": "een noodzakelijke terugtrekking — een stap terug doen van het lawaai om te horen wat je zelf denkt, niet alleen wat iedereen om je heen zegt.",
+      "reversed": "isolatie die omslaat in vermijding, of wijsheid die zo dicht bij jezelf wordt gehouden dat het nooit de mensen bereikt die het nodig hebben.",
+      "advice": "Zoek de eenzaamheid op. Het antwoord dat je zoekt, vind je niet in een menigte."
+    },
+    "10": {
+      "name": "Het Rad van Fortuin",
+      "keywords": [
+        "cycli",
+        "verandering",
+        "lot",
+        "keerpunten"
+      ],
+      "upright": "een verschuiving die al gaande is, voortgestuwd door krachten die groter zijn dan een enkele keuze — omstandigheden die veranderen en de voorwaarden van de situatie wijzigen.",
+      "reversed": "een cyclus die zichzelf herhaalt omdat het onderliggende patroon niet is veranderd — alleen het kostuum.",
+      "advice": "Stop met proberen de draaiing te controleren. Steek je energie in hoe je reageert zodra het tot stilstand komt."
+    },
+    "11": {
+      "name": "De Gerechtigheid",
+      "keywords": [
+        "eerlijkheid",
+        "waarheid",
+        "oorzaak en gevolg",
+        "helderheid"
+      ],
+      "upright": "een eerlijke afrekening, ook al is die niet comfortabel — heldere blik op oorzaak en gevolg, en op wat er verschuldigd is.",
+      "reversed": "een onbalans die niemand heeft aangepakt, of een waarheid die wordt ontweken omdat deze recht in de ogen kijken verantwoording zou eisen.",
+      "advice": "Bekijk de situatie zonder jezelf te vleien. Eerlijkheid begint met een oprechte balansopmaak."
+    },
+    "12": {
+      "name": "De Gehangene",
+      "keywords": [
+        "overgave",
+        "nieuw perspectief",
+        "pauze"
+      ],
+      "upright": "vooruitgang die wordt geboekt door te pauzeren in plaats van te pushen — een bewuste opschorting die een blik op de zaken opent die je niet kon bereiken terwijl je in beweging was.",
+      "reversed": "uitstel om het uitstellen, of een opoffering die nooit echt tot enig inzicht heeft geleid.",
+      "advice": "Laat dit nog even onopgelost. Het inzicht zit in het wachten, niet ergens voorbij het wachten."
+    },
+    "13": {
+      "name": "De Dood",
+      "keywords": [
+        "transformatie",
+        "eindes",
+        "loslaten"
+      ],
+      "upright": "een echt einde dat ruimte maakt voor iets dat er anders niet had kunnen zijn — geen vernietiging, maar noodzakelijke verandering.",
+      "reversed": "een verandering die lang na het onvermijdelijke wordt tegengehouden, wat het einde alleen maar moeilijker maakt wanneer het uiteindelijk toch komt.",
+      "advice": "Laat het deel hiervan dat al voorbij is, ook echt voorbij zijn. Iets anders heeft de ruimte nodig die het nu inneemt."
+    },
+    "14": {
+      "name": "De Gematigdheid",
+      "keywords": [
+        "balans",
+        "matigheid",
+        "integratie",
+        "geduld"
+      ],
+      "upright": "twee dingen die onverenigbaar leken die in een werkbaar midden terechtkomen — geduld, mengen, het langzame ambacht om de verhoudingen precies goed te krijgen.",
+      "reversed": "te veel in één richting, of een compromis dat zo snel in elkaar is geflanst dat geen van beide partijen tevreden is.",
+      "advice": "Vertraag het mengproces. De juiste balans laat zich niet overhaast afdwingen."
+    },
+    "15": {
+      "name": "De Duivel",
+      "keywords": [
+        "gehechtheid",
+        "beperking",
+        "verleiding",
+        "oude patronen"
+      ],
+      "upright": "een patroon, gewoonte of dynamiek die meer grip op je heeft dan je zou willen toegeven — ook al zat de deur naar buiten nooit op slot.",
+      "reversed": "de eerste echte aanzet om los te komen van iets dat je gevangen hield — de ketting eindelijk zien voor wat hij is.",
+      "advice": "Kijk eerlijk naar wat je blijft kiezen, ook al kost het je wat. Het benoemen ervan is waar de uitweg begint."
+    },
+    "16": {
+      "name": "De Toren",
+      "keywords": [
+        "plotselinge verandering",
+        "omwenteling",
+        "openbaring"
+      ],
+      "upright": "een structuur gebouwd op wankele grond, die snel instort — ontwrichtend, maar verhelderend, omdat het opruimt wat nooit stabiel was.",
+      "reversed": "een instorting die door puur vermijdingsgedrag is uitgesteld, of een kleinere verstoring die toch iets losmaakt.",
+      "advice": "Haast je niet om precies te herbouwen wat is gevallen. Vraag je eerst af waarom het niet kon blijven staan."
+    },
+    "17": {
+      "name": "De Ster",
+      "keywords": [
+        "hoop",
+        "vernieuwing",
+        "inspiratie",
+        "genezing"
+      ],
+      "upright": "stille hoop die terugkeert na een zware periode — geen naïef optimisme, maar een echt gevoel dat dingen kunnen worden hersteld en dat het de goede kant op gaat.",
+      "reversed": "hoop die dun wordt, of een vrolijke blik die los is komen te staan van enig concreet plan.",
+      "advice": "Sta jezelf toe weer te hopen. Je hebt het verdiend en het wijst naar iets echts."
+    },
+    "18": {
+      "name": "De Maan",
+      "keywords": [
+        "onzekerheid",
+        "het onderbewuste",
+        "illusie",
+        "intuïtie"
+      ],
+      "upright": "een situatie die wordt verlicht door iets anders dan de nuchtere feiten — instinct, verbeelding en oude angsten die zich vermengen, waardoor je nog niet het hele plaatje ziet.",
+      "reversed": "verwarring die begint op te trekken, of een angst die in de verbeelding groter bleek dan in de werkelijkheid.",
+      "advice": "Forceer geen beslissing zolang het beeld nog zo onduidelijk is. Wacht op meer licht."
+    },
+    "19": {
+      "name": "De Zon",
+      "keywords": [
+        "vreugde",
+        "vitaliteit",
+        "helderheid",
+        "succes"
+      ],
+      "upright": "puur geluk — helderheid, warmte, een resultaat dat geen twijfel behoeft.",
+      "reversed": "vreugde die wordt getemperd door er te veel over na te denken, of een succes dat niet wordt toegelaten en genoten voor wat het is.",
+      "advice": "Laat dit zo goed zijn als het is. Je hoeft niet naar het addertje onder het gras te zoeken."
+    },
+    "20": {
+      "name": "Het Oordeel",
+      "keywords": [
+        "afrekening",
+        "ontwaken",
+        "reflectie",
+        "absolutie"
+      ],
+      "upright": "een eerlijke afrekening met waar je bent geweest, en een oproep om in een versie van jezelf te stappen die past bij wat je hebt geleerd.",
+      "reversed": "zelfoordeel dat omslaat in hardheid, of een wake-upcall die nog even wordt uitgesteld.",
+      "advice": "Geef duidelijk gehoor aan de oproep. Waar je ook voor bent weggelopen, het is nu tijd om het onder ogen te zien."
+    },
+    "21": {
+      "name": "De Wereld",
+      "keywords": [
+        "voltooiing",
+        "heelheid",
+        "aankomst"
+      ],
+      "upright": "een cyclus die netjes wordt afgesloten, alles wat het moest leren is al in handen — een echt gevoel van aankomst voordat de volgende reis begint.",
+      "reversed": "een bijna-voltooiing die het laatste stukje mist, of afsluiting die wordt gezocht voordat het de tijd is.",
+      "advice": "Erken hoe ver dit is gekomen voordat je je haast naar wat er hierna komt."
+    }
+  },
+  "minorArcana": {
+    "wands": {
+      "ace": {
+        "keywords": [
+          "inspiratie",
+          "nieuwe onderneming",
+          "creatieve vonk"
+        ],
+        "upright": "een plotselinge uitbarsting van creatieve energie — een idee, aanbod of onderneming die nog geen vorm heeft gekregen, maar waar je al wel naartoe wordt getrokken.",
+        "reversed": "inspiratie die telkens vastloopt voordat het tot actie komt, of enthousiasme voor een nieuw project dat al afkoelt voordat het begonnen is.",
+        "advice": "Handel nu naar die vonk, terwijl het vuur nog brandt. Wachten op het perfecte plan zorgt er alleen maar voor dat het uitdooft."
+      },
+      "two": {
+        "keywords": [
+          "planning",
+          "toekomstvisie",
+          "persoonlijke kracht"
+        ],
+        "upright": "op een comfortabel uitkijkpunt staan met echte opties voor je, waarbij je afweegt wat je al hebt opgebouwd en waar je het naartoe zou kunnen brengen.",
+        "reversed": "te voorzichtig zijn uit angst voor het onbekende, of een toekomstplan dat nooit echt op de proef wordt gesteld.",
+        "advice": "Stop met het bewonderen van het uitzicht vanaf waar je staat. Kies een richting en begin er naartoe te lopen."
+      },
+      "three": {
+        "keywords": [
+          "expansie",
+          "vooruitziende blik",
+          "wachten op resultaten"
+        ],
+        "upright": "het wachten nadat het werk is gedaan — de schepen zijn al uitgevaren, de resultaten zijn er nog niet, maar het fundament is solide genoeg om op te vertrouwen.",
+        "reversed": "vertragingen die zich opstapelen bij een plan dat er veelbelovend uitzag, of een verbreed perspectief dat obstakels onthult waar je geen rekening mee had gehouden.",
+        "advice": "Houd je ogen nog even op de horizon gericht. Wat je in gang hebt gezet, is nog steeds onderweg."
+      },
+      "four": {
+        "keywords": [
+          "viering",
+          "thuiskomst",
+          "mijlpaal"
+        ],
+        "upright": "een mijlpaal die het waard is om bij stil te staan — een thuiskomst, een feest, een gevoel dat je dit specifieke moment van rust hebt verdiend.",
+        "reversed": "een viering die leeg aanvoelt, of een gevoel van thuis en ergens bij horen dat nog niet helemaal is bereikt.",
+        "advice": "Sta jezelf toe om hier volledig van te genieten. Niet elk goed moment hoeft direct te worden opgevolgd door de volgende taak."
+      },
+      "five": {
+        "keywords": [
+          "competitie",
+          "wrijving",
+          "meningsverschil"
+        ],
+        "upright": "botsende wilskracht in het openbaar — luidruchtig, misschien vermoeiend, maar eerlijk, en beter dan dezelfde spanning die onderhuids blijft sudderen.",
+        "reversed": "conflict dat eindelijk stoom verliest, of een rivaliteit die meer uiterlijke schijn dan inhoud blijkt te zijn.",
+        "advice": "Verwar deze wrijving niet met falen. Concurrerende ideeën scherpen elkaar aan wanneer niemand bang is om hardop van mening te verschillen."
+      },
+      "six": {
+        "keywords": [
+          "overwinning",
+          "erkenning",
+          "zelfvertrouwen"
+        ],
+        "upright": "een overwinning die anderen ook kunnen zien — publieke erkenning voor inspanningen die tot nu toe grotendeels onzichtbaar waren.",
+        "reversed": "trots die omslaat in arrogantie, of een overwinning die nooit de erkenning kreeg die het verdiende.",
+        "advice": "Accepteer de erkenning zonder het weg te wuiven met excuses. Je hebt de winst verdiend; laat het zo staan."
+      },
+      "seven": {
+        "keywords": [
+          "defensieve houding",
+          "doorzettingsvermogen",
+          "je mannetje staan"
+        ],
+        "upright": "een positie vasthouden die iedereen van je probeert af te pakken — vermoeiend, maar het bewijs dat wat je hebt opgebouwd het verdedigen waard is.",
+        "reversed": "terrein prijsgeven dat je niet had hoeven opgeven, of zo lang een positie verdedigen dat je uit het oog bent verloren waarom het ertoe deed.",
+        "advice": "Houd stand, maar controleer of je nog steeds voor de juiste zaak vecht."
+      },
+      "eight": {
+        "keywords": [
+          "momentum",
+          "snelle actie",
+          "snelle beweging"
+        ],
+        "upright": "alles beweegt plotseling tegelijk — berichten komen binnen, plannen versnellen, een periode van snelle beweging na lang wachten.",
+        "reversed": "momentum dat stagneert precies wanneer het er het meest toe deed, of dingen die zo snel gaan dat niets de tijd krijgt om te landen.",
+        "advice": "Beweeg snel terwijl het pad vrij is, maar ren niet harder dan je eigen vermogen om te reageren op wat er daarna komt."
+      },
+      "nine": {
+        "keywords": [
+          "veerkracht",
+          "laatste verdedigingslinie",
+          "waakzaam doorzettingsvermogen"
+        ],
+        "upright": "nog één laatste inspanning die van je wordt gevraagd na een lange reeks — moe, op je hoede, maar nog steeds staand, en dichter bij het einde dan het voelt.",
+        "reversed": "defensiviteit die is verhard tot isolatie, of uitputting die elke resterende uitdaging groter doet lijken dan hij is.",
+        "advice": "Je hebt tot nu toe elke ronde overleefd. Laat je waakzaamheid je er niet van weerhouden om hulp te accepteren bij deze laatste stap."
+      },
+      "ten": {
+        "keywords": [
+          "last",
+          "overbelasting",
+          "zwaarbevochten voltooiing"
+        ],
+        "upright": "meer dragen dan je deel omdat je zo dicht bij de finish bent dat het nu neerleggen zonde voelt.",
+        "reversed": "een last die uit koppigheid wordt vastgehouden, of werk dat eindelijk wordt neergelegd nadat het veel te lang is meegedragen.",
+        "advice": "Vraag jezelf af wat je meedraagt dat nooit van jou was om af te maken. Een deel van dit gewicht kan worden gedeeld of losgelaten."
+      },
+      "page": {
+        "keywords": [
+          "verkenning",
+          "nieuw idee",
+          "enthousiasme"
+        ],
+        "upright": "een idee dat te opwindend is om stil bij te zitten — rusteloze nieuwsgierigheid die zichzelf onmiddellijk wil testen in de wereld.",
+        "reversed": "enthousiasme zonder opvolging, of plannen die luid worden aangekondigd en daarna stilletjes worden verlaten.",
+        "advice": "Laat je leiden door het enthousiasme, maar geef het idee ten minste één echte test voordat je het volgende najaagt."
+      },
+      "knight": {
+        "keywords": [
+          "avontuur",
+          "impulsiviteit",
+          "gedurfde achtervolging"
+        ],
+        "upright": "met totaal zelfvertrouwen op het volgende afstormen, meer gedreven door de honger naar de jacht dan door een vast plan.",
+        "reversed": "roekeloosheid die je begint te kosten, of rusteloze energie die nergens productief meer heen kan.",
+        "advice": "Breng wat van die brutaliteit onder controle voordat het jou gaat beheersen, in plaats van dat jij het beheerst."
+      },
+      "queen": {
+        "keywords": [
+          "zelfvertrouwen",
+          "onafhankelijkheid",
+          "magnetisme"
+        ],
+        "upright": "een warm, onwankelbaar zelfvertrouwen dat mensen aantrekt zonder dat je voor hen hoeft te presteren.",
+        "reversed": "zelfvertrouwen dat broos of veeleisend is geworden, of onafhankelijkheid die wordt gebruikt om anderen buiten te sluiten in plaats van op eigen benen te staan.",
+        "advice": "Leid met het zelfvertrouwen dat je al hebt. Je hoeft het niet eerst aan iemand anders te bewijzen."
+      },
+      "king": {
+        "keywords": [
+          "visie",
+          "leiderschap",
+          "gedurfd ondernemerschap"
+        ],
+        "upright": "leiderschap dat inspireert door het goede voorbeeld te geven — een gedurfde visie gecombineerd met de daadkracht om het werkelijkheid te maken.",
+        "reversed": "hoge verwachtingen die onmogelijk zijn geworden om aan te voldoen, of ambitie die zo meedogenloos wordt nagestreefd dat het de mensen die je helpen opbrandt.",
+        "advice": "Leid de visie, maar controleer of de mensen die het met je uitvoeren er nog steeds bij willen zijn."
+      }
+    },
+    "cups": {
+      "ace": {
+        "keywords": [
+          "nieuwe liefde",
+          "emotionele opening",
+          "overvloed"
+        ],
+        "upright": "een emotionele beker die overstroomt — nieuwe liefde, nieuw mededogen, of een gevoel dat zo vol is dat het ergens anders heen moet stromen.",
+        "reversed": "een emotionele opening die wordt tegengehouden, of liefde en verbinding die wordt aangeboden maar nog niet wordt toegelaten.",
+        "advice": "Laat dit gevoel zo vol zijn als het is. Het is niet nodig om iets dat zo echt is te rantsoeneren."
+      },
+      "two": {
+        "keywords": [
+          "partnerschap",
+          "wederzijdse aantrekkingskracht",
+          "verbintenis"
+        ],
+        "upright": "twee mensen die elkaar als gelijken ontmoeten — een band die zich vormt, of verdiept, op wederzijdse en min of meer gelijke voet.",
+        "reversed": "een verbinding die uit balans is geraakt, of een partnerschap dat onder spanning staat die nog niet hardop is uitgesproken.",
+        "advice": "Controleer of deze verbinding nog steeds zo wederzijds is als in het begin. Zeg duidelijk wat er is veranderd, als er iets is veranderd."
+      },
+      "three": {
+        "keywords": [
+          "vriendschap",
+          "viering",
+          "gemeenschap"
+        ],
+        "upright": "vreugde die beter is als je haar deelt — een bijeenkomst, een vriendschap, een moment dat het waard is om te vieren met de mensen die je hebben gesteund.",
+        "reversed": "een groepsdynamiek die omslaat in roddel of uitsluiting, of overdaad die een moment dat een echte viering had moeten zijn, vertroebelt.",
+        "advice": "Betrek de mensen die het belangrijkst voor je zijn bij dit moment. Vieren betekent meer als je het niet alleen doet."
+      },
+      "four": {
+        "keywords": [
+          "apathie",
+          "contemplatie",
+          "gemiste kans"
+        ],
+        "upright": "verveling met wat er al op tafel ligt, ook al wordt er iets dat de moeite waard is recht voor je neus aangeboden.",
+        "reversed": "apathie die eindelijk loslaat, of de bereidheid om op te kijken en de kans te overwegen die je eerder negeerde.",
+        "advice": "Kijk op van wat je teleurstelt en merk op wat er wordt aangeboden. Het is misschien meer waard dan het op het eerste gezicht leek."
+      },
+      "five": {
+        "keywords": [
+          "verlies",
+          "verdriet",
+          "spijt"
+        ],
+        "upright": "verdriet gericht op wat is gemorst en verloren, zelfs terwijl er vlakbij nog iets intacts staat dat onopgemerkt blijft.",
+        "reversed": "verdriet dat begint los te laten, of de eerste echte stappen naar het accepteren van een verlies in plaats van het steeds opnieuw te beleven.",
+        "advice": "Rouw om wat echt verloren is, maar draai je lang genoeg om om te zien wat er nog achter je staat."
+      },
+      "six": {
+        "keywords": [
+          "nostalgie",
+          "herinnering",
+          "onschuld"
+        ],
+        "upright": "een trek naar eenvoudigere tijden — oude herinneringen, vertrouwde troost, of een hereniging met iemand uit een eerder hoofdstuk.",
+        "reversed": "nostalgie die een schuilplaats is geworden, of een geïdealiseerd verleden dat het heden er slechter uit laat zien dan het is.",
+        "advice": "Bezoek het verleden voor troost, maar ga er niet weer wonen. Wat je nu nodig hebt, leeft in het heden."
+      },
+      "seven": {
+        "keywords": [
+          "fantasie",
+          "keuzes",
+          "illusie"
+        ],
+        "upright": "te veel aantrekkelijke opties, sommige solider dan andere, waardoor het moeilijk is om echte kansen van wensdenken te onderscheiden.",
+        "reversed": "de mist trekt op genoeg om te zien welke opties ooit echt waren, en een beslissing wordt eindelijk mogelijk.",
+        "advice": "Toets elke optie aan de realiteit voordat je kiest. Niet alles wat hier glinstert zal standhouden."
+      },
+      "eight": {
+        "keywords": [
+          "weglopen",
+          "zoeken naar diepere betekenis",
+          "vertrek"
+        ],
+        "upright": "weglopen van iets dat er van buitenaf prima uitziet, omdat het je van binnen niet meer voedt.",
+        "reversed": "ergens blijven uit angst voor wat vertrekken zou betekenen, of ronddwalen zonder je ooit volledig aan het vertrek te verbinden.",
+        "advice": "Vertrouw op dat deel van jezelf dat weet dat dit niet langer genoeg is, ook al kun je nog niet volledig uitleggen waarom."
+      },
+      "nine": {
+        "keywords": [
+          "tevredenheid",
+          "voldoening",
+          "wens vervuld"
+        ],
+        "upright": "een gemakkelijke, comfortabele voldoening — een wens ingewilligd, een verlangen vervuld, tevredenheid die niet gerechtvaardigd hoeft te worden.",
+        "reversed": "zelfvoldaanheid die in de plaats komt van echte voldoening, of overvloed die op de een of andere manier toch niet genoeg voelt.",
+        "advice": "Laat deze tevredenheid eenvoudig zijn. Je hoeft het niet dubbel te verdienen door je zorgen te maken dat het niet zal duren."
+      },
+      "ten": {
+        "keywords": [
+          "emotionele vervulling",
+          "familieharmonie",
+          "blijvend geluk"
+        ],
+        "upright": "een diep, bestendig geluk opgebouwd met de mensen die het dichtst bij je staan — geen piekervaring, maar een blijvende staat.",
+        "reversed": "harmonie thuis die meer schijn dan werkelijkheid is, of waarden onder de mensen van wie je houdt die stilletjes niet meer op één lijn liggen.",
+        "advice": "Kijk voorbij het plaatje van geluk en controleer of de mensen die erin staan het ook zo voelen."
+      },
+      "page": {
+        "keywords": [
+          "creatieve kans",
+          "intuïtieve boodschap",
+          "nieuwsgierigheid"
+        ],
+        "upright": "een zachte, onverwachte emotionele of creatieve boodschap die aankomt — iets dat de moeite waard is om op te letten, ook al lijkt het klein.",
+        "reversed": "emotionele onvolwassenheid die een echte kans in de weg staat, of een creatieve impuls die wordt gebruikt om te ontsnappen in plaats van om uit te drukken.",
+        "advice": "Neem het kleine, onverwachte gevoel serieus. Het is informatiever dan het lijkt."
+      },
+      "knight": {
+        "keywords": [
+          "romantiek",
+          "idealisme",
+          "het hart volgen"
+        ],
+        "upright": "leiden met het hart, een romantische of idealistische visie nastreven met oprechte ernst, ook al is het nog niet volledig praktisch.",
+        "reversed": "humeurigheid vermomd als gevoeligheid, of een romantisch ideaal dat je steeds weer teleurstelt.",
+        "advice": "Volg hier je hart, maar toets het aan de realiteit voordat je het helemaal volgt."
+      },
+      "queen": {
+        "keywords": [
+          "mededogen",
+          "emotionele veiligheid",
+          "intuïtie"
+        ],
+        "upright": "emotionele diepgang gecombineerd met echte stabiliteit — mededogen voor anderen dat niet ten koste gaat van je eigen basis.",
+        "reversed": "mededogen dat is doorgeslagen in zelfverwaarlozing, of emotionele veiligheid die alleen standhoudt zolang niemand het test.",
+        "advice": "Geef anderen je mededogen, maar houd er genoeg van achter voor jezelf."
+      },
+      "king": {
+        "keywords": [
+          "emotionele balans",
+          "diplomatie",
+          "kalme controle"
+        ],
+        "upright": "een kalme beheersing over sterke gevoelens — in staat om stabiel en eerlijk te blijven, zelfs als de emotionele belangen groot zijn.",
+        "reversed": "controle over gevoelens die eigenlijk onderdrukking is, of kalmte aan de oppervlakte die manipulatie eronder verbergt.",
+        "advice": "Blijf stabiel, maar laat weten wat je echt voelt in plaats van het alleen maar te managen."
+      }
+    },
+    "swords": {
+      "ace": {
+        "keywords": [
+          "doorbraak",
+          "helderheid",
+          "nieuw idee"
+        ],
+        "upright": "een plotselinge snede door verwarring — een inzicht, besluit of waarheid die scherp en onmiskenbaar helder binnenkomt.",
+        "reversed": "helderheid die vertroebeld is door te veel ruis, of een waarheid die verdraaid is voordat deze je bereikte.",
+        "advice": "Vertrouw op de heldere gedachte wanneer deze komt. Laat je niet terug in verwarring praten."
+      },
+      "two": {
+        "keywords": [
+          "impasse",
+          "moeilijke beslissing",
+          "vermijding"
+        ],
+        "upright": "een beslissing die op afstand wordt gehouden, zo zorgvuldig bewaakt en in balans dat geen van beide opties ooit wordt gekozen.",
+        "reversed": "de patstelling die eindelijk doorbroken wordt, of een overvloed aan tegenstrijdige informatie die de keuze moeilijker maakt in plaats van makkelijker.",
+        "advice": "Doe het blinddoek af. De beslissing wordt niet makkelijker door haar langer uit te stellen."
+      },
+      "three": {
+        "keywords": [
+          "liefdesverdriet",
+          "verraad",
+          "verdriet"
+        ],
+        "upright": "een pijn die scherp en specifiek is — een waarheid, verraad of verlies dat precies snijdt omdat het echt is.",
+        "reversed": "de eerste fasen van genezing, of oude pijn die weer naar boven komt omdat deze de eerste keer niet volledig is verwerkt.",
+        "advice": "Laat de pijn precies zo scherp zijn als ze is. Het helder benoemen ervan is wat de genezing start."
+      },
+      "four": {
+        "keywords": [
+          "rust",
+          "herstel",
+          "contemplatie"
+        ],
+        "upright": "een weloverwogen terugtrekking na conflict of spanning — geen nederlaag, maar het herstel dat een geest nodig heeft voordat hij weer helder kan denken.",
+        "reversed": "rust die onderbroken wordt voordat deze voltooid is, of rusteloosheid die echt herstel onmogelijk maakt.",
+        "advice": "Neem de rust volledig. Half herstel betekent alleen maar dat je de uitputting meeneemt naar wat er daarna komt."
+      },
+      "five": {
+        "keywords": [
+          "holle overwinning",
+          "conflict",
+          "verraad"
+        ],
+        "upright": "een overwinning die meer kost dan ze waard is — een conflict dat tot het einde wordt doorgezet, ook al zijn alle betrokkenen er slechter aan toe.",
+        "reversed": "wrok die blijft hangen na een conflict dat nooit echt is opgelost, of een kans om vrede te sluiten in plaats van het voordeel te forceren.",
+        "advice": "Vraag jezelf af of het winnen van dit specifieke gevecht de prijs waard is die je daarna zult betalen."
+      },
+      "six": {
+        "keywords": [
+          "overgang",
+          "verdergaan",
+          "kalmer water"
+        ],
+        "upright": "een langzame, weloverwogen beweging weg van turbulentie, waarbij je alleen het noodzakelijke meeneemt naar iets stabielers.",
+        "reversed": "je verzetten tegen een overgang die al noodzakelijk is, of onverwerkte bagage die wordt meegenomen naar het kalmere water dat voor je ligt.",
+        "advice": "Laat het woelige water achter je. Blijf niet terugkijken naar de oever die je verlaat."
+      },
+      "seven": {
+        "keywords": [
+          "strategie",
+          "misleiding",
+          "alleen handelen"
+        ],
+        "upright": "rustig en onafhankelijk bewegen, nemen wat je nodig hebt zonder toestemming te vragen — slim, maar niet volledig eerlijk.",
+        "reversed": "een verborgen strategie die aan het licht komt, of een schuldig geweten dat eindelijk een kortere weg inhaalt die genomen is.",
+        "advice": "Vraag jezelf af of de strategie die je volgt nog steeds logisch zou zijn als iedereen die erbij betrokken is deze zou kunnen zien."
+      },
+      "eight": {
+        "keywords": [
+          "gevangenschap",
+          "slachtoffermentaliteit",
+          "zelfopgelegde beperkingen"
+        ],
+        "upright": "je aan alle kanten ingesloten voelen, ook al zijn de touwen die je vasthouden losser dan ze voelen — een gevangenis die meer uit overtuiging dan uit feiten is opgebouwd.",
+        "reversed": "de eerste echte barst in die zelfopgelegde val, naarmate het verhaal van machteloosheid zijn greep begint te verliezen.",
+        "advice": "Zoek naar de opening in de touwen waarvan je aannam dat ze stevig waren. Er is meer ruimte om te bewegen dan het lijkt."
+      },
+      "nine": {
+        "keywords": [
+          "angst",
+          "zorgen",
+          "mentale kwelling"
+        ],
+        "upright": "een geest die in het donker de slechtst mogelijke scenario's doorloopt, uitgeput door angsten die om 3 uur 's nachts veel groter lijken dan bij daglicht.",
+        "reversed": "zorgen die beginnen te verminderen, of een besluit om de angst eindelijk hardop uit te spreken in plaats van deze alleen te dragen.",
+        "advice": "Spreek de zorg hardop uit tegen iemand. Het overleeft zelden het contact met het daglicht in de staat waarin het nu voelt."
+      },
+      "ten": {
+        "keywords": [
+          "dieptepunt",
+          "pijnlijk einde",
+          "verraad"
+        ],
+        "upright": "een einde dat even definitief als pijnlijk is — het ergste heb je al achter de rug, en vanaf hier kan het alleen nog maar beter worden.",
+        "reversed": "je verzetten tegen een einde dat al heeft plaatsgevonden, of een langzaam, gedeeltelijk herstel van iets dat nog niet volledig is genezen.",
+        "advice": "Laat dit einde compleet zijn. Vechten om het half in leven te houden verlengt alleen maar de pijn ervan."
+      },
+      "page": {
+        "keywords": [
+          "nieuwsgierigheid",
+          "waakzaamheid",
+          "dorst naar waarheid"
+        ],
+        "upright": "een alerte, vragende geest die informatie verzamelt en nauwlettend toekijkt voordat hij beslist wat hij moet geloven.",
+        "reversed": "roddels die in de plaats komen van echt onderzoek, of ideeën die nooit verder komen dan praten en niet leiden tot echte actie.",
+        "advice": "Blijf vragen stellen, maar handel uiteindelijk naar wat de antwoorden je vertellen."
+      },
+      "knight": {
+        "keywords": [
+          "besluitvaardig handelen",
+          "assertiviteit",
+          "snel denken"
+        ],
+        "upright": "snel bewegen en duidelijk spreken, direct ter zake komen zonder op iemands toestemming te wachten.",
+        "reversed": "agressie die het gezonde verstand inhaalt, of impulsieve beslissingen die sneller zijn genomen dan de situatie vereiste.",
+        "advice": "Handel besluitvaardig, maar haal één keer adem voordat je de scherpste versie uitspreekt van wat je denkt."
+      },
+      "queen": {
+        "keywords": [
+          "onafhankelijk denken",
+          "duidelijke grenzen",
+          "directe communicatie"
+        ],
+        "upright": "situaties helder zien en dat uitspreken zonder het meer te verzachten dan de waarheid vereist.",
+        "reversed": "directheid die is doorgeslagen naar kilheid, of grenzen die zo rigide worden bewaakt dat niemand dichtbij kan komen.",
+        "advice": "Behoud de helderheid, maar controleer of de botheid noodzakelijk is of gewoon makkelijker dan vriendelijk zijn."
+      },
+      "king": {
+        "keywords": [
+          "intellectueel gezag",
+          "gestructureerd denken",
+          "onpartijdige waarheid"
+        ],
+        "upright": "oordelen gebaseerd op principes en bewijs in plaats van gevoel — eerlijk, precies en moeilijk te betwisten.",
+        "reversed": "logica die als wapen wordt gebruikt, of autoriteit die technisch correct is terwijl ze toch wreed is.",
+        "advice": "Heb gelijk, maar laat het gelijk hebben geen excuus zijn om onvriendelijk te zijn."
+      }
+    },
+    "pentacles": {
+      "ace": {
+        "keywords": [
+          "nieuwe kans",
+          "welvaart",
+          "manifestatie"
+        ],
+        "upright": "een concrete kans die in je schoot valt — praktisch, reëel en de moeite waard om op voort te bouwen in plaats van er alleen naar te kijken.",
+        "reversed": "een gemiste kans door een slechte timing of planning, of een veelbelovend begin dat nooit is opgevolgd.",
+        "advice": "Zet nu de praktische stap. Dit soort kansen beloont doorzettingsvermogen meer dan enthousiasme."
+      },
+      "two": {
+        "keywords": [
+          "balans",
+          "aanpassingsvermogen",
+          "prioriteiten jongleren"
+        ],
+        "upright": "meerdere verplichtingen tegelijk in beweging houden en je onderweg aanpassen in plaats van ze te laten vallen.",
+        "reversed": "één prioriteit te veel in de mix, waardoor er nu iets misgaat dat eigenlijk niet had mogen gebeuren.",
+        "advice": "Kijk eerlijk naar wat je aan het jongleren bent. Misschien moet je iets neerleggen in plaats van harder te proberen het in balans te houden."
+      },
+      "three": {
+        "keywords": [
+          "samenwerking",
+          "vaardigheid",
+          "teamwerk"
+        ],
+        "upright": "verschillende vaardigheden die samenkomen in iets wat niemand alleen had kunnen bouwen — solide vooruitgang door echte samenwerking.",
+        "reversed": "in isolatie werken aan iets dat andere handen nodig had, of een team dat niet meer dezelfde kant op trekt.",
+        "advice": "Schakel de hulp in die dit vereist. Dit is geen project dat je goed in je eentje kunt voltooien."
+      },
+      "four": {
+        "keywords": [
+          "veiligheid",
+          "controle",
+          "vasthouden"
+        ],
+        "upright": "een stevige greep op wat je hebt opgebouwd, waarbij veiligheid voorrang krijgt boven risico, zelfs ten koste van wat flexibiliteit.",
+        "reversed": "zo krampachtig vasthouden dat er niets nieuws binnenkomt, of angst voor verlies die beslissingen meer stuurt dan een reële dreiging.",
+        "advice": "Maak je greep iets losser. Wat je beschermt is niet zo kwetsbaar als het voelt."
+      },
+      "five": {
+        "keywords": [
+          "ontbering",
+          "financieel verlies",
+          "isolatie"
+        ],
+        "upright": "echte ontbering, die net zozeer in de isolatie wordt gevoeld als in het verlies zelf — worstelen terwijl het voelt alsof hulp onbereikbaar is.",
+        "reversed": "de eerste tekenen dat er steun beschikbaar komt, of ontbering die eindelijk begint te verminderen na een zware periode.",
+        "advice": "Zoek naar de deur die in de buurt openstaat. Hulp is hier, ook al voelt het nog niet zo."
+      },
+      "six": {
+        "keywords": [
+          "vrijgevigheid",
+          "geven en ontvangen",
+          "balans"
+        ],
+        "upright": "middelen die eerlijk tussen mensen stromen — hulp gegeven omdat het nodig is, en ontvangen zonder schaamte.",
+        "reversed": "vrijgevigheid waar voorwaarden aan verbonden zijn, of een uitwisseling die stilletjes eenzijdig is geworden.",
+        "advice": "Controleer of wat hier wordt gegeven vrijblijvend is, of dat er iets in ruil wordt verwacht."
+      },
+      "seven": {
+        "keywords": [
+          "geduld",
+          "lange termijn",
+          "voortgang evalueren"
+        ],
+        "upright": "een pauze om de balans op te maken van de reeds geïnvesteerde moeite, en te wegen of het loont of dat er een andere koers nodig is.",
+        "reversed": "ongeduld omdat het resultaat nog niet is gekomen, of doorgaan met inspanningen op een pad dat niets meer oplevert.",
+        "advice": "Voer een eerlijke audit uit. Sommige inspanningen verdienen meer geduld; andere verdienen een nieuw plan."
+      },
+      "eight": {
+        "keywords": [
+          "ijver",
+          "vakmanschap",
+          "vaardigheden opbouwen"
+        ],
+        "upright": "gestage, herhaalde inspanning gericht op het echt goed worden in iets — niet glamoureus, maar precies wat meesterschap vereist.",
+        "reversed": "perfectionisme dat echte vooruitgang vertraagt, of het nemen van sluiproutes bij werk dat volledige inzet verdiende.",
+        "advice": "Blijf de niet-glamoureuze herhalingen doen. Zo ziet vaardigheid eruit terwijl het wordt opgebouwd."
+      },
+      "nine": {
+        "keywords": [
+          "zelfredzaamheid",
+          "overvloed",
+          "onafhankelijkheid"
+        ],
+        "upright": "comfort en overvloed die je grotendeels zelf hebt verdiend — een zelfredzaamheid die niemands goedkeuring nodig heeft.",
+        "reversed": "succes dat er van buiten goed uitziet maar hol aanvoelt, of overwerk waardoor er niemand meer overblijft om het mee te delen.",
+        "advice": "Geniet van wat je hebt opgebouwd zonder dat iemand anders hoeft te bevestigen dat het telt."
+      },
+      "ten": {
+        "keywords": [
+          "nalatenschap",
+          "lange termijn veiligheid",
+          "familiebezit"
+        ],
+        "upright": "stabiliteit die langer meegaat dan één persoon — een nalatenschap of fundament gebouwd om meer dan alleen jezelf te ondersteunen.",
+        "reversed": "een nalatenschap onder druk, of familiegeschillen over middelen die iets duurzaams bedreigen.",
+        "advice": "Bescherm wat bedoeld is om jou te overleven, maar laat geschillen erover niet ongedaan maken waarvoor het gebouwd is."
+      },
+      "page": {
+        "keywords": [
+          "nieuwe kans",
+          "studie",
+          "praktische nieuwsgierigheid"
+        ],
+        "upright": "een praktische kans die het waard is om nauwkeurig te bestuderen — nieuw, veelbelovend en nog in de fase van leren hoe het werkt.",
+        "reversed": "onrealistische plannen die niet aan de werkelijkheid zijn getoetst, of vooruitgang die is gestagneerd voordat het echt begon.",
+        "advice": "Bestudeer deze kans grondig voordat je je verder verbindt. Het is veelbelovend, maar nog onbewezen."
+      },
+      "knight": {
+        "keywords": [
+          "ijver",
+          "routine",
+          "methodische vooruitgang"
+        ],
+        "upright": "langzame, methodische, betrouwbare vooruitgang — geen sluiproutes, alleen consistent werk dat na verloop van tijd optelt.",
+        "reversed": "routine die is verworden tot stagnatie, of perfectionisme dat zo rigide is dat er niets meer wordt afgerond.",
+        "advice": "Vertrouw op de langzame methode die werkt. Het hoeft niet sneller te gaan om effectief te zijn."
+      },
+      "queen": {
+        "keywords": [
+          "koestering",
+          "vindingrijkheid",
+          "geaardheid"
+        ],
+        "upright": "praktische zorg die zich op tastbare manieren uit — comfort, middelen en geaardheid die gul aan anderen worden aangeboden.",
+        "reversed": "zorg voor anderen ten koste van zorg voor jezelf, of onzekerheid over middelen die die vrijgevigheid ondermijnt.",
+        "advice": "Bied jezelf dezelfde praktische zorg die je zo gemakkelijk aan iedereen om je heen geeft."
+      },
+      "king": {
+        "keywords": [
+          "materieel meesterschap",
+          "financiële zekerheid",
+          "vrijgevigheid"
+        ],
+        "upright": "materieel en financieel meesterschap dat in de loop van de tijd is opgebouwd, nu vrijgevig genoeg om de gecreëerde zekerheid te delen.",
+        "reversed": "controle over middelen die rigide of bezitterig wordt, of financiële zekerheid die ten koste van alles wordt nagestreefd.",
+        "advice": "Gebruik wat je hebt opgebouwd op een gulle manier. Zekerheid die niet wordt gedeeld, leidt uiteindelijk tot isolatie."
+      }
+    }
+  }
+}
