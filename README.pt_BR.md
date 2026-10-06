@@ -14,6 +14,11 @@
 
 O site nasceu como uma aplicação Node/Express convencional (Express + templates + JSON de conteúdo por idioma). Depois, virou também um campo de teste para outra curiosidade técnica: portar a aplicação inteira para [Kof](https://koflang.github.io/) — não só o servidor, mas o **build inteiro**. Desde 12 de setembro de 2026 o site em produção ( https://mytarot.day ) roda em Kof; desde 26 de setembro de 2026, o próprio processo de build (gerar o HTML de cada idioma, montar as respostas da API, achatar os dados de conteúdo) também roda 100% em Kof, sem Node nenhum no caminho — zero indisponibilidade em todos os deploys, via blue-green.
 
+Na frente de tudo isso, dois servidores com papéis diferentes:
+
+- **Nginx** — o servidor web de borda: recebe toda a conexão na porta 80 (TLS já vem terminado do Cloudflare), serve os arquivos estáticos de `public/` direto do disco (imagens, CSS, JS, blog), faz o redirect canônico (www→apex, http→https) e repassa o resto pro backend via proxy.
+- **Kof** (`server/Main.kf`) — o servidor de aplicação: atende tudo que o Nginx não resolve sozinho — as rotas de `/api/*` e o HTML por idioma — rodando em duas instâncias idênticas (`mytarot-kof-a`/`mytarot-kof-b`) que se alternam a cada deploy blue-green.
+
 ## Estrutura do repositório
 
 - **`content/`** — o app Node/Express original. Só `views/` (template HTML), `public/` (CSS, JS, imagens, blog) e `data/` (texto das cartas por idioma e a estrutura neutra do baralho) continuam sendo a fonte de verdade — o build em Kof lê esses três direto. `lib/` (i18n e renderização) e `server.js` ficaram mortos desde que o build também virou 100% Kof: nada mais lê essa lógica, mantidos só como referência histórica de como o site nasceu.
