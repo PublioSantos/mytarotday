@@ -4,6 +4,8 @@
 
 [mytarot.day](https://mytarot.day) é um projeto de teste de tecnologia. O baralho de tarot foi usado como **ferramenta de teste**, não como objeto de estudo de tarô — eu não sou tarólogo nem místico. O que eu queria era montar, um site real, funcional, usado no mundo todo, com uma quantidade grande de combinações possíveis, rodando inteiro numa VPS pequena e gratuita (OCI).
 
+No código do servidor (server/Main.kf), a geração é 100% dinâmica por requisição, não baseada em modelos fixos de leitura completa.
+
 ## O desafio que eu me propus
 
 - **Alcance global**: o site está traduzido em **28 idiomas**, incluindo idiomas RTL (árabe, hebraico) e CJK (japonês, coreano, chinês).
