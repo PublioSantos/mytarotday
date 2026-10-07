@@ -2,7 +2,9 @@
 
 # MyTarot.Day
 
-[mytarot.day](https://mytarot.day) is a technology test project. The tarot deck was used as a **testing tool**, not as a subject of study — I'm not a tarot reader or a mystic. What I wanted was to build a real, functional site, used worldwide, with a huge number of possible combinations, running entirely on a small, free VPS (OCI).
+[mytarot.day](https://mytarot.day) is a technology test project. The tarot deck was used as a **testing tool**, not as a subject of study — I'm not a tarot reader or a mystic. What I wanted was to build a real, functional site, used worldwide, with a huge number of possible combinations, running entirely on a small, free VPS (OCI). 
+
+In the server code (server/Main.kf), generation is 100% dynamic per request, not based on fixed templates.
 
 ## The challenge I set for myself
 
