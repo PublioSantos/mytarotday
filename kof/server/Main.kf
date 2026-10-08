@@ -430,6 +430,18 @@ String jsonField(String body, String key) {
 // A cauda de ~70 ms que aparece em poucos por cento das requisicoes NAO vem
 // daqui: ela atinge todas as rotas por igual, inclusive /api/health, e e'
 // evento periodico da JVM.
+//
+// ORDEM IMPORTA: Catalogo vem ANTES de Engine neste arquivo de proposito,
+// nao por acaso — e contorno de um bug real do compilador Kof (0.4.5-beta
+// ate pelo menos 0.5.0-beta, github.com/KofLang/Kof4j#779): uma classe
+// declarada DEPOIS da classe que contem Engine.generateJson (que monta um
+// List<Record> num loop e chama json.encode no resultado) quebra o calculo
+// de frames do ASM no JVM backend, mesmo que o conteudo dessa classe
+// posterior nao tenha NADA a ver com Engine — confirmado isolando com uma
+// classe vazia. A classe que contem o metodo problematico tem que ser a
+// ULTIMA do arquivo. Catalogo referencia Engine antecipadamente (o Kof
+// resolve tipos numa passada separada da emissao, entao isso compila sem
+// problema) — nao mover Engine pra antes de Catalogo sem testar de novo.
 class Catalogo {
     Map<String, Engine> motores
     Map<String, String> paginas
