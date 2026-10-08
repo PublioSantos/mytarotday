@@ -14,17 +14,21 @@
 #   ./deploy.sh --gerar      so regenera localmente
 #   ./deploy.sh --status     mostra quem esta ativa
 #   ./deploy.sh --rollback   volta para o app Node
+#
+# Config de ambiente (nao versionada): copie .env.example para .env e
+# preencha CHAVE/HOST/KOF_LOCAL/BASE/FONTE com os valores reais da sua VPS.
 # ---------------------------------------------------------------------------
 set -euo pipefail
 
-BASE=/home/publio/Downloads/install/mytarot-kof
-FONTE=/home/publio/mytarot
-# mesma versao publicada em /opt/kof na VPS — nao usar "current" (aponta pra
-# outra versao, usada por outro projeto de bug-hunt).
-KOF_LOCAL=/home/publio/Downloads/install/kof-toolchain/kof-0.4.4-beta-linux-x86_64/bin/kof
-CHAVE=/home/publio/vps1/ssh-key-2026-06-26.key
-HOST=ubuntu@163.176.191.214
-UPSTREAM=/etc/nginx/conf.d/mytarot-upstream.conf
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+[ -f "$DIR/.env" ] && source "$DIR/.env"
+
+BASE="${BASE:?defina BASE em .env (caminho local deste repo)}"
+FONTE="${FONTE:?defina FONTE em .env (caminho do conteudo/app original)}"
+KOF_LOCAL="${KOF_LOCAL:?defina KOF_LOCAL em .env (binario kof local)}"
+CHAVE="${CHAVE:?defina CHAVE em .env (chave SSH da VPS)}"
+HOST="${HOST:?defina HOST em .env (usuario@ip da VPS)}"
+UPSTREAM="${UPSTREAM:-/etc/nginx/conf.d/mytarot-upstream.conf}"
 SSH="ssh -o BatchMode=yes -o IdentitiesOnly=yes -o ConnectTimeout=15 -i $CHAVE"
 
 vermelho() { printf '\033[31m%s\033[0m\n' "$*"; }

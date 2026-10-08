@@ -38,7 +38,7 @@ server {
 
     # --- API: sempre do app, nunca do disco -------------------------------
     location /api/ {
-        proxy_pass http://127.0.0.1:3001;
+        proxy_pass http://mytarot_app;
         proxy_http_version 1.1;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
@@ -57,7 +57,7 @@ server {
     }
 
     location @app {
-        proxy_pass http://127.0.0.1:3001;
+        proxy_pass http://mytarot_app;
         proxy_http_version 1.1;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
