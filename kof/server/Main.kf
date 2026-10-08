@@ -158,97 +158,6 @@ String jsonStr(String s) {
 
 // ---------------------------------------------------------------- engine
 
-class Engine {
-    List<NeutralCard> deck
-    List<CardText> cards
-    Meta meta
-
-    public constructor(String code) {
-        this.deck = json.decode<List<NeutralCard>>(readAll("deck.json"))
-        this.cards = json.decode<List<CardText>>(readAll(code + ".cards.json"))
-        this.meta = json.decode<Meta>(readAll(code + ".meta.json"))
-    }
-
-    Int[] drawIndices(Int count, Rng rng) {
-        var n = this.deck.size
-        var pool = new Int[n]
-        var i = 0
-        while (i < n) {
-            pool[i] = i
-            i = i + 1
-        }
-        var poolSize = n
-        var picked = new Int[count]
-        var k = 0
-        while (k < count) {
-            var idx = rng.below(poolSize)
-            picked[k] = pool[idx]
-            var j = idx
-            while (j < poolSize - 1) {
-                pool[j] = pool[j + 1]
-                j = j + 1
-            }
-            poolSize = poolSize - 1
-            k = k + 1
-        }
-        return picked
-    }
-
-    String composeParagraph(Position pos, CardText card, Bool reversed, Rng rng, String reversedWord) {
-        var intros = pos.intros()
-        var intro = intros.get(rng.below(intros.size))
-        var raw = card.upright()
-        if (reversed) {
-            raw = card.reversed()
-        }
-        var meaning = stripTrailingPeriod(raw)
-        var orientationWord = ","
-        if (reversed) {
-            orientationWord = ", " + reversedWord + ","
-        }
-        return intro + " **" + card.name() + "**" + orientationWord + " " + meaning + ". " + card.advice()
-    }
-
-    String generateJson(String dateStr, Rng rng) {
-        var positions = this.meta.positions()
-        var count = positions.size
-        var chosen = this.drawIndices(count, rng)
-        var reversedWord = this.meta.reversedLabel()
-
-        var saidas = listOf()
-        var i = 0
-        while (i < count) {
-            var pos = positions.get(i)
-            var card = this.cards.get(chosen[i])
-            var neutral = this.deck.get(chosen[i])
-            // ordem dos sorteios preservada: orientacao, depois a abertura
-            var reversed = rng.next() < 0.35
-            var paragraph = this.composeParagraph(pos, card, reversed, rng, reversedWord)
-            var orientation = "upright"
-            if (reversed) {
-                orientation = "reversed"
-            }
-            var carta = CartaJson(card.id(), card.name(), neutral.glyph(),
-                                  neutral.image(), neutral.isMajor() == 1)
-            saidas.add(PosicaoJson(pos.key(), pos.label(), pos.subtitle(), carta,
-                                   orientation, card.keywords(), paragraph))
-            i = i + 1
-        }
-
-        var clauses = this.meta.summaryClauses()
-        var clause = clauses.get(rng.below(clauses.size))
-        var determinant = "**" + this.cards.get(chosen[0]).name() + "**"
-        var past = this.cards.get(chosen[1]).name().toLowerCase()
-        var future = this.cards.get(chosen[3]).name().toLowerCase()
-        var summary = replaceAll(clause, "{determinant}", determinant)
-        summary = replaceAll(summary, "{past}", past)
-        summary = replaceAll(summary, "{future}", future)
-
-        return json.encode(LeituraJson(dateStr, saidas, summary))
-    }
-}
-
-
 // --------------------------------------------------------- rate limit
 
 // Anti-spam por atraso, nunca por recusa: numa janela de 1h, os 4 primeiros
@@ -594,6 +503,97 @@ String servirLocale(LocaleTable table, Catalogo catalogo, String code) {
     }
     headerSet("Content-Type", "text/html; charset=utf-8")
     return catalogo.pagina(code)
+}
+
+
+class Engine {
+    List<NeutralCard> deck
+    List<CardText> cards
+    Meta meta
+
+    public constructor(String code) {
+        this.deck = json.decode<List<NeutralCard>>(readAll("deck.json"))
+        this.cards = json.decode<List<CardText>>(readAll(code + ".cards.json"))
+        this.meta = json.decode<Meta>(readAll(code + ".meta.json"))
+    }
+
+    Int[] drawIndices(Int count, Rng rng) {
+        var n = this.deck.size
+        var pool = new Int[n]
+        var i = 0
+        while (i < n) {
+            pool[i] = i
+            i = i + 1
+        }
+        var poolSize = n
+        var picked = new Int[count]
+        var k = 0
+        while (k < count) {
+            var idx = rng.below(poolSize)
+            picked[k] = pool[idx]
+            var j = idx
+            while (j < poolSize - 1) {
+                pool[j] = pool[j + 1]
+                j = j + 1
+            }
+            poolSize = poolSize - 1
+            k = k + 1
+        }
+        return picked
+    }
+
+    String composeParagraph(Position pos, CardText card, Bool reversed, Rng rng, String reversedWord) {
+        var intros = pos.intros()
+        var intro = intros.get(rng.below(intros.size))
+        var raw = card.upright()
+        if (reversed) {
+            raw = card.reversed()
+        }
+        var meaning = stripTrailingPeriod(raw)
+        var orientationWord = ","
+        if (reversed) {
+            orientationWord = ", " + reversedWord + ","
+        }
+        return intro + " **" + card.name() + "**" + orientationWord + " " + meaning + ". " + card.advice()
+    }
+
+    String generateJson(String dateStr, Rng rng) {
+        var positions = this.meta.positions()
+        var count = positions.size
+        var chosen = this.drawIndices(count, rng)
+        var reversedWord = this.meta.reversedLabel()
+
+        var saidas = listOf()
+        var i = 0
+        while (i < count) {
+            var pos = positions.get(i)
+            var card = this.cards.get(chosen[i])
+            var neutral = this.deck.get(chosen[i])
+            // ordem dos sorteios preservada: orientacao, depois a abertura
+            var reversed = rng.next() < 0.35
+            var paragraph = this.composeParagraph(pos, card, reversed, rng, reversedWord)
+            var orientation = "upright"
+            if (reversed) {
+                orientation = "reversed"
+            }
+            var carta = CartaJson(card.id(), card.name(), neutral.glyph(),
+                                  neutral.image(), neutral.isMajor() == 1)
+            saidas.add(PosicaoJson(pos.key(), pos.label(), pos.subtitle(), carta,
+                                   orientation, card.keywords(), paragraph))
+            i = i + 1
+        }
+
+        var clauses = this.meta.summaryClauses()
+        var clause = clauses.get(rng.below(clauses.size))
+        var determinant = "**" + this.cards.get(chosen[0]).name() + "**"
+        var past = this.cards.get(chosen[1]).name().toLowerCase()
+        var future = this.cards.get(chosen[3]).name().toLowerCase()
+        var summary = replaceAll(clause, "{determinant}", determinant)
+        summary = replaceAll(summary, "{past}", past)
+        summary = replaceAll(summary, "{future}", future)
+
+        return json.encode(LeituraJson(dateStr, saidas, summary))
+    }
 }
 
 main() {
