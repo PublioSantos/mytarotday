@@ -23,6 +23,8 @@ In front of all of this, two servers with different jobs:
 - **Nginx** — the edge web server: takes every connection on port 80 (TLS already terminated upstream by Cloudflare), serves `public/`'s static files straight from disk (images, CSS, JS, blog), does the canonical redirect (www→apex, http→https), and proxies the rest to the backend.
 - **Kof** (`server/Main.kf`) — the application server: handles whatever Nginx doesn't resolve on its own — the `/api/*` routes and each locale's HTML — running as two identical instances (`mytarot-kof-a`/`mytarot-kof-b`) that alternate on every blue-green deploy.
 
+Since October 8, 2026, the site runs on the latest Kof release (**0.5.0-beta**). Getting there meant finding a real compiler bug — a `kof check` that crashed with a misleading error — and a real workaround: the class containing the problematic method has to be the **last** one declared in the file (declaration order affects the JVM backend's ASM frame computation, even when the following class has nothing to do with the one that breaks). Filed as [issue #779](https://github.com/KofLang/Kof4j/issues/779) in the Kof repo.
+
 ## Repository layout
 
 - **`content/`** — the original Node/Express app. Only `views/` (HTML template), `public/` (CSS, JS, images, blog) and `data/` (per-language card text and copy, plus the neutral card structure) are still the source of truth — the Kof build reads those three directly. `lib/` (i18n and rendering logic) and `server.js` are dead code now that the build is also 100% Kof: nothing reads that logic anymore, kept only as historical reference for how the site started out.
