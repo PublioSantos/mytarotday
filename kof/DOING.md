@@ -1,5 +1,37 @@
 [English](DOING.md) | [Português](DOING.pt_BR.md)
 
+> **✅ DONE (10/08, later same day, owner = 192.168.0.131).** **Production
+> upgraded to Kof 0.5.0-beta.** The ASM frame-crash regression (issue
+> [#779](https://github.com/KofLang/Kof4j/issues/779), tracked below as
+> "unfixed through six releases") turned out to have a real, cheap
+> workaround — **class declaration order**. Bisecting the real
+> `server/Main.kf` (not building synthetic repros from scratch, which had
+> failed ~8 times) found: a completely empty class placed *after*
+> `class Engine` in the file reproduces the crash; the identical empty class
+> placed *before* `Engine` does not. Content is irrelevant, only position.
+> Moved `class Catalogo` to before `class Engine` (it forward-references
+> `Engine`, which compiles fine — Kof resolves types in a separate pass from
+> emission) — same file, same lines, just reordered. The whole file now
+> compiles and runs clean on 0.5.0-beta.
+>
+> Verified thoroughly before trusting it: local `kof check` and a real local
+> run (GET /, GET /pt/, POST /api/reading all correct), full build pipeline,
+> blue-green deploy to production (zero downtime), and — since the exact
+> failure mode last time was a crash-on-restart — **manually restarted the
+> live instance under production traffic** to confirm it survives (it did:
+> `NRestarts=0`, just the normal ~24s recompile window, back to 200).
+> `/opt/kof` on the VPS is now 0.5.0-beta; `/opt/kof.0.4.4-rolledback` kept
+> for instant rollback. `.env`'s `KOF_LOCAL` updated to point at the local
+> 0.5.0-beta binary too, so `deploy.sh` stays consistent with the VPS.
+>
+> Posted the corrected finding as a follow-up on #779 (my first two
+> "Map<String,Engine> field" theories were wrong — never tested a plain
+> control case; this one's been reproduced carefully both ways).
+>
+> **NEXT STEP:** nothing blocked. If this regression gets fixed upstream,
+> the reordering can be reverted at leisure (it's harmless either way, not
+> urgent to undo).
+
 > **✅ DONE (10/08, owner = 192.168.0.131).** Session after a multi-day gap:
 > the GitHub repo had been **deleted and recreated from scratch** sometime
 > between 09/27 and 10/06 (new repo, `created_at` 10/06, single commit with a

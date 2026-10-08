@@ -1,5 +1,39 @@
 [English](DOING.md) | [Português](DOING.pt_BR.md)
 
+> **✅ FEITO (08/10, mais tarde no mesmo dia, dono = 192.168.0.131).**
+> **Produção atualizada pro Kof 0.5.0-beta.** A regressão de crash de frame
+> no ASM (issue [#779](https://github.com/KofLang/Kof4j/issues/779),
+> registrada abaixo como "não corrigida em seis releases") tinha um contorno
+> de verdade, barato — **ordem de declaração de classe**. Bissectando o
+> `server/Main.kf` real (não construindo repros sintéticos do zero, que
+> tinham falhado umas 8 vezes), achei: uma classe completamente vazia
+> colocada *depois* de `class Engine` no arquivo reproduz o crash; a mesma
+> classe vazia colocada *antes* não. O conteúdo não importa, só a posição.
+> Movi `class Catalogo` pra antes de `class Engine` (ela referencia `Engine`
+> antecipadamente, o que compila de boa — o Kof resolve tipos numa passada
+> separada da emissão) — mesmo arquivo, mesmas linhas, só reordenadas. O
+> arquivo inteiro agora compila e roda limpo no 0.5.0-beta.
+>
+> Verifiquei bem antes de confiar: `kof check` local e uma execução local de
+> verdade (GET /, GET /pt/, POST /api/reading todos corretos), pipeline de
+> build completo, deploy blue-green em produção (zero indisponibilidade) e
+> — já que o modo de falha exato da vez passada foi um crash no reinício —
+> **reiniciei manualmente a instância ativa sob tráfego de produção** pra
+> confirmar que aguenta (aguentou: `NRestarts=0`, só a janela normal de
+> ~24s de recompilação, voltou pra 200). O `/opt/kof` da VPS agora é
+> 0.5.0-beta; `/opt/kof.0.4.4-rolledback` mantido pra rollback instantâneo.
+> O `KOF_LOCAL` do `.env` também atualizado pro binário 0.5.0-beta local,
+> pro `deploy.sh` ficar consistente com a VPS.
+>
+> Postei a descoberta corrigida como acompanhamento na #779 (minhas duas
+> primeiras teorias sobre "campo Map<String,Engine>" estavam erradas — nunca
+> tinha testado um caso de controle simples; essa foi reproduzida com
+> cuidado nos dois sentidos).
+>
+> **PRÓXIMO PASSO:** nada bloqueado. Se essa regressão for corrigida
+> upstream, a reordenação pode ser revertida com calma (é inofensiva de
+> qualquer jeito, não é urgente desfazer).
+
 > **✅ FEITO (08/10, dono = 192.168.0.131).** Sessão depois de um intervalo de
 > vários dias: o repositório no GitHub tinha sido **apagado e recriado do
 > zero** entre 27/09 e 06/10 (repo novo, `created_at` 06/10, um único commit
