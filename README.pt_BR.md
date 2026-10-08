@@ -23,7 +23,6 @@ Na frente de tudo isso, dois servidores com papéis diferentes:
 - **Nginx** — o servidor web de borda: recebe toda a conexão na porta 80 (TLS já vem terminado do Cloudflare), serve os arquivos estáticos de `public/` direto do disco (imagens, CSS, JS, blog), faz o redirect canônico (www→apex, http→https) e repassa o resto pro backend via proxy.
 - **Kof** (`server/Main.kf`) — o servidor de aplicação: atende tudo que o Nginx não resolve sozinho — as rotas de `/api/*` e o HTML por idioma — rodando em duas instâncias idênticas (`mytarot-kof-a`/`mytarot-kof-b`) que se alternam a cada deploy blue-green.
 
-Desde 08 de outubro de 2026 o site roda na versão mais atual do Kof (**0.5.0-beta**). Chegar até ali exigiu achar um bug real do compilador — um `kof check` que travava de forma enganosa — e um contorno de verdade: a classe que contém o método problemático precisa ser a **última** declarada no arquivo (ordem de declaração afeta o cálculo de frames do ASM no backend JVM, mesmo quando a classe seguinte não tem nada a ver com a que quebra). Reportado como [issue #779](https://github.com/KofLang/Kof4j/issues/779) no repositório do Kof.
 
 ## Estrutura do repositório
 
