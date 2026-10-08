@@ -7,11 +7,12 @@
 // <code>.render.json / <code>.ui.json (insumos de build vestigiais, nao
 // copiados para server/, mantidos so por paridade com o pipeline antigo).
 //
-// json.decode<Map<String,T>> ja funciona no Kof 0.4.4-beta (issue #103
+// json.decode<Map<String,T>> ja funciona desde o Kof 0.4.4-beta (issue #103
 // fechada), MAS decodificar um Map<String,Record> quando ele e' CAMPO de
 // outro record (ou aninhado dentro de outro Map) devolve o Map vazio, sem
-// erro — bug ainda nao reportado, achado ao portar isto. Contorno: nunca
-// decodificar Map<String,Record> a nao ser como ARGUMENTO DE TIPO DIRETO de
+// erro — ainda presente em 0.5.0-beta, reportado como
+// github.com/KofLang/Kof4j#633. Contorno: nunca decodificar
+// Map<String,Record> a nao ser como ARGUMENTO DE TIPO DIRETO de
 // json.decode<...>(...); para isolar cada trecho antes de decodificar, um
 // extrator manual (campoBruto/extraiValorBalanceado) faz o corte respeitando
 // aspas e escapes — o mesmo estilo ja usado em jsonField() no server/Main.kf
