@@ -1,5 +1,59 @@
 [English](DOING.md) | [Português](DOING.pt_BR.md)
 
+> **✅ FEITO (08/10, dono = 192.168.0.131).** Sessão depois de um intervalo de
+> vários dias: o repositório no GitHub tinha sido **apagado e recriado do
+> zero** entre 27/09 e 06/10 (repo novo, `created_at` 06/10, um único commit
+> com um README novo bem mais curto) — tudo que tinha sido enviado antes
+> (content/, kof/, o README completo com a seção de Arquitetura dos Dados)
+> sumiu junto. Reenviei `content/` (da VPS, ~450MB) e `kof/` (desta máquina)
+> do mesmo jeito de antes; restaurei o README completo (renomeei a seção
+> "Why?" pra "Arquitetura dos Dados"/"Data Architecture", como pedido) e
+> acrescentei duas notas novas: a divisão Nginx/Kof na camada de serviço, e a
+> escolha deliberada de montar o texto de forma determinística em vez de
+> gerar a leitura via IA.
+>
+> **Regressão de segurança achada e corrigida:** o `deploy.sh` tinha voltado
+> a expor o IP real da VPS e o caminho da chave SSH em texto puro — a
+> correção baseada em `.env` do dia 26/09 não sobreviveu ao push
+> reconstruído (o `.env.example` também tinha sumido localmente, então o
+> `cp` falhava silenciosamente sem erro). Reapliquei a leitura de `.env` e
+> recriei o `.env.example`.
+>
+> **Arquivos obsoletos do `kof/` limpos** (confirmado via API do GitHub, não
+> pelo CDN — o `raw.githubusercontent.com` serviu conteúdo em cache por uns
+> minutos depois de cada push e quase gerou um falso "não funcionou"):
+> - `dump-json.sh` — parecia shell puro mas tinha um heredoc Python
+>   embutido; ferramenta de diff só-dev, presa ao toolchain antigo
+>   0.3.22-beta e a uma data de 13/09. Apagado.
+> - `engine/cfg.txt` — resíduo de teste de uma linha só. Apagado.
+> - `servir.sh` — descrevia a fase (há muito encerrada) de Kof e Node
+>   rodando em paralelo, com caminho fixo desta máquina. Apagado.
+> - `ISSUE-compiler.md` / `ISSUE-web.md` — rascunhos de bugs do 0.3.22-beta
+>   que a mantenedora já corrigiu e fechou faz tempo. Apagados.
+> - `nginx-mytarot.day` — estava desatualizado (`proxy_pass 127.0.0.1:3001`
+>   fixo, não o upstream indireto `mytarot_app` real do blue-green).
+>   Atualizado com a config real, puxada direto da VPS.
+>
+> **Toolchain do Kof: testei o 0.5.0-beta (release mais nova, 28/09),
+> confirmei que continua quebrado, revertido pro 0.4.4-beta.** O `kof check`
+> no `server/Main.kf` de verdade bate no mesmo crash de frame do ASM
+> `COMPUTE_FRAMES` em `Engine.generateJson` da regressão 0.4.5–0.4.10 — não
+> corrigido nem na versão mais nova. O usuário pediu pra fazer o upgrade
+> mesmo assim, aceitando o risco explicitamente ("se parar de funcionar,
+> informo a Mel"). **O risco se materializou em minutos**: o
+> `mytarot-kof-b.service` reiniciou sozinho (contador de restart do systemd
+> foi pra 9) enquanto o `/opt/kof` estava em 0.5.0-beta, tentou recompilar,
+> travou, o site caiu pra 502. Revertido o `/opt/kof` pro 0.4.4-beta na
+> hora; o próximo reinício compilou limpo e o site voltou. `/opt/kof.0.5.0-
+> rolledback` mantido na VPS pra quem quiser testar de novo no futuro.
+> Corrente de backups na VPS: `kof.0.3.22-rolledback`, `kof.0.5.0-rolledback`
+> (o 0.4.4-beta voltou pro `/opt/kof` em si).
+>
+> **PRÓXIMO PASSO (o re-dispacho lê isto):** nada bloqueado. Se uma versão
+> nova do Kof sair, testar `kof check server/Main.kf` contra ela antes de
+> encostar no `/opt/kof` da VPS de novo — a regressão já está confirmada
+> quebrada em SEIS releases seguidas (0.4.5 até 0.5.0).
+
 > **✅ FEITO (26/09, mais tarde no mesmo dia, dono = 192.168.0.131).** O build
 > agora é **100% Kof, zero Node** — terminou a frente que a entrada abaixo
 > chama de "bloqueada". `extrair-config.js`, `gen-api.js`, `gen-html.js`

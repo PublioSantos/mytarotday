@@ -1,5 +1,56 @@
 [English](DOING.md) | [Português](DOING.pt_BR.md)
 
+> **✅ DONE (10/08, owner = 192.168.0.131).** Session after a multi-day gap:
+> the GitHub repo had been **deleted and recreated from scratch** sometime
+> between 09/27 and 10/06 (new repo, `created_at` 10/06, single commit with a
+> short new README) — everything pushed earlier (content/, kof/, the full
+> README with the Data Architecture section) was gone. Re-pushed `content/`
+> (from the VPS, ~450MB) and `kof/` (from this machine) the same way as
+> before; restored the full README (renamed its "Why?" section to
+> "Data Architecture"/"Arquitetura dos Dados" per request) and added two new
+> notes: the Nginx/Kof serving-layer split, and the deliberate choice of
+> deterministic text assembly over an AI-generated reading.
+>
+> **Security regression found and fixed:** `deploy.sh` had reverted to
+> hardcoding the real VPS IP and the local SSH key path in plain text —
+> the `.env`-based fix from 09/26 never made it into the rebuilt push
+> (`.env.example` was missing locally too, so the `cp` silently no-op'd).
+> Re-applied the `.env` sourcing and recreated `.env.example`.
+>
+> **Stale `kof/` files cleaned up** (confirmed via GitHub API, not the CDN —
+> `raw.githubusercontent.com` served stale cached content for a few minutes
+> after each push and almost caused a false "didn't work" read):
+> - `dump-json.sh` — looked like pure shell but had an embedded Python
+>   heredoc; dev-only diffing tool, hardcoded to the old 0.3.22-beta
+>   toolchain and a 09/13 date. Deleted.
+> - `engine/cfg.txt` — stray one-line scratch file. Deleted.
+> - `servir.sh` — described the long-gone Node/Kof parallel-testing phase,
+>   hardcoded this machine's path. Deleted.
+> - `ISSUE-compiler.md` / `ISSUE-web.md` — draft bug reports for 0.3.22-beta
+>   issues the maintainer already fixed and closed long ago. Deleted.
+> - `nginx-mytarot.day` — was stale (hardcoded `proxy_pass 127.0.0.1:3001`,
+>   not the real blue-green `mytarot_app` upstream indirection). Refreshed
+>   with the actual live config pulled from the VPS.
+>
+> **Kof toolchain: tested 0.5.0-beta (latest release, 09/28), confirmed
+> still broken, rolled back to 0.4.4-beta.** `kof check` on the real
+> `server/Main.kf` hits the exact same ASM `COMPUTE_FRAMES` frame crash in
+> `Engine.generateJson` as the 0.4.5–0.4.10 regression — unfixed through the
+> newest release. User asked to upgrade anyway, explicitly accepting the
+> risk ("if it breaks, I'll tell Mel"). **The risk materialized within
+> minutes**: `mytarot-kof-b.service` auto-restarted on its own (systemd
+> restart counter went to 9) while `/opt/kof` was on 0.5.0-beta, tried to
+> recompile, crashed, site went 502. Rolled back `/opt/kof` to 0.4.4-beta
+> immediately; next restart compiled clean, site recovered. `/opt/kof.0.5.0-
+> rolledback` kept on the VPS for next time someone wants to re-test.
+> Backup chain on the VPS: `kof.0.3.22-rolledback`, `kof.0.5.0-rolledback`
+> (0.4.4-beta is back in `/opt/kof` itself).
+>
+> **NEXT STEP (re-dispatch reads this):** nothing blocked. If a newer Kof
+> release ships, re-test `kof check server/Main.kf` against it before ever
+> touching `/opt/kof` on the VPS again — the regression has now been
+> confirmed broken across SIX releases (0.4.5 through 0.5.0).
+
 > **✅ DONE (09/26, later same day, owner = 192.168.0.131).** The build is now
 > **100% Kof, zero Node** — finished the effort the entry below calls
 > "blocked". `extrair-config.js`, `gen-api.js`, `gen-html.js` deleted;
