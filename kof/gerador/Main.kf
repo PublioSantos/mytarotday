@@ -12,19 +12,20 @@
 // e confirmado nesta sessao. Um record fixo emitiria `"skipToContent":null`
 // aonde o JS original simplesmente omite a chave, mudando o payload publico.
 //
-// BUG do Kof 0.4.4-beta encontrado ao escrever isto (nao reportado ainda):
-// passar um Map vindo de json.decode<Map<...>> como ARGUMENTO de uma funcao
-// definida pelo usuario (mesmo com o parametro tipado exatamente
-// Map<String,String>) quebra a VERIFICACAO DE BYTECODE — nem a primeira
-// linha do main() chega a rodar — desde que em algum ponto do mesmo programa
-// um record contendo um Map<String,String> tambem passe por json.encode().
-// O erro reportado pela JVM e' totalmente enganoso ("os componentes de
-// runtime do JavaFX nao foram encontrados"). Isolado com repros minimos:
-// o mesmo Map construido via mapOf()+put() (em vez de decode) funciona
-// normalmente passado pela mesma funcao, no mesmo contexto. Contorno:
-// nunca passar um Map decodificado por uma funcao — so usar `.get()` nele
-// diretamente, no mesmo escopo onde o decode aconteceu, copiando pra um
-// mapOf() novo ali mesmo.
+// BUG do compilador Kof encontrado ao escrever isto (confirmado em
+// 0.4.4-beta e ainda presente em 0.5.0-beta, reportado como
+// github.com/KofLang/Kof4j#634): passar um Map vindo de
+// json.decode<Map<...>> como ARGUMENTO de uma funcao definida pelo usuario
+// (mesmo com o parametro tipado exatamente Map<String,String>) quebra a
+// VERIFICACAO DE BYTECODE — nem a primeira linha do main() chega a rodar —
+// desde que em algum ponto do mesmo programa um record contendo um
+// Map<String,String> tambem passe por json.encode(). O erro reportado pela
+// JVM e' totalmente enganoso ("os componentes de runtime do JavaFX nao
+// foram encontrados"). Isolado com repros minimos: o mesmo Map construido
+// via mapOf()+put() (em vez de decode) funciona normalmente passado pela
+// mesma funcao, no mesmo contexto. Contorno: nunca passar um Map
+// decodificado por uma funcao — so usar `.get()` nele diretamente, no mesmo
+// escopo onde o decode aconteceu, copiando pra um mapOf() novo ali mesmo.
 //
 //   kof run Main.kf
 // ==========================================================================
