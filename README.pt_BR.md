@@ -18,7 +18,8 @@ Seria fácil fazer um prompt para uma IA que gerasse uma leitura de tarô. Em ve
 
 O site nasceu como uma aplicação Node/Express convencional (Express + templates + JSON de conteúdo por idioma). Depois, virou também um campo de teste para outra curiosidade técnica: portar a aplicação inteira para [Kof](https://koflang.github.io/) — não só o servidor, mas o **build inteiro**. Desde 12 de setembro de 2026 o site em produção ( https://mytarot.day ) roda em Kof; desde 26 de setembro de 2026, o próprio processo de build (gerar o HTML de cada idioma, montar as respostas da API, achatar os dados de conteúdo) também roda 100% em Kof, sem Node nenhum no caminho — zero indisponibilidade em todos os deploys, via blue-green.
 
-Na frente de tudo isso, dois servidores com papéis diferentes:
+O acesso direto por índice a vetores em memória é mais rápido do que qualquer consulta a SGBD. A resposta é montada instantaneamente, mesmo sob tráfego elevado na instância mais modesta.
+
 
 - **Nginx** — o servidor web de borda: recebe toda a conexão na porta 80 (TLS já vem terminado do Cloudflare), serve os arquivos estáticos de `public/` direto do disco (imagens, CSS, JS, blog), faz o redirect canônico (www→apex, http→https) e repassa o resto pro backend via proxy.
 - **Kof** (`server/Main.kf`) — o servidor de aplicação: atende tudo que o Nginx não resolve sozinho — as rotas de `/api/*` e o HTML por idioma — rodando em duas instâncias idênticas (`mytarot-kof-a`/`mytarot-kof-b`) que se alternam a cada deploy blue-green.
