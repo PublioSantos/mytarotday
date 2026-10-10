@@ -161,6 +161,6 @@ O `reshape` existe porque a fonte é aninhada e legível (boa pra editar texto),
 
 **Invariante importante:** `deck[i].id == cards[i].id` — o sorteio devolve índices nesse array, nunca ids soltos.
 
-## Uma ressalva
+## Ressalvas
 
 O projeto deu tão certo que ficou um site de leitura de tarô gratuito, inspirado no tarô tradicional. O ponto de partida foi técnico, não místico — mas o resultado é um tarot de verdade: 78 cartas, interpretações completas, em 28 idiomas. Ele funciona como qualquer site de tarot funcionaria. A única diferença é a motivação de quem construiu: é um projeto de Tecnologia que escolheu o tarot como domínio pra testar alcance global e escala numa infraestrutura mínima. As leituras não devem ser lidas como orientação real para decisões importantes.
