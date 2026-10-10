@@ -2,7 +2,7 @@
 
 # MyTarot.Day
 
-[mytarot.day](https://mytarot.day) é um projeto de teste de tecnologia. O baralho de tarot foi usado como **ferramenta de teste**, não como objeto de estudo de tarô. Eu não sou tarólogo nem místico. O que eu queria era montar, um site real, funcional, usado no mundo todo, com uma quantidade grande de combinações possíveis, rodando inteiro numa VPS pequena e gratuita (OCI). Hoje rodando em Kof.
+[mytarot.day](https://mytarot.day) é um projeto de teste de tecnologia. O baralho de tarot foi usado como **ferramenta de teste**, não como objeto de estudo de tarô. Eu não sou tarólogo nem místico. O que eu queria era montar, um site real, funcional, usado no mundo todo, com uma quantidade grande de combinações possíveis, rodando inteiro numa VPS pequena e gratuita (OCI/Ubuntu). Hoje rodando em Kof.
 
 No código do servidor (server/Main.kf), a geração é dinâmica por requisição.
 
