@@ -160,6 +160,6 @@ idiomas[]: { code, nativeName, isRtl, questionMark, dateFormat }
 
 **Important invariant:** `deck[i].id == cards[i].id` — the draw returns indexes into this array, never bare ids.
 
-## A caveat
+## Caveats
 
 The project worked out so well that it became a free tarot reading site, inspired by traditional tarot. The starting point was technical, not mystical — but the result is a real tarot site: 78 cards, full interpretations, in 28 languages. It works like any tarot site would. The only difference is the builder's motivation: this isn't a tarot reader's voice, it's a Technology project that picked tarot as the domain to test global reach and scale on minimal infrastructure. Readings should not be read as real guidance for important decisions.
