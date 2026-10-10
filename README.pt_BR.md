@@ -2,7 +2,7 @@
 
 # MyTarot.Day
 
-[mytarot.day](https://mytarot.day) é um projeto de teste de tecnologia. O baralho de tarot foi usado como **ferramenta de teste**, não como objeto de estudo de tarô — eu não sou tarólogo nem místico. O que eu queria era montar, um site real, funcional, usado no mundo todo, com uma quantidade grande de combinações possíveis, rodando inteiro numa VPS pequena e gratuita (OCI).
+[mytarot.day](https://mytarot.day) é um projeto de teste de tecnologia. O baralho de tarot foi usado como **ferramenta de teste**, não como objeto de estudo de tarô. Eu não sou tarólogo nem místico. O que eu queria era montar, um site real, funcional, usado no mundo todo, com uma quantidade grande de combinações possíveis, rodando inteiro numa VPS pequena e gratuita (OCI).
 
 No código do servidor (server/Main.kf), a geração é 100% dinâmica por requisição, não baseada em modelos fixos de leitura completa.
 
@@ -10,7 +10,7 @@ No código do servidor (server/Main.kf), a geração é 100% dinâmica por requi
 
 - **Alcance global**: o site está traduzido em **28 idiomas**, incluindo idiomas RTL (árabe, hebraico) e CJK (japonês, coreano, chinês).
 - **Milhões de combinações**: cada leitura sorteia 4 cartas distintas entre 78 (a posição importa: determinante/passado/presente/futuro), e cada carta pode sair normal ou invertida. Isso produz `78×77×76×75 × 2⁴ =` **548 milhões** de combinações possíveis de leitura por idioma, sem que seja necessário armazenar cada combinação individualmente.
-- **Infraestrutura mínima**: tudo isso roda numa única instância **OCI Always Free** (Oracle Cloud), sem custo de servidor.
+- **Infraestrutura mínima**: roda numa única instância **OCI Always Free** (Oracle Cloud), sem custo de servidor.
 
 ## Como foi construído
 
