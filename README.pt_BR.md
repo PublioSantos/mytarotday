@@ -14,7 +14,7 @@ No código do servidor (server/Main.kf), a geração é dinâmica por requisiç�
 
 ## Como foi construído
 
-Seria fácil fazer um prompt para uma IA que gerasse uma leitura de tarô. Em vez disso, optei por pegar as cartas de tarô e seus significados e montar os textos de forma determinística.
+Seria fácil criar um prompt para uma IA gerar uma leitura de tarô. Em vez disso, optei por utilizar as cartas e seus significados para compor os textos de forma determinística, com encaixes gramaticais.
 
 O site nasceu como uma aplicação Node/Express convencional (Express + templates + JSON de conteúdo por idioma). Depois, virou também um campo de teste para outra curiosidade técnica: portar a aplicação inteira para [Kof](https://koflang.github.io/) — não só o servidor, mas o **build inteiro**. Desde 12 de setembro de 2026 o site em produção ( https://mytarot.day ) roda em Kof; desde 26 de setembro de 2026, o próprio processo de build (gerar o HTML de cada idioma, montar as respostas da API, achatar os dados de conteúdo) também roda 100% em Kof, sem Node nenhum no caminho — zero indisponibilidade em todos os deploys, via blue-green.
 
